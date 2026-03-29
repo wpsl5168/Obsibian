@@ -4,10 +4,11 @@
 
 ## 入口
 
+- [[20-Claude-Code/00-Overview]]（优先：vibe coding 落地）
 - [[10-Topics/AI-Agent/主题地图]]
-- [[10-Topics/AI-Agent/10大主题总览]]（第一版骨架）
 - [[10-Topics/AI-Agent/学习路径]]
 - [[10-Topics/AI-Agent/术语表]]
+- [[10-Topics/AI-Agent/10大主题总览]]（第一版骨架）
 
 ## 最近更新
 
