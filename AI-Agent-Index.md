@@ -10,4 +10,5 @@
 
 ## 最近更新
 
-- （待首次同步写入）
+- [[AI-Agent-Daily/2026-03-29]]
+- [[00-Inbox/2026-03-29-AI-Agent-Daily-Brief]]
