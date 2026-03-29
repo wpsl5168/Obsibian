@@ -13,5 +13,16 @@
 - 沙箱：命令执行与文件读写都要可控边界
 - 评测：上线前后用 evals 防回归
 
+## 时间线（演进史速览）
+
+- 2025-08：Bruce Schneier 强调“LLM prompt injection 仍无法被有效防御”（引用/讨论在业界广泛传播）。
+  - 技术：prompt injection / tool abuse / data exfiltration
+  - 关键人物：Bruce Schneier、Simon Willison 等
+  - 行业背景：agent 工具化带来的系统性安全风险被放大
+
+- 202x-xx：Martin Fowler 体系化总结 agentic AI 安全风险与工程应对。
+  - 技术：威胁建模、最小权限、审批点、沙箱、可观测
+  - 行业背景：coding agents 与企业 agent 从“可用”走向“可上线”
+
 ## 最近条目
 - [[AI-Agent-Daily/2026-03-29]]

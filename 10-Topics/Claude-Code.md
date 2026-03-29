@@ -11,5 +11,12 @@
 - 插件与可扩展性（commands/agents/plugins）
 - 安全边界（文件访问、命令执行、敏感信息处理）
 
+## 时间线（演进史速览）
+
+- 2026-03：Claude Code 官方 changelog 持续迭代（以 CHANGELOG.md 为准）。
+  - 技术：checkpointing / channels / PR review / .claude 规则与技能体系
+  - 关键角色：Anthropic（官方团队）+ 开源贡献者
+  - 行业背景：coding agent 从“补全”走向“读仓库+改文件+跑命令+提 PR”的端到端执行
+
 ## 最近条目
 - [[AI-Agent-Daily/2026-03-29]]

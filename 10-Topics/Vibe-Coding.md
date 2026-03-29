@@ -33,6 +33,19 @@
 - 质量保障：测试、review、静态分析、evals
 - 合规：数据访问边界、敏感信息处理、审计记录
 
+## 时间线（演进史速览）
+
+- 2021→：Copilot 把“代码补全”推向大众，形成第一波 AI 编程范式。
+  - 技术：IDE 内联补全
+  - 企业/生态：GitHub/Microsoft
+
+- 2024→：coding agent 逐步具备“读仓库/改文件/跑命令”的端到端能力。
+  - 技术：tool use / repo-aware
+  - 行业背景：从补全走向“任务完成”
+
+- 2026→：Claude Code 等工具把 agentic coding 产品化（终端/IDE/云端），并强化 checkpointing、channels、best practices。
+  - 企业/生态：Anthropic
+
 ## 后续我会怎么写这个话题
-- 形成一条“技术演变史”主线：从 Copilot 到 coding agent 到 MCP/协议化工具，到工作流/审批/审计
+- 形成一条“技术演变史”主线：从 Copilot → coding agent → MCP/协议化工具 → 工作流/审批/审计
 - 每次日报只写增量；这里沉淀结构化结论与最佳实践

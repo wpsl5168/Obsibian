@@ -15,5 +15,13 @@
 ## 顶流原创（原站点）
 - Simon Willison 的 MCP 相关合集：<https://simonwillison.net/tags/model-context-protocol/>
 
+## 时间线（演进史速览）
+
+- （按官方发布与规范版本逐步补全）
+- 202x-xx：Anthropic 发布并开源 MCP（Model Context Protocol）。
+  - 技术：MCP server/client、标准化工具与数据源接入、授权（OAuth/DCR）
+  - 关键角色：Anthropic + 生态贡献者（modelcontextprotocol org）
+  - 行业背景：Agent 需要以协议方式规模化连接企业系统（GitHub/DB/Drive/Slack…）
+
 ## 最近条目
 - [[AI-Agent-Daily/2026-03-29]]
