@@ -9,6 +9,7 @@
 - [[10-Topics/AI-Agent/学习路径]]
 - [[10-Topics/AI-Agent/术语表]]
 - [[10-Topics/AI-Agent/10大主题总览]]（第一版骨架）
+- [[10-Topics/LLM-Architecture/README]]（LLM 架构：参数、MoE vs Dense、图解）
 
 ## 最近更新
 
