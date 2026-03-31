@@ -14,3 +14,5 @@
 
 - [[AI-Agent-Daily/2026-03-29]]
 - [[00-Inbox/2026-03-29-AI-Agent-Daily-Brief]]
+- [[10-Topics/Learning/DeepLearning.AI/DeepLearning.AI-学习路径]]
+
