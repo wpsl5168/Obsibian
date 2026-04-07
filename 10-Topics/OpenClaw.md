@@ -22,5 +22,10 @@
   - 关键贡献者：openclaw/openclaw 维护者与核心贡献者（以 release/PR 为准）
   - 行业背景：多渠道 agent + 工具副作用治理成为生产化刚需
 
+- 2026-04-03（OpenClaw v2026.4.2）：插件配置迁移 + Task Flow 基座回归（更偏“可运维的后台编排”）。
+  - 技术：plugins config boundary / openclaw doctor --fix / Task Flow（durable state、revision、inspection/recovery、child task spawning）
+  - 我关心的含义：把 agent 的“副作用能力”（exec/写文件/外部调用）纳入统一审批与可审计链路；同时让后台任务的编排状态可恢复、可运维。
+
 ## 最近条目
 - [[AI-Agent-Daily/2026-03-29]]（含 v2026.3.28 release 摘要）
+- [[AI-Agent-Daily/2026-04-03]]（含 v2026.4.2 release 摘要与我的解读）
