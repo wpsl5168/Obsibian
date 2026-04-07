@@ -3,6 +3,8 @@
 ## 场景与原理
 为了防止拥有高级权限（如 `sa`）的人员轻易窥探和窃取核心业务存储过程源码，SQL Server 提供了原生的 `WITH ENCRYPTION` 选项。
 - **作用**：通过对系统表中存储的源码进行内部混淆（异或算法），使 `sp_helptext` 或 SSMS 的“修改”功能失效，直接阻断明文查看。
+- **性能零损耗**：加密仅作用于对象的保存与读取阶段，执行时跑的是已编译的二进制执行计划，**完全不影响查询性能**。
+- **终极安全加固**：原生加密连注释也会一并加密。如果被破解，注释将一览无遗。最佳实践是**在加密前执行脱敏脚本剔除所有注释（如单行 `--` 与多行 `/*...*/`）**。
 - **特点**：不需要外部证书，零成本。属“防君子不防小人”级别，针对高级 DBA 仍有逆向解密风险，但在常规生产环境（防运维/初级开发人员拷贝代码）下行之有效。
 - **⚠️ 核心警告**：**加密不可逆！** 数据库不再保留明文，执行加密前**必须**自行在本地或 Git 库中备份源码。
 
@@ -67,13 +69,20 @@ foreach ($Proc in $Procedures) {
     $BackupFile = Join-Path -Path $BackupPath -ChildPath "$SafeFileName.sql"
     $Def | Out-File -FilePath $BackupFile -Encoding UTF8
 
-    # 4. 正则替换逻辑
-    # 匹配 CREATE 到第一个 AS 之间的定义，并强制插入 WITH ENCRYPTION
+    # 4. 深度脱敏与正则替换逻辑
+    # ==========================
+    # 4.1 剥离所有注释信息（终极反解密策略）
+    # 去除多行注释 /* ... */
+    $NewDef = $Def -replace '(?s)/\*.*?\*/', ''
+    # 去除单行注释 -- 及后续内容（注意：若业务字符串中恰好有 '--' 极小概率会被误伤，请人工评估）
+    $NewDef = $NewDef -replace '--.*', ''
+    
+    # 4.2 匹配 CREATE 到第一个 AS 之间的定义，并强制插入 WITH ENCRYPTION
     $RegexPattern = '(?is)(^\s*CREATE\s+PROC(?:EDURE)?.*?)(?=\bAS\b)'
     
-    if ($Def -match $RegexPattern) {
+    if ($NewDef -match $RegexPattern) {
         # 将头部的 CREATE 替换为 ALTER
-        $NewDef = $Def -replace '(?is)^\s*CREATE\s+', 'ALTER '
+        $NewDef = $NewDef -replace '(?is)^\s*CREATE\s+', 'ALTER '
         $NewDef = $NewDef -replace $RegexPattern, "`$1 WITH ENCRYPTION `r`n"
 
         try {
