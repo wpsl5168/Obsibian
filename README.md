@@ -17,3 +17,4 @@
 
 ## 写作风格
 - [[90-Templates/Writing-Style]]（中文优先；少堆链接，回答“是什么/为什么重要/怎么用”）
+- [[90-Templates/Diagram-Style]]（配图/架构图强约束：严谨对齐正文、禁止发散、NotebookLM 极简白板风）
