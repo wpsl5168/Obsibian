@@ -1,0 +1,206 @@
+{
+  "main": {
+    "id": "5cb6f14198ab8e17",
+    "type": "split",
+    "children": [
+      {
+        "id": "6b225d3d669fa929",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "e4e2e85475ec49d8",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "新标签页"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "58e7a2e5b66d4aec",
+    "type": "mobile-drawer",
+    "children": [
+      {
+        "id": "754046422b920cc6",
+        "type": "leaf",
+        "state": {
+          "type": "file-explorer",
+          "state": {
+            "sortOrder": "alphabetical",
+            "autoReveal": false
+          },
+          "icon": "lucide-folder-closed",
+          "title": "文件列表"
+        }
+      },
+      {
+        "id": "75fd9183e5270b9b",
+        "type": "leaf",
+        "state": {
+          "type": "search",
+          "state": {
+            "query": "",
+            "matchingCase": false,
+            "explainSearch": false,
+            "collapseAll": false,
+            "extraContext": false,
+            "sortOrder": "alphabetical"
+          },
+          "icon": "lucide-search",
+          "title": "搜索"
+        }
+      },
+      {
+        "id": "fa95d4d21385acc7",
+        "type": "leaf",
+        "state": {
+          "type": "tag",
+          "state": {
+            "sortOrder": "frequency",
+            "useHierarchy": true,
+            "showSearch": false,
+            "searchQuery": ""
+          },
+          "icon": "lucide-tags",
+          "title": "标签"
+        }
+      },
+      {
+        "id": "218a1f585fe3286e",
+        "type": "leaf",
+        "state": {
+          "type": "all-properties",
+          "state": {
+            "sortOrder": "frequency",
+            "showSearch": false,
+            "searchQuery": ""
+          },
+          "icon": "lucide-archive",
+          "title": "添加笔记属性"
+        }
+      },
+      {
+        "id": "321c45071a0e9430",
+        "type": "leaf",
+        "state": {
+          "type": "bookmarks",
+          "state": {},
+          "icon": "lucide-bookmark",
+          "title": "书签"
+        }
+      }
+    ],
+    "currentTab": 0
+  },
+  "right": {
+    "id": "bcafc63a52be1896",
+    "type": "mobile-drawer",
+    "children": [
+      {
+        "id": "55fd0ba856380c2a",
+        "type": "leaf",
+        "state": {
+          "type": "backlink",
+          "state": {
+            "collapseAll": false,
+            "extraContext": false,
+            "sortOrder": "alphabetical",
+            "showSearch": false,
+            "searchQuery": "",
+            "backlinkCollapsed": false,
+            "unlinkedCollapsed": true
+          },
+          "icon": "links-coming-in",
+          "title": "反向链接"
+        }
+      },
+      {
+        "id": "9974c30339e2173d",
+        "type": "leaf",
+        "state": {
+          "type": "outgoing-link",
+          "state": {
+            "linksCollapsed": false,
+            "unlinkedCollapsed": true
+          },
+          "icon": "links-going-out",
+          "title": "出链"
+        }
+      },
+      {
+        "id": "b7b146fc7c8c7ce0",
+        "type": "leaf",
+        "state": {
+          "type": "outline",
+          "state": {
+            "followCursor": false,
+            "showSearch": false,
+            "searchQuery": ""
+          },
+          "icon": "lucide-list",
+          "title": "大纲"
+        }
+      }
+    ],
+    "currentTab": 0
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false,
+      "bases:新建数据库": false,
+      "obsidian-git:Open Git source control": false
+    }
+  },
+  "active": "55fd0ba856380c2a",
+  "lastOpenFiles": [
+    "10-Topics/Learning/DeepLearning.AI/snapshots/deeplearningai-courses-2026-04-09.compact.json",
+    "05-日常笔记/DeepLearning.AI/DeepLearning.AI-学习路径.md",
+    "scripts/xiaobei_migration.py",
+    "AI-Agent-Daily/2026-04-09.md",
+    "10-Topics/Learning/DeepLearning.AI/updates/2026-04-09-deeplearningai-update.md",
+    "10-Topics/Learning/DeepLearning.AI/snapshots/deeplearningai-courses-2026-04-09.json",
+    "05-日常笔记/README.md",
+    "05-日常笔记/Diagram-Style.md",
+    "/10-Topics/Learning/DeepLearning.AI/snapshots/deeplearningai-courses-2026-04-09.compact.json",
+    "/05-日常笔记/DeepLearning.AI/DeepLearning.AI-学习路径.md",
+    "05-日常笔记/ClaudeCode-工具/00-Overview.md",
+    "05-日常笔记/30-Checkpointing.md",
+    "05-日常笔记/20-CLI-Cheatsheet.md",
+    "05-日常笔记/10-经典方法论（ReAct_Reflexion_ToT_MetaGPT）.md",
+    "05-日常笔记/10-Best-Practices-Extract.md",
+    "05-日常笔记/09-HITL与Guardrails（人类在环_安全）.md",
+    "05-日常笔记/08-Observability与Evals（可观测_评测）.md",
+    "05-日常笔记/07-AI Dev产品化（CLI_GUI_Cloud）.md",
+    "05-日常笔记/05-Handoff与Triage（交接_分诊）.md",
+    "05-日常笔记/03-平台化框架（DevUI_OTel_多语言）.md",
+    "05-日常笔记/02-异步消息与事件驱动（Event-driven Messaging）.md",
+    "05-日常笔记/01-工作流编排（Graphs & Workflows）.md",
+    "05-日常笔记/01-Session-Management.md",
+    "05-日常笔记/00-Global-Rules.md",
+    "04-项目开发/README.md",
+    "03-日常灵感/SQLServer_高级加密方案_CLR_混淆.md",
+    "03-日常灵感/SQLServer_存储过程加密方案_WITH_ENCRYPTION.md",
+    "03-日常灵感/SQLServer_Dacpac包加密与自动化部署.md",
+    "03-日常灵感/README.md",
+    "/scripts/xiaobei_migration.py",
+    "/10-Topics/Learning/DeepLearning.AI/snapshots/deeplearningai-courses-2026-04-09.json",
+    "scripts",
+    "05-日常笔记/DeepLearning.AI",
+    "05-日常笔记/ClaudeCode-工具",
+    "05-日常笔记",
+    "04-项目开发",
+    "assets/claude-code/auto-mode.png",
+    "/assets/claude-code/auto-mode.png"
+  ]
+}
