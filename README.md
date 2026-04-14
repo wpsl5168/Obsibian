@@ -17,7 +17,7 @@ tags: [索引, 知识库, AI-Agent]
 ### 📥 0. 收件箱 (`00-Inbox/`)
 - **定位**：待整理的原始素材、研究报告草稿。
 - **内容**：
-  - [[2026-04-11-AI-Agent-研究报告]] — AI Agent 10大主题研究报告（工程落地向）
+  - [[2026-04-12-AI-Agent-研究报告]] — AI Agent 10大主题研究报告（工程落地向）
 
 ### 📰 1. 新闻速递 (`01-新闻速递/`)
 - **定位**：AI 及 AI Agent 相关行业重大新闻、RSS 推荐、重要事件及里程碑。
@@ -66,10 +66,10 @@ tags: [索引, 知识库, AI-Agent]
 - **DeepLearning.AI 学习**：
   - [[DeepLearning.AI-学习路径]]
 
-### 📊 6. AI Agent Daily (`AI-Agent-Daily/`)
+### 📊 6. AI Agent Daily (`06-AI-Agent-Daily/`)
 - **定位**：每日 AI Agent 领域动态追踪（官方 + 顶流原创）。
 - **内容**：OpenClaw Release、Claude Code、MCP 生态、顶流博主原创。
-- 最新：[[AI-Agent-Daily/2026-04-13|2026-04-13]] · [[AI-Agent-Daily/2026-04-12|04-12]] · [[AI-Agent-Daily/2026-04-11|04-11]] · [[AI-Agent-Daily/2026-04-10|04-10]] · [[AI-Agent-Daily/2026-04-09|04-09]]
+- 最新：[[06-AI-Agent-Daily/2026-04-13|2026-04-13]] · [[06-AI-Agent-Daily/2026-04-12|04-12]] · [[06-AI-Agent-Daily/2026-04-11|04-11]] · [[06-AI-Agent-Daily/2026-04-10|04-10]] · [[06-AI-Agent-Daily/2026-04-09|04-09]]
 
 ### 📚 7. 专题学习 (`10-Topics/`)
 - **DeepLearning.AI 课程追踪**：
@@ -78,13 +78,12 @@ tags: [索引, 知识库, AI-Agent]
 
 ### ⚙️ 8. 治理与记忆 (`99-Governance/`)
 - **定位**：OpenClaw Agent 的运行记忆与日志存档。
-- **内容**：Agent Session 记录、每日 Pipeline 日志、调试记录。
+- **内容**：[[OpenClaw-迁移摘要]]（压缩后的关键决策摘要）、Agent 心跳状态、[[00-写作与排版规范|写作与排版规范]]。
 - ⚠️ 注意：此目录为自动生成的 Agent Memory，非人工笔记。
 
 ### 📁 9. 其他
 - `assets/` — 配图资源库（截图、架构图等）
 - `scripts/` — 知识库维护脚本
-- [[00-写作与排版规范|写作与排版规范]] — 全库统一的写作风格指南
 
 ---
 
