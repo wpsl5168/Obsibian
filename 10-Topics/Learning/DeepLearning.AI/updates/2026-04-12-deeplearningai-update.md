@@ -1,3 +1,9 @@
+---
+title: "DeepLearning.AI 每日更新 2026-04-12"
+date: 2026-04-12
+tags: [DeepLearning-AI, 学习, 课程]
+---
+
 # DeepLearning.AI 每日更新
 
 - 日期（本地）：2026-04-12

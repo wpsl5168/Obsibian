@@ -1,3 +1,9 @@
+---
+title: "NotebookLM API 调研"
+date: 2026-04-02
+tags: [NotebookLM, API, LLM]
+---
+
 # Session: 2026-04-02 05:20:01 UTC
 
 - **Session Key**: agent:main:mattermost:direct:3xc9mexbqjnxigzqao9rmuz5ky

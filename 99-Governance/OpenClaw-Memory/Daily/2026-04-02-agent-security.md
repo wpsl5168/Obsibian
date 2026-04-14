@@ -1,3 +1,9 @@
+---
+title: "Agent 安全策略讨论"
+date: 2026-04-02
+tags: [OpenClaw, 安全, AI-Agent]
+---
+
 # Session: 2026-04-02 02:07:52 UTC
 
 - **Session Key**: agent:main:mattermost:direct:3xc9mexbqjnxigzqao9rmuz5ky

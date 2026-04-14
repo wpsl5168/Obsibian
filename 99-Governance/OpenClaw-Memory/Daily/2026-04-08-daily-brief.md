@@ -1,3 +1,9 @@
+---
+title: "Daily Brief 构建记录"
+date: 2026-04-08
+tags: [OpenClaw, Daily-Brief, Pipeline]
+---
+
 # Session: 2026-04-08 10:30:24 UTC
 
 - **Session Key**: agent:main:mattermost:direct:3xc9mexbqjnxigzqao9rmuz5ky

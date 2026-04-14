@@ -1,3 +1,9 @@
+---
+title: "SQLServer Dacpac加密部署（Memory副本）"
+date: 2026-04-08
+tags: [SQL-Server, Dacpac, 安全, duplicate]
+---
+
 # SQLServer_Dacpac包加密与自动化部署 (PowerShell+AES256)
 
 **日期**: 2026-04-08

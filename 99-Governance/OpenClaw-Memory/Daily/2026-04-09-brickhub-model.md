@@ -1,3 +1,9 @@
+---
+title: "BrickHub 大模型检查记录"
+date: 2026-04-09
+tags: [BrickHub, LLM, OpenClaw]
+---
+
 # Session: 2026-04-09 04:16:27 UTC
 
 - **Session Key**: agent:main:mattermost:direct:3xc9mexbqjnxigzqao9rmuz5ky

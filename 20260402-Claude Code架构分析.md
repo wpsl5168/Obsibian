@@ -1,6 +1,12 @@
+---
+title: "Claude Code 架构深度解析与创新分析"
+date: 2026-04-02
+tags: [AI-Agent, Claude-Code, MCP, 架构分析]
+---
+
 # 🛡️ Claude Code 架构深度解析与创新分析
 
-> **背景：** 2026年3月，Anthropic 旗下的命令行 AI 智能体 **Claude Code** 因源码泄露，揭示了其代号为 **"Tengu" (天狗)** 的底层逻辑。这不仅是一款 CLI 工具，更是一套成熟的 **Agent 操作系统**。
+> **背景：** 2026年3月，Anthropic 旗下的命令行 AI 智能体 **Claude Code** 因源码泄露，揭示了其代号为 **"Tengu" (天狗)** 的底层逻辑。这不仅是一款 CLI 工具，更是一套成熟的 **[[AI-Agent架构|Agent 操作系统]]**。
 
 ---
 
@@ -11,7 +17,7 @@ Claude Code 采用了高度模块化的执行环境：
 ### 1. 技术栈选型
 * **运行时 (Runtime):** 采用 **Bun**，确保 CLI 交互无延迟。
 * **UI 引擎:** **React + Ink**，在终端中实现组件化开发，支持动态进度条和实时刷新。
-* **通信协议:** 深度集成 **MCP (Model Context Protocol)**，标准化跨工具数据交换。
+* **通信协议:** 深度集成 **[[MCP规范|MCP]] (Model Context Protocol)**，标准化跨工具数据交换。
 
 ### 2. 四层架构模型 (Tengu Architecture)
 * **协议层 (Protocol Layer):** 负责标准化数据交换。
@@ -43,4 +49,4 @@ Claude Code 采用了高度模块化的执行环境：
 ---
 
 ## 🧐 综合评价
-Claude Code 的成功证明了：顶级 AI 工具的差距不在于模型本身，而在于 **Harness (装甲/工程支架)** 的构建。其极致的权限控制、鲁棒的快照机制和标准化的 MCP 协议，是其工业级竞争力的核心。
+Claude Code 的成功证明了：顶级 AI 工具的差距不在于模型本身（另见 [[SWE-Agent实战]]），而在于 **Harness (装甲/工程支架)** 的构建。其极致的权限控制、鲁棒的快照机制和标准化的 MCP 协议，是其工业级竞争力的核心。

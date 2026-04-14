@@ -1,4 +1,12 @@
+---
+title: "Claude Code 概览（落地导向）"
+date: 2026-04-07
+tags: [Claude-Code, Vibe-Coding, AI-Agent]
+---
+
 # Claude Code 概览（落地导向）
+
+> 深度架构分析见 [[20260402-Claude Code架构分析]] · MCP 协议见 [[MCP规范]]
 
 > 你关心的是：vibe coding 到底能做什么、怎么评估、怎么快速落地。
 

@@ -7,6 +7,8 @@ tags: [sql, database, security]
 
 # SQLServer_Dacpac包加密与自动化部署 (PowerShell+AES256)
 
+> 系列文档：[[SQLServer_存储过程加密方案_WITH_ENCRYPTION|WITH ENCRYPTION基础方案]] · [[SQLServer_高级加密方案_CLR_混淆|CLR高级混淆]]
+
 **日期**: 2026-04-08
 **关联**: 基于 2026-04-07 讨论的 [[SQL Server]] 存储过程加密方案 (防代码泄露) 的进一步延伸 (防介质泄漏)。
 

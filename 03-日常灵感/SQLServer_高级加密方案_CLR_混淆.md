@@ -7,6 +7,8 @@ tags: [sql, database, security]
 
 # [[SQL Server]] 存储过程高级加密方案：CLR + 代码混淆
 
+> 系列文档：[[SQLServer_存储过程加密方案_WITH_ENCRYPTION|WITH ENCRYPTION基础方案]] · [[SQLServer_Dacpac包加密与自动化部署|Dacpac加密部署]]
+
 ## 场景与原理
 原生 T-SQL 的 `WITH ENCRYPTION` 仅是一种可逆的代码混淆（文本异或），面对掌握专用工具的高级 DBA（具备 `sa` 或 `sysadmin` 权限），源码仍有被提取和还原的风险。
 

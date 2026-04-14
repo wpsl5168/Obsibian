@@ -1,3 +1,9 @@
+---
+title: "BrickHub Gemini/Copilot 提示词模板"
+date: 2026-04-08
+tags: [BrickHub, 提示词, Gemini, Copilot]
+---
+
 
 
 太棒了，我们这就开始 BrickHub 的第一步：实现**一个标准 2x6 乐高积木的 3D 渲染**。

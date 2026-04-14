@@ -7,6 +7,8 @@ tags: [sql, database, security]
 
 # [[SQL Server]] 存储过程加密方案 (WITH ENCRYPTION)
 
+> 系列文档：[[SQLServer_Dacpac包加密与自动化部署|Dacpac加密部署]] · [[SQLServer_高级加密方案_CLR_混淆|CLR高级混淆]]
+
 ## 场景与原理
 为了防止拥有高级权限（如 `sa`）的人员轻易窥探和窃取核心业务存储过程源码，[[SQL Server]] 提供了原生的 `WITH ENCRYPTION` 选项。
 - **作用**：通过对系统表中存储的源码进行内部混淆（异或算法），使 `sp_helptext` 或 SSMS 的“修改”功能失效，直接阻断明文查看。
