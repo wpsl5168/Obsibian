@@ -162,17 +162,180 @@ mcp_servers:
 
 ---
 
-### 6.2 多Agent协作功能
+### 6.2 记忆管理（Lifecycle Management）
 
-#### F6: Agent隔离与共享（Multi-Agent Memory）
+#### F11: 自动温度调控
 
 | 项目 | 说明 |
 |------|------|
-| **功能描述** | GitHub-style记忆仓库：每个Agent有私有记忆，可创建共享仓库 |
-| **接口** | `POST /v1/agents` (注册), `POST /v1/repos` (创建记忆库), `POST /v1/repos/{id}/grant` (授权) |
-| **参数** | agent注册: `agent_id, name, token`; repo创建: `name, visibility(public/private)`; grant: `agent_id, permission(read/write/admin)` |
-| **存储** | 表 `agents`(id, name, token_hash, created_at), `repos`(id, name, owner_agent_id, visibility), `repo_grants`(repo_id, agent_id, permission) |
-| **验收标准** | ① Agent只能访问有权限的记忆库 ② Token认证延迟<10ms ③ 支持最少100个Agent并发 ④ 权限变更实时生效 |
+| **功能描述** | 基于访问模式自动调整记忆温度（Hot/Warm/Cold），无需人工干预 |
+| **升温规则** | Warm→Hot: `access_count ≥ 5 AND last_accessed within 7d`; Cold→Warm: 被检索命中时自动升温 |
+| **降温规则** | Hot→Warm: `last_accessed > 7d`; Warm→Cold: `last_accessed > 30d AND access_count < 3` |
+| **遗忘公式** | `score = α × recency(t) + β × relevance(query) + γ × frequency(n)` 其中 α=0.4, β=0.35, γ=0.25; `recency(t) = exp(-λt)`, λ=0.05/天; score < 0.1 且非pinned → 标记待清除 |
+| **接口** | `POST /v1/maintenance/sweep` (手动触发), `GET /v1/maintenance/schedule` (查看自动任务) |
+| **参数** | sweep: `dry_run: bool`, `threshold: float` (遗忘阈值, 默认0.1) |
+| **验收标准** | ① 温度调控每小时自动运行一次 ② 升降温有日志记录（consolidation_log） ③ pinned记忆永不降温/遗忘 ④ 用户可通过config.yaml自定义α/β/γ和时间窗口 |
+
+#### F12: 记忆版本与冲突处理
+
+| 项目 | 说明 |
+|------|------|
+| **功能描述** | 记忆更新时保留历史版本，矛盾记忆自动检测并标记 |
+| **接口** | `GET /v1/memories/{id}/history`, `POST /v1/memories/conflicts` |
+| **存储** | 表 `memory_versions`(memory_id, version, content, updated_at); 表 `conflicts`(id, memory_a_id, memory_b_id, type, resolved) |
+| **矛盾检测** | 同scope+同主题的记忆，语义相似度>0.8但情感/意图相反 → 标记为conflict |
+| **解决策略** | 默认保留最新; 可配置为`ask`(标记待人工决策)或`merge`(调用本地模型合并) |
+| **验收标准** | ① 每次update自动创建版本记录 ② 最多保留10个历史版本（可配置） ③ conflicts接口返回未解决冲突列表 ④ 冲突解决后自动清理旧版本 |
+
+#### F13: 记忆导入导出与迁移
+
+| 项目 | 说明 |
+|------|------|
+| **功能描述** | 支持记忆批量导入导出，兼容Mem0/CLAUDE.md等格式 |
+| **接口** | `POST /v1/memories/export`, `POST /v1/memories/import` |
+| **参数** | export: `format: enum(json\|markdown\|mem0)`, `scope: str`, `agent_id: str`; import: `file: UploadFile`, `format: enum(json\|markdown\|mem0\|claudemd)`, `target_repo: str` |
+| **支持格式** | JSON(原生), Markdown(MEMORY.md风格), Mem0 JSON, CLAUDE.md(Claude Code记忆) |
+| **验收标准** | ① export→import round-trip零数据丢失 ② 导入Mem0格式自动映射字段 ③ 导入CLAUDE.md自动拆分为独立记忆条目 ④ 大批量(10K条)导入<60秒 |
+
+---
+
+### 6.3 隔离模式（Isolation Model）
+
+> 设计理念：借鉴GitHub的 Organization → Repository → Branch 模型
+
+#### F14: 三级隔离架构
+
+| 层级 | 概念 | 类比GitHub | 说明 |
+|------|------|-----------|------|
+| **L1: Tenant（租户）** | 部署实例 | GitHub Organization | 一个海马体实例 = 一个租户，物理隔离（独立DB文件） |
+| **L2: Agent（代理）** | 注册的AI Agent | GitHub User | 每个Agent有唯一ID+Token，拥有私有记忆空间 |
+| **L3: Session（会话）** | 单次对话上下文 | GitHub Branch | 会话级临时记忆，会话结束后决定保留/丢弃 |
+
+#### F15: 记忆库权限体系
+
+| 项目 | 说明 |
+|------|------|
+| **功能描述** | Agent通过PAT(Personal Access Token)认证，记忆库分public/private，权限精细控制 |
+| **Token机制** | 注册Agent时生成PAT，格式`hpc_xxxxxxxxxxxx`，SHA-256哈希存储，支持多Token（如只读Token、全权Token） |
+| **Token Scope** | `memory:read` — 读取记忆; `memory:write` — 写入记忆; `repo:admin` — 管理记忆库; `consolidate` — 触发整合 |
+| **记忆库类型** | `private` — 仅owner和被授权Agent可访问; `public` — 同租户下所有Agent可读（写仍需授权） |
+
+**权限矩阵：**
+
+| 角色 | 自己的private repo | 他人的private repo | public repo | 共享repo(被授权) |
+|------|-------------------|-------------------|-------------|-----------------|
+| **主Agent (owner)** | 读写删 | ❌ | 读 | 按授权(read/write/admin) |
+| **子Agent** | 读写删(自己的) | ❌ | 读 | 按授权(通常只读) |
+| **未注册Agent** | ❌ | ❌ | ❌ | ❌ |
+
+**典型场景：**
+
+```
+场景1: Hermes主Agent + 子Agent协作
+├── hermes-private (private)     ← 主Agent独占，存用户偏好/敏感信息
+├── hermes-shared (public)       ← 所有子Agent可读，存项目上下文/技术约定
+└── sub-agent-001-private (private) ← 子Agent独占，存临时推理中间结果
+
+场景2: 多Agent团队
+├── team-knowledge (public)      ← 团队共享知识库
+├── agent-alice-private (private) ← Alice的个人记忆
+├── agent-bob-private (private)   ← Bob的个人记忆
+└── project-x (private)          ← 项目专属，Alice=admin, Bob=read
+```
+
+| **接口** | 说明 |
+|---------|------|
+| `POST /v1/agents` | 注册Agent，返回PAT |
+| `POST /v1/agents/{id}/tokens` | 生成额外Token（指定scope） |
+| `DELETE /v1/agents/{id}/tokens/{token_id}` | 吊销Token |
+| `POST /v1/repos` | 创建记忆库 |
+| `PUT /v1/repos/{id}` | 修改记忆库（名称/可见性） |
+| `POST /v1/repos/{id}/grant` | 授权Agent访问 |
+| `DELETE /v1/repos/{id}/grant/{agent_id}` | 撤销授权 |
+| `GET /v1/repos/{id}/grants` | 查看授权列表 |
+
+| **验收标准** |
+|-------------|
+| ① 无Token请求返回401 |
+| ② Token scope不足返回403 |
+| ③ 访问无权限的private repo返回404（不暴露存在性） |
+| ④ public repo未授权写入返回403 |
+| ⑤ Token吊销后立即生效（<1秒） |
+| ⑥ 支持同时100+个Agent注册 |
+
+#### F16: Session级记忆隔离
+
+| 项目 | 说明 |
+|------|------|
+| **功能描述** | 会话级临时记忆空间，会话内自动可见，会话结束时由Agent决定哪些提升为持久记忆 |
+| **接口** | `POST /v1/sessions` (开始会话), `DELETE /v1/sessions/{id}` (结束会话), `POST /v1/sessions/{id}/promote` (提升记忆) |
+| **参数** | 开始: `agent_id, session_id(可选，默认生成)`, 结束: `promote_strategy: enum(all\|none\|auto)` — auto由本地模型判断哪些值得保留 |
+| **存储** | 表 `session_memories`(session_id, memory_id) 关联表，会话结束且不提升时清除 |
+| **验收标准** | ① 会话记忆对其他会话不可见 ② promote=auto时，模型判断保留率在30-70%之间（非全保留/全丢弃） ③ 会话结束后临时记忆在24h内自动清除 |
+
+---
+
+### 6.4 记忆共享（Memory Sharing）
+
+> 设计理念：**隔离是默认，共享是显式授权的动作。** 像发GitHub Collaborator邀请一样精确控制谁能看到什么。
+
+#### F17: 共享记忆库（Shared Repos）
+
+| 项目 | 说明 |
+|------|------|
+| **功能描述** | Agent创建共享记忆库，邀请其他Agent加入，实现跨Agent知识传递 |
+| **接口** | `POST /v1/repos` (创建), `POST /v1/repos/{id}/grant` (邀请), `GET /v1/repos/{id}/feed` (共享动态) |
+| **共享粒度** | **repo级** — 整个记忆库共享; **tag级** — 只共享指定tag的记忆（如 `grant(agent_id, permission, tags=["project-context"])` ） |
+| **写入冲突** | 多Agent同时写入同一repo时，采用 last-write-wins + 自动版本记录（F12），不做分布式锁 |
+| **验收标准** | ① 授权后Agent立即可检索共享记忆（<1秒生效） ② tag级共享过滤准确率100% ③ 共享记忆的修改对所有被授权Agent实时可见 ④ feed接口返回最近的共享记忆变更流（分页） |
+
+#### F18: 记忆广播（Memory Broadcast）
+
+| 项目 | 说明 |
+|------|------|
+| **功能描述** | 主Agent向所有子Agent单向推送关键上下文（如用户偏好变更、项目决策），子Agent无需主动拉取 |
+| **接口** | `POST /v1/broadcast` |
+| **参数** | `content: str`, `from_agent: str`, `to_agents: list[str]` (空=所有已注册Agent), `priority: enum(normal\|urgent)`, `ttl: int` |
+| **机制** | 写入各目标Agent的收件队列表 `inbox`; Agent下次search时自动注入urgent广播; normal广播在Agent显式调用 `GET /v1/inbox` 时返回 |
+| **验收标准** | ① urgent广播在下次search时自动出现在结果最前 ② 广播有已读状态追踪 ③ TTL到期自动清除 ④ 单次广播支持最多1000个目标Agent |
+
+**典型共享场景：**
+
+```
+场景1: 用户偏好同步
+  用户对Hermes说"我喜欢简洁风格" 
+  → Hermes写入自己的private repo
+  → Hermes通过broadcast推送给所有子Agent
+  → 子Agent下次工作时自动获得该偏好
+
+场景2: 项目知识共享
+  主Agent创建 "brickhub-context" shared repo (public)
+  → 主Agent写入项目架构、技术栈、设计规范
+  → Claude Code子Agent被授权read
+  → Claude Code检索时自动搜索shared repo + 自己的private repo
+
+场景3: 跨Agent学习
+  Agent-A完成了一个复杂debug，提炼出经验
+  → Agent-A写入shared repo "team-learnings" (tag: "debugging")
+  → Agent-B下次遇到类似问题，search命中该经验
+  → 避免重复踩坑
+
+场景4: 敏感信息隔离
+  主Agent持有用户API keys、个人信息
+  → 存在private repo，不共享
+  → 子Agent只能访问脱敏后的共享上下文
+  → 即使子Agent被注入恶意prompt，也无法获取敏感信息
+```
+
+#### F19: 共享审计日志（Sharing Audit Trail）
+
+| 项目 | 说明 |
+|------|------|
+| **功能描述** | 记录所有共享相关操作，便于安全审计和问题追踪 |
+| **接口** | `GET /v1/audit/sharing` |
+| **参数** | `agent_id: str`, `repo_id: str`, `action: enum(grant\|revoke\|read\|write\|broadcast)`, `since: datetime`, `limit: int` |
+| **存储** | 表 `sharing_audit`(id, timestamp, actor_agent_id, target_agent_id, repo_id, action, detail) |
+| **验收标准** | ① 每次grant/revoke/broadcast自动记录 ② 每次跨Agent读取记录（可配置关闭以降低写入量） ③ 日志保留90天（可配置） ④ 支持按Agent/Repo/Action维度过滤 |
 
 ---
 
