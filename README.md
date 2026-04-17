@@ -1,6 +1,6 @@
 ---
 title: "老王的知识库 (Obsidian Vault)"
-date: 2026-04-14
+date: 2026-04-17
 tags: [索引, 知识库, AI-Agent]
 ---
 
@@ -8,7 +8,7 @@ tags: [索引, 知识库, AI-Agent]
 
 本知识库采用结构化与双向链接体系，旨在沉淀成完整的知识图谱，而非碎片化信息。
 
-> 最后审计：2026-04-14 · 维护人：小贝（二秘/知识库整理员）
+> 最后审计：2026-04-17 · 维护人：小贝（二秘/知识库整理员）
 
 ---
 
@@ -19,9 +19,9 @@ tags: [索引, 知识库, AI-Agent]
 - **内容**：
   - [[2026-04-12-AI-Agent-研究报告]] — AI Agent 10大主题研究报告（工程落地向）
 
-### 📰 1. 新闻速递 (`01-新闻速递/`)
-- **定位**：AI 及 AI Agent 相关行业重大新闻、RSS 推荐、重要事件及里程碑。
-- **形式**：每日简报形式整理，沉淀为历史档案。
+### 📰 1. 新闻与动态 (`01-新闻与动态/`)
+- **定位**：AI 及 AI Agent 领域新闻、每日动态追踪、重要事件里程碑。
+- **内容**：行业新闻速递 + AI Agent Daily（OpenClaw Release、Claude Code、MCP 生态、顶流博主原创）。
 
 ### 🌐 2. AI知识星球 (`02-AI知识星球/`)
 - **定位**：体系化 AI 知识图谱（非碎片知识）。
@@ -35,25 +35,12 @@ tags: [索引, 知识库, AI-Agent]
   - `06-工程落地与Vibe_Coding实战/` — [[6.1-终端IDE形态深度对比|IDE对比]] · [[6.2-CLI原生Agent实战|CLI Agent]] · [[6.3-SWE-Agent端到端闭环开发|SWE-Agent]]
   - 独立专题：[[AI-Agent架构]] · [[MCP规范]] · [[Workflow设计模式]] · [[SWE-Agent实战]]
 
-### 💡 3. 日常灵感 (`03-日常灵感/`)
-- **定位**：伴随每日聊天的技术与想法汇总沉淀。
-- **内容**（SQL Server 加密系列）：
+### 💡 3. 笔记与灵感 (`03-笔记与灵感/`)
+- **定位**：日常学习笔记、技术灵感、随笔心得。
+- **SQL Server 加密系列**：
   - [[SQLServer_存储过程加密方案_WITH_ENCRYPTION|WITH ENCRYPTION 基础方案]]
   - [[SQLServer_高级加密方案_CLR_混淆|CLR + 代码混淆高级方案]]
   - [[SQLServer_Dacpac包加密与自动化部署|Dacpac 包加密与自动化部署]]
-
-### 🏗️ 4. 项目开发 (`04-项目开发/`)
-- **定位**：实战项目管理与 Vibe Coding 试水。
-- **BrickHub 项目**：
-  - [[4.5-BrickHub_Architecture_Vision|总体架构与愿景]]
-  - [[4.6-BrickHub_Technical_Research|进阶技术研究蓝图]]
-  - [[4.7-BrickHub_LDraw_Standard_Assets|LDraw 标准测试素材库]]
-  - [[4.8-BrickHub_Interactive_Engine_Architecture|互动拼搭引擎架构白皮书]]
-  - [[4.9-BrickHub_Engineering_Principles_and_Lessons|工程原则与血泪教训]]
-  - [[Gemini提示词|Gemini/Copilot 提示词模板]]
-
-### 📝 5. 日常笔记 (`05-日常笔记/`)
-- **定位**：记录个人心得与日常随笔。
 - **OpenAI Agent SDK 系列**：
   - [[00-Global-Rules]] · [[01-Session-Management]] · [[01-工作流编排（Graphs & Workflows）]]
   - [[02-异步消息与事件驱动（Event-driven Messaging）]] · [[03-平台化框架（DevUI_OTel_多语言）]]
@@ -66,10 +53,22 @@ tags: [索引, 知识库, AI-Agent]
 - **DeepLearning.AI 学习**：
   - [[DeepLearning.AI-学习路径]]
 
-### 📊 6. AI Agent Daily (`06-AI-Agent-Daily/`)
-- **定位**：每日 AI Agent 领域动态追踪（官方 + 顶流原创）。
-- **内容**：OpenClaw Release、Claude Code、MCP 生态、顶流博主原创。
-- 最新：[[06-AI-Agent-Daily/2026-04-13|2026-04-13]] · [[06-AI-Agent-Daily/2026-04-12|04-12]] · [[06-AI-Agent-Daily/2026-04-11|04-11]] · [[06-AI-Agent-Daily/2026-04-10|04-10]] · [[06-AI-Agent-Daily/2026-04-09|04-09]]
+### 🏗️ 4. 项目开发 (`04-项目开发/`)
+- **定位**：实战项目管理与 Vibe Coding 试水。
+- **BrickHub 项目**：
+  - [[4.5-BrickHub_Architecture_Vision|总体架构与愿景]]
+  - [[4.6-BrickHub_Technical_Research|进阶技术研究蓝图]]
+  - [[4.7-BrickHub_LDraw_Standard_Assets|LDraw 标准测试素材库]]
+  - [[4.8-BrickHub_Interactive_Engine_Architecture|互动拼搭引擎架构白皮书]]
+  - [[4.9-BrickHub_Engineering_Principles_and_Lessons|工程原则与血泪教训]]
+  - [[Gemini提示词|Gemini/Copilot 提示词模板]]
+
+### 🤖 5. AI Agent 专题 (`05-AI-Agent专题/`)
+- **定位**：AI Agent 架构研究、模型对比、实践经验。
+- **内容**：
+  - [[AI-Agent-Memory架构借鉴分析]]
+  - [[Hermes上下文管理优化方案]]
+  - [[Claude-Opus-4.7-vs-4.6]]
 
 ### 📚 7. 专题学习 (`10-Topics/`)
 - **DeepLearning.AI 课程追踪**：
@@ -77,7 +76,7 @@ tags: [索引, 知识库, AI-Agent]
   - `digests/` — 每日总结与学习建议
 
 ### ⚙️ 8. 治理与记忆 (`99-Governance/`)
-- **定位**：OpenClaw Agent 的运行记忆与日志存档。
+- **定位**：Agent 运行记忆与日志存档。
 - **内容**：[[OpenClaw-迁移摘要]]（压缩后的关键决策摘要）、Agent 心跳状态、[[00-写作与排版规范|写作与排版规范]]。
 - ⚠️ 注意：此目录为自动生成的 Agent Memory，非人工笔记。
 
@@ -100,7 +99,6 @@ tags: [索引, 知识库, AI-Agent]
 | `DevOps` | CI/CD、自动化部署 |
 | `Claude-Code` | Claude Code 工具使用与架构 |
 | `Vibe-Coding` | AI辅助编程实战 |
-| `OpenClaw` | OpenClaw Agent 平台 |
 | `DeepLearning-AI` | DeepLearning.AI 课程学习 |
 
 ---
