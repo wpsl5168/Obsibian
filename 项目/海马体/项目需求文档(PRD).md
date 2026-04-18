@@ -1,6 +1,6 @@
 # 海马体（Hippocampus）— 项目需求文档（PRD）
 
-> 版本：v1.0 | 日期：2026-04-18 | 作者：小虾 | 状态：初稿待评审
+> 版本：v1.1 | 日期：2026-04-18 | 作者：小虾 | 状态：初稿待评审
 
 ---
 
@@ -157,7 +157,7 @@ mcp_servers:
 | **功能描述** | 定期用本地模型整合记忆：去重、合并矛盾、提炼摘要，类似人脑REM睡眠 |
 | **接口** | `POST /v1/consolidate` (手动触发), 自动定时运行 |
 | **参数** | `scope: str`, `dry_run: bool` |
-| **处理逻辑** | ① 聚类相似记忆（余弦>0.85） ② 调用本地7B模型合并/摘要 ③ 检测矛盾记忆（"用户喜欢A" vs "用户不喜欢A"）保留最新 ④ 生成整合报告 |
+| **处理逻辑** | ① 聚类相似记忆（余弦>0.85） ② 合并/摘要（规则层：模板拼接；模型层：调用外部API） ③ 检测矛盾记忆（"用户喜欢A" vs "用户不喜欢A"）保留最新 ④ 生成整合报告 |
 | **验收标准** | ① 整合后记忆数量减少≥20%（有重复时） ② 矛盾检测准确率≥80% ③ 整合不丢失关键信息（人工抽检） ④ 默认每天凌晨自动运行一次 |
 
 ---
@@ -339,6 +339,33 @@ mcp_servers:
 
 ---
 
+### 6.5 安全与自动化
+
+#### F20: 敏感信息识别（PII Detection）
+
+| 项目 | 说明 |
+|------|------|
+| **功能描述** | 写入记忆时自动检测敏感信息（API Key、邮箱、手机号、身份证号等），标记或脱敏，防止跨Agent共享时泄露 |
+| **接口** | 写入流程自动触发；`POST /v1/memories/scan` 可手动扫描存量 |
+| **实现** | 纯规则引擎，零模型依赖：正则匹配（API key模式、邮箱、手机号、身份证、信用卡号）+ 关键词黑名单（password、secret、token） |
+| **行为** | 检测到PII后：① 自动添加 `pii:true` 标签 ② `scope` 强制为 `private`（不可共享） ③ 可选脱敏模式：用 `***` 替换敏感值后存储 |
+| **配置** | `pii_detection: enabled/disabled`，`pii_action: tag_only/redact/reject`，`pii_patterns: list`（可扩展自定义正则） |
+| **验收标准** | ① 识别率≥95%（标准格式PII） ② 误报率<5% ③ 检测延迟<5ms ④ 共享接口自动拦截含PII的private记忆 ⑤ scan接口可扫描存量并生成报告 |
+
+#### F21: 自动记忆提取（Auto Memory Extraction）
+
+| 项目 | 说明 |
+|------|------|
+| **功能描述** | 从Agent对话流中自动提取值得记住的内容，无需Agent显式调用add。这是核心用户体验——Agent不需要"知道"自己在存记忆 |
+| **接口** | `POST /v1/extract` |
+| **参数** | `messages: list[{role, content}]`（对话片段），`agent_id: str`，`mode: enum(rules\|model\|hybrid)` |
+| **规则层（无模型）** | ① 用户纠正Agent时 → 提取偏好（"我喜欢X不喜欢Y"模式匹配） ② 用户自述信息 → 提取事实（"我是/我在/我的"模式） ③ Agent发现环境信息 → 提取（"OS is/Python version"等） ④ 重复出现的关键词/实体 → 提取 |
+| **模型层（可选）** | 调用外部LLM API对对话做摘要提取，识别隐含偏好和上下文 |
+| **输出** | `extracted: list[{content, confidence, source_turn, suggested_scope, suggested_tags}]`，需Agent确认或配置自动写入阈值 |
+| **验收标准** | ① 规则层可独立运行（零API费用） ② 提取准确率≥70%（规则层）/≥90%（模型层） ③ 支持auto_commit阈值：confidence>0.8自动写入 ④ 提取不阻塞对话（异步处理） ⑤ 防重复：提取结果与已有记忆去重 |
+
+---
+
 ### 6.3 协议层
 
 #### F7: REST API
@@ -469,9 +496,9 @@ Agent-B → 被授权read权限
 │  └─────────────────────────────────────────────────────┘   │
 │                         ▼                                  │
 │  ┌─────────────────────────────────────────────────────┐   │
-│  │                 本地模型层                             │   │
-│  │  Ollama / llama.cpp — 7B模型                         │   │
-│  │  用途：embedding生成、记忆分类、摘要、遗忘决策、矛盾检测  │   │
+│  │              智能处理层（分级策略）                      │   │
+│  │  无模型层：温度调控/TTL遗忘/正则PII/余弦去重（MVP）     │   │
+│  │  可选模型层：整合/摘要/矛盾检测（外部API或本地大模型）   │   │
 │  └─────────────────────────────────────────────────────┘   │
 └─────────────────────────────────────────────────────────────┘
 
@@ -496,8 +523,8 @@ Agent-B → 被授权read权限
 |------|------|
 | **OS** | Linux / macOS / Windows (WSL2) |
 | **Python** | 3.10+ |
-| **RAM** | 2GB（无本地模型）/ 6GB（含7B模型推理） |
-| **磁盘** | 500MB（引擎） + 4GB（本地模型，可选） |
+| **RAM** | 2GB（规则引擎模式）/ 4GB+（含embedding生成） |
+| **磁盘** | 500MB（引擎） + 可选embedding模型缓存 |
 | **网络** | 安装时需要（pip/docker pull），运行时完全离线 |
 
 ### 推荐配置
@@ -515,7 +542,7 @@ Agent-B → 被授权read权限
 | SQLite 3.35+ | 存储（内置于Python） | ✅ 必须 |
 | sqlite-vec | 向量搜索扩展 | ✅ 必须 |
 | FastAPI + Uvicorn | REST API | ✅ 必须 |
-| Ollama | 本地模型推理 | ⚠️ 可选（无则禁用智能功能） |
+| 外部LLM API | 整合/摘要/矛盾检测（OpenAI/Anthropic/本地Ollama均可） | ⚠️ 可选（无则仅用规则引擎，MVP够用） |
 | jieba | 中文分词 | ⚠️ 可选（无则中文FTS降级） |
 
 ---
@@ -524,10 +551,10 @@ Agent-B → 被授权read权限
 
 | 阶段 | 周期 | 目标 | 交付物 |
 |------|------|------|--------|
-| **M0: Dogfood** | W1-2 | 从Hermes记忆系统提炼核心 | 独立Python包骨架，通过现有memory_server.py验证 |
+| **M0: Dogfood** | W1-2 | 从Hermes现有记忆迁移 | ① 解析~/memory-mcp/memory_server.py的4个MCP tools → 抽象为hippocampus核心API ② 迁移MEMORY.md/USER.md→SQLite ③ Hermes config改接hippocampus MCP ④ 验证：Hermes记忆读写无感切换 |
 | **M1: Core** | W3-4 | 记忆CRUD + 热冷分层 + 检索 | F1-F4完成，单元测试覆盖>80% |
 | **M2: Protocol** | W5-6 | MCP + REST + CLI | F7-F9完成，可对接Claude Desktop/Hermes |
-| **M3: Smart** | W7-8 | 本地模型 + 整合 + 遗忘 | F5完成，Auto-Dream可运行 |
+| **M3: Smart** | W7-8 | 智能整合 + 自动提取 + PII检测 | F5+F20+F21完成，Auto-Dream+规则引擎可运行 |
 | **M4: Multi-Agent** | W9-10 | Agent隔离共享 + 知识库 | F6+F10完成 |
 | **M5: Launch** | W11-12 | 打包 + 文档 + 开源发布 | PyPI包, Docker镜像, GitHub README, HN Post |
 
@@ -554,6 +581,8 @@ Agent-B → 被授权read权限
 | POST | `/v1/knowledge/index` | 索引知识库 |
 | POST | `/v1/knowledge/search` | 搜索知识库 |
 | GET | `/v1/health` | 健康检查 |
+| POST | `/v1/memories/scan` | PII扫描存量 |
+| POST | `/v1/extract` | 自动记忆提取 |
 
 ## 附录B: 数据库Schema
 
