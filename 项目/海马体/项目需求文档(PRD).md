@@ -364,6 +364,18 @@ mcp_servers:
 | **输出** | `extracted: list[{content, confidence, source_turn, suggested_scope, suggested_tags}]`，需Agent确认或配置自动写入阈值 |
 | **验收标准** | ① 规则层可独立运行（零API费用） ② 提取准确率≥70%（规则层）/≥90%（模型层） ③ 支持auto_commit阈值：confidence>0.8自动写入 ④ 提取不阻塞对话（异步处理） ⑤ 防重复：提取结果与已有记忆去重 |
 
+#### F22: 记忆审查（Memory Review）
+
+| 项目 | 说明 |
+|------|------|
+| **功能描述** | 用户通过Web界面审查所有记忆内容，按Agent过滤、按时间轴浏览，支持编辑/删除/标记，让用户对AI记了什么拥有完全掌控 |
+| **接口** | `GET /v1/memories/timeline`（API层），前端为内置Web UI |
+| **参数** | `agent_id: str`（按Agent过滤），`scope: list[str]`，`temperature: list[str]`，`tags: list[str]`，`date_from: datetime`，`date_to: datetime`，`page: int`，`page_size: int`（默认50） |
+| **返回** | `items: list[{id, content, agent_id, agent_name, scope, tags, temperature, pii, pinned, created_at, updated_at, access_count}]`，按created_at降序，支持按天分组 |
+| **UI功能** | ① 左侧Agent列表筛选（显示各Agent记忆数量） ② 主区域时间轴视图（按天分组，每条记忆显示温度/标签/scope徽章） ③ 单条操作：编辑内容、删除、pin/unpin、手动升降温 ④ 批量操作：全选/多选后批量删除/归档 ⑤ 顶部搜索栏（FTS全文检索） ⑥ 温度/scope/PII筛选器 |
+| **技术实现** | 内置于FastAPI的静态文件服务，纯HTML+JS（无框架依赖），访问 `localhost:8200/ui` |
+| **验收标准** | ① 1万条记忆加载<2秒（分页） ② Agent过滤即时响应 ③ 编辑/删除后实时更新 ④ 移动端可用（响应式布局） ⑤ 支持导出选中记忆为JSON/Markdown |
+
 ---
 
 ### 6.3 协议层
@@ -581,6 +593,7 @@ Agent-B → 被授权read权限
 | POST | `/v1/knowledge/index` | 索引知识库 |
 | POST | `/v1/knowledge/search` | 搜索知识库 |
 | GET | `/v1/health` | 健康检查 |
+| GET | `/v1/memories/timeline` | 时间轴审查 |
 | POST | `/v1/memories/scan` | PII扫描存量 |
 | POST | `/v1/extract` | 自动记忆提取 |
 
