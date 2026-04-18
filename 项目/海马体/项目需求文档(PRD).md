@@ -376,6 +376,63 @@ mcp_servers:
 | **技术实现** | 内置于FastAPI的静态文件服务，纯HTML+JS（无框架依赖），访问 `localhost:8200/ui` |
 | **验收标准** | ① 1万条记忆加载<2秒（分页） ② Agent过滤即时响应 ③ 编辑/删除后实时更新 ④ 移动端可用（响应式布局） ⑤ 支持导出选中记忆为JSON/Markdown |
 
+#### F23: 上下文注入策略（Context Injection）
+
+| 项目 | 说明 |
+|------|------|
+| **功能描述** | 定义记忆如何注入Agent对话的system prompt——存和搜只是基础设施，注入才是用户体验的最后一公里。不同Agent框架统一调这个接口，不用各自拼装 |
+| **接口** | `POST /v1/inject` |
+| **参数** | `agent_id: str`，`query: str`（当前用户输入，用于相关性召回），`token_budget: int`（默认2000，注入内容的token上限），`strategy: enum(full\|summary\|ranked)`，`sections: list[enum(user_profile\|preferences\|facts\|recent\|relevant)]`（选择注入哪些板块） |
+| **策略** | **full**：原文注入（小量记忆时）；**summary**：先摘要再注入（记忆多时节省token）；**ranked**：按相关性打分，贪心填充到token_budget |
+| **输出** | `{injected_text: str, token_count: int, sources: list[memory_id], truncated: bool}` — 返回拼装好的文本块，Agent直接塞进system prompt |
+| **模板** | 内置默认模板（`## User Profile\n...\n## Relevant Context\n...`），支持用户自定义Jinja2模板 |
+| **验收标准** | ① 注入延迟<50ms（不含搜索） ② token计数误差<5% ③ 输出不超过token_budget ④ 支持自定义模板 ⑤ 无记忆时返回空串不报错 |
+
+#### F24: Webhook/事件推送（Event Push）
+
+| 项目 | 说明 |
+|------|------|
+| **功能描述** | 记忆变更时主动推送通知到外部系统，让Agent间实现记忆感知而非只能轮询。Agent-A更新共享记忆后，Agent-B实时收到通知 |
+| **接口** | `POST /v1/webhooks`（注册），`GET /v1/webhooks`（列表），`DELETE /v1/webhooks/{id}`（删除） |
+| **参数** | 注册：`url: str`（回调地址），`events: list[enum(memory.created\|memory.updated\|memory.deleted\|memory.promoted\|memory.archived\|consolidation.completed\|pii.detected)]`，`agent_filter: str`（可选，只监听指定Agent的事件），`secret: str`（HMAC签名密钥） |
+| **推送格式** | `{event: str, timestamp: float, agent_id: str, memory_id: str, data: dict, signature: str}` — POST到注册的URL，带HMAC-SHA256签名 |
+| **重试** | 失败后指数退避重试3次（1s/5s/30s），连续失败10次自动禁用webhook并记录 |
+| **验收标准** | ① 事件推送延迟<500ms ② HMAC签名可验证 ③ 重试机制工作正常 ④ 禁用的webhook可手动重新启用 ⑤ 支持同时注册多个webhook |
+
+#### F25: 备份与恢复（Backup & Restore）
+
+| 项目 | 说明 |
+|------|------|
+| **功能描述** | 定时自动备份+手动备份+一键恢复。数据全在SQLite单文件里，没有备份策略就是裸奔 |
+| **接口** | CLI: `hippocampus backup`/`hippocampus restore`；API: `POST /v1/backup`，`POST /v1/restore` |
+| **备份内容** | memory.db完整快照 + config.yaml + hot/MEMORY.md — 打包为单个 `.hcb`（hippocampus backup）文件（实为tar.gz） |
+| **自动备份** | 可配置cron表达式（默认每天凌晨3点），保留最近N份（默认7），超出自动清理最旧的 |
+| **恢复** | `hippocampus restore <backup_file>` — 停止服务→替换数据文件→重启→验证完整性 |
+| **存储** | 默认 `~/.hippocampus/backups/`，支持配置为任意路径（方便挂载外部存储） |
+| **验收标准** | ① 备份不中断服务（SQLite在线备份API） ② 恢复后所有记忆可检索 ③ 备份文件含SHA256校验和 ④ 损坏的备份恢复时报错而非静默失败 ⑤ `hippocampus backup --list` 查看所有备份及大小 |
+
+#### F26: 记忆导入/迁移（Import & Migration）
+
+| 项目 | 说明 |
+|------|------|
+| **功能描述** | 从外部系统导入记忆，降低用户切换成本。开源项目的采用率很吃这个——用户已有记忆数据时能无痛迁入 |
+| **接口** | CLI: `hippocampus import`；API: `POST /v1/import` |
+| **支持格式** | ① **Hermes MD** — 解析MEMORY.md/USER.md的§分隔格式，每段→一条记忆 ② **Mem0 JSON** — 兼容Mem0导出格式 ③ **通用JSON** — `[{content, tags?, metadata?, created_at?}]` ④ **CSV** — content列必填，其余可选 ⑤ **Markdown目录** — 每个.md文件→一条或多条记忆（按heading拆分） |
+| **参数** | `source: str`（文件路径或URL），`format: enum(hermes\|mem0\|json\|csv\|markdown)`，`agent_id: str`，`scope: str`，`dry_run: bool`（预览不执行），`dedup: bool`（导入时去重，默认true） |
+| **验收标准** | ① 每种格式有示例文件和文档 ② dry_run返回将导入的条数和预览 ③ 导入过程有进度输出 ④ 重复记忆自动跳过（余弦>0.92） ⑤ 导入失败不影响已有数据（事务保护） |
+
+#### F27: 记忆版本历史（Memory Versioning）
+
+| 项目 | 说明 |
+|------|------|
+| **功能描述** | 记忆内容每次变更保留历史版本，支持查看diff和回滚。整合/编辑/自动合并都可能改错，回不去就是灾难 |
+| **接口** | `GET /v1/memories/{id}/history`，`POST /v1/memories/{id}/rollback` |
+| **参数** | history: `limit: int`（默认10）；rollback: `version: int`（回滚到指定版本号） |
+| **存储** | 表 `memory_versions`(id, memory_id, version, content, changed_by, change_type, created_at) — 每次UPDATE/consolidate自动插入旧版本 |
+| **返回** | `versions: list[{version, content, changed_by, change_type(manual\|consolidation\|auto_extract\|import), created_at, diff_summary}]` |
+| **UI集成** | F22审查界面中，每条记忆可展开查看历史版本，一键回滚 |
+| **验收标准** | ① 每次内容变更自动记录（零手动操作） ② 版本保留上限可配置（默认50版本/条） ③ 回滚后版本号递增（不覆盖历史） ④ 超出上限自动清理最早版本 ⑤ diff_summary为人可读的变更摘要 |
+
 ---
 
 ### 6.3 协议层
@@ -596,6 +653,15 @@ Agent-B → 被授权read权限
 | GET | `/v1/memories/timeline` | 时间轴审查 |
 | POST | `/v1/memories/scan` | PII扫描存量 |
 | POST | `/v1/extract` | 自动记忆提取 |
+| POST | `/v1/inject` | 上下文注入 |
+| POST | `/v1/webhooks` | 注册webhook |
+| GET | `/v1/webhooks` | 列表webhook |
+| DELETE | `/v1/webhooks/{id}` | 删除webhook |
+| POST | `/v1/backup` | 手动备份 |
+| POST | `/v1/restore` | 恢复备份 |
+| POST | `/v1/import` | 导入记忆 |
+| GET | `/v1/memories/{id}/history` | 版本历史 |
+| POST | `/v1/memories/{id}/rollback` | 回滚版本 |
 
 ## 附录B: 数据库Schema
 
@@ -668,6 +734,30 @@ CREATE TABLE consolidation_log (
     action TEXT,          -- merge/dedupe/forget/summarize
     affected_ids TEXT,    -- JSON array of memory IDs
     detail TEXT,
+    created_at REAL DEFAULT (unixepoch('subsec'))
+);
+
+-- 记忆版本历史
+CREATE TABLE memory_versions (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    memory_id TEXT REFERENCES memories(id) ON DELETE CASCADE,
+    version INTEGER NOT NULL,
+    content TEXT NOT NULL,
+    changed_by TEXT,              -- agent_id or 'system'
+    change_type TEXT CHECK(change_type IN ('manual','consolidation','auto_extract','import','rollback')),
+    created_at REAL DEFAULT (unixepoch('subsec'))
+);
+CREATE INDEX idx_mv_memory ON memory_versions(memory_id, version);
+
+-- Webhook注册表
+CREATE TABLE webhooks (
+    id TEXT PRIMARY KEY DEFAULT (hex(randomblob(8))),
+    url TEXT NOT NULL,
+    events TEXT DEFAULT '[]',     -- JSON array of event types
+    agent_filter TEXT,            -- NULL = all agents
+    secret TEXT,                  -- HMAC signing key
+    enabled BOOLEAN DEFAULT TRUE,
+    failure_count INTEGER DEFAULT 0,
     created_at REAL DEFAULT (unixepoch('subsec'))
 );
 ```
