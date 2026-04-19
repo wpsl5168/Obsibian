@@ -1,6 +1,6 @@
 # 海马体（Hippocampus）— 项目需求文档（PRD）
 
-> 版本：v2.0 | 日期：2026-04-18 | 作者：小虾 | 状态：评审中
+> 版本：v2.1 | 日期：2026-04-19 | 作者：小虾 | 状态：评审中
 
 ---
 
@@ -96,9 +96,17 @@ Agent无法持久化对话中获得的知识，每次对话从零开始。
 **操作步骤**
 1. Agent调用 `POST /v1/memories`，传入content和可选元数据
 2. 引擎计算content的embedding向量
-3. 与已有记忆做余弦相似度比对，>0.92则合并而非新建
-4. 写入SQLite memories表 + FTS5索引 + 向量索引
-5. 返回记忆ID和写入状态（created/merged）
+3. **精确去重**：内容normalize后完全相同→跳过，返回`duplicate`
+4. **语义去重**：与已有记忆余弦相似度>0.92→合并而非新建
+5. 写入SQLite memories表 + FTS5索引 + 向量索引
+6. 返回记忆ID和写入状态（created/merged/duplicate）
+
+**写入可靠性（WAL机制）**
+当海马体作为Hook管道的下游存储时（见F27），写入失败不应导致数据丢失：
+1. Hook端写入失败时，将操作追加到本地WAL文件（`~/.hermes/plugins/openhippo/wal.jsonl`）
+2. 每次Hook触发时，先检查WAL积压，有则重试
+3. 重试3次仍失败→标记为dead letter（`wal.dead.jsonl`）
+4. WAL文件大小上限1MB，超出轮转
 
 **输入参数**
 
@@ -122,9 +130,11 @@ Agent无法持久化对话中获得的知识，每次对话从零开始。
 
 **技术方案**
 - 存储：SQLite `memories` 表，含embedding BLOB字段
-- 去重：sqlite-vec计算余弦相似度，阈值0.92
+- 精确去重：content normalize（strip+去前缀标记）后SHA-256比对
+- 语义去重：sqlite-vec计算余弦相似度，阈值0.92
 - 索引：同步写入FTS5全文索引 + vec0向量索引
 - 批量：SQLite事务包裹，失败回滚
+- WAL：Hook端JSONL追加写入，FIFO重试队列
 
 **验收标准**
 1. 写入后立即可通过search检索到
@@ -758,7 +768,7 @@ Agent可能无意中将用户敏感信息写入共享记忆库，造成隐私泄
 依赖Agent主动调用add太被动，大量有价值信息在对话中流失。
 
 **操作步骤**
-1. Agent将对话片段发送到 `POST /v1/extract`
+1. Agent将对话片段发送到 `POST /v1/extract`（Hook模式下由post_llm_call自动触发，无需Agent显式调用）
 2. 规则层：模式匹配提取用户偏好/事实/环境信息
 3. 模型层（可选）：调用外部LLM做摘要提取
 4. 返回提取结果+置信度
@@ -783,10 +793,12 @@ Agent可能无意中将用户敏感信息写入共享记忆库，造成隐私泄
 
 **技术方案**
 - 规则层模式：
-  - 用户纠正："我喜欢X不喜欢Y"/"不要做X要做Y"
-  - 用户自述："我是/我在/我的/我叫"
-  - 环境信息："OS is/Python version/running on"
+  - 用户纠正："我喜欢X不喜欢Y"/"不要做X要做Y"/"别XX了"/"不是X是Y"
+  - 用户自述："我是/我在/我的/我叫/我习惯/我偏好"
+  - 环境信息："OS is/Python version/running on/安装了/部署在"
+  - 明确指令："记住/remember/always/never/以后/下次"
   - 重复实体：同一实体出现3+次→提取
+  - **Hook模式特殊规则**：post_llm_call直接对user_message做规则匹配，不命中则丢弃（不存储原始对话）
 - 模型层：外部LLM prompt提取隐含偏好
 - 去重：提取结果与已有记忆余弦>0.92→跳过
 - 异步：提取不阻塞对话流
@@ -875,10 +887,22 @@ Agent框架各自拼装记忆到prompt，格式不统一、token浪费、信息�
 **操作步骤**
 1. 访问 `localhost:8200/ui`
 2. 左侧Agent列表选择筛选
-3. 主区域时间轴浏览记忆
-4. 单条操作：编辑/删除/pin/升降温
-5. 批量操作：多选后批量删除/归档
-6. 搜索栏全文检索
+3. 主区域时间轴浏览记忆（hot+cold统一视图）
+4. 单条操作：查看详情/编辑/删除/pin/升降温
+5. 批量操作：多选后批量删除/归档/导出
+6. 搜索栏全文检索 + 语义搜索
+7. 查看记忆来源标记（手动写入/Hook提取/镜像同步/迁移导入）
+
+**API前置条件（REST CRUD by ID）**
+UI依赖以下REST API，需在UI开发前完成：
+
+| 方法 | 路径 | 说明 |
+|------|------|------|
+| GET | `/v1/memories/{id}` | 获取单条记忆详情 |
+| PUT | `/v1/memories/{id}` | 编辑记忆内容 |
+| DELETE | `/v1/memories/{id}` | 删除单条记忆 |
+| GET | `/v1/memories/timeline` | 分页时间轴（支持hot/cold/来源过滤） |
+| GET | `/v1/memories/{id}/history` | 版本历史（F10） |
 
 **输入参数**
 API层 `GET /v1/memories/timeline`：
@@ -1202,24 +1226,29 @@ SQLite文件损坏、误操作删除记忆、服务器迁移等场景下的数�
 #### F26: Hermes记忆迁移
 
 **需求描述**
-从现有Hermes内嵌记忆系统（~/memory-mcp/memory_server.py）无感迁移到海马体。这是Dogfood第一步，验证整个系统可用。
+从现有Hermes内嵌记忆系统迁移到海马体，采用**Hook管道双写**架构（而非替换MCP Server）。Hermes内置memory保留作为热缓存，海马体作为持久化冷存储+语义搜索引擎。这是Dogfood第一步。
 
 **解决的问题**
-海马体的第一个用户就是Hermes Agent自己。迁移验证是发布前的必经之路。
+海马体的第一个用户就是Hermes Agent自己。通过Hook管道实现双写同步，而非替换Hermes内置memory，原因：
+1. **MCP方案被否决**：大模型并不会每次都调用MCP tool，记忆同步不可靠
+2. **Hook方案优势**：管道级自动拦截，每次memory操作100%被捕获，零遗漏
+3. **保留Hermes热缓存**：Hermes内置memory注入system prompt的能力不可替代，海马体补充持久化+语义搜索
 
 **操作步骤**
-1. 解析现有memory_server.py的4个MCP tools接口签名
-2. 导入MEMORY.md和USER.md到海马体（F23 Hermes格式）
-3. 迁移state.db中的冷记忆到海马体cold层
-4. 修改Hermes config.yaml，MCP server从memory_server.py改为hippocampus mcp
-5. 验证：Hermes记忆读写行为无变化
+1. 部署OpenHippo Plugin到`~/.hermes/plugins/openhippo/`（见F27）
+2. 导入MEMORY.md和USER.md到海马体hot_memory表
+3. 迁移state.db中的冷记忆到海马体cold_memory表
+4. 对所有cold记忆执行embedding backfill
+5. 重启Hermes Gateway加载Plugin
+6. 验证：三个Hook正常触发，双写同步无遗漏
 
 **输入参数**
 
 | 参数 | 类型 | 必填 | 说明 |
 |------|------|------|------|
-| hermes_memory_path | str | ✅ | ~/memory-mcp/ 路径 |
-| hermes_config_path | str | ✅ | Hermes config.yaml路径 |
+| hermes_state_db | str | ✅ | Hermes state.db路径（含cold memory） |
+| memory_md | str | ✅ | MEMORY.md路径（hot memory - agent notes） |
+| user_md | str | ✅ | USER.md路径（hot memory - user profile） |
 
 **输出参数**
 
@@ -1227,26 +1256,77 @@ SQLite文件损坏、误操作删除记忆、服务器迁移等场景下的数�
 |------|------|------|
 | migrated_hot | int | 迁移的热记忆条数 |
 | migrated_cold | int | 迁移的冷记忆条数 |
-| config_updated | bool | Hermes配置是否更新成功 |
-| validation_passed | bool | 读写验证是否通过 |
+| embeddings_generated | int | 生成的embedding数 |
+| hooks_verified | bool | 三个Hook是否验证通过 |
 
 **技术方案**
 - MEMORY.md解析：§分隔符拆分→每段为一条hot记忆
 - USER.md解析：§分隔符拆分→scope=user的hot记忆
 - state.db解析：SQLite读取→mapping到hippocampus schema
-- 配置迁移：修改Hermes config.yaml的mcp_servers section
+- 迁移数据用metadata标记来源（`{"source": "hermes-migration"}`），不使用content前缀污染
+- Hook Plugin部署：三文件（pre_llm_call/post_llm_call/post_tool_call）+ __init__.py
 
 **验收标准**
-1. 迁移后Hermes的memory add/search/archive/promote四个操作正常
+1. 迁移后Hermes的memory add/replace/remove/search/archive/promote六个操作均同步到海马体
 2. 原有MEMORY.md/USER.md内容可通过search检索
 3. 迁移过程可回滚（保留原文件备份）
 4. 迁移脚本幂等（重复运行不产生重复记忆）
+5. 语义搜索验证通过（相关query命中迁移数据）
 
 **验证手段**
-- 端到端测试：迁移→Hermes对话→验证记忆读写
+- 端到端测试：迁移→Hermes对话→验证双写同步
 - 完整性测试：对比迁移前后记忆条数和内容
 - 回滚测试：迁移→回滚→验证原系统恢复
 - 幂等测试：迁移两次→验证记忆数量不翻倍
+- 语义搜索测试：用自然语言query验证embedding检索质量
+
+---
+
+#### F27: Hook管道集成（Pipeline Hook Integration）
+
+**需求描述**
+通过Hermes Plugin Hook机制实现海马体与Agent的自动集成。三个Hook覆盖记忆生命周期的全部入口，实现**全自动无感知**的记忆同步。
+
+**解决的问题**
+MCP依赖模型主动调用tool，不可靠（模型可能跳过、遗忘、选择不调用）。Hook在管道级拦截，100%捕获率，Agent完全无感知。
+
+**架构概览**
+```
+用户消息 → [pre_llm_call Hook] → 语义搜索冷记忆 → 注入context
+                                    ↓
+         → LLM生成回复 → [post_llm_call Hook] → 规则提取 → 有价值则写入cold
+                                    ↓
+         → 工具调用 → [post_tool_call Hook] → 镜像memory操作到海马体
+```
+
+**三个Hook职责**
+
+| Hook | 触发时机 | 职责 | 延迟要求 |
+|------|----------|------|----------|
+| pre_llm_call | 用户消息到达、LLM调用前 | 语义搜索冷记忆，注入相关上下文到system prompt | <2秒（阻塞） |
+| post_llm_call | LLM回复生成后 | 规则层提取对话中有价值的记忆，写入cold存储 | 异步，不阻塞 |
+| post_tool_call | 任何tool执行后 | 镜像memory工具的所有操作到海马体 | 异步，不阻塞 |
+
+**技术方案**
+- 通信：urllib.request同步HTTP调用海马体REST API
+- 失败处理：所有写入操作best-effort + WAL重试（见F1写入可靠性）
+- 搜索失败：静默降级，不影响对话
+- Plugin注册：`register(ctx)`函数，ctx.register_hook()注册三个回调
+
+**验收标准**
+1. 三个Hook在Gateway启动时自动注册，日志可见
+2. pre_llm_call：相关冷记忆注入到LLM上下文，搜索超时不阻塞对话
+3. post_llm_call：只提取有价值的记忆（非全量对话），噪声率<30%
+4. post_tool_call：memory的6种操作中写操作全部镜像
+5. 海马体服务不可用时，Hermes对话完全不受影响（优雅降级）
+6. WAL机制确保写入最终一致
+
+**验证手段**
+- Hook注册测试：重启Gateway→检查日志
+- 注入测试：对话中提及历史话题→验证冷记忆出现在回复上下文
+- 镜像测试：执行memory add→检查海马体DB中同步出现
+- 降级测试：停止海马体→正常对话→验证无报错
+- WAL测试：停止海马体→执行memory操作→重启→验证WAL回放
 
 
 ---
@@ -1306,6 +1386,40 @@ Agent-A创建shared repo(F14) → 写入项目上下文 → 授权Agent-B(F12)
 ├── hot/MEMORY.md      # Hot记忆镜像
 ├── backups/           # 自动备份
 └── logs/              # 运行日志
+
+**Hook管道集成架构（Dogfood模式 - F27）**
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│  Hermes Agent（工作Agent）                                    │
+│  ┌─────────────┐  ┌──────────────┐  ┌──────────────┐       │
+│  │ 内置Memory   │  │ System Prompt│  │  Tool调用     │       │
+│  │ (热缓存)     │  │ (注入热记忆)  │  │              │       │
+│  └──────┬──────┘  └──────────────┘  └───────┬──────┘       │
+│  ┌──────┴─────────────────────────────────────┴──────┐      │
+│  │              Plugin Hook管道（F27）                  │      │
+│  │  pre_llm_call → post_llm_call → post_tool_call    │      │
+│  └──────────────────────┬────────────────────────────┘      │
+└─────────────────────────┼───────────────────────────────────┘
+                          │ REST API (localhost:8200)
+                          ▼
+┌─────────────────────────────────────────────────────────────┐
+│  海马体 OpenHippo（记忆引擎）                                  │
+│  ┌─────────┐  ┌─────────────┐  ┌─────────────┐             │
+│  │ 语义搜索 │  │ 规则层提取   │  │ 去重引擎     │             │
+│  │FTS+Vec  │  │(F18 patterns)│  │(cosine>0.92)│             │
+│  └────┬────┘  └──────┬──────┘  └──────┬──────┘             │
+│       └──────────────┼───────────────┘                      │
+│              ┌───────┴───────┐                               │
+│              │  SQLite存储层  │                               │
+│              └───────────────┘                               │
+└─────────────────────────────────────────────────────────────┘
+```
+
+Hook Plugin文件: ~/.hermes/plugins/openhippo/
+├── __init__.py        # Hook注册 + 全部逻辑
+├── wal.jsonl          # 写入失败重试队列
+└── wal.dead.jsonl     # 死信队列
 ```
 
 ---
@@ -1329,22 +1443,30 @@ Agent-A创建shared repo(F14) → 写入项目上下文 → 授权Agent-B(F12)
 
 ### M0: Dogfood迁移（第1-2周）
 
-**目标**：从Hermes现有记忆系统无感迁移到海马体原型
+**目标**：通过Hook管道实现Hermes记忆双写同步到海马体
 
 **交付物**
-- [ ] hippocampus核心MemoryEngine类（add/search/delete/stats）
-- [ ] MEMORY.md/USER.md → SQLite迁移脚本
-- [ ] MCP Server（兼容现有4个tool签名）
-- [ ] Hermes config.yaml改接hippocampus
+- [x] MemoryEngine核心类（add/search/replace/remove/archive/promote/stats）
+- [x] SQLite + FTS5 + sqlite-vec混合检索引擎
+- [x] REST API（FastAPI，/v1/*端点）
+- [x] MEMORY.md/USER.md/state.db → 海马体迁移（含embedding backfill）
+- [x] Hermes Plugin Hook管道（F27三个Hook）
+- [ ] 写入去重（F1精确+语义去重）
+- [ ] post_llm_call规则层提取（F18，替代全量存储）
+- [ ] WAL重试机制（F1写入可靠性）
+- [ ] 记忆审查REST API（GET/PUT/DELETE by ID + timeline）
 
 **验收准则**
-1. ✅ Hermes对话中 memory add → 写入hippocampus DB → search可检索
+1. ✅ Hermes对话中 memory add → Hook自动镜像到海马体DB → search可检索
 2. ✅ 原MEMORY.md中所有记忆可通过search命中
-3. ✅ 迁移脚本幂等：运行两次记忆数不翻倍
-4. ✅ 切换过程Hermes无感知（MCP tool签名不变）
-5. ✅ 回滚方案：30秒内切回原memory_server.py
+3. ✅ 迁移脚本幂等：运行两次记忆数不翻倍（去重保证）
+4. ✅ Hook管道对Hermes完全透明（Agent无感知）
+5. ✅ 海马体不可用时Hermes正常工作（优雅降级）
+6. ⬜ 写入去重：重复内容不产生冗余记忆
+7. ⬜ 规则层提取：只存有价值记忆，噪声率<30%
+8. ⬜ 用户可通过REST API审查所有历史记忆
 
-**涉及功能**：F1(写入), F2(检索), F3(删除), F7(MCP), F26(迁移)
+**涉及功能**：F1(写入+去重), F2(检索), F18(规则提取), F20(审查API), F26(迁移), F27(Hook管道)
 
 ---
 
