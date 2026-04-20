@@ -67,7 +67,7 @@ tags: [OpenClaw, Memory, 摘要, 治理]
 
 ### 知识库重大重构（04-08）
 - 废弃旧 `Obsidian/` 目录，启用 `obsidian-vault/`
-- 建立 [[00-写作与排版规范]]（Callout 语法、盘古之白、Frontmatter、双链强制）
+- 建立 [[写作规范]]（Callout 语法、盘古之白、Frontmatter、双链强制）
 - AI 知识星球 6 大结构定型
 - 小贝模型升级为 `claude-3.5-sonnet`
 - 全量文件清洗、迁移、合并，推送 GitHub
