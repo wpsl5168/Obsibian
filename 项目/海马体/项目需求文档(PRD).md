@@ -6,7 +6,7 @@
 
 ## 一、项目目的
 
-为AI Agent提供**本地优先、隐私第一**的持久化记忆引擎。让任何Agent框架通过标准协议（MCP/REST/CLI）即插即用地获得跨会话记忆能力，数据永远不离开用户的机器。
+为AI Agent提供**本地优先、隐私第一**的持久化记忆引擎。让任何Agent框架通过标准协议（REST API / CLI / Hook Plugin）即插即用地获得跨会话记忆能力，数据永远不离开用户的机器。记忆库支持**一键导出迁移**，用户可随时将全部记忆打包带走，零锁定。
 
 ### 核心命题
 
@@ -23,7 +23,7 @@
 | 3 | **部署复杂** | 竞品需3+容器、Neo4j、外部embedding API | `pip install hippocampus` 一行搞定 |
 | 4 | **记忆割裂** | 多Agent各自为政，无法共享上下文 | GitHub-style记忆仓库，权限隔离+受控共享 |
 | 5 | **记忆膨胀** | 只存不管，记忆越来越多越来越慢 | 热冷分层+自动遗忘+整合，模拟人脑记忆机制 |
-| 6 | **集成成本高** | 每个框架对接方式不同 | MCP + REST + CLI三协议，5分钟集成 |
+| 6 | **集成成本高** | 每个框架对接方式不同 | REST API + CLI + Hook Plugin，5分钟集成 |
 
 ---
 
@@ -52,7 +52,7 @@
 | 开源（Community） | 付费（Pro/Enterprise） |
 |-------------------|----------------------|
 | 完整记忆引擎 | 跨设备E2E加密同步 |
-| MCP + REST + CLI | Web Dashboard |
+| REST API + CLI + Hook Plugin | Web Dashboard |
 | 热冷分层 + FTS5 + 向量搜索 | 记忆分析报告 |
 | 单机多Agent隔离共享 | 团队共享（RBAC）/ SSO / 审计 |
 
@@ -71,8 +71,8 @@ docker run -d -p 8200:8200 -v ~/.hippocampus:/data hippocampus/hippocampus:lates
 from hippocampus import MemoryEngine
 engine = MemoryEngine(db_path="~/.hippocampus/memory.db")
 
-# 方式4: MCP接入
-# config.yaml → mcp_servers.hippocampus.command: hippocampus mcp
+# 方式4: Hook/Plugin接入（以Hermes Agent为例）
+# 在Agent的plugin目录放置hook脚本，自动拦截对话并同步记忆
 ```
 
 ---
@@ -147,7 +147,7 @@ Agent无法持久化对话中获得的知识，每次对话从零开始。
 - 单元测试：写入→检索round-trip
 - 性能测试：批量写入100条计时
 - 去重测试：写入近义句验证合并行为
-- 集成测试：通过MCP/REST/CLI三种协议写入后交叉检索
+- 集成测试：通过REST/CLI/Hook三种方式写入后交叉检索
 
 
 ### 6.2 协议与接入
@@ -199,50 +199,37 @@ Agent框架需要通过HTTP调用记忆服务，需要标准化、有文档、�
 
 ---
 
-#### F7: MCP协议
+#### F7: Hook/Plugin集成协议
 
 **需求描述**
-Model Context Protocol Server，供Claude Code/Hermes/Cursor等MCP客户端直接调用。
+通过Hook/Plugin管道机制，让Agent框架**无感知**地自动同步记忆。同时支持REST API供直接调用。
 
 **解决的问题**
-MCP是AI Agent生态标准协议，不支持MCP就无法被主流Agent框架即插即用。
+传统MCP依赖大模型"主动调用"tool，不可靠（模型可能跳过、遗忘、选择不调用）。Hook在管道级拦截，100%捕获率，Agent完全无感知。
 
-**操作步骤**
-1. 用户在Agent配置文件中添加 `hippocampus mcp` 作为MCP server
-2. Agent框架自动发现tools列表
-3. Agent通过tool_call调用记忆操作
-4. 海马体通过stdio/SSE返回结果
-
-**输入参数**
-MCP Tools列表：
-
-| Tool名 | 对应API | 说明 |
-|--------|---------|------|
-| memory_add | POST /v1/memories | 写入记忆 |
-| memory_search | POST /v1/memories/search | 检索记忆 |
-| memory_delete | DELETE /v1/memories/{id} | 删除记忆 |
-| memory_stats | GET /v1/memories/stats | 统计信息 |
-| memory_consolidate | POST /v1/consolidate | 触发整合 |
-| memory_inject | POST /v1/inject | 上下文注入 |
-
-**输出参数**
-MCP标准content block：`{type: "text", text: JSON.stringify(result)}`
-
-**技术方案**
-- SDK：`mcp` Python SDK
-- 传输：stdio（默认）/ SSE（可配置）
-- Tool参数：与REST API完全一致，复用Pydantic模型
+**集成方式**
+1. **Hook/Plugin模式**（推荐）：在Agent的Gateway/Pipeline中注入pre/post hook，自动拦截对话并同步记忆
+2. **REST API模式**：直接调用 `POST /v1/memories`、`POST /v1/memories/search` 等标准HTTP接口
+3. **嵌入式模式**：`from hippocampus import MemoryEngine` 直接在Python中使用
 
 **验收标准**
-1. Claude Desktop配置后可直接调用所有tools
-2. Hermes Agent配置后可直接调用
-3. Tool参数与REST API一致
-4. 返回格式符合MCP标准
+1. Hook模式：Agent对话时记忆自动写入，无需Agent知晓
+2. REST模式：标准HTTP客户端可调用所有接口
+3. 多Agent可同时连接同一海马体实例，通过agent_id隔离
+4. 支持Bearer Token认证，保障安全
 
 **验证手段**
-- Claude Desktop集成测试：配置→调用memory_add→memory_search验证
-- Hermes集成测试：配置config.yaml→验证tool发现+调用
-- 协议测试：用MCP Inspector验证消息格式
+- Hook集成测试：Agent对话→验证记忆自动写入+语义检索命中
+- REST集成测试：curl调用全部API端点
+- 多Agent并发测试：多个Agent同时读写，数据隔离正确
+
+**已知安全债务（M2前必须解决）**
+- 当前单一Bearer Token，所有Agent共享，Agent-A可读写Agent-B数据
+- 目标：per-agent token，token绑定agent_id scope，越权请求返回403
+- 临时缓解：dogfood阶段只有单Agent，风险可控
+
+**未来扩展**
+MCP作为Agent生态标准协议正在快速普及（Claude Code、Cursor、Windsurf等），海马体不排除未来以可选协议层方式支持。但核心集成方式始终是Hook/Plugin（自动无感知）+ REST API（显式调用），MCP不会成为依赖项。
 
 ---
 
@@ -256,7 +243,7 @@ MCP标准content block：`{type: "text", text: JSON.stringify(result)}`
 
 **操作步骤**
 1. `hippocampus init` — 初始化数据目录和配置
-2. `hippocampus serve` — 启动HTTP+MCP服务
+2. `hippocampus serve` — 启动HTTP服务
 3. `hippocampus add "记忆内容"` — 写入记忆
 4. `hippocampus search "查询词"` — 检索记忆
 5. `hippocampus stats` — 查看统计
@@ -1059,20 +1046,30 @@ SQLite文件损坏、误操作删除记忆、服务器迁移等场景下的数�
 
 ---
 
-#### F23: 记忆导入/迁移（Import & Migration）
+#### F23: 记忆导入/导出/迁移（Import / Export / Migration）
 
 **需求描述**
-从外部系统导入记忆，降低切换成本。支持Hermes MD、Mem0 JSON、通用JSON、CSV、Markdown目录5种格式。
+支持记忆的完整导入和**一键导出**。导入：从外部系统迁入，降低切换成本，支持Hermes MD、Mem0 JSON、通用JSON、CSV、Markdown目录5种格式。导出：用户随时可将全部记忆打包带走，**零锁定**，这是海马体的核心承诺。
 
 **解决的问题**
-用户已有记忆数据（Hermes、Mem0、笔记系统），无法无痛迁入海马体。
+1. 用户已有记忆数据（Hermes、Mem0、笔记系统），无法无痛迁入海马体
+2. 用户担心数据被锁定在某个平台，无法自由迁移——海马体必须让用户"来去自由"
 
 **操作步骤**
-1. CLI：`hippocampus import --format hermes --source ~/memory-mcp/MEMORY.md`
+
+*导入：*
+1. CLI：`hippocampus import --format hermes --source ~/.hermes/MEMORY.md`
 2. API：`POST /v1/import` 上传文件
 3. 解析源格式→标准化→去重检查→写入
 4. dry_run预览导入数量和内容预览
 5. 导入过程有进度输出
+
+*导出（一键打包）：*
+6. CLI：`hippocampus export --format json --output ~/my-memories/`
+7. API：`GET /v1/export?format=json&agent_id=default`
+8. 支持导出格式：JSON（完整，含metadata/embedding）、Markdown（人类可读）、CSV（表格分析）
+9. 支持过滤：按agent_id、scope、时间范围、tag导出
+10. 导出包含完整元数据（创建时间、来源、tag、层级），确保可无损再导入
 
 **输入参数**
 
@@ -1084,6 +1081,18 @@ SQLite文件损坏、误操作删除记忆、服务器迁移等场景下的数�
 | scope | str | ❌ | 默认agent |
 | dry_run | bool | ❌ | 预览不执行 |
 | dedup | bool | ❌ | 导入时去重，默认true |
+
+**导出输入参数**
+
+| 参数 | 类型 | 必填 | 说明 |
+|------|------|------|------|
+| format | enum | ❌ | json/markdown/csv，默认json |
+| agent_id | str | ❌ | 导出指定Agent，默认全部 |
+| scope | str | ❌ | 过滤scope |
+| since | datetime | ❌ | 起始时间 |
+| until | datetime | ❌ | 截止时间 |
+| tags | list | ❌ | 过滤标签 |
+| include_embeddings | bool | ❌ | 是否包含向量，默认true（JSON格式） |
 
 **输出参数**
 
@@ -1102,12 +1111,25 @@ SQLite文件损坏、误操作删除记忆、服务器迁移等场景下的数�
 - 事务：批量INSERT包裹在事务中，失败回滚
 - 去重：逐条计算余弦相似度>0.92→跳过
 
+**导出技术方案**
+- 导出格式头：`{"schema_version": "1.0", "embedding_backend": "ollama/nomic-embed-text-v1.5", "exported_at": "ISO8601", "total_count": N, "agent_id": "..."}`
+- 流式写入：逐条从SQLite读取，大文件(>1万条)使用JSON Lines格式(.jsonl)，小文件使用标准JSON
+- 分片：`--split-size 50MB`按文件大小切分，文件名带序号（memories_001.jsonl, memories_002.jsonl）
+- 导入reembed检测：比对导出文件的`embedding_backend`与当前配置，不一致时提示用户确认reembed
+- Markdown导出：每条记忆一个section，含标题(前30字)、时间、tag、层级(hot/warm/cold)、正文
+
 **验收标准**
-1. 每种格式有示例文件和文档
+1. 每种导入格式有示例文件和文档
 2. dry_run返回预览不执行
 3. 导入失败不影响已有数据（事务保护）
 4. 重复记忆自动跳过
 5. 10K条导入<60秒
+6. **一键导出**：`hippocampus export` 可导出全部记忆，包含完整元数据
+7. **round-trip保证**：export→import后记忆数量和内容100%一致
+8. 导出JSON包含embedding向量，迁移后无需重新计算
+9. 导出JSON必须包含`schema_version`字段，版本化格式，确保未来表结构变更后老导出文件仍可解析
+10. 导入时支持`--reembed`选项：检测embedding后端不一致时自动重算向量，而非使用不兼容的旧向量
+11. 10万条记忆导出采用**流式写入**，内存占用<200MB，支持`--split-size`分片
 
 **验证手段**
 - 格式测试：每种格式准备测试文件→导入→验证
@@ -1226,11 +1248,11 @@ SQLite文件损坏、误操作删除记忆、服务器迁移等场景下的数�
 #### F26: Hermes记忆迁移
 
 **需求描述**
-从现有Hermes内嵌记忆系统迁移到海马体，采用**Hook管道双写**架构（而非替换MCP Server）。Hermes内置memory保留作为热缓存，海马体作为持久化冷存储+语义搜索引擎。这是Dogfood第一步。
+从现有Hermes内嵌记忆系统迁移到海马体，采用**Hook管道双写**架构。Hermes内置memory保留作为热缓存，海马体作为持久化冷存储+语义搜索引擎。这是Dogfood第一步。
 
 **解决的问题**
 海马体的第一个用户就是Hermes Agent自己。通过Hook管道实现双写同步，而非替换Hermes内置memory，原因：
-1. **MCP方案被否决**：大模型并不会每次都调用MCP tool，记忆同步不可靠
+1. **早期曾考虑MCP方案但被否决**：大模型并不会每次都调用MCP tool，记忆同步不可靠
 2. **Hook方案优势**：管道级自动拦截，每次memory操作100%被捕获，零遗漏
 3. **保留Hermes热缓存**：Hermes内置memory注入system prompt的能力不可替代，海马体补充持久化+语义搜索
 
@@ -1336,7 +1358,7 @@ MCP依赖模型主动调用tool，不可靠（模型可能跳过、遗忘、选�
 ### 7.1 首次安装
 
 ```
-pip install hippocampus → hippocampus init → hippocampus serve → 配置Agent MCP/REST → 开始使用
+pip install hippocampus → hippocampus init → hippocampus serve → 配置Agent Hook/REST → 开始使用
 ```
 
 ### 7.2 记忆生命周期
@@ -1365,11 +1387,11 @@ Agent-A创建shared repo(F14) → 写入项目上下文 → 授权Agent-B(F12)
 │  ┌──────────┐  ┌──────────┐  ┌──────────┐  ┌───────────┐  │
 │  │Claude Code│  │  Hermes  │  │  Cursor  │  │ 自定义Agent│  │
 │  └─────┬────┘  └─────┬────┘  └─────┬────┘  └─────┬─────┘  │
-│        │MCP          │REST         │MCP          │REST     │
+│        │Hook         │Hook/REST    │REST         │REST     │
 └────────┼─────────────┼─────────────┼─────────────┼─────────┘
          ▼             ▼             ▼             ▼
 ┌─────────────────────────────────────────────────────────────┐
-│  协议层: MCP Server(stdio/SSE) | REST API(FastAPI) | CLI    │
+│  协议层: REST API(FastAPI) | CLI | Hook/Plugin管道            │
 ├─────────────────────────────────────────────────────────────┤
 │  认证层: Agent Token → Repo权限 → Scope过滤                  │
 ├─────────────────────────────────────────────────────────────┤
@@ -1549,7 +1571,7 @@ Hook Plugin文件: ~/.hermes/plugins/openhippo/
 - [ ] Obsidian知识库索引（F24）
 - [ ] 记忆审查Web UI（F20）
 - [ ] 健康检查+监控（F25）
-- [ ] 导入迁移（F23）5种格式
+- [ ] 导入导出迁移（F23）5种格式 + 一键导出
 
 **验收准则**
 1. ✅ 备份→恢复round-trip零数据丢失
