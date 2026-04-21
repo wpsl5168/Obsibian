@@ -1,8 +1,12 @@
 ---
 title: "05-Handoff与Triage（交接_分诊）"
+created: 2026-03-28
+updated: 2026-04-20
+type: methodology
+tags: []
+status: draft
 date: 2026-04-08
 category: Notes
-tags: [daily]
 ---
 
 # 05-Handoff与Triage（交接_分诊）

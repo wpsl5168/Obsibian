@@ -1,8 +1,12 @@
 ---
 title: "Diagram-Style"
+created: 2026-04-07
+updated: 2026-04-20
+type: concept
+tags: []
+status: draft
 date: 2026-04-08
 category: Notes
-tags: [daily]
 ---
 
 # 配图标准（强约束：禁止 AI 生图）
@@ -43,7 +47,7 @@ tags: [daily]
 2) **原封不动下载**图片文件（不做 AI 重绘、不做“生成版”替代）。
 3) 将图片保存到知识库内的 `assets/`（建议子目录按 topic 命名，如 `assets/claude-code/`）。
 4) 在 Markdown 文章中用**相对路径**引用，例如：
-   - `![[assets/claude-code/official-architecture.png]]`（Obsidian 内链）
+   - `!assets/claude-code/official-architecture.png`（Obsidian 内链）
    - 或 `![caption](../assets/claude-code/official-architecture.png)`（标准 Markdown）
 5) 在图片附近标注来源（URL + 访问日期），并尽量说明该图对应正文的哪个小节。
 

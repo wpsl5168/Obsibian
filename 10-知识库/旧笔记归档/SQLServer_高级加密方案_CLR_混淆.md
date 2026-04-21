@@ -1,11 +1,15 @@
 ---
 title: "SQLServer_高级加密方案_CLR_混淆"
+created: 2026-04-07
+updated: 2026-04-20
+type: concept
+tags: [security]
+status: draft
 date: 2026-04-08
 category: SQL-Server
-tags: [sql, database, security]
 ---
 
-# [[SQL Server]] 存储过程高级加密方案：CLR + 代码混淆
+# SQL Server 存储过程高级加密方案：CLR + 代码混淆
 
 > 系列文档：[[SQLServer_存储过程加密方案_WITH_ENCRYPTION|WITH ENCRYPTION基础方案]] · [[SQLServer_Dacpac包加密与自动化部署|Dacpac加密部署]]
 
@@ -13,7 +17,7 @@ tags: [sql, database, security]
 原生 T-SQL 的 `WITH ENCRYPTION` 仅是一种可逆的代码混淆（文本异或），面对掌握专用工具的高级 DBA（具备 `sa` 或 `sysadmin` 权限），源码仍有被提取和还原的风险。
 
 为了实现**真正意义上的防逆向工程**，行业内通常采用“降维打击”策略：
-将核心商业逻辑从 T-SQL 剥离，使用 C# (.NET) 编写，通过专业混淆器（Obfuscator）进行深度代码混淆后，编译为二进制 `.dll`（Assembly），最后作为 **CLR 存储过程** 部署到 [[SQL Server]] 引擎中。
+将核心商业逻辑从 T-SQL 剥离，使用 C# (.NET) 编写，通过专业混淆器（Obfuscator）进行深度代码混淆后，编译为二进制 `.dll`（Assembly），最后作为 **CLR 存储过程** 部署到 SQL Server 引擎中。
 
 ### 核心优势与代价
 - ✅ **极高的破解门槛**：即使攻击者导出 `.dll`，反编译后看到的也将是变量名全乱（如 `a`、`b`）、控制流被打断的“意大利面条”代码，破解成本远高于重写。
@@ -26,7 +30,7 @@ tags: [sql, database, security]
 ## 实战部署指南（三步走）
 
 ### 第一步：使用 C# 编写核心逻辑
-在 Visual Studio 中创建“[[SQL Server]] 数据库项目”或普通类库项目，编写机密算法。
+在 Visual Studio 中创建“SQL Server 数据库项目”或普通类库项目，编写机密算法。
 
 ```csharp
 using System;
@@ -40,7 +44,7 @@ public class CoreBusinessLogic
     public static void CalculateSecretBonus(SqlInt32 customerId, out SqlDecimal bonus)
     {
         // 核心机密算法（例如：复杂的计息、返佣规则、风控判定等）
-        // 外部无法通过 [[SQL Server]] 系统表看到此处的逻辑
+        // 外部无法通过 SQL Server 系统表看到此处的逻辑
         double baseVal = customerId.Value * 3.14159;
         
         if (baseVal > 1000) {
@@ -57,11 +61,11 @@ public class CoreBusinessLogic
 这是本方案的核心环节。使用混淆工具（如开源的 `ConfuserEx` 或商用的 `Dotfuscator`）对 `MyBusiness.dll` 进行处理。
 - **效果**：工具将重新编码方法名、混淆 IL 指令流并加密字符串常量。输出一个同名但在逆向工程下“面目全非”的保护版 DLL。
 
-### 第三步：部署至 [[SQL Server]]
+### 第三步：部署至 SQL Server
 将混淆后的 DLL 部署到生产库。
 
 ```sql
--- 1. 开启 [[SQL Server]] 的 CLR 支持（若尚未开启）
+-- 1. 开启 SQL Server 的 CLR 支持（若尚未开启）
 EXEC sp_configure 'show advanced options', 1;
 RECONFIGURE;
 EXEC sp_configure 'clr enabled', 1;

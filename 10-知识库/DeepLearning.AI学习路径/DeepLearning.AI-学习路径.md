@@ -1,5 +1,10 @@
 ---
 title: DeepLearning.AI 学习路径（工程师向）
+created: 2026-03-31
+updated: 2026-04-20
+type: concept
+tags: []
+status: draft
 source: https://www.deeplearning.ai/courses/
 generated_at_utc: 2026-03-31
 ---

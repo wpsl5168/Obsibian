@@ -1,8 +1,12 @@
 ---
 title: "10-Best-Practices-Extract"
+created: 2026-03-29
+updated: 2026-04-20
+type: concept
+tags: []
+status: draft
 date: 2026-04-08
 category: Notes
-tags: [daily]
 ---
 
 # Claude Code Best Practices（摘录 + 落地解读）

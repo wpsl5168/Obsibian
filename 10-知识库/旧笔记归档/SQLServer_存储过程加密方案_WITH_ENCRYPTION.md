@@ -1,16 +1,20 @@
 ---
 title: "SQLServer_存储过程加密方案_WITH_ENCRYPTION"
+created: 2026-04-07
+updated: 2026-04-20
+type: concept
+tags: [security]
+status: draft
 date: 2026-04-08
 category: SQL-Server
-tags: [sql, database, security]
 ---
 
-# [[SQL Server]] 存储过程加密方案 (WITH ENCRYPTION)
+# SQL Server 存储过程加密方案 (WITH ENCRYPTION)
 
 > 系列文档：[[SQLServer_Dacpac包加密与自动化部署|Dacpac加密部署]] · [[SQLServer_高级加密方案_CLR_混淆|CLR高级混淆]]
 
 ## 场景与原理
-为了防止拥有高级权限（如 `sa`）的人员轻易窥探和窃取核心业务存储过程源码，[[SQL Server]] 提供了原生的 `WITH ENCRYPTION` 选项。
+为了防止拥有高级权限（如 `sa`）的人员轻易窥探和窃取核心业务存储过程源码，SQL Server 提供了原生的 `WITH ENCRYPTION` 选项。
 - **作用**：通过对系统表中存储的源码进行内部混淆（异或算法），使 `sp_helptext` 或 SSMS 的“修改”功能失效，直接阻断明文查看。
 - **特点**：不需要外部证书，零成本。属“防君子不防小人”级别，针对高级 DBA 仍有逆向解密风险，但在常规生产环境（防运维/初级开发人员拷贝代码）下行之有效。
 - **⚠️ 核心警告**：**加密不可逆！** 数据库不再保留明文，执行加密前**必须**自行在本地或 Git 库中备份源码。

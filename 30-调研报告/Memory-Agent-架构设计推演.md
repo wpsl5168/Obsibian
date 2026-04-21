@@ -1,7 +1,11 @@
 ---
 title: "Memory Agent 架构设计推演"
+created: 2026-04-17
+updated: 2026-04-20
+type: research
+tags: [agent, memory, architecture, methodology]
+status: stable
 date: 2026-04-17
-tags: [AI-Agent, 记忆系统, 架构设计, 苏格拉底式提问]
 ---
 
 # Memory Agent 架构设计推演

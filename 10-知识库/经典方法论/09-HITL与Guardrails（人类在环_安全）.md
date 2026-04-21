@@ -1,8 +1,12 @@
 ---
 title: "09-HITL与Guardrails（人类在环_安全）"
+created: 2026-03-28
+updated: 2026-04-20
+type: methodology
+tags: []
+status: draft
 date: 2026-04-08
 category: Notes
-tags: [daily]
 ---
 
 # 09-HITL与Guardrails（人类在环_安全）

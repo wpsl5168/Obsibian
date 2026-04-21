@@ -16,7 +16,7 @@ status: stable
 
 | 子目录 | 内容 | 主要tag |
 |--------|------|---------|
-| [[AI模型与Agent/README\|AI模型与Agent]] | 22页系统化AI/Agent知识体系。1.x 大模型 / 2.x 提示工程 / 3.x 工具与RAG / 4.x Agent架构 / 5.x 评测安全 / 6.x AI编程 | `#agent` `#llm` `#prompt` |
+| AI模型与Agent | 22页系统化AI/Agent知识体系。1.x 大模型 / 2.x 提示工程 / 3.x 工具与RAG / 4.x Agent架构 / 5.x 评测安全 / 6.x AI编程 | `#agent` `#llm` `#prompt` |
 | `经典方法论/` | 9页 — ReAct、Reflexion、ToT、HITL、Workflow编排等 | `#methodology` |
 | `DeepLearning.AI学习路径/` | DeepLearning.AI课程笔记与学习路径设计 | `#methodology` |
 | `工具速查/` | Claude Code / CLI / Diagram 等速查表 | `#vibe-coding` `#tooling` |

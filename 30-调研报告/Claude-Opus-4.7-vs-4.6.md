@@ -1,7 +1,11 @@
 ---
 title: Claude Opus 4.7 vs 4.6 对比
+created: 2026-04-17
+updated: 2026-04-20
+type: research
+tags: [llm, comparison]
+status: stable
 date: 2026-04-17
-tags: [claude, anthropic, model-comparison, opus]
 ---
 
 # Claude Opus 4.7 vs 4.6 对比

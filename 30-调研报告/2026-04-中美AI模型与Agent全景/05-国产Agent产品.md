@@ -1,7 +1,11 @@
 ---
 title: 国产 Agent 产品 4 强 2026
+created: 2026-04-20
+updated: 2026-04-20
+type: research
+tags: [agent, llm]
+status: stable
 date: 2026-04-20
-tags: [Agent, 中国, 扣子, 智谱, AutoGLM, 文心, Manus]
 parent: "[[INDEX]]"
 ---
 

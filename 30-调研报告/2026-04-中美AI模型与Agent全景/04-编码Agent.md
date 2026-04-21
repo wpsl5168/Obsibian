@@ -1,7 +1,11 @@
 ---
 title: 编码 Agent 6 强 2026
+created: 2026-04-20
+updated: 2026-04-20
+type: research
+tags: [agent, vibe-coding]
+status: stable
 date: 2026-04-20
-tags: [Agent, 编码, ClaudeCode, Codex, Cursor, Devin, OpenHands, GeminiCLI]
 parent: "[[INDEX]]"
 ---
 

@@ -1,8 +1,12 @@
 ---
 title: "20-CLI-Cheatsheet"
+created: 2026-03-29
+updated: 2026-04-20
+type: concept
+tags: []
+status: draft
 date: 2026-04-08
 category: Notes
-tags: [daily]
 ---
 
 # Claude Code CLI Cheatsheet（速查）

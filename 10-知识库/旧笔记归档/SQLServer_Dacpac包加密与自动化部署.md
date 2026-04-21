@@ -1,8 +1,12 @@
 ---
 title: "SQLServer_Dacpac包加密与自动化部署"
+created: 2026-04-08
+updated: 2026-04-20
+type: concept
+tags: [security]
+status: draft
 date: 2026-04-08
 category: SQL-Server
-tags: [sql, database, security]
 ---
 
 # SQLServer_Dacpac包加密与自动化部署 (PowerShell+AES256)
@@ -10,7 +14,7 @@ tags: [sql, database, security]
 > 系列文档：[[SQLServer_存储过程加密方案_WITH_ENCRYPTION|WITH ENCRYPTION基础方案]] · [[SQLServer_高级加密方案_CLR_混淆|CLR高级混淆]]
 
 **日期**: 2026-04-08
-**关联**: 基于 2026-04-07 讨论的 [[SQL Server]] 存储过程加密方案 (防代码泄露) 的进一步延伸 (防介质泄漏)。
+**关联**: 基于 2026-04-07 讨论的 SQL Server 存储过程加密方案 (防代码泄露) 的进一步延伸 (防介质泄漏)。
 
 ## 背景与痛点
 
@@ -19,7 +23,7 @@ tags: [sql, database, security]
 
 ## 解决方案
 
-整套方案使用 PowerShell 原生实现，基于 .NET AES-256 算法，并结合 [[SQL Server]] 自带的 `SqlPackage.exe`。
+整套方案使用 PowerShell 原生实现，基于 .NET AES-256 算法，并结合 SQL Server 自带的 `SqlPackage.exe`。
 **特点**:
 1. 纯代码实现，无第三方依赖（不需要安装 7z/WinRAR 等加密压缩软件）。
 2. 在部署阶段实现“阅后即焚”，尽可能缩短明文包在磁盘上的停留时间。
@@ -30,7 +34,7 @@ tags: [sql, database, security]
 
 ```powershell
 # 1. 配置参数
-$SqlPackagePath = "C:\Program Files\Microsoft [[SQL Server]]\160\DAC\bin\SqlPackage.exe"
+$SqlPackagePath = "C:\Program Files\Microsoft SQL Server\160\DAC\bin\SqlPackage.exe"
 $SourceConnectionString = "Server=.;Database=YourDB;Integrated Security=True;TrustServerCertificate=True;"
 $PlainDacpacPath = "C:\temp\YourDB.dacpac"
 $EncryptedFilePath = "C:\temp\YourDB.dacpac.enc"
@@ -72,7 +76,7 @@ Write-Host "打包并加密完成！输出文件: $EncryptedFilePath" -Foregroun
 
 ```powershell
 # 1. 配置参数
-$SqlPackagePath = "C:\Program Files\Microsoft [[SQL Server]]\160\DAC\bin\SqlPackage.exe"
+$SqlPackagePath = "C:\Program Files\Microsoft SQL Server\160\DAC\bin\SqlPackage.exe"
 $TargetConnectionString = "Server=.;Database=TargetDB;Integrated Security=True;TrustServerCertificate=True;"
 $EncryptedFilePath = "C:\temp\YourDB.dacpac.enc"
 $TempDacpacPath = "C:\temp\YourDB_temp.dacpac"
@@ -118,5 +122,5 @@ finally {
 
 ## 注意事项
 
-- **工具路径**: 脚本中的 `$SqlPackagePath` 需要根据目标服务器实际安装的 [[SQL Server]] 目录或 SSMS/Visual Studio 携带的 `DAC\bin` 路径进行微调。
+- **工具路径**: 脚本中的 `$SqlPackagePath` 需要根据目标服务器实际安装的 SQL Server 目录或 SSMS/Visual Studio 携带的 `DAC\bin` 路径进行微调。
 - **安全性**: 密码在脚本中建议通过参数化传入，或者部署工具动态获取，避免直接硬编码在文件中。

@@ -87,6 +87,7 @@ sources: [可选，源材料路径或URL]
 ### 状态维度 (lifecycle)
 - `#draft` — 草稿（与frontmatter status=draft同义，可选）
 - `#legacy` — 旧笔记归档区
+- `#meta` — 元页面（README、index、说明文档）
 
 > **新tag流程**：先PR到本Schema，再使用。禁止野生tag。
 

@@ -1,8 +1,12 @@
 ---
 title: "07-AI Dev产品化（CLI_GUI_Cloud）"
+created: 2026-03-28
+updated: 2026-04-20
+type: methodology
+tags: []
+status: draft
 date: 2026-04-08
 category: Notes
-tags: [daily]
 ---
 
 # 07-AI Dev产品化（CLI_GUI_Cloud）

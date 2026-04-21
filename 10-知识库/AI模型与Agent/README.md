@@ -1,8 +1,11 @@
 ---
 title: "02-AI知识星球 索引"
-date: 2026-04-08
+created: 2026-04-08
 updated: 2026-04-15
-tags: [索引, AI-Agent, 知识图谱]
+type: concept
+tags: [meta, agent, memory]
+status: draft
+date: 2026-04-08
 ---
 
 # 02-AI知识星球

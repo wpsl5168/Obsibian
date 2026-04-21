@@ -90,3 +90,51 @@ type: meta
   - research-to-kb：入库子Agent context 强制要求frontmatter规范+更新index+追加log+lint自检
 - 首跑基线：88页 / 100% frontmatter覆盖 / 0 CRITICAL / 463 WARN（66坏链、205野生tag、183缺字段、其余孤儿页/超长页）
 - 这些 WARN 是真实存量债务，留待后续按主题分批清理
+
+## [2026-04-21] mass-cleanup | 第4波债务清理 | 451 WARN已修复
+**工具**: 新增 `~/.hermes/skills/note-taking/kb-maintenance/scripts/wiki_fix.py`
+**模式**: dry-run → apply → re-lint → 幂等验证
+
+### 治理数据 BEFORE → AFTER
+| 指标 | BEFORE | AFTER | Δ |
+|---|---|---|---|
+| CRITICAL | 0 | 0 | — |
+| WARN     | 463 | **7** | -451 (-97.4%) |
+| 坏链      | 66  | **0** | 全清 |
+| 野生tag   | 205 | **0** | 全清 |
+| 缺字段    | 183 | **0** | 全清 |
+| 非法status | 2  | **0** | 全清 |
+| 超长页    | 7   | 7  | 留待拆文波 |
+
+### 4A 坏链修复（66处）
+- 13× [[SQL Server]] → 删除（旧笔记目标已不在治理区）
+- 7× [[Model_Context_Protocol 规范解析]] → [[3.2-Model_Context_Protocol规范解析]]
+- 7× [[AI_Agent 核心心智模型]] → [[4.1-AI_Agent核心心智模型]]
+- 7× [[工作流编排模式]] → [[4.2-工作流编排模式]]
+- 4× [[1.1-LLM基础与模型选型]] → [[1.1-大模型演进与主流架构体系]]
+- 其余按映射表批量替换
+
+### 4B 标签归一（205处 → 17-tag taxonomy）
+- 大小写归一: #AI/#LLM → #llm | #BrickHub → #brickhub | #Agent → #agent
+- 分类归并: #Cursor/#Copilot/#Devin/#OpenHands/#GeminiCLI/#Windsurf → #vibe-coding
+- 厂商映射: #OpenAI/#Google/#Meta/#xAI/#DeepSeek/#Qwen/#Kimi → #llm
+- 语义归并: #MemGPT/#长期记忆/#向量数据库 → #memory | #ReAct/#TDD → #methodology
+- 章节中文tag: #基础架构与模型底座 等 → 删除（章节本身就是目录）
+- 杂项: #daily/#qa/#dreaming/#sql/#database → 删除
+- Schema扩展: 新增 #meta（README/index/说明文档专用）
+
+### 4C frontmatter补字段（62文件 / 183字段）
+- created: 62处（git log --diff-filter=A 取首次提交日期）
+- updated: 58处（git log -1 取最近提交日期）
+- type:    62处（按目录推断: 10-/AI模型→concept, 30-/→research, 20-/→entity）
+- status:  60处（30-调研→stable, 其余→draft）
+- tags:    1处
+
+### 验证闭环
+- ✅ wiki_fix.py 幂等性测试通过（第二次执行0变更）
+- ✅ wiki_lint.py 复跑确认 451 WARN 已清
+- ✅ 抽查 1.1-大模型演进 / Memory架构借鉴分析 frontmatter 符合规范
+
+### 留待清理
+- 7处 oversized 长文需拆分（独立的"拆长文波"，工作量大）
+- 55处 orphan + 17处 not_in_index 是 INFO 级，不影响主体质量

@@ -1,8 +1,12 @@
 ---
 title: "08-Observability与Evals（可观测_评测）"
+created: 2026-03-28
+updated: 2026-04-20
+type: methodology
+tags: []
+status: draft
 date: 2026-04-08
 category: Notes
-tags: [daily]
 ---
 
 # 08-Observability与Evals（可观测_评测）

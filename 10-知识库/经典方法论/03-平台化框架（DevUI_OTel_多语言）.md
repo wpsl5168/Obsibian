@@ -1,8 +1,12 @@
 ---
 title: "03-平台化框架（DevUI_OTel_多语言）"
+created: 2026-03-28
+updated: 2026-04-20
+type: methodology
+tags: []
+status: draft
 date: 2026-04-08
 category: Notes
-tags: [daily]
 ---
 
 # 03-平台化框架（DevUI_OTel_多语言）

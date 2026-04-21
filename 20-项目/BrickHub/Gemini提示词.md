@@ -1,7 +1,11 @@
 ---
 title: "BrickHub Gemini/Copilot 提示词模板"
+created: 2026-04-09
+updated: 2026-04-20
+type: entity
+tags: [brickhub, prompt, llm, vibe-coding]
+status: draft
 date: 2026-04-08
-tags: [BrickHub, 提示词, Gemini, Copilot]
 ---
 
 

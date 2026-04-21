@@ -1,8 +1,12 @@
 ---
 title: "01-Session-Management"
+created: 2026-03-29
+updated: 2026-04-20
+type: concept
+tags: []
+status: draft
 date: 2026-04-08
 category: Notes
-tags: [daily]
 ---
 
 # 会话管理（压缩/切会话策略）

@@ -1,8 +1,11 @@
 ---
 title: 2026 中美 AI 模型与 Agent 全景报告
+created: 2026-04-20
+updated: 2026-04-20
+type: research
+tags: [research, llm, agent, comparison]
+status: stable
 date: 2026-04-20
-tags: [调研, AI模型, Agent, 中美对比, 行业全景]
-status: v1.0
 ---
 
 # 2026 中美 AI 模型与 Agent 全景报告
@@ -79,4 +82,4 @@ status: v1.0
 
 - 季度更新一次（下次 2026-07）
 - 重大模型/产品发布即时增补
-- 关联：[[F5-Dream设计-v0.1|海马体F5-Dream设计]]、[[../../工作笔记/Hermes Agent架构]]
+- 关联：[[F5-Dream设计-v0.1|海马体F5-Dream设计]]、Hermes Agent架构

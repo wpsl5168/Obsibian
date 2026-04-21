@@ -1,7 +1,11 @@
 ---
 title: 开源 Agent 框架 6 强 2026
+created: 2026-04-20
+updated: 2026-04-20
+type: research
+tags: [agent, tooling]
+status: stable
 date: 2026-04-20
-tags: [Agent, 框架, 开源, LangGraph, AutoGen, CrewAI, MetaGPT, Dify, Langflow]
 parent: "[[INDEX]]"
 ---
 
@@ -29,7 +33,7 @@ parent: "[[INDEX]]"
 - **谁在用**：Airbyte 2026 报告中**生产部署数 #1**
 - **何时选**：多步骤 + 分支 + 审批 + 持久化的生产 Agent
 - **何时别选**：简单 ReAct（< 5 节点）杀鸡用牛刀
-- 详见 [[../../工作笔记/LangGraph 速查]]（待建）
+- 详见 ../../工作笔记/LangGraph 速查（待建）
 
 ### 🥈 Dify — 中国出品的 LLM-Ops 平台王者
 - **核心价值**：Workflow + RAG + Agent + Plugin 全栈一体，开箱可私有化部署
