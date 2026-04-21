@@ -80,3 +80,13 @@ type: meta
 反映新的88页结构与100% FM覆盖。
 
 ---
+
+## [2026-04-21] tool-release | wiki_lint.py 上线 | 治理体系第3波完成
+- 新工具：`~/.hermes/skills/note-taking/kb-maintenance/scripts/wiki_lint.py`（~330行Python，零依赖）
+- 检查项：frontmatter完整性 / tag taxonomy合规 / 坏链 / 孤儿页 / 超长页 / stale / index对账
+- 退出码：0=clean / 1=warnings / 2=errors（可串CI/cron）
+- Skill升级：kb-maintenance + research-to-kb 均已注入Schema约束段落
+  - kb-maintenance：审计流程改为一键跑lint，标签体系更新为17-tag taxonomy
+  - research-to-kb：入库子Agent context 强制要求frontmatter规范+更新index+追加log+lint自检
+- 首跑基线：88页 / 100% frontmatter覆盖 / 0 CRITICAL / 463 WARN（66坏链、205野生tag、183缺字段、其余孤儿页/超长页）
+- 这些 WARN 是真实存量债务，留待后续按主题分批清理
