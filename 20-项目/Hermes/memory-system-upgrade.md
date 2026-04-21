@@ -1,3 +1,12 @@
+---
+title: Hermes Memory System Upgrade
+created: 2026-04-15
+updated: 2026-04-21
+type: entity
+tags: [hermes, memory, architecture]
+status: stable
+---
+
 # Hermes Memory System Upgrade
 
 > Created: 2026-04-15

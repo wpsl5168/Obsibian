@@ -1,8 +1,17 @@
+---
+title: AI Agent Memory 架构借鉴分析
+created: 2026-04-15
+updated: 2026-04-21
+type: research
+tags: [memory, research, comparison]
+status: stable
+---
+
 # AI Agent Memory 架构借鉴分析
 
 > 调研日期：2025-04-15
 > 调研范围：Anthropic Claude、OpenAI ChatGPT、mem0、Letta (MemGPT)、LangGraph、Cursor
-> 目标：分析业界主流 AI Agent memory 方案，识别 Hermes Agent 的改进方向
+> 目标：分析业界主流 AI Agent memory 方案，识别 [[../20-项目/Hermes/README|Hermes Agent]] 的改进方向
 
 ---
 

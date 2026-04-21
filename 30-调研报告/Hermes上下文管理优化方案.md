@@ -1,3 +1,12 @@
+---
+title: Hermes 上下文管理优化方案
+created: 2026-04-15
+updated: 2026-04-21
+type: research
+tags: [hermes, research, architecture]
+status: stable
+---
+
 # Hermes 上下文管理优化方案
 
 > 撰写日期：2026-04-15
@@ -8,7 +17,7 @@
 
 ## 1. 背景与问题
 
-Hermes Agent 在通过 Copilot provider 接入 Claude 模型时，存在严重的上下文空间不足问题，直接影响长对话场景下的任务执行质量。
+[[../20-项目/Hermes/README|Hermes Agent]] 在通过 Copilot provider 接入 Claude 模型时，存在严重的上下文空间不足问题，直接影响长对话场景下的任务执行质量。
 
 ### 1.1 现象描述
 
