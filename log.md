@@ -1,7 +1,7 @@
 ---
 title: 知识库操作日志
 created: 2026-04-21
-updated: 2026-04-21
+updated: 2026-04-22
 type: meta
 ---
 
@@ -174,3 +174,5 @@ type: meta
 - 9个赛道完整评分 + 三层组合策略
 
 ## [2026-04-22] research-ingest | McKinsey-2026-AI报告与5岁AI启蒙 | 整合 McKinsey 2026 三份核心报告（State of Organizations/State of AI/MGI Agents-Robots-Us）+ 儿童AI教育研究，输出AI现状+5岁娃三层启蒙路径+12月节奏，~12KB。
+
+## [2026-04-22] weekly-maintenance | 知识库维护 | 修复4个CRITICAL问题（缺frontmatter）+ 1个WARN（invalid type）+ 6个新文档加入index.md。丰富AI知识库内容：大模型演进补充Claude 4.5/GPT-5/Gemini 3.0，MCP更新2026生态数据，终端IDE新增Continue/Claude Code，Agent架构/评测基准/推理策略补充最新进展。621行新增，107行删除。
