@@ -139,6 +139,7 @@ type: meta
 - [[30-调研报告/Claude-Opus-4.7-vs-4.6.md|Claude Opus 4.7 vs 4.6 对比]] — 1. **Extended Thinking移除** → 只能用 adaptive 模式 + effort 参数控制 2. **Sampling参数移除** → temperature / top_p / top_k 直接报400错误 3.
 - [[30-调研报告/Hermes上下文管理优化方案.md|Hermes 上下文管理优化方案]] — ---  🔴
 - [[30-调研报告/Memory-Agent-架构设计推演.md|Memory Agent 架构设计推演]] — ---  🟡
+- [[30-调研报告/McKinsey-2026-AI报告与5岁AI启蒙.md|McKinsey 2026 AI 报告解读 & 5岁儿童 AI 启蒙路径]] — 基于 McKinsey 2026《State of Organizations》《State of AI》《Agents/Robots/Us》三份报告，结合儿童 AI 教育研究，给出 AI 现状判断 + 5 岁娃三层启蒙路径 + 12 个月落地节奏。  🔴
 - [[30-调研报告/README.md|30-调研报告]] — 深度调研、对比分析、决策报告。**完成后只读**，新版本另开文件。 受 [[SCHEMA]] 约束。完整索引见 [[index]]。
 
 

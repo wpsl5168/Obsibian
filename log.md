@@ -172,3 +172,5 @@ type: meta
 ## 2026-04-21 调研产出
 - 30-调研报告/AI-Agent个人盈利赛道扫描-2026Q2.md (新增)
 - 9个赛道完整评分 + 三层组合策略
+
+## [2026-04-22] research-ingest | McKinsey-2026-AI报告与5岁AI启蒙 | 整合 McKinsey 2026 三份核心报告（State of Organizations/State of AI/MGI Agents-Robots-Us）+ 儿童AI教育研究，输出AI现状+5岁娃三层启蒙路径+12月节奏，~12KB。
