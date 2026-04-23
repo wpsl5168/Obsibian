@@ -85,6 +85,11 @@ type: meta
 
 ## 🦛 项目：海马体（OpenHippo）
 
+- [[20-项目/海马体/架构方案-v0.4-多agent共享池.md|海马体 v0.4 架构定稿 — 多 Agent 共享池 + 切片治理]] — 与老王对话推导而成，定稿架构方案，进入实施阶段  🔴
+- [[20-项目/海马体/重构方案-事件总线v1.md|海马体重构方案 v1.0 — 事件总线架构]] — 针对 Hermes Gateway 重启后 OpenHippo 丢失 hook 调用的根因分析和重构方案  🔴
+- [[20-项目/海马体/设计/F5-统一软删除管线-v0.1.md|F5 统一软删除管线设计 v0.1]] — 统一软删除设计草稿，待架构审核  🔴
+- [[20-项目/海马体/设计/F5-统一软删除管线-v0.2.md|F5 统一软删除管线设计 v0.2]] — 消化 v0.1 评审报告后的修订版  🔴
+- [[20-项目/海马体/设计/F5-统一软删除管线-v0.3.md|F5 统一软删除管线设计 v0.3]] — 消化 v0.2 复审报告后的修订版  🔴
 - [[20-项目/海马体/F5-Dream设计-v0.1.md|F5 Dream（记忆整合）设计 — v0.1 草案]] — ---  🔴
 - [[20-项目/海马体/PRD分卷/prd-01-目的与痛点.md|PRD 一·二｜项目目的与解决痛点]] — ---
 - [[20-项目/海马体/PRD分卷/prd-02-用户与开源形态.md|PRD 三·四｜目标用户与开源形态]] — ---
@@ -111,6 +116,7 @@ type: meta
 ## ⚡ 项目：Hermes Agent
 
 - [[20-项目/Hermes/memory-system-upgrade.md|Hermes Memory System Upgrade]] — Hermes记忆系统存在三个核心问题： 1. **Gateway重启丢对话** — 重启无clean_shutdown标记→session被标记suspended→下次消息auto-reset 2. **session_search超时**  🔴
+- [[20-项目/盈利方案-2026Q2.md|AI Agent 个人盈利路径方案 (老王 2026Q2)]] — 基于老王现有技术栈的个人盈利方案  🔴
 
 
 ## 💭 项目：Dreaming（自主预研）
@@ -120,6 +126,7 @@ type: meta
 - [[20-项目/Dreaming/2026-04-19-research.md|BrickHub 每日报告]] — ldrawParser.js是纯逻辑层，无UI代码，无不符项。
 - [[20-项目/Dreaming/2026-04-20-research.md|BrickHub 每日报告 — 2026-04-20]] — **现象**：`node -e` 调用 `buildSystemPrompt()`，返回字符串长度 **18,873 字符**（预期约 3.6KB）。 **根因**：`lib/llmPrompt.js:123` 的本意关闭符 `` `; `
 - [[20-项目/Dreaming/2026-04-21-research.md|BrickHub 每日报告 — 2026-04-21]] — Phase 3 沙盒核心两文件——零件抽屉与场景容器。配合 `npm test` 全量回归。
+- [[20-项目/Dreaming/2026-04-22-research.md|BrickHub预研+质检 2026-04-22]] — BrickHub项目预研和质检报告  🔴
 
 
 ## 🌏 调研：2026-04 中美AI模型与Agent全景
@@ -135,6 +142,7 @@ type: meta
 
 ## 📊 调研：单篇报告
 
+- [[30-调研报告/AI-Agent个人盈利赛道扫描-2026Q2.md|AI Agent 个人盈利赛道扫描 (2026Q2)]] — 基于国内外市场的 AI Agent 个人盈利赛道深度调研  🔴
 - [[30-调研报告/AI-Agent-Memory架构借鉴分析.md|AI Agent Memory 架构借鉴分析]] — ---  🔴
 - [[30-调研报告/Claude-Opus-4.7-vs-4.6.md|Claude Opus 4.7 vs 4.6 对比]] — 1. **Extended Thinking移除** → 只能用 adaptive 模式 + effort 参数控制 2. **Sampling参数移除** → temperature / top_p / top_k 直接报400错误 3.
 - [[30-调研报告/Hermes上下文管理优化方案.md|Hermes 上下文管理优化方案]] — ---  🔴
