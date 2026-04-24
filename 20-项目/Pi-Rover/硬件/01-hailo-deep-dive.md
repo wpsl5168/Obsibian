@@ -1,7 +1,11 @@
 ---
 title: Hailo 加速器详解
-date: 2026-04-23
+created: 2026-04-23
+updated: 2026-04-23
+type: entity
 tags: [pi-rover, hardware, hailo, edge-ai]
+status: draft
+date: 2026-04-23
 ---
 
 > 上游: [[../INDEX|Pi-Rover项目首页]] · [[../软件栈/01-pi-deployment-forms|部署形式]]

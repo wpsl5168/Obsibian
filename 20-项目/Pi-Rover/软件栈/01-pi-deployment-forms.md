@@ -1,7 +1,11 @@
 ---
 title: Pi 5 本地部署形式详解
-date: 2026-04-23
+created: 2026-04-23
+updated: 2026-04-23
+type: entity
 tags: [pi-rover, deployment, raspberry-pi]
+status: draft
+date: 2026-04-23
 ---
 
 > 上游: [[../INDEX|Pi-Rover项目首页]] · [[../架构模式/03-hybrid-brain|混合脑架构]]
