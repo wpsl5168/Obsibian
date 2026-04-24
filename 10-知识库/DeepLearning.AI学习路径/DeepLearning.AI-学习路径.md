@@ -1,7 +1,7 @@
 ---
 title: DeepLearning.AI 学习路径（工程师向）
 created: 2026-03-31
-updated: 2026-04-21
+updated: 2026-04-24
 type: concept
 tags: []
 status: draft
@@ -80,7 +80,7 @@ generated_at_utc: 2026-03-31
 
 - **GenAI 模型训练/后训练**：Build and Train an LLM with JAX；Fine-tuning and Reinforcement Learning for LLMs: Intro to Post-Training
 - **开源模型与生态**：Open Source Models with Hugging Face
-- **多模态与文档**：Document AI: From OCR to Agentic Doc Extraction；Multi-Vector Image Retrieval
+- **多模态与文档**：Document AI: From OCR to Agentic Doc Extraction；Multi-Vector Image Retrieval；**Building Multimodal Data Pipelines**（2026-04 新增，重点推荐）
 - **深度学习体系化**：Deep Learning Specialization；PyTorch for Deep Learning Professional Certificate
 - **ML 基础体系化**：Machine Learning Specialization
 - **非技术同学/产品侧**：AI for Everyone；Generative AI for Everyone
