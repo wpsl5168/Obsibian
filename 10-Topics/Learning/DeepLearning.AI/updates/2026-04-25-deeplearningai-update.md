@@ -1,41 +1,48 @@
 ---
 date: 2026-04-25
-source: deeplearning.ai/courses (Algolia API)
+source: deeplearning.ai
 total_courses: 121
-previous_snapshot: deeplearningai-courses-2026-04-24.compact.json
+prev_snapshot: 2026-04-24
 new: 0
 removed: 0
 modified: 0
 ---
 
-# DeepLearning.AI Course Catalog Update — 2026-04-25
+# DeepLearning.AI 课程更新 — 2026-04-25
 
-## Overview
+## 概览
 
-| Metric | Value |
+| 指标 | 值 |
 |---|---|
-| Total courses | 121 |
-| Previous snapshot | deeplearningai-courses-2026-04-24.compact.json |
-| New | 0 |
-| Removed | 0 |
-| Modified | 0 |
+| 当前课程总数 | 121 |
+| 上次快照 | 2026-04-24 |
+| 新增 | 0 |
+| 移除 | 0 |
+| 变更 | 0 |
 
-## 🆕 New Courses
+## 新增课程
 
-_None._
+_无_
 
-## 🗑️ Removed Courses
+## 移除课程
 
-_None._
+_无_
 
-## ✏️ Modified Courses
+## 变更课程
 
-_None._
+_无_
 
-## 📊 Course Type Distribution
+## 课程类型分布
 
-| Type | Count |
+| Course Type | 数量 |
 |---|---|
 | Short Courses | 97 |
 | Specializations | 14 |
 | Courses | 10 |
+
+## Skill Level 分布
+
+| Skill Level | 数量 |
+|---|---|
+| ('Intermediate',) | 61 |
+| ('Beginner',) | 60 |
