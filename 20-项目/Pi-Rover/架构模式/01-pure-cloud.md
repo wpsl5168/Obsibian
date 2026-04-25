@@ -1,3 +1,11 @@
+---
+title: 01-pure-cloud
+created: 2026-04-23
+updated: 2026-04-23
+type: concept
+tags: [pi-rover]
+status: draft
+---
 # 模式01：纯云端架构
 
 ## 一句话

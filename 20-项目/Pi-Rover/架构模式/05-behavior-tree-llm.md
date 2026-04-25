@@ -1,3 +1,11 @@
+---
+title: 05-behavior-tree-llm
+created: 2026-04-23
+updated: 2026-04-23
+type: concept
+tags: [pi-rover]
+status: draft
+---
 # 模式05：行为树 + LLM 架构
 
 ## 一句话

@@ -3,7 +3,8 @@ title: Hailo 加速器详解
 created: 2026-04-23
 updated: 2026-04-23
 type: entity
-tags: [pi-rover, hardware, hailo, edge-ai]
+tags: [pi-rover]
+oversized_ok: true
 status: draft
 date: 2026-04-23
 ---

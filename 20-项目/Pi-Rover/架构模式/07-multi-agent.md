@@ -1,3 +1,11 @@
+---
+title: 07-multi-agent
+created: 2026-04-23
+updated: 2026-04-23
+type: concept
+tags: [pi-rover]
+status: draft
+---
 # 模式07：多Agent协作架构
 
 ## 一句话

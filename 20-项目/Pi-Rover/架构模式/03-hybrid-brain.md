@@ -1,3 +1,11 @@
+---
+title: 03-hybrid-brain
+created: 2026-04-23
+updated: 2026-04-23
+type: concept
+tags: [pi-rover]
+status: draft
+---
 # 模式03：混合脑架构 ★推荐
 
 ## 一句话

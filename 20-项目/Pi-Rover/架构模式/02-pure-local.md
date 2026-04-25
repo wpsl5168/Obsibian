@@ -1,3 +1,11 @@
+---
+title: 02-pure-local
+created: 2026-04-23
+updated: 2026-04-23
+type: concept
+tags: [pi-rover]
+status: draft
+---
 # 模式02：纯本地架构
 
 ## 一句话

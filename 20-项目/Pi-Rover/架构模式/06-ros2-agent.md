@@ -1,3 +1,11 @@
+---
+title: 06-ros2-agent
+created: 2026-04-23
+updated: 2026-04-23
+type: concept
+tags: [pi-rover]
+status: draft
+---
 # 模式06：ROS 2 + LLM Agent 架构
 
 ## 一句话

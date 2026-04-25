@@ -1,3 +1,11 @@
+---
+title: README
+created: 2026-04-23
+updated: 2026-04-23
+type: meta
+tags: [pi-rover]
+status: stable
+---
 # Pi-Rover 知识库
 
 > 项目：树莓派Agent级智能小车

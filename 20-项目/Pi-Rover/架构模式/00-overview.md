@@ -1,3 +1,11 @@
+---
+title: 00-overview
+created: 2026-04-23
+updated: 2026-04-23
+type: concept
+tags: [pi-rover]
+status: draft
+---
 # 架构模式总览
 
 ## 8种主流架构一览

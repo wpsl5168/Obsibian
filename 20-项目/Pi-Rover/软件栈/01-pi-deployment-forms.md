@@ -3,7 +3,8 @@ title: Pi 5 本地部署形式详解
 created: 2026-04-23
 updated: 2026-04-23
 type: entity
-tags: [pi-rover, deployment, raspberry-pi]
+tags: [pi-rover]
+oversized_ok: true
 status: draft
 date: 2026-04-23
 ---

@@ -1,3 +1,11 @@
+---
+title: 99-decision-matrix
+created: 2026-04-23
+updated: 2026-04-23
+type: concept
+tags: [pi-rover]
+status: draft
+---
 # 决策矩阵：Pi-Rover 架构选型
 
 ## 老王需求回顾 (Source of Truth)
