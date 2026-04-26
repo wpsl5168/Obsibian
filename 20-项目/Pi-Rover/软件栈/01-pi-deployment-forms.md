@@ -4,8 +4,8 @@ created: 2026-04-23
 updated: 2026-04-23
 type: entity
 tags: [pi-rover]
-oversized_ok: true
 status: draft
+oversized_ok: true
 date: 2026-04-23
 ---
 
