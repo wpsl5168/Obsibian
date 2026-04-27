@@ -1,3 +1,11 @@
+---
+title: 08-federated-swarm
+created: 2026-04-23
+updated: 2026-04-23
+type: concept
+tags: [pi-rover]
+status: draft
+---
 # 模式08：联邦集群 / 多车协同架构
 
 ## 一句话

@@ -1,3 +1,11 @@
+---
+title: INDEX
+created: 2026-04-23
+updated: 2026-04-23
+type: meta
+tags: [pi-rover]
+status: stable
+---
 # Pi-Rover 项目首页
 
 > 树莓派Agent级智能小车 — 本地优先 + 云端兜底
@@ -35,4 +43,4 @@
 ## 相关项目
 
 - [[../海马体/INDEX|OpenHippo海马体]] — 未来可作为Pi-Rover长期记忆后端
-- [[../BrickHub/|BrickHub]] — 另一核心项目
+- [[4.5-BrickHub_Architecture_Vision|BrickHub]] — 另一核心项目

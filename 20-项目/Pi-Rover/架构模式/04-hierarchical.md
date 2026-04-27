@@ -1,3 +1,11 @@
+---
+title: 04-hierarchical
+created: 2026-04-23
+updated: 2026-04-23
+type: concept
+tags: [pi-rover]
+status: draft
+---
 # 模式04：分层反射架构
 
 ## 一句话
