@@ -1,10 +1,12 @@
 ---
 title: Safety AI 工程安全检查系统
-project: safety
-status: planning
-owner: 老王
 created: 2026-05-03
+updated: 2026-05-03
+type: entity
 tags: [project, safety, planning]
+status: planning
+project: safety
+owner: 老王
 ---
 
 # Safety AI · 工程安全检查系统
