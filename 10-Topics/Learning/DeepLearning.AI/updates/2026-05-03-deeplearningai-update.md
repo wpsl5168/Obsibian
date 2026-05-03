@@ -1,0 +1,25 @@
+---
+date: 2026-05-03
+type: deeplearningai-update
+previous_snapshot: 2026-05-02
+---
+
+# DeepLearning.AI 课程变更报告 — 2026-05-03
+
+## 概览
+
+| 指标 | 数值 |
+|------|------|
+| 总课程数 | 122 |
+| 上次快照 | 2026-05-02 (122 课程) |
+| 新增 | 0 |
+| 移除 | 0 |
+| 修改 | 0 |
+
+## 📊 课程类型分布
+
+| 类型 | 数量 |
+|------|------|
+| Short Courses | 97 |
+| Specializations | 14 |
+| Courses | 11 |
