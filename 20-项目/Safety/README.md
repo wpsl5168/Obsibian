@@ -3,8 +3,8 @@ title: Safety AI 工程安全检查系统
 created: 2026-05-03
 updated: 2026-05-03
 type: entity
-tags: [project, safety, planning]
-status: planning
+tags: [safety, meta]
+status: draft
 project: safety
 owner: 老王
 ---
