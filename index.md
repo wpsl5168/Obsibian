@@ -80,6 +80,11 @@ type: meta
 - [[10-知识库/DeepLearning.AI学习路径/DeepLearning.AI-学习路径.md|DeepLearning.AI 学习资料（面向工程师）]] — 数据抓取来源：DeepLearning.AI 课程索引（Algolia index: courses_date_desc）  🔴
 
 
+## 👪 家庭教育
+
+- [[10-知识库/家庭教育/初一英语学习方案.md|初一男孩英语学习启动方案]] — 游戏切入，自然拼读解决单词记不住根因，间隔复习提升记忆效果  🔴
+
+
 ## 🗄️ 旧笔记归档
 
 - [[10-知识库/旧笔记归档/SQLServer_Dacpac包加密与自动化部署.md|SQLServer_Dacpac包加密与自动化部署 (PowerShell+AES256)]] — **日期**: 2026-04-08 **关联**: 基于 2026-04-07 讨论的 [[SQL Server]] 存储过程加密方案 (防代码泄露) 的进一步延伸 (防介质泄漏)。  🟡
@@ -150,6 +155,7 @@ type: meta
 
 - [[20-项目/Hermes/memory-system-upgrade.md|Hermes Memory System Upgrade]] — Hermes记忆系统存在三个核心问题： 1. **Gateway重启丢对话** — 重启无clean_shutdown标记→session被标记suspended→下次消息auto-reset 2. **session_search超时**  🔴
 - [[20-项目/盈利方案-2026Q2.md|AI Agent 个人盈利路径方案 (老王 2026Q2)]] — 基于老王现有技术栈的个人盈利方案  🔴
+- [[20-项目/AI风口调研/2026-AI风口-张雪峰视角.md|2026 AI 风口 · 张雪峰视角]] — 2026年AI岗位市场分析，张雪峰视角，覆盖稳定口子+投机机会+创业赛道  🔴
 
 
 ## 💭 项目：Dreaming（自主预研）
