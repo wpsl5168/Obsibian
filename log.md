@@ -14,6 +14,19 @@ type: meta
 
 ---
 
+## [2026-05-05] weekly maintenance | Automated by cron (Phase 1-3)
+
+**审计结果**: CRITICAL:0, WARN:10 → 0, INFO:53 (主要为超长页)
+
+**修复动作**:
+- 房产调研文件缺字段：补齐 created/updated/type 字段，野生tag归并为规范tag  
+- 孤儿页面收编：AI风口调研 → 项目/Hermes分类，英语学习方案 → 新增家庭教育分类
+- index.md同步更新：新增"👪家庭教育"分类，收编2个孤儿页面
+
+**治理效果**: 10个WARN问题全部修复，2个孤儿页面成功入库，无CRITICAL问题
+
+---
+
 ## [2026-04-29] weekly maintenance | Automated by cron
 
 **审计结果**: CRITICAL:0 → 0, WARN:4 → 0, INFO:63 → 40
