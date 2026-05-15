@@ -83,6 +83,12 @@ sources: [可选，源材料路径或URL]
 - `#brickhub` — BrickHub项目相关
 - `#hermes` — Hermes Agent相关
 - `#openhippo` — 海马体项目相关
+- `#pi-rover` — Pi Rover 项目相关
+- `#safety` — Safety AI 工程安全检查项目相关
+
+### 个人事务 (personal)
+- `#realestate` — 房产调研（小区成交价、政策、置业决策）
+- `#family` — 家庭事务（教育、生活、出行）
 
 ### 状态维度 (lifecycle)
 - `#draft` — 草稿（与frontmatter status=draft同义，可选）

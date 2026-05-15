@@ -14,6 +14,43 @@ type: meta
 
 ---
 
+## [2026-05-05] weekly maintenance | Automated by cron — COMPLETE
+
+**审计结果**: CRITICAL:0, WARN:10 → 0, INFO:53 → 49 ✅ **全绿达成**
+
+**修复动作**:
+- 房产调研文件缺字段：补齐 created/updated/type 字段，野生tag归并为规范tag  
+- 孤儿页面收编：AI风口调研 → 项目/Hermes分类，英语学习方案 → 新增家庭教育分类
+- index.md同步更新：新增"👪家庭教育"分类，收编2个孤儿页面
+- 审计脚本更新：补齐缺失的 family/realestate 标签到 VALID_TAGS
+
+**治理效果**: 
+- ✅ 10个WARN问题全部修复
+- ✅ 2个孤儿页面成功入库  
+- ✅ 7个野生标签全部规范化
+- ✅ 知识库达到全绿状态 (仅49个INFO级超长页提醒)
+- ✅ 143个页面，100% frontmatter覆盖
+
+**下周重点**: 内容质量提升 — 重点检查🔴标记的空洞文件
+
+---
+
+## [2026-04-29] weekly maintenance | Automated by cron
+
+**审计结果**: CRITICAL:0 → 0, WARN:4 → 0, INFO:63 → 40
+
+**问题修复**:
+- 🔧 **野生标签清理**: 修复 `30-调研报告/2026高考志愿全行业评估.md` 的4个野生标签 (`#高考`, `#志愿填报`, `#行业分析`, `#张雪峰视角`) → 规范化为 `[research]`
+- 📄 **索引更新**: 在 `index.md` 补充14个缺失条目:
+  - Pi-Rover项目: 12个架构模式+硬件+软件栈文档
+  - Dreaming项目: 1个研究报告
+  - 调研报告: 1个高考志愿评估报告
+- ✅ **全绿状态**: WARN级问题从4个清零，CRITICAL级问题保持0
+
+**剩余事项**: 40个INFO级超长页（>200行），建议考虑添加 `oversized_ok: true` 豁免标记，因为多数为技术深度文档和调研报告，拆分会影响阅读体验。
+
+---
+
 ## [2026-04-21] init | 知识库治理体系建立
 
 按 Karpathy LLM Wiki 模式为 obsidian-vault 建立治理骨架：
@@ -178,3 +215,7 @@ type: meta
 ## [2026-04-22] weekly-maintenance | 知识库维护 | 修复4个CRITICAL问题（缺frontmatter）+ 1个WARN（invalid type）+ 6个新文档加入index.md。丰富AI知识库内容：大模型演进补充Claude 4.5/GPT-5/Gemini 3.0，MCP更新2026生态数据，终端IDE新增Continue/Claude Code，Agent架构/评测基准/推理策略补充最新进展。621行新增，107行删除。
 
 ## [2026-04-23] lint-fix | 拆长文+加豁免 | 处理wiki_lint 5个oversized WARN：海马体两文档加 oversized_ok: true 豁免（架构方案-v0.4 437行 / F5-软删除-v0.3 424行，结构性长文不拆）；三篇知识库综述按H2拆分：2.2-高阶推理策略 534→329行（剥离§10-13到 2.2.1-推理模型工程化进阶 237行）、3.2-MCP规范 424→173行（剥离协议架构+传输层到 3.2.3-MCP协议架构与传输层 274行）、4.1-Agent心智模型 453→253行（剥离2026新进展+主流框架到 4.1.1-Agent认知架构与主流框架2026 232行）。同步更新index.md添加3个新子页索引。WARN结构性oversized 5→0。
+
+## [2026-05-05] research-ingest | 怡海花园真实成交价调研 | 房天下网签数据，3 个分园近期成交单价区间 3.5~4.6 万/㎡，链家参考价偏高 10~20%。放 00-收件箱/。
+
+## [2026-05-05] schema-update | 新增 #realestate / #family tags + 30-调研报告/房产/ 子分类，迁入怡海花园调研。

@@ -37,9 +37,10 @@ generated_at_utc: 2026-03-31
 - **学习目标**：掌握提示工程基础与常见 LLM 能力模式（总结/分类/改写/抽取/生成）。
 - **前置要求**：会基础编程；了解 API 调用。
 - **推荐顺序**：
-  1) ChatGPT Prompt Engineering for Developers
-  2) LangChain for LLM Application Development
-  3) LangChain: Chat with Your Data（若想快速上手 RAG）
+  1) AI Prompting for Everyone（2026-04 新增，全民级基础，团队培训首选）
+  2) ChatGPT Prompt Engineering for Developers
+  3) LangChain for LLM Application Development
+  4) LangChain: Chat with Your Data（若想快速上手 RAG）
 - **关键知识点**：指令/上下文/示例、输出约束（JSON/schema）、提示注入与安全、检索增强（chunking/embedding/检索/引用）。
 - **练习/产出**：
   - 做一个“企业知识库问答”Demo：含检索、引用、答案结构化、拒答策略；

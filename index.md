@@ -80,6 +80,11 @@ type: meta
 - [[10-知识库/DeepLearning.AI学习路径/DeepLearning.AI-学习路径.md|DeepLearning.AI 学习资料（面向工程师）]] — 数据抓取来源：DeepLearning.AI 课程索引（Algolia index: courses_date_desc）  🔴
 
 
+## 👪 家庭教育
+
+- [[10-知识库/家庭教育/初一英语学习方案.md|初一男孩英语学习启动方案]] — 游戏切入，自然拼读解决单词记不住根因，间隔复习提升记忆效果  🔴
+
+
 ## 🗄️ 旧笔记归档
 
 - [[10-知识库/旧笔记归档/SQLServer_Dacpac包加密与自动化部署.md|SQLServer_Dacpac包加密与自动化部署 (PowerShell+AES256)]] — **日期**: 2026-04-08 **关联**: 基于 2026-04-07 讨论的 [[SQL Server]] 存储过程加密方案 (防代码泄露) 的进一步延伸 (防介质泄漏)。  🟡
@@ -96,6 +101,25 @@ type: meta
 - [[20-项目/BrickHub/4.9-BrickHub_Engineering_Principles_and_Lessons.md|BrickHub 工程原则与血泪教训总结 (4.9)]] — **老王原话：“代码一定要优雅，一定要有结构性，架构化，哪怕多用点时间。不要写屎一样的代码。”**
 - [[20-项目/BrickHub/Gemini提示词.md|Gemini提示词]] — 太棒了，我们这就开始 BrickHub 的第一步：实现**一个标准 2x6 乐高积木的 3D 渲染**。  🟡
 
+
+## 🤖 项目：Pi-Rover
+
+- [[20-项目/Pi-Rover/架构模式/00-overview.md|Pi-Rover 架构模式概览]] — 八种智能车架构模式对比分析  🔴
+- [[20-项目/Pi-Rover/架构模式/01-pure-cloud.md|纯云端架构]] — 计算全部在云端，本地只做数据传输  🔴
+- [[20-项目/Pi-Rover/架构模式/02-pure-local.md|纯本地架构]] — 完全离线计算，边缘AI推理  🔴
+- [[20-项目/Pi-Rover/架构模式/03-hybrid-brain.md|混合大脑架构]] — 云端+边缘协同计算  🔴
+- [[20-项目/Pi-Rover/架构模式/04-hierarchical.md|分层决策架构]] — 多级决策系统  🔴
+- [[20-项目/Pi-Rover/架构模式/05-behavior-tree-llm.md|行为树+LLM架构]] — 经典AI与LLM结合  🔴
+- [[20-项目/Pi-Rover/架构模式/06-ros2-agent.md|ROS2 Agent架构]] — 基于ROS2的智能体设计  🔴
+- [[20-项目/Pi-Rover/架构模式/07-multi-agent.md|多智能体架构]] — 分布式协作系统  🔴
+- [[20-项目/Pi-Rover/架构模式/08-federated-swarm.md|联邦群集架构]] — 去中心化集群控制  🔴
+- [[20-项目/Pi-Rover/架构模式/99-decision-matrix.md|架构决策矩阵]] — 各架构模式优劣对比  🔴
+- [[20-项目/Pi-Rover/硬件/01-hailo-deep-dive.md|Hailo AI芯片深度解析]] — Hailo-8边缘AI推理芯片技术分析  🔴
+- [[20-项目/Pi-Rover/软件栈/01-pi-deployment-forms.md|树莓派部署形态研究]] — 不同部署方案的技术选型  🔴
+
+## 🌙 项目：Dreaming
+
+- [[20-项目/Dreaming/2026-04-23-research.md|Dreaming 研究报告 2026-04-23]] — 自动化记忆维护系统研究  🔴
 
 ## 🦛 项目：海马体（OpenHippo）
 
@@ -131,6 +155,7 @@ type: meta
 
 - [[20-项目/Hermes/memory-system-upgrade.md|Hermes Memory System Upgrade]] — Hermes记忆系统存在三个核心问题： 1. **Gateway重启丢对话** — 重启无clean_shutdown标记→session被标记suspended→下次消息auto-reset 2. **session_search超时**  🔴
 - [[20-项目/盈利方案-2026Q2.md|AI Agent 个人盈利路径方案 (老王 2026Q2)]] — 基于老王现有技术栈的个人盈利方案  🔴
+- [[20-项目/AI风口调研/2026-AI风口-张雪峰视角.md|2026 AI 风口 · 张雪峰视角]] — 2026年AI岗位市场分析，张雪峰视角，覆盖稳定口子+投机机会+创业赛道  🔴
 
 
 ## 💭 项目：Dreaming（自主预研）
@@ -157,7 +182,8 @@ type: meta
 ## 📊 调研：单篇报告
 
 - [[30-调研报告/AI-Agent个人盈利赛道扫描-2026Q2.md|AI Agent 个人盈利赛道扫描 (2026Q2)]] — 基于国内外市场的 AI Agent 个人盈利赛道深度调研  🔴
-- [[30-调研报告/AI-Agent-Memory架构借鉴分析.md|AI Agent Memory 架构借鉴分析]] — ---  🔴
+- [[30-调研报告/2026高考志愿全行业评估.md|2026 高考志愿全行业评估报告]] — 基于2025-2026春招季数据，张雪峰视角解读各专业就业前景  🔴
+- [[30-调研报告/AI-Agent-Memory架构借鉴分析.md|AI Agent Memory 架构借鉴分析]] — 记忆系统架构模式分析  🔴
 - [[30-调研报告/Claude-Opus-4.7-vs-4.6.md|Claude Opus 4.7 vs 4.6 对比]] — 1. **Extended Thinking移除** → 只能用 adaptive 模式 + effort 参数控制 2. **Sampling参数移除** → temperature / top_p / top_k 直接报400错误 3.
 - [[30-调研报告/Hermes上下文管理优化方案.md|Hermes 上下文管理优化方案]] — ---  🔴
 - [[30-调研报告/Memory-Agent-架构设计推演.md|Memory Agent 架构设计推演]] — ---  🟡
@@ -218,3 +244,9 @@ type: meta
 - [[测试用例-D1-D5-功能与性能|海马体测试用例 D1-D5]]
 - [[测试用例-D6-D8-容量与异常|海马体测试用例 D6-D8]]
 - [[测试方案-报告与缺陷追踪|海马体测试报告与缺陷追踪]]
+
+
+## 🏠 房产调研
+
+- [[30-调研报告/房产/README|房产调研索引]]
+- [[30-调研报告/房产/2026-05-怡海花园真实成交价|怡海花园真实成交价 (2026-05)]] — 丰台科技园三个分园近期网签 3.5~4.6 万/㎡

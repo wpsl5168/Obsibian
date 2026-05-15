@@ -1,0 +1,241 @@
+{
+  "date": "2026-05-10",
+  "total_courses": 47,
+  "courses": [
+    {
+      "title": "AI Python for Beginners",
+      "url": "https://www.deeplearning.ai/short-courses/ai-python-for-beginners",
+      "type": "Short Course"
+    },
+    {
+      "title": "ChatGPT Prompt Engineering for Developers",
+      "url": "https://www.deeplearning.ai/short-courses/chatgpt-prompt-engineering-for-developers",
+      "type": "Short Course"
+    },
+    {
+      "title": "Generative AI for Everyone",
+      "url": "https://www.deeplearning.ai/courses/generative-ai-for-everyone",
+      "type": "Course"
+    },
+    {
+      "title": "Machine Learning Specialization",
+      "url": "https://www.deeplearning.ai/courses/machine-learning-specialization",
+      "type": "Professional Certificate"
+    },
+    {
+      "title": "Multi AI Agent Systems with crewAI",
+      "url": "https://www.deeplearning.ai/short-courses/multi-ai-agent-systems-with-crewai",
+      "type": "Short Course"
+    },
+    {
+      "title": "LangChain for LLM Application Development",
+      "url": "https://www.deeplearning.ai/short-courses/langchain-for-llm-application-development",
+      "type": "Short Course"
+    },
+    {
+      "title": "AI for Everyone",
+      "url": "https://www.deeplearning.ai/courses/ai-for-everyone",
+      "type": "Course"
+    },
+    {
+      "title": "Build Interactive Agents with Generative UI",
+      "url": "https://www.deeplearning.ai/short-courses/build-interactive-agents-with-generative-ui",
+      "type": "Short Course"
+    },
+    {
+      "title": "AI Prompting for Everyone",
+      "url": "https://www.deeplearning.ai/courses/ai-prompting-for-everyone",
+      "type": "Course"
+    },
+    {
+      "title": "Building Multimodal Data Pipelines",
+      "url": "https://www.deeplearning.ai/short-courses/building-multimodal-data-pipelines",
+      "type": "Short Course"
+    },
+    {
+      "title": "Spec-Driven Development with Coding Agents",
+      "url": "https://www.deeplearning.ai/short-courses/spec-driven-development-with-coding-agents",
+      "type": "Short Course"
+    },
+    {
+      "title": "Efficient Inference with SGLang: Text and Image Generation",
+      "url": "https://www.deeplearning.ai/short-courses/efficient-inference-with-sglang-text-and-image-generation",
+      "type": "Short Course"
+    },
+    {
+      "title": "Agent Memory: Building Memory-Aware Agents",
+      "url": "https://www.deeplearning.ai/short-courses/agent-memory-building-memory-aware-agents",
+      "type": "Short Course"
+    },
+    {
+      "title": "Build and Train an LLM with JAX",
+      "url": "https://www.deeplearning.ai/short-courses/build-and-train-an-llm-with-jax",
+      "type": "Short Course"
+    },
+    {
+      "title": "A2A: The Agent2Agent Protocol",
+      "url": "https://www.deeplearning.ai/short-courses/a2a-the-agent2agent-protocol",
+      "type": "Short Course"
+    },
+    {
+      "title": "Agent Skills with Anthropic",
+      "url": "https://www.deeplearning.ai/short-courses/agent-skills-with-anthropic",
+      "type": "Short Course"
+    },
+    {
+      "title": "Gemini CLI: Code & Create with an Open-Source Agent",
+      "url": "https://www.deeplearning.ai/short-courses/gemini-cli-code-and-create-with-an-open-source-agent",
+      "type": "Short Course"
+    },
+    {
+      "title": "Document AI: From OCR to Agentic Doc Extraction",
+      "url": "https://www.deeplearning.ai/short-courses/document-ai-from-ocr-to-agentic-doc-extraction",
+      "type": "Short Course"
+    },
+    {
+      "title": "Build with Andrew",
+      "url": "https://www.deeplearning.ai/courses/build-with-andrew",
+      "type": "Course"
+    },
+    {
+      "title": "Nvidia's NeMo Agent Toolkit: Making Agents Reliable",
+      "url": "https://www.deeplearning.ai/short-courses/nvidia-nat-making-agents-reliable",
+      "type": "Short Course"
+    },
+    {
+      "title": "Multi-Vector Image Retrieval",
+      "url": "https://www.deeplearning.ai/short-courses/multi-vector-image-retrieval",
+      "type": "Short Course"
+    },
+    {
+      "title": "Building Coding Agents with Tool Execution",
+      "url": "https://www.deeplearning.ai/short-courses/building-coding-agents-with-tool-execution",
+      "type": "Short Course"
+    },
+    {
+      "title": "Semantic Caching for AI Agents",
+      "url": "https://www.deeplearning.ai/short-courses/semantic-caching-for-ai-agents",
+      "type": "Short Course"
+    },
+    {
+      "title": "Design, Develop, and Deploy Multi-Agent Systems with CrewAI",
+      "url": "https://www.deeplearning.ai/courses/design-develop-and-deploy-multi-agent-systems-with-crewai",
+      "type": "Course"
+    },
+    {
+      "title": "Jupyter AI: AI Coding in Notebooks",
+      "url": "https://www.deeplearning.ai/short-courses/jupyter-ai-coding-in-notebooks",
+      "type": "Short Course"
+    },
+    {
+      "title": "PyTorch for Deep Learning Professional Certificate",
+      "url": "https://www.deeplearning.ai/courses/pytorch-for-deep-learning-professional-certificate",
+      "type": "Professional Certificate"
+    },
+    {
+      "title": "Fine-tuning and Reinforcement Learning for LLMs: Intro to Post-Training",
+      "url": "https://www.deeplearning.ai/courses/fine-tuning-and-reinforcement-learning-for-llms-intro-to-post-training",
+      "type": "Course"
+    },
+    {
+      "title": "Governing AI Agents",
+      "url": "https://www.deeplearning.ai/short-courses/governing-ai-agents",
+      "type": "Short Course"
+    },
+    {
+      "title": "Building Live Voice Agents with Google's ADK",
+      "url": "https://www.deeplearning.ai/short-courses/building-live-voice-agents-with-googles-adk",
+      "type": "Short Course"
+    },
+    {
+      "title": "Agentic AI",
+      "url": "https://www.deeplearning.ai/courses/agentic-ai",
+      "type": "Course"
+    },
+    {
+      "title": "Building and Evaluating Data Agents",
+      "url": "https://www.deeplearning.ai/short-courses/building-and-evaluating-data-agents",
+      "type": "Short Course"
+    },
+    {
+      "title": "Build AI Apps with MCP Servers: Working with Box Files",
+      "url": "https://www.deeplearning.ai/short-courses/build-ai-apps-with-mcp-server-working-with-box-files",
+      "type": "Short Course"
+    },
+    {
+      "title": "Knowledge Graphs for AI Agent API Discovery",
+      "url": "https://www.deeplearning.ai/short-courses/knowledge-graphs-for-ai-agent-api-discovery",
+      "type": "Short Course"
+    },
+    {
+      "title": "Agentic Knowledge Graph Construction",
+      "url": "https://www.deeplearning.ai/short-courses/agentic-knowledge-graph-construction",
+      "type": "Short Course"
+    },
+    {
+      "title": "Fast Prototyping of GenAI Apps with Streamlit",
+      "url": "https://www.deeplearning.ai/courses/fast-prototyping-of-genai-apps-with-streamlit",
+      "type": "Course"
+    },
+    {
+      "title": "Claude Code: A Highly Agentic Coding Assistant",
+      "url": "https://www.deeplearning.ai/short-courses/claude-code-a-highly-agentic-coding-assistant",
+      "type": "Short Course"
+    },
+    {
+      "title": "Pydantic for LLM Workflows",
+      "url": "https://www.deeplearning.ai/short-courses/pydantic-for-llm-workflows",
+      "type": "Short Course"
+    },
+    {
+      "title": "Retrieval Augmented Generation (RAG)",
+      "url": "https://www.deeplearning.ai/courses/retrieval-augmented-generation-rag",
+      "type": "Course"
+    },
+    {
+      "title": "Post-training of LLMs",
+      "url": "https://www.deeplearning.ai/short-courses/post-training-of-llms",
+      "type": "Short Course"
+    },
+    {
+      "title": "Building with Llama 4",
+      "url": "https://www.deeplearning.ai/short-courses/building-with-llama-4",
+      "type": "Short Course"
+    },
+    {
+      "title": "Data Analytics Professional Certificate",
+      "url": "https://www.deeplearning.ai/courses/data-analytics",
+      "type": "Professional Certificate"
+    },
+    {
+      "title": "Orchestrating Workflows for GenAI Applications",
+      "url": "https://www.deeplearning.ai/short-courses/orchestrating-workflows-for-genai-applications",
+      "type": "Short Course"
+    },
+    {
+      "title": "DSPy: Build and Optimize Agentic Apps",
+      "url": "https://www.deeplearning.ai/short-courses/dspy-build-optimize-agentic-apps",
+      "type": "Short Course"
+    },
+    {
+      "title": "Reinforcement Fine-Tuning LLMs with GRPO",
+      "url": "https://www.deeplearning.ai/short-courses/reinforcement-fine-tuning-llms-grpo",
+      "type": "Short Course"
+    },
+    {
+      "title": "MCP: Build Rich-Context AI Apps with Anthropic",
+      "url": "https://www.deeplearning.ai/short-courses/mcp-build-rich-context-ai-apps-with-anthropic",
+      "type": "Short Course"
+    },
+    {
+      "title": "Building AI Voice Agents for Production",
+      "url": "https://www.deeplearning.ai/short-courses/building-ai-voice-agents-for-production",
+      "type": "Short Course"
+    },
+    {
+      "title": "LLMs as Operating Systems: Agent Memory",
+      "url": "https://www.deeplearning.ai/short-courses/llms-as-operating-systems-agent-memory",
+      "type": "Short Course"
+    }
+  ]
+}

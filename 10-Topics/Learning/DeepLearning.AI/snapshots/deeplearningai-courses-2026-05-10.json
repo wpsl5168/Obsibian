@@ -1,0 +1,336 @@
+{
+  "synced_at": "2026-05-10T19:25:14.818702",
+  "date": "2026-05-10",
+  "total_courses": 47,
+  "courses": [
+    {
+      "collaborator": "DeepLearning.AI",
+      "description": "Learn Python programming with AI assistance. Gain skills writing, testing, and debugging code efficiently, and create real-world AI applications.",
+      "title": "AI Python for Beginners",
+      "type": "Short Course",
+      "url": "https://www.deeplearning.ai/short-courses/ai-python-for-beginners"
+    },
+    {
+      "collaborator": "OpenAI",
+      "description": "Learn the fundamentals of prompt engineering for ChatGPT. Learn effective prompting, and how to use LLMs for summarizing, inferring, transforming, and expanding.",
+      "title": "ChatGPT Prompt Engineering for Developers",
+      "type": "Short Course",
+      "url": "https://www.deeplearning.ai/short-courses/chatgpt-prompt-engineering-for-developers"
+    },
+    {
+      "collaborator": "DeepLearning.AI",
+      "description": "Learn how to use generative AI's capabilities & limitations. Get an overview of real-world examples, and impact on business & society for effective strategies.",
+      "title": "Generative AI for Everyone",
+      "type": "Course",
+      "url": "https://www.deeplearning.ai/courses/generative-ai-for-everyone"
+    },
+    {
+      "collaborator": "DeepLearning.AI, Stanford Online",
+      "description": "Learn foundational AI concepts through an intuitive visual approach, then learn the code needed to implement the algorithms and math for ML.",
+      "title": "Machine Learning Specialization",
+      "type": "Professional Certificate",
+      "url": "https://www.deeplearning.ai/courses/machine-learning-specialization"
+    },
+    {
+      "collaborator": "crewAI",
+      "description": "Automate business workflows with multi-AI agent systems. Exceed the performance of prompting a single LLM by designing and prompting a team of AI agents through natural language.",
+      "title": "Multi AI Agent Systems with crewAI",
+      "type": "Short Course",
+      "url": "https://www.deeplearning.ai/short-courses/multi-ai-agent-systems-with-crewai"
+    },
+    {
+      "collaborator": "LangChain",
+      "description": "Use the powerful and extensible LangChain framework, using prompts, parsing, memory, chains, question answering, and agents.",
+      "title": "LangChain for LLM Application Development",
+      "type": "Short Course",
+      "url": "https://www.deeplearning.ai/short-courses/langchain-for-llm-application-development"
+    },
+    {
+      "collaborator": "DeepLearning.AI",
+      "description": "Learn about AI technologies and how to use them. Examine AI's societal impact, and learn to navigate this technological shift.",
+      "title": "AI for Everyone",
+      "type": "Course",
+      "url": "https://www.deeplearning.ai/courses/ai-for-everyone"
+    },
+    {
+      "collaborator": "CopilotKit",
+      "description": "Build fullstack agent apps that go beyond plain text, generating custom UIs like charts, forms, and whiteboards on demand.",
+      "title": "Build Interactive Agents with Generative UI",
+      "type": "Short Course",
+      "url": "https://www.deeplearning.ai/short-courses/build-interactive-agents-with-generative-ui"
+    },
+    {
+      "collaborator": "DeepLearning.AI",
+      "description": "Become an AI power user in this new course taught by Andrew Ng. From finding information to building apps, you'll develop the prompting skills that get real, useful results from today's most powerful AI models.",
+      "title": "AI Prompting for Everyone",
+      "type": "Course",
+      "url": "https://www.deeplearning.ai/courses/ai-prompting-for-everyone"
+    },
+    {
+      "collaborator": "Snowflake",
+      "description": "Learn to build AI-powered pipelines that turn images, audio, and video into LLM-ready text, and power multimodal applications on top.",
+      "title": "Building Multimodal Data Pipelines",
+      "type": "Short Course",
+      "url": "https://www.deeplearning.ai/short-courses/building-multimodal-data-pipelines"
+    },
+    {
+      "collaborator": "JetBrains",
+      "description": "Move beyond vibe coding: write clear specs that give your coding agent the context it needs to build intentional, maintainable software.",
+      "title": "Spec-Driven Development with Coding Agents",
+      "type": "Short Course",
+      "url": "https://www.deeplearning.ai/short-courses/spec-driven-development-with-coding-agents"
+    },
+    {
+      "collaborator": "RadixArk, LMSys",
+      "description": "Learn how LLM inference works under the hood and implement caching optimizations, including KV cache and RadixAttention, to make text and image generation faster and cheaper.",
+      "title": "Efficient Inference with SGLang: Text and Image Generation",
+      "type": "Short Course",
+      "url": "https://www.deeplearning.ai/short-courses/efficient-inference-with-sglang-text-and-image-generation"
+    },
+    {
+      "collaborator": "Oracle",
+      "description": "Build a complete agent memory system that lets an LLM store, retrieve, and refine knowledge across sessions—turning a stateless agent into one that learns and improves over time.",
+      "title": "Agent Memory: Building Memory-Aware Agents",
+      "type": "Short Course",
+      "url": "https://www.deeplearning.ai/short-courses/agent-memory-building-memory-aware-agents"
+    },
+    {
+      "collaborator": "Google",
+      "description": "Build and train a 20M-parameter LLM from scratch using JAX, the open-source library behind Google's Gemini, and learn the core techniques powering modern AI development.",
+      "title": "Build and Train an LLM with JAX",
+      "type": "Short Course",
+      "url": "https://www.deeplearning.ai/short-courses/build-and-train-an-llm-with-jax"
+    },
+    {
+      "collaborator": "Google Cloud, IBM Research",
+      "description": "Connect agents across different frameworks and teams using A2A, the open protocol standardizing agent-to-agent communication.",
+      "title": "A2A: The Agent2Agent Protocol",
+      "type": "Short Course",
+      "url": "https://www.deeplearning.ai/short-courses/a2a-the-agent2agent-protocol"
+    },
+    {
+      "collaborator": "Anthropic",
+      "description": "Equip agents with expert on-demand knowledge to enable reliable coding, research, and data analysis workflows",
+      "title": "Agent Skills with Anthropic",
+      "type": "Short Course",
+      "url": "https://www.deeplearning.ai/short-courses/agent-skills-with-anthropic"
+    },
+    {
+      "collaborator": "Gemini CLI",
+      "description": "Build real-world applications from the command line using Gemini CLI, Google's open-source agentic coding assistant that coordinates local tools and cloud services to automate coding and creative workflows.",
+      "title": "Gemini CLI: Code & Create with an Open-Source Agent",
+      "type": "Short Course",
+      "url": "https://www.deeplearning.ai/short-courses/gemini-cli-code-and-create-with-an-open-source-agent"
+    },
+    {
+      "collaborator": "LandingAI",
+      "description": "Build agentic systems to parse documents and extract information grounded in visual components like charts, tables, and forms.",
+      "title": "Document AI: From OCR to Agentic Doc Extraction",
+      "type": "Short Course",
+      "url": "https://www.deeplearning.ai/short-courses/document-ai-from-ocr-to-agentic-doc-extraction"
+    },
+    {
+      "collaborator": "DeepLearning.AI",
+      "description": "If you've never written code before, this course is for you. In less than 30 minutes, you'll learn to describe an idea in words and let AI transform it into an app for you.",
+      "title": "Build with Andrew",
+      "type": "Course",
+      "url": "https://www.deeplearning.ai/courses/build-with-andrew"
+    },
+    {
+      "collaborator": "Nvidia",
+      "description": "Turn proof-of-concept agent demos into production-ready systems using observability, evaluation, and deployment tools from Nvidia's NeMo Agent Toolkit.",
+      "title": "Nvidia's NeMo Agent Toolkit: Making Agents Reliable",
+      "type": "Short Course",
+      "url": "https://www.deeplearning.ai/short-courses/nvidia-nat-making-agents-reliable"
+    },
+    {
+      "collaborator": "Qdrant",
+      "description": "Build advanced retrieval systems that represent images with multiple vectors, enabling fine-grained matching between text queries and visual content for accurate multi-modal search.",
+      "title": "Multi-Vector Image Retrieval",
+      "type": "Short Course",
+      "url": "https://www.deeplearning.ai/short-courses/multi-vector-image-retrieval"
+    },
+    {
+      "collaborator": "E2B",
+      "description": "Build AI agents that write and execute code to accomplish tasks, running safely in sandboxed cloud environments that protect your systems from untrusted code.",
+      "title": "Building Coding Agents with Tool Execution",
+      "type": "Short Course",
+      "url": "https://www.deeplearning.ai/short-courses/building-coding-agents-with-tool-execution"
+    },
+    {
+      "collaborator": "Redis",
+      "description": "Speed up and reduce the costs of your AI agents by implementing semantic caching that reuses responses based on meaning rather than exact text.",
+      "title": "Semantic Caching for AI Agents",
+      "type": "Short Course",
+      "url": "https://www.deeplearning.ai/short-courses/semantic-caching-for-ai-agents"
+    },
+    {
+      "collaborator": "CrewAI",
+      "description": "Build practical multi-agent systems that collaborate, use tools and memory, and scale reliably to production",
+      "title": "Design, Develop, and Deploy Multi-Agent Systems with CrewAI",
+      "type": "Course",
+      "url": "https://www.deeplearning.ai/courses/design-develop-and-deploy-multi-agent-systems-with-crewai"
+    },
+    {
+      "collaborator": "Project Jupyter",
+      "description": "Learn to code with AI in Jupyter notebooks. Use Jupyter AI to generate code, get explanations, and analyze data.",
+      "title": "Jupyter AI: AI Coding in Notebooks",
+      "type": "Short Course",
+      "url": "https://www.deeplearning.ai/short-courses/jupyter-ai-coding-in-notebooks"
+    },
+    {
+      "collaborator": "DeepLearning.AI",
+      "description": "Learn the core principles of building, optimizing, and deploying deep learning models using PyTorch.",
+      "title": "PyTorch for Deep Learning Professional Certificate",
+      "type": "Professional Certificate",
+      "url": "https://www.deeplearning.ai/courses/pytorch-for-deep-learning-professional-certificate"
+    },
+    {
+      "collaborator": "AMD",
+      "description": "Learn how to apply fine-tuning and reinforcement learning techniques to shape model behavior, improve reasoning, and make LLMs safer and more reliable.",
+      "title": "Fine-tuning and Reinforcement Learning for LLMs: Intro to Post-Training",
+      "type": "Course",
+      "url": "https://www.deeplearning.ai/courses/fine-tuning-and-reinforcement-learning-for-llms-intro-to-post-training"
+    },
+    {
+      "collaborator": "Databricks",
+      "description": "Integrate data governance into your agent's workflow to ensure it handles data safely, securely, and accurately.",
+      "title": "Governing AI Agents",
+      "type": "Short Course",
+      "url": "https://www.deeplearning.ai/short-courses/governing-ai-agents"
+    },
+    {
+      "collaborator": "Google",
+      "description": "Build real-time voice AI agents, from simple to multi-agent podcast systems, using Google's Agent Development Kit.",
+      "title": "Building Live Voice Agents with Google's ADK",
+      "type": "Short Course",
+      "url": "https://www.deeplearning.ai/short-courses/building-live-voice-agents-with-googles-adk"
+    },
+    {
+      "collaborator": "DeepLearning.AI",
+      "description": "In this course taught by Andrew Ng, you'll build agentic AI systems that take action through iterative, multi-step workflows.",
+      "title": "Agentic AI",
+      "type": "Course",
+      "url": "https://www.deeplearning.ai/courses/agentic-ai"
+    },
+    {
+      "collaborator": "Snowflake",
+      "description": "Build, evaluate, and improve a multi-agent system that plans its steps, connects to data sources, and provides insights.",
+      "title": "Building and Evaluating Data Agents",
+      "type": "Short Course",
+      "url": "https://www.deeplearning.ai/short-courses/building-and-evaluating-data-agents"
+    },
+    {
+      "collaborator": "Box",
+      "description": "Build an LLM app that uses tools from the Box MCP server to discover Box files and extract text from them. Transform it into a multi-agent system that communicates using A2A.",
+      "title": "Build AI Apps with MCP Servers: Working with Box Files",
+      "type": "Short Course",
+      "url": "https://www.deeplearning.ai/short-courses/build-ai-apps-with-mcp-server-working-with-box-files"
+    },
+    {
+      "collaborator": "SAP",
+      "description": "Construct a knowledge graph and use it to enable your AI agent to find and call the right APIs in the right order.",
+      "title": "Knowledge Graphs for AI Agent API Discovery",
+      "type": "Short Course",
+      "url": "https://www.deeplearning.ai/short-courses/knowledge-graphs-for-ai-agent-api-discovery"
+    },
+    {
+      "collaborator": "Neo4j",
+      "description": "Build a multi-agent system that plans, designs, and constructs a knowledge graph.",
+      "title": "Agentic Knowledge Graph Construction",
+      "type": "Short Course",
+      "url": "https://www.deeplearning.ai/short-courses/agentic-knowledge-graph-construction"
+    },
+    {
+      "collaborator": "Snowflake",
+      "description": "Prototype and deploy GenAI apps using an MVP workflow, prompt engineering, and RAG.",
+      "title": "Fast Prototyping of GenAI Apps with Streamlit",
+      "type": "Course",
+      "url": "https://www.deeplearning.ai/courses/fast-prototyping-of-genai-apps-with-streamlit"
+    },
+    {
+      "collaborator": "Anthropic",
+      "description": "Explore, build, and refine codebases with Claude Code.",
+      "title": "Claude Code: A Highly Agentic Coding Assistant",
+      "type": "Short Course",
+      "url": "https://www.deeplearning.ai/short-courses/claude-code-a-highly-agentic-coding-assistant"
+    },
+    {
+      "collaborator": "DeepLearning.AI",
+      "description": "Build reliable LLM applications with structured outputs and validated data using Pydantic.",
+      "title": "Pydantic for LLM Workflows",
+      "type": "Short Course",
+      "url": "https://www.deeplearning.ai/short-courses/pydantic-for-llm-workflows"
+    },
+    {
+      "collaborator": "DeepLearning.AI",
+      "description": "Gain fundamental understanding and the practical knowledge to develop production-ready RAG applications, from architecture to deployment and evaluation.",
+      "title": "Retrieval Augmented Generation (RAG)",
+      "type": "Course",
+      "url": "https://www.deeplearning.ai/courses/retrieval-augmented-generation-rag"
+    },
+    {
+      "collaborator": "University of Washington, NexusFlow",
+      "description": "Adapt LLMs for specific tasks and behaviors using post-training techniques like SFT, DPO, and online RL.",
+      "title": "Post-training of LLMs",
+      "type": "Short Course",
+      "url": "https://www.deeplearning.ai/short-courses/post-training-of-llms"
+    },
+    {
+      "collaborator": "Meta",
+      "description": "Build multimodal and long-context GenAI applications using Llama 4 open models, API, and Llama tools.",
+      "title": "Building with Llama 4",
+      "type": "Short Course",
+      "url": "https://www.deeplearning.ai/short-courses/building-with-llama-4"
+    },
+    {
+      "collaborator": "DeepLearning.AI",
+      "description": "Build a solid data analytics foundation using industry standard and AI tools to extract insights, make decisions, and solve real-world business problems.",
+      "title": "Data Analytics Professional Certificate",
+      "type": "Professional Certificate",
+      "url": "https://www.deeplearning.ai/courses/data-analytics"
+    },
+    {
+      "collaborator": "Astronomer",
+      "description": "Turn your GenAI prototype into an automated pipeline using Apache Airflow",
+      "title": "Orchestrating Workflows for GenAI Applications",
+      "type": "Short Course",
+      "url": "https://www.deeplearning.ai/short-courses/orchestrating-workflows-for-genai-applications"
+    },
+    {
+      "collaborator": "Databricks",
+      "description": "Build, debug, and optimize AI agents using DSPy and MLflow.",
+      "title": "DSPy: Build and Optimize Agentic Apps",
+      "type": "Short Course",
+      "url": "https://www.deeplearning.ai/short-courses/dspy-build-optimize-agentic-apps"
+    },
+    {
+      "collaborator": "Predibase",
+      "description": "Improve LLM reasoning with reinforcement fine-tuning and reward functions.",
+      "title": "Reinforcement Fine-Tuning LLMs with GRPO",
+      "type": "Short Course",
+      "url": "https://www.deeplearning.ai/short-courses/reinforcement-fine-tuning-llms-grpo"
+    },
+    {
+      "collaborator": "Anthropic",
+      "description": "Build AI apps that access tools, data, and prompts using the Model Context Protocol.",
+      "title": "MCP: Build Rich-Context AI Apps with Anthropic",
+      "type": "Short Course",
+      "url": "https://www.deeplearning.ai/short-courses/mcp-build-rich-context-ai-apps-with-anthropic"
+    },
+    {
+      "collaborator": "LiveKit, RealAvatar",
+      "description": "Build responsive, scalable, and human-like AI voice applications.",
+      "title": "Building AI Voice Agents for Production",
+      "type": "Short Course",
+      "url": "https://www.deeplearning.ai/short-courses/building-ai-voice-agents-for-production"
+    },
+    {
+      "collaborator": "Letta",
+      "description": "Build systems with MemGPT agents that can autonomously manage their memory.",
+      "title": "LLMs as Operating Systems: Agent Memory",
+      "type": "Short Course",
+      "url": "https://www.deeplearning.ai/short-courses/llms-as-operating-systems-agent-memory"
+    }
+  ]
+}
