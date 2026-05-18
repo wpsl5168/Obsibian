@@ -1,3 +1,13 @@
+---
+title: Qlib 实战 Pipeline (微软 AI 量化框架)
+created: 2026-05-18
+updated: 2026-05-18
+type: research
+tags: [research]
+status: stable
+oversized_ok: true
+---
+
 # Qlib 实战 Pipeline(微软 AI 量化框架)
 
 > 调研时间:2026-05 | Qlib v0.9+ | 43.1k★,2026-04 仍在更新

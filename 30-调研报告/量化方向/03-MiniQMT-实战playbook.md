@@ -1,3 +1,12 @@
+---
+title: MiniQMT 散户实盘 Playbook (2024-2025)
+created: 2026-05-18
+updated: 2026-05-18
+type: research
+tags: [research]
+status: stable
+---
+
 # MiniQMT 散户实盘 Playbook(2024-2025)
 
 > 调研时间:2026-05 | 适用:Linux/Mac 用户想做 A股 Python 量化实盘

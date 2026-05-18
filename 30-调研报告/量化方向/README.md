@@ -1,3 +1,12 @@
+---
+title: 量化方向调研报告 - 索引
+created: 2026-05-18
+updated: 2026-05-18
+type: research
+tags: [research]
+status: stable
+---
+
 # 量化方向调研报告
 
 > 入库时间:2026-05-18 | 状态:第一轮完成,Qlib 深度待补
