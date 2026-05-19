@@ -1,3 +1,10 @@
+---
+title: Palantir FDE 深度调研
+created: 2026-05-19
+updated: 2026-05-19
+type: research
+tags: [research]
+---
 # Palantir FDE 深度调研
 
 > 系列入口。Forward Deployed Engineer 模式的定义、起源、方法论、组织结构、商业飞轮、批评与移植可能性。
@@ -51,7 +58,7 @@
 ## 关联阅读
 
 - [[../../00-个人/简历/README]] — 老王 PFE 背景与 FDE 的能力交集
-- [[../../10-知识库/AI Agent]] — Hermes Agent 作为个人 Ontology 等价物的潜力
+- [[../../10-知识库/AI模型与Agent/04-智能体架构与工作流设计/4.1-AI_Agent核心心智模型|AI Agent]] — Hermes Agent 作为个人 Ontology 等价物的潜力
 - 外部:Barry (ex-Palantir) *Understanding Forward Deployed Engineering* — barry.ooo/posts/fde-culture
 - 外部:Diogo Silva Santos *A Comprehensive Analysis of Palantir's FDE Model* (Medium, Apr 2026)
 - 外部:PostHog *WTF is a Forward Deployed Engineer* — posthog.com/blog/forward-deployed-engineer

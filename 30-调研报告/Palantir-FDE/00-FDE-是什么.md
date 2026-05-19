@@ -1,3 +1,10 @@
+---
+title: 00 FDE 是什么
+created: 2026-05-19
+updated: 2026-05-19
+type: research
+tags: [research]
+---
 # 00 FDE 是什么
 
 > 厘清概念边界:FDE 不是一个 title,是一个工程家族;不是 PFE 的升级版,是组织结构的反向重构。

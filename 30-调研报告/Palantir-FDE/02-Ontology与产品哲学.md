@@ -1,3 +1,10 @@
+---
+title: 02 Ontology 与产品哲学
+created: 2026-05-19
+updated: 2026-05-19
+type: research
+tags: [research]
+---
 # 02 Ontology 与产品哲学
 
 > 为什么 Ontology 才是真正的护城河,FDE 只是采矿工。为什么 Palantir 没有传统 PM。deployment-as-R&D 的财务把戏怎么玩。

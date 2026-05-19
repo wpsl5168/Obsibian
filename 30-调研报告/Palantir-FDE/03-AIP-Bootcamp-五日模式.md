@@ -1,3 +1,10 @@
+---
+title: 03 AIP Bootcamp 五日模式
+created: 2026-05-19
+updated: 2026-05-19
+type: research
+tags: [research]
+---
 # 03 AIP Bootcamp 五日模式
 
 > 2023 年发明的 5 天压缩交付模式,把 FDE 方法论变成销售飞轮。直接拉动 ARR 翻倍、股价 $15→$80。
