@@ -4,6 +4,7 @@ created: 2026-05-19
 updated: 2026-05-19
 type: research
 tags: [research]
+status: stable
 ---
 # 02 Ontology 与产品哲学
 

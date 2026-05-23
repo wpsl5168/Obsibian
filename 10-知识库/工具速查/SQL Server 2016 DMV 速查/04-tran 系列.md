@@ -1,3 +1,12 @@
+---
+title: SQL Server 2016 DMV - tran 系列
+created: 2026-05-23
+updated: 2026-05-23
+type: entity
+tags: [tooling, methodology]
+status: stable
+---
+
 # 04 - sys.dm_tran_* 系列（事务与锁）
 
 > 阻塞、死锁、长事务的核心数据源。

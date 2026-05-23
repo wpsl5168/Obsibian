@@ -1,3 +1,12 @@
+---
+title: SQL Server 2016 DMV - exec 系列
+created: 2026-05-23
+updated: 2026-05-23
+type: entity
+tags: [tooling, methodology]
+status: stable
+---
+
 # 01 - sys.dm_exec_* 系列（执行与会话）
 
 > 排查"现在谁在跑什么、卡在哪、跑了啥 SQL"的核心 DMV 群。

@@ -1,3 +1,12 @@
+---
+title: SQL Server 2016 DMV - io/hadr 系列
+created: 2026-05-23
+updated: 2026-05-23
+type: entity
+tags: [tooling, methodology]
+status: stable
+---
+
 # 05 - IO + HADR + 扩展事件
 
 > 文件 IO 延迟、AlwaysOn 副本健康、XE 监控。
