@@ -19,13 +19,13 @@ status: stable
 
 ## 📚 分类索引
 
-| 文件 | 覆盖 DMV | 用途 |
-|---|---|---|
-| [[01-exec 系列|01-exec 系列（执行与会话）]] | dm_exec_requests/sessions/sql_text/connections/cached_plans/query_plan/query_memory_grants | 当前会话、运行中请求、SQL 文本、执行计划 |
-| [[02-os 系列|02-os 系列（操作系统层）]] | dm_os_wait_stats/waiting_tasks/sys_info/windows_info/memory_clerks/buffer_descriptors/performance_counters/workers/threads/ring_buffers | 等待统计、CPU/内存/IO 系统级指标 |
-| [[03-db 系列|03-db 系列（数据库与索引）]] | dm_db_index_usage_stats/index_physical_stats/stats_properties/file_space_usage/session_space_usage/missing_index_* | 索引使用、碎片、缺失索引、空间 |
-| [[04-tran 系列|04-tran 系列（事务与锁）]] | dm_tran_active_transactions/locks/session_transactions | 活动事务、锁等待、长事务排查 |
-| [[05-io-hadr 系列|05-io-hadr 系列（IO + AlwaysOn）]] | dm_io_virtual_file_stats/hadr_database_replica_states/xe_sessions | 文件 IO 延迟、副本健康度、扩展事件 |
+| 文件              | 覆盖 DMV                         | 用途                                                                                                                                      |                        |
+| --------------- | ------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------- | ---------------------- |
+| [[01-exec 系列    | 01-exec 系列（执行与会话）]]            | dm_exec_requests/sessions/sql_text/connections/cached_plans/query_plan/query_memory_grants                                              | 当前会话、运行中请求、SQL 文本、执行计划 |
+| [[02-os 系列      | 02-os 系列（操作系统层）]]              | dm_os_wait_stats/waiting_tasks/sys_info/windows_info/memory_clerks/buffer_descriptors/performance_counters/workers/threads/ring_buffers | 等待统计、CPU/内存/IO 系统级指标   |
+| [[03-db 系列      | 03-db 系列（数据库与索引）]]             | dm_db_index_usage_stats/index_physical_stats/stats_properties/file_space_usage/session_space_usage/missing_index_*                      | 索引使用、碎片、缺失索引、空间        |
+| [[04-tran 系列    | 04-tran 系列（事务与锁）]]             | dm_tran_active_transactions/locks/session_transactions                                                                                  | 活动事务、锁等待、长事务排查         |
+| [[05-io-hadr 系列 | 05-io-hadr 系列（IO + AlwaysOn）]] | dm_io_virtual_file_stats/hadr_database_replica_states/xe_sessions                                                                       | 文件 IO 延迟、副本健康度、扩展事件    |
 
 ---
 
