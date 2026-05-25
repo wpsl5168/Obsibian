@@ -1,24 +1,24 @@
 {
   "main": {
-    "id": "6649f50b3c068286",
+    "id": "5f8b5ca9c0ebdc0a",
     "type": "split",
     "children": [
       {
-        "id": "b683c1334c044e3b",
+        "id": "a6e90efa051195f7",
         "type": "tabs",
         "children": [
           {
-            "id": "f40f391fbe6a0995",
+            "id": "6d5ecc19e46a084a",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "00-Inbox/2026-04-12-AI-Agent-研究报告.md",
-                "mode": "source",
+                "file": "30-调研报告/Stack-chan-桌面AI机器人选型与采购.md",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2026-04-12-AI-Agent-研究报告"
+              "title": "Stack-chan-桌面AI机器人选型与采购"
             }
           }
         ]
@@ -27,11 +27,11 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "05bfadcdf947f19c",
+    "id": "7ca3df03e54880b0",
     "type": "mobile-drawer",
     "children": [
       {
-        "id": "24a6816084bf714c",
+        "id": "5c7936a65030c623",
         "type": "leaf",
         "state": {
           "type": "file-explorer",
@@ -44,7 +44,7 @@
         }
       },
       {
-        "id": "db2061292f7c06bc",
+        "id": "28400321a6ac0e11",
         "type": "leaf",
         "state": {
           "type": "search",
@@ -61,7 +61,7 @@
         }
       },
       {
-        "id": "2c43515cb5657a18",
+        "id": "87eb5e23e656c14f",
         "type": "leaf",
         "state": {
           "type": "tag",
@@ -76,7 +76,7 @@
         }
       },
       {
-        "id": "da7c71ff12a5d69d",
+        "id": "7058b93ccb7a3c16",
         "type": "leaf",
         "state": {
           "type": "all-properties",
@@ -90,7 +90,7 @@
         }
       },
       {
-        "id": "cd670e942a03371a",
+        "id": "908da4e6f2a8c3d8",
         "type": "leaf",
         "state": {
           "type": "bookmarks",
@@ -103,16 +103,16 @@
     "currentTab": 0
   },
   "right": {
-    "id": "13ad3254521a8668",
+    "id": "75eacbbdb6af06d4",
     "type": "mobile-drawer",
     "children": [
       {
-        "id": "529c18d129040a06",
+        "id": "1246c2f2c7cba0cb",
         "type": "leaf",
         "state": {
           "type": "backlink",
           "state": {
-            "file": "00-Inbox/2026-04-12-AI-Agent-研究报告.md",
+            "file": "30-调研报告/2026-04-中美AI模型与Agent全景/01-美国大模型.md",
             "collapseAll": false,
             "extraContext": false,
             "sortOrder": "alphabetical",
@@ -126,12 +126,12 @@
         }
       },
       {
-        "id": "8c4b67fb6f4606aa",
+        "id": "3d105c51f23c4335",
         "type": "leaf",
         "state": {
           "type": "outgoing-link",
           "state": {
-            "file": "00-Inbox/2026-04-12-AI-Agent-研究报告.md",
+            "file": "项目/海马体/测试方案与用例.md",
             "linksCollapsed": false,
             "unlinkedCollapsed": true
           },
@@ -140,12 +140,12 @@
         }
       },
       {
-        "id": "2ac8650e2ce91992",
+        "id": "ce699fa8afacf863",
         "type": "leaf",
         "state": {
           "type": "outline",
           "state": {
-            "file": "00-Inbox/2026-04-12-AI-Agent-研究报告.md",
+            "file": "项目/海马体/测试方案与用例.md",
             "followCursor": false,
             "showSearch": false,
             "searchQuery": ""
@@ -153,22 +153,13 @@
           "icon": "lucide-list",
           "title": "大纲"
         }
-      },
-      {
-        "id": "08b309fc2ad3205f",
-        "type": "leaf",
-        "state": {
-          "type": "git-view",
-          "state": {},
-          "icon": "git-pull-request",
-          "title": "Source Control"
-        }
       }
     ],
-    "currentTab": 3
+    "currentTab": 0
   },
   "left-ribbon": {
     "hiddenItems": {
+      "file-cleaner-redux:Clean files": false,
       "switcher:打开快速切换": false,
       "graph:查看关系图谱": false,
       "canvas:新建白板": false,
@@ -179,43 +170,46 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "08b309fc2ad3205f",
+  "active": "6d5ecc19e46a084a",
   "lastOpenFiles": [
-    "05-AI-Agent专题/Hermes上下文管理优化方案.md",
-    "05-AI-Agent专题/AI-Agent-Memory架构借鉴分析.md",
-    "03-笔记与灵感/DeepLearning.AI/DeepLearning.AI-学习路径.md",
-    "05-AI-Agent专题/Claude-Opus-4.7-vs-4.6.md",
-    "/05-AI-Agent专题/Hermes上下文管理优化方案.md",
-    "/05-AI-Agent专题/AI-Agent-Memory架构借鉴分析.md",
-    "03-笔记与灵感/SQLServer_高级加密方案_CLR_混淆.md",
-    "03-笔记与灵感/SQLServer_存储过程加密方案_WITH_ENCRYPTION.md",
-    "03-笔记与灵感/SQLServer_Dacpac包加密与自动化部署.md",
-    "03-笔记与灵感/README.md",
-    "03-笔记与灵感/Diagram-Style.md",
-    "/03-笔记与灵感/DeepLearning.AI/DeepLearning.AI-学习路径.md",
-    "03-笔记与灵感/ClaudeCode-工具/00-Overview.md",
-    "03-笔记与灵感/30-Checkpointing.md",
-    "03-笔记与灵感/20-CLI-Cheatsheet.md",
-    "03-笔记与灵感/10-经典方法论（ReAct_Reflexion_ToT_MetaGPT）.md",
-    "03-笔记与灵感/10-Best-Practices-Extract.md",
-    "03-笔记与灵感/09-HITL与Guardrails（人类在环_安全）.md",
-    "03-笔记与灵感/08-Observability与Evals（可观测_评测）.md",
-    "03-笔记与灵感/07-AI Dev产品化（CLI_GUI_Cloud）.md",
-    "03-笔记与灵感/05-Handoff与Triage（交接_分诊）.md",
-    "03-笔记与灵感/03-平台化框架（DevUI_OTel_多语言）.md",
-    "03-笔记与灵感/02-异步消息与事件驱动（Event-driven Messaging）.md",
-    "03-笔记与灵感/01-工作流编排（Graphs & Workflows）.md",
-    "03-笔记与灵感/01-Session-Management.md",
-    "03-笔记与灵感/00-Global-Rules.md",
-    "05-AI-Agent专题",
-    "03-笔记与灵感/DeepLearning.AI",
-    "03-笔记与灵感/ClaudeCode-工具",
-    "03-笔记与灵感",
-    "01-新闻与动态",
-    "/05-AI-Agent专题",
-    "/03-笔记与灵感/DeepLearning.AI",
-    "/03-笔记与灵感/ClaudeCode-工具",
-    "/03-笔记与灵感",
-    "/01-新闻与动态"
+    "conflict-files-obsidian-git.md",
+    "30-调研报告/Stack-chan-桌面AI机器人选型与采购.md",
+    "10-Topics/Learning/DeepLearning.AI/snapshots/deeplearningai-courses-2026-05-20.json",
+    "10-Topics/Learning/DeepLearning.AI/snapshots/deeplearningai-courses-2026-05-19.json",
+    "10-Topics/Learning/DeepLearning.AI/snapshots/deeplearningai-courses-2026-05-20.compact.json",
+    "10-Topics/Learning/DeepLearning.AI/updates/2026-05-20-deeplearningai-update.md",
+    "/10-Topics/Learning/DeepLearning.AI/snapshots/deeplearningai-courses-2026-05-20.json",
+    "/10-Topics/Learning/DeepLearning.AI/snapshots/deeplearningai-courses-2026-05-19.json",
+    "/10-Topics/Learning/DeepLearning.AI/snapshots/deeplearningai-courses-2026-05-20.compact.json",
+    "/10-Topics/Learning/DeepLearning.AI/snapshots/deeplearningai-courses-2026-05-19.compact.json",
+    "10-Topics/Learning/DeepLearning.AI/snapshots/deeplearningai-courses-2026-05-19.compact.json",
+    "/10-Topics/Learning/DeepLearning.AI/snapshots",
+    "04-项目开发/dreaming/2026-05-20-research.md",
+    "01-新闻速递/2026-05-20-AI-Daily.md",
+    "/99-Governance/weekly-digest/2026-W21.md",
+    "/99-Governance/weekly-digest/2026-05-20-daily.md",
+    "99-Governance/weekly-digest/2026-05-20-daily.md",
+    "/99-Governance/weekly-digest",
+    "/30-调研报告/Palantir-FDE/README.md",
+    "/30-调研报告/Palantir-FDE/08-市场认可与国内实操.md",
+    "/30-调研报告/Palantir-FDE/07-移植到个人咨询.md",
+    "/30-调研报告/Palantir-FDE/06-阴暗面与批评.md",
+    "/30-调研报告/Palantir-FDE/05-对标与模仿者.md",
+    "/30-调研报告/Palantir-FDE/04-组织与招聘.md",
+    "/30-调研报告/Palantir-FDE/03-AIP-Bootcamp-五日模式.md",
+    "/30-调研报告/Palantir-FDE/02-Ontology与产品哲学.md",
+    "/30-调研报告/Palantir-FDE/01-起源与方法论.md",
+    "/30-调研报告/Palantir-FDE/00-FDE-是什么.md",
+    "/10-Topics/Learning/DeepLearning.AI/updates/2026-05-20-deeplearningai-update.md",
+    "/10-Topics/Learning/DeepLearning.AI/updates/2026-05-19-deeplearningai-update.md",
+    "10-Topics/Learning/DeepLearning.AI/updates/2026-05-19-deeplearningai-update.md",
+    "/04-项目开发/dreaming/2026-05-20-research.md",
+    "/04-项目开发/dreaming/2026-05-19-research.md",
+    "04-项目开发/dreaming/2026-05-19-research.md",
+    "/01-新闻速递/2026-05-20-AI-Daily.md",
+    "/01-新闻速递/2026-05-19-AI-Daily.md",
+    "20-项目/Safety/assets/architecture.png",
+    "/20-项目/Safety/assets/architecture.png",
+    "assets/claude-code/auto-mode.png"
   ]
 }

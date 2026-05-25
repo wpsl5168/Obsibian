@@ -1,1 +1,6 @@
-{}
+{
+  "interfaceFontFamily": "Georgia",
+  "textFontFamily": "Georgia",
+  "baseFontSize": 10,
+  "baseFontSizeAction": true
+}
