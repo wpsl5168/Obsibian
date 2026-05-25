@@ -28,68 +28,68 @@ type: meta
 
 ## 🤖 AI模型与Agent（核心知识）
 
-- [[10-知识库/AI模型与Agent/01-基础架构与模型底座/1.1-大模型演进与主流架构体系.md|大模型演进与主流架构体系]] — 大语言模型（Large Language Model, LLM）本质上是一个**超大规模的概率函数**——给定一串 Token 序列，输出下一个 Token 的概率分布。如果用 .NET 类比：`Func<Token[], Probabil  🟡
-- [[10-知识库/AI模型与Agent/01-基础架构与模型底座/1.2-上下文窗口与Token机制.md|上下文窗口与 Token 机制]] — Token 不等于字符，也不等于单词。它是模型 Tokenizer 切分后的最小语义单元。  🟡
-- [[10-知识库/AI模型与Agent/01-基础架构与模型底座/1.3-多模态能力原理与应用.md|多模态能力原理与应用]] — 多模态（Multimodal）指模型能处理和生成**多种数据模态**——文本、图像、音频、视频。  🟡
-- [[10-知识库/AI模型与Agent/01-基础架构与模型底座/1.4-Embeddings与向量表示.md|Embeddings 与向量表示]] — Embedding（嵌入/向量表示）本质上就是把人类语言"翻译"成计算机能做数学运算的高维浮点数组。如果你熟悉 SQL Server，可以这样理解：**一张表的每一行是一个文本，Embedding 就是给每行算出一个固定长度的 `VARBI  🔴
-- [[10-知识库/AI模型与Agent/02-提示词工程与输出规范/2.1-系统提示词与角色设定.md|系统提示词与角色设定]] — System Prompt（系统提示词）是 LLM 对话的"宪法"——它在每轮对话之前注入，定义模型的行为边界、人格、输出格式和能力范围。如果把 LLM 比作一个 C# 类，**System Prompt 就是构造函数里的初始化配置，Use  🔴
-- [[10-知识库/AI模型与Agent/02-提示词工程与输出规范/2.2-高阶推理策略.md|高阶推理策略]] — 高阶推理策略就是让 LLM "想清楚再说话"的各种套路。如果说基础 Prompt 是 `Console.WriteLine("答案")`，**高阶推理就是在输出前先跑一遍 `Debug.Assert()` + 单元测试 + 代码审查**。  🔴
-- [[10-知识库/AI模型与Agent/02-提示词工程与输出规范/2.3-结构化数据输出.md|结构化数据输出]] — 结构化输出（Structured Output）就是让 LLM 不再"自由发挥"，而是严格按照预定义的 Schema 输出 JSON、XML 等机器可解析的数据格式。如果把 LLM 比作一个 C# 方法，**普通对话是返回 `string`  🔴
-- [[10-知识库/AI模型与Agent/03-工具调用与上下文协议/3.1-函数调用底层机制.md|函数调用底层机制]] — **Function Calling**（函数调用）是 LLM 厂商提供的一种结构化输出能力：模型在推理过程中不直接返回自然语言，而是生成一个符合预定义 JSON Schema 的函数调用请求，由客户端执行后将结果回传给模型继续推理。  🟡
-- [[10-知识库/AI模型与Agent/03-工具调用与上下文协议/3.2-Model_Context_Protocol规范解析.md|Model Context Protocol 规范解析]] — **MCP 之于 AI Agent，就像 ADO.NET 之于 .NET 应用——一套标准化的数据访问协议。**  🔴
-- [[10-知识库/AI模型与Agent/03-工具调用与上下文协议/3.3-RAG系统架构与演进.md|RAG 系统架构与演进]] — **RAG（Retrieval-Augmented Generation，检索增强生成）** 是一种将外部知识检索与 LLM 生成相结合的架构模式。其核心思想：不要指望模型"记住"所有知识，而是在推理时动态检索相关上下文，注入到 promp  🔴
-- [[10-知识库/AI模型与Agent/04-智能体架构与工作流设计/4.1-AI_Agent核心心智模型.md|AI Agent 核心心智模型]] — 相较于传统的静态 Prompt 问答，Agent 的核心特征在于**闭环的行动与反馈机制**。它能够根据环境返回的真实数据动态调整后续策略。  🔴
-- [[10-知识库/AI模型与Agent/04-智能体架构与工作流设计/4.2-工作流编排模式.md|工作流编排模式]] — **工作流编排（Workflow Orchestration）** 是指将多个 LLM 调用、工具调用、条件判断等步骤按照一定的逻辑拓扑组织起来，形成可执行、可观测、可恢复的自动化流程。  🔴
-- [[10-知识库/AI模型与Agent/04-智能体架构与工作流设计/4.3-记忆机制设计.md|记忆机制设计]] — **记忆（Memory）** 是 Agent 区别于一次性 LLM 调用的关键特征。没有记忆的 Agent 就像患了健忘症的员工——每次汇报都要从头解释背景。记忆系统让 Agent 能够跨会话积累经验、持久化关键信息、动态调整行为策略。  🔴
-- [[10-知识库/AI模型与Agent/04-智能体架构与工作流设计/4.4-Human-in-the-loop交接机制.md|Human-in-the-loop 交接机制]] — **Human-in-the-loop (HITL)** 是指在 AI Agent 的自主执行循环中，在关键决策点引入人类审核、确认或介入的机制。它是 Agent 从实验环境走向生产环境的**必要安全网**。  🔴
-- [[10-知识库/AI模型与Agent/04-智能体架构与工作流设计/4.5-AI-Agent架构开源学习指南.md|AI Agent 架构开源学习指南]] — ---  🔴
-- [[10-知识库/AI模型与Agent/05-评测监控与安全防护/5.1-模型评测基准与Evals驱动开发.md|模型评测基准与 Evals 驱动开发]] — LLM Evaluation（大模型评测）是对语言模型能力的系统化度量。类比 .NET 工程中的单元测试 + 集成测试 + 性能基准测试：  🔴
-- [[10-知识库/AI模型与Agent/05-评测监控与安全防护/5.2-可观测性与链路追踪.md|可观测性与链路追踪]] — 传统微服务可观测性（Metrics / Logs / Traces 三支柱）在 LLM 应用场景下严重不足：  🔴
-- [[10-知识库/AI模型与Agent/05-评测监控与安全防护/5.3-AI安全护栏与防御机制.md|AI 安全护栏与防御机制]] — LLM 应用面临的安全威胁与传统 Web 应用截然不同：  🔴
-- [[10-知识库/AI模型与Agent/06-工程落地与Vibe_Coding实战/6.1-终端IDE形态深度对比.md|终端 IDE 形态深度对比]] — 2025 年以来，AI 编码工具已分化为三个明确的形态：  🔴
-- [[10-知识库/AI模型与Agent/06-工程落地与Vibe_Coding实战/6.2-CLI原生Agent实战.md|6.2 CLI原生Agent实战]] — 在 [[6.1-Vibe_Coding核心理念]] 中我们提到 Vibe Coding 的核心是"意图驱动"。但 VS Code 插件（Copilot / Cursor）本质上是 **IDE-first**，Agent 能力受限于编辑器沙箱  🔴
-- [[10-知识库/AI模型与Agent/06-工程落地与Vibe_Coding实战/6.3-SWE-Agent端到端闭环开发.md|6.3 SWE-Agent 端到端闭环开发]] — SWE-Agent 由 Princeton 和 Stanford 联合推出（1.0 版本），核心贡献是提出了 **ACI（Agent-Computer Interface）** 的概念——一套专门为 LLM Agent 设计的"计算机操作接  🔴
-- [[10-知识库/AI模型与Agent/README.md|02-AI知识星球]] — ---
+- [[30-知识库/AI模型与Agent/01-基础架构与模型底座/1.1-大模型演进与主流架构体系.md|大模型演进与主流架构体系]] — 大语言模型（Large Language Model, LLM）本质上是一个**超大规模的概率函数**——给定一串 Token 序列，输出下一个 Token 的概率分布。如果用 .NET 类比：`Func<Token[], Probabil  🟡
+- [[30-知识库/AI模型与Agent/01-基础架构与模型底座/1.2-上下文窗口与Token机制.md|上下文窗口与 Token 机制]] — Token 不等于字符，也不等于单词。它是模型 Tokenizer 切分后的最小语义单元。  🟡
+- [[30-知识库/AI模型与Agent/01-基础架构与模型底座/1.3-多模态能力原理与应用.md|多模态能力原理与应用]] — 多模态（Multimodal）指模型能处理和生成**多种数据模态**——文本、图像、音频、视频。  🟡
+- [[30-知识库/AI模型与Agent/01-基础架构与模型底座/1.4-Embeddings与向量表示.md|Embeddings 与向量表示]] — Embedding（嵌入/向量表示）本质上就是把人类语言"翻译"成计算机能做数学运算的高维浮点数组。如果你熟悉 SQL Server，可以这样理解：**一张表的每一行是一个文本，Embedding 就是给每行算出一个固定长度的 `VARBI  🔴
+- [[30-知识库/AI模型与Agent/02-提示词工程与输出规范/2.1-系统提示词与角色设定.md|系统提示词与角色设定]] — System Prompt（系统提示词）是 LLM 对话的"宪法"——它在每轮对话之前注入，定义模型的行为边界、人格、输出格式和能力范围。如果把 LLM 比作一个 C# 类，**System Prompt 就是构造函数里的初始化配置，Use  🔴
+- [[30-知识库/AI模型与Agent/02-提示词工程与输出规范/2.2-高阶推理策略.md|高阶推理策略]] — 高阶推理策略就是让 LLM "想清楚再说话"的各种套路。如果说基础 Prompt 是 `Console.WriteLine("答案")`，**高阶推理就是在输出前先跑一遍 `Debug.Assert()` + 单元测试 + 代码审查**。  🔴
+- [[30-知识库/AI模型与Agent/02-提示词工程与输出规范/2.3-结构化数据输出.md|结构化数据输出]] — 结构化输出（Structured Output）就是让 LLM 不再"自由发挥"，而是严格按照预定义的 Schema 输出 JSON、XML 等机器可解析的数据格式。如果把 LLM 比作一个 C# 方法，**普通对话是返回 `string`  🔴
+- [[30-知识库/AI模型与Agent/03-工具调用与上下文协议/3.1-函数调用底层机制.md|函数调用底层机制]] — **Function Calling**（函数调用）是 LLM 厂商提供的一种结构化输出能力：模型在推理过程中不直接返回自然语言，而是生成一个符合预定义 JSON Schema 的函数调用请求，由客户端执行后将结果回传给模型继续推理。  🟡
+- [[30-知识库/AI模型与Agent/03-工具调用与上下文协议/3.2-Model_Context_Protocol规范解析.md|Model Context Protocol 规范解析]] — **MCP 之于 AI Agent，就像 ADO.NET 之于 .NET 应用——一套标准化的数据访问协议。**  🔴
+- [[30-知识库/AI模型与Agent/03-工具调用与上下文协议/3.3-RAG系统架构与演进.md|RAG 系统架构与演进]] — **RAG（Retrieval-Augmented Generation，检索增强生成）** 是一种将外部知识检索与 LLM 生成相结合的架构模式。其核心思想：不要指望模型"记住"所有知识，而是在推理时动态检索相关上下文，注入到 promp  🔴
+- [[30-知识库/AI模型与Agent/04-智能体架构与工作流设计/4.1-AI_Agent核心心智模型.md|AI Agent 核心心智模型]] — 相较于传统的静态 Prompt 问答，Agent 的核心特征在于**闭环的行动与反馈机制**。它能够根据环境返回的真实数据动态调整后续策略。  🔴
+- [[30-知识库/AI模型与Agent/04-智能体架构与工作流设计/4.2-工作流编排模式.md|工作流编排模式]] — **工作流编排（Workflow Orchestration）** 是指将多个 LLM 调用、工具调用、条件判断等步骤按照一定的逻辑拓扑组织起来，形成可执行、可观测、可恢复的自动化流程。  🔴
+- [[30-知识库/AI模型与Agent/04-智能体架构与工作流设计/4.3-记忆机制设计.md|记忆机制设计]] — **记忆（Memory）** 是 Agent 区别于一次性 LLM 调用的关键特征。没有记忆的 Agent 就像患了健忘症的员工——每次汇报都要从头解释背景。记忆系统让 Agent 能够跨会话积累经验、持久化关键信息、动态调整行为策略。  🔴
+- [[30-知识库/AI模型与Agent/04-智能体架构与工作流设计/4.4-Human-in-the-loop交接机制.md|Human-in-the-loop 交接机制]] — **Human-in-the-loop (HITL)** 是指在 AI Agent 的自主执行循环中，在关键决策点引入人类审核、确认或介入的机制。它是 Agent 从实验环境走向生产环境的**必要安全网**。  🔴
+- [[30-知识库/AI模型与Agent/04-智能体架构与工作流设计/4.5-AI-Agent架构开源学习指南.md|AI Agent 架构开源学习指南]] — ---  🔴
+- [[30-知识库/AI模型与Agent/05-评测监控与安全防护/5.1-模型评测基准与Evals驱动开发.md|模型评测基准与 Evals 驱动开发]] — LLM Evaluation（大模型评测）是对语言模型能力的系统化度量。类比 .NET 工程中的单元测试 + 集成测试 + 性能基准测试：  🔴
+- [[30-知识库/AI模型与Agent/05-评测监控与安全防护/5.2-可观测性与链路追踪.md|可观测性与链路追踪]] — 传统微服务可观测性（Metrics / Logs / Traces 三支柱）在 LLM 应用场景下严重不足：  🔴
+- [[30-知识库/AI模型与Agent/05-评测监控与安全防护/5.3-AI安全护栏与防御机制.md|AI 安全护栏与防御机制]] — LLM 应用面临的安全威胁与传统 Web 应用截然不同：  🔴
+- [[30-知识库/AI模型与Agent/06-工程落地与Vibe_Coding实战/6.1-终端IDE形态深度对比.md|终端 IDE 形态深度对比]] — 2025 年以来，AI 编码工具已分化为三个明确的形态：  🔴
+- [[30-知识库/AI模型与Agent/06-工程落地与Vibe_Coding实战/6.2-CLI原生Agent实战.md|6.2 CLI原生Agent实战]] — 在 [[6.1-Vibe_Coding核心理念]] 中我们提到 Vibe Coding 的核心是"意图驱动"。但 VS Code 插件（Copilot / Cursor）本质上是 **IDE-first**，Agent 能力受限于编辑器沙箱  🔴
+- [[30-知识库/AI模型与Agent/06-工程落地与Vibe_Coding实战/6.3-SWE-Agent端到端闭环开发.md|6.3 SWE-Agent 端到端闭环开发]] — SWE-Agent 由 Princeton 和 Stanford 联合推出（1.0 版本），核心贡献是提出了 **ACI（Agent-Computer Interface）** 的概念——一套专门为 LLM Agent 设计的"计算机操作接  🔴
+- [[30-知识库/AI模型与Agent/README.md|02-AI知识星球]] — ---
 
 
 ## 🛠️ 工具速查
 
-- [[10-知识库/工具速查/00-Global-Rules.md|全局规则（大秘/二秘统一遵守）]] — - 任何“有意义的产物”都要落到 GitHub（Obsidian 仓库）并可检索。 - 不允许只存在于聊天里。
-- [[10-知识库/工具速查/01-Session-Management.md|会话管理（压缩/切会话策略）]] — 目的：避免长会话导致上下文膨胀（模型变笨/忘前文），同时保证关键信息不丢。
-- [[10-知识库/工具速查/10-Best-Practices-Extract.md|Claude Code Best Practices（摘录 + 落地解读）]] — 来源（官方）：<https://code.claude.com/docs/en/best-practices>
-- [[10-知识库/工具速查/20-CLI-Cheatsheet.md|Claude Code CLI Cheatsheet（速查）]] — 来源（官方）：<https://code.claude.com/docs/en/cli-reference>
-- [[10-知识库/工具速查/ClaudeCode工具/00-Overview.md|Claude Code 概览（落地导向）]] — Claude Code 是一个 **agentic coding 环境**：它不只是回答问题，而是能在你的项目里读文件、改文件、跑命令，按“探索→计划→实现→验证”的循环完成任务。
-- [[10-知识库/工具速查/Diagram-Style.md|配图标准（强约束：禁止 AI 生图）]] — 1) **必须基于文章内容严谨生成**：图里每个实体、关系、层级，都要能在正文中找到对应依据。 2) **禁止随意发散与脑补**：正文没提到的模块/流程/术语，不得擅自补全。 3) **统一风格**：高级、极简、学术白板风（参考 Googl
+- [[30-知识库/工具速查/00-Global-Rules.md|全局规则（大秘/二秘统一遵守）]] — - 任何“有意义的产物”都要落到 GitHub（Obsidian 仓库）并可检索。 - 不允许只存在于聊天里。
+- [[30-知识库/工具速查/01-Session-Management.md|会话管理（压缩/切会话策略）]] — 目的：避免长会话导致上下文膨胀（模型变笨/忘前文），同时保证关键信息不丢。
+- [[30-知识库/工具速查/10-Best-Practices-Extract.md|Claude Code Best Practices（摘录 + 落地解读）]] — 来源（官方）：<https://code.claude.com/docs/en/best-practices>
+- [[30-知识库/工具速查/20-CLI-Cheatsheet.md|Claude Code CLI Cheatsheet（速查）]] — 来源（官方）：<https://code.claude.com/docs/en/cli-reference>
+- [[30-知识库/工具速查/ClaudeCode工具/00-Overview.md|Claude Code 概览（落地导向）]] — Claude Code 是一个 **agentic coding 环境**：它不只是回答问题，而是能在你的项目里读文件、改文件、跑命令，按“探索→计划→实现→验证”的循环完成任务。
+- [[30-知识库/工具速查/Diagram-Style.md|配图标准（强约束：禁止 AI 生图）]] — 1) **必须基于文章内容严谨生成**：图里每个实体、关系、层级，都要能在正文中找到对应依据。 2) **禁止随意发散与脑补**：正文没提到的模块/流程/术语，不得擅自补全。 3) **统一风格**：高级、极简、学术白板风（参考 Googl
 
 
 ## 📜 经典方法论
 
-- [[10-知识库/经典方法论/01-工作流编排（Graphs & Workflows）.md|01-工作流编排（Graphs & Workflows）]] — 
-- [[10-知识库/经典方法论/02-异步消息与事件驱动（Event-driven Messaging）.md|02-异步消息与事件驱动（Event-driven Messaging）]] — 
-- [[10-知识库/经典方法论/03-平台化框架（DevUI_OTel_多语言）.md|03-平台化框架（DevUI_OTel_多语言）]] — 
-- [[10-知识库/经典方法论/05-Handoff与Triage（交接_分诊）.md|05-Handoff与Triage（交接_分诊）]] — 
-- [[10-知识库/经典方法论/07-AI Dev产品化（CLI_GUI_Cloud）.md|07-AI Dev产品化（CLI_GUI_Cloud）]] — 
-- [[10-知识库/经典方法论/08-Observability与Evals（可观测_评测）.md|08-Observability与Evals（可观测_评测）]] — 
-- [[10-知识库/经典方法论/09-HITL与Guardrails（人类在环_安全）.md|09-HITL与Guardrails（人类在环_安全）]] — 
-- [[10-知识库/经典方法论/10-经典方法论（ReAct_Reflexion_ToT_MetaGPT）.md|10-经典方法论（ReAct_Reflexion_ToT_MetaGPT）]] — 
-- [[10-知识库/经典方法论/30-Checkpointing.md|Checkpointing（回退/回放机制）]] — 来源（官方）：<https://code.claude.com/docs/en/checkpointing>
+- [[30-知识库/经典方法论/01-工作流编排（Graphs & Workflows）.md|01-工作流编排（Graphs & Workflows）]] — 
+- [[30-知识库/经典方法论/02-异步消息与事件驱动（Event-driven Messaging）.md|02-异步消息与事件驱动（Event-driven Messaging）]] — 
+- [[30-知识库/经典方法论/03-平台化框架（DevUI_OTel_多语言）.md|03-平台化框架（DevUI_OTel_多语言）]] — 
+- [[30-知识库/经典方法论/05-Handoff与Triage（交接_分诊）.md|05-Handoff与Triage（交接_分诊）]] — 
+- [[30-知识库/经典方法论/07-AI Dev产品化（CLI_GUI_Cloud）.md|07-AI Dev产品化（CLI_GUI_Cloud）]] — 
+- [[30-知识库/经典方法论/08-Observability与Evals（可观测_评测）.md|08-Observability与Evals（可观测_评测）]] — 
+- [[30-知识库/经典方法论/09-HITL与Guardrails（人类在环_安全）.md|09-HITL与Guardrails（人类在环_安全）]] — 
+- [[30-知识库/经典方法论/10-经典方法论（ReAct_Reflexion_ToT_MetaGPT）.md|10-经典方法论（ReAct_Reflexion_ToT_MetaGPT）]] — 
+- [[30-知识库/经典方法论/30-Checkpointing.md|Checkpointing（回退/回放机制）]] — 来源（官方）：<https://code.claude.com/docs/en/checkpointing>
 
 
 ## 🎓 DeepLearning.AI学习路径
 
-- [[10-知识库/DeepLearning.AI学习路径/DeepLearning.AI-学习路径.md|DeepLearning.AI 学习资料（面向工程师）]] — 数据抓取来源：DeepLearning.AI 课程索引（Algolia index: courses_date_desc）  🔴
+- [[30-知识库/DeepLearning.AI学习路径/DeepLearning.AI-学习路径.md|DeepLearning.AI 学习资料（面向工程师）]] — 数据抓取来源：DeepLearning.AI 课程索引（Algolia index: courses_date_desc）  🔴
 
 
 ## 👪 家庭教育
 
-- [[10-知识库/家庭教育/初一英语学习方案.md|初一男孩英语学习启动方案]] — 游戏切入，自然拼读解决单词记不住根因，间隔复习提升记忆效果  🔴
+- [[30-知识库/家庭教育/初一英语学习方案.md|初一男孩英语学习启动方案]] — 游戏切入，自然拼读解决单词记不住根因，间隔复习提升记忆效果  🔴
 
 
 ## 🗄️ 旧笔记归档
 
-- [[10-知识库/旧笔记归档/SQLServer_Dacpac包加密与自动化部署.md|SQLServer_Dacpac包加密与自动化部署 (PowerShell+AES256)]] — **日期**: 2026-04-08 **关联**: 基于 2026-04-07 讨论的 [[SQL Server]] 存储过程加密方案 (防代码泄露) 的进一步延伸 (防介质泄漏)。  🟡
-- [[10-知识库/旧笔记归档/SQLServer_存储过程加密方案_WITH_ENCRYPTION.md|[[SQL Server]] 存储过程加密方案 (WITH ENCRYPTION)]] — 为了防止拥有高级权限（如 `sa`）的人员轻易窥探和窃取核心业务存储过程源码，[[SQL Server]] 提供了原生的 `WITH ENCRYPTION` 选项。 - **作用**：通过对系统表中存储的源码进行内部混淆（异或算法），使 `  🟡
-- [[10-知识库/旧笔记归档/SQLServer_高级加密方案_CLR_混淆.md|[[SQL Server]] 存储过程高级加密方案：CLR + 代码混淆]] — 原生 T-SQL 的 `WITH ENCRYPTION` 仅是一种可逆的代码混淆（文本异或），面对掌握专用工具的高级 DBA（具备 `sa` 或 `sysadmin` 权限），源码仍有被提取和还原的风险。
+- [[30-知识库/旧笔记归档/SQLServer_Dacpac包加密与自动化部署.md|SQLServer_Dacpac包加密与自动化部署 (PowerShell+AES256)]] — **日期**: 2026-04-08 **关联**: 基于 2026-04-07 讨论的 [[SQL Server]] 存储过程加密方案 (防代码泄露) 的进一步延伸 (防介质泄漏)。  🟡
+- [[30-知识库/旧笔记归档/SQLServer_存储过程加密方案_WITH_ENCRYPTION.md|[[SQL Server]] 存储过程加密方案 (WITH ENCRYPTION)]] — 为了防止拥有高级权限（如 `sa`）的人员轻易窥探和窃取核心业务存储过程源码，[[SQL Server]] 提供了原生的 `WITH ENCRYPTION` 选项。 - **作用**：通过对系统表中存储的源码进行内部混淆（异或算法），使 `  🟡
+- [[30-知识库/旧笔记归档/SQLServer_高级加密方案_CLR_混淆.md|[[SQL Server]] 存储过程高级加密方案：CLR + 代码混淆]] — 原生 T-SQL 的 `WITH ENCRYPTION` 仅是一种可逆的代码混淆（文本异或），面对掌握专用工具的高级 DBA（具备 `sa` 或 `sysadmin` 权限），源码仍有被提取和还原的风险。
 
 
 ## 🧱 项目：BrickHub
@@ -170,32 +170,32 @@ type: meta
 
 ## 🌏 调研：2026-04 中美AI模型与Agent全景
 
-- [[30-调研报告/2026-04-中美AI模型与Agent全景/01-美国大模型.md|🇺🇸 美国五大家旗舰大模型（2026-04）]] — ---
-- [[30-调研报告/2026-04-中美AI模型与Agent全景/02-中国大模型.md|🇨🇳 中国八大家旗舰大模型（2026-04）]] — ---  🟡
-- [[30-调研报告/2026-04-中美AI模型与Agent全景/03-开源Agent框架.md|🛠️ 开源 Agent 框架 6 强（2026-04）]] — ---
-- [[30-调研报告/2026-04-中美AI模型与Agent全景/04-编码Agent.md|💻 编码 Agent 6 强（2026-04）]] — ---
-- [[30-调研报告/2026-04-中美AI模型与Agent全景/05-国产Agent产品.md|🇨🇳 国产 Agent 产品 4 强（2026-04）]] — ---
-- [[30-调研报告/2026-04-中美AI模型与Agent全景/06-中美对比与趋势.md|⚖️ 中美对比 & 2026 趋势研判]] — ---  🟡
-- [[30-调研报告/2026-04-中美AI模型与Agent全景/INDEX.md|2026 中美 AI 模型与 Agent 全景报告]] — ---
+- [[40-调研报告/2026-04-中美AI模型与Agent全景/01-美国大模型.md|🇺🇸 美国五大家旗舰大模型（2026-04）]] — ---
+- [[40-调研报告/2026-04-中美AI模型与Agent全景/02-中国大模型.md|🇨🇳 中国八大家旗舰大模型（2026-04）]] — ---  🟡
+- [[40-调研报告/2026-04-中美AI模型与Agent全景/03-开源Agent框架.md|🛠️ 开源 Agent 框架 6 强（2026-04）]] — ---
+- [[40-调研报告/2026-04-中美AI模型与Agent全景/04-编码Agent.md|💻 编码 Agent 6 强（2026-04）]] — ---
+- [[40-调研报告/2026-04-中美AI模型与Agent全景/05-国产Agent产品.md|🇨🇳 国产 Agent 产品 4 强（2026-04）]] — ---
+- [[40-调研报告/2026-04-中美AI模型与Agent全景/06-中美对比与趋势.md|⚖️ 中美对比 & 2026 趋势研判]] — ---  🟡
+- [[40-调研报告/2026-04-中美AI模型与Agent全景/INDEX.md|2026 中美 AI 模型与 Agent 全景报告]] — ---
 
 
 ## 📊 调研：单篇报告
 
-- [[30-调研报告/AI-Agent个人盈利赛道扫描-2026Q2.md|AI Agent 个人盈利赛道扫描 (2026Q2)]] — 基于国内外市场的 AI Agent 个人盈利赛道深度调研  🔴
-- [[30-调研报告/2026高考志愿全行业评估.md|2026 高考志愿全行业评估报告]] — 基于2025-2026春招季数据，张雪峰视角解读各专业就业前景  🔴
-- [[30-调研报告/AI-Agent-Memory架构借鉴分析.md|AI Agent Memory 架构借鉴分析]] — 记忆系统架构模式分析  🔴
-- [[30-调研报告/Claude-Opus-4.7-vs-4.6.md|Claude Opus 4.7 vs 4.6 对比]] — 1. **Extended Thinking移除** → 只能用 adaptive 模式 + effort 参数控制 2. **Sampling参数移除** → temperature / top_p / top_k 直接报400错误 3.
-- [[30-调研报告/Hermes上下文管理优化方案.md|Hermes 上下文管理优化方案]] — ---  🔴
-- [[30-调研报告/Memory-Agent-架构设计推演.md|Memory Agent 架构设计推演]] — ---  🟡
-- [[30-调研报告/McKinsey-2026-AI报告与5岁AI启蒙.md|McKinsey 2026 AI 报告解读 & 5岁儿童 AI 启蒙路径]] — 基于 McKinsey 2026《State of Organizations》《State of AI》《Agents/Robots/Us》三份报告，结合儿童 AI 教育研究，给出 AI 现状判断 + 5 岁娃三层启蒙路径 + 12 个月落地节奏。  🔴
-- [[30-调研报告/README.md|30-调研报告]] — 深度调研、对比分析、决策报告。**完成后只读**，新版本另开文件。 受 [[SCHEMA]] 约束。完整索引见 [[index]]。
+- [[40-调研报告/AI-Agent个人盈利赛道扫描-2026Q2.md|AI Agent 个人盈利赛道扫描 (2026Q2)]] — 基于国内外市场的 AI Agent 个人盈利赛道深度调研  🔴
+- [[40-调研报告/2026高考志愿全行业评估.md|2026 高考志愿全行业评估报告]] — 基于2025-2026春招季数据，张雪峰视角解读各专业就业前景  🔴
+- [[40-调研报告/AI-Agent-Memory架构借鉴分析.md|AI Agent Memory 架构借鉴分析]] — 记忆系统架构模式分析  🔴
+- [[40-调研报告/Claude-Opus-4.7-vs-4.6.md|Claude Opus 4.7 vs 4.6 对比]] — 1. **Extended Thinking移除** → 只能用 adaptive 模式 + effort 参数控制 2. **Sampling参数移除** → temperature / top_p / top_k 直接报400错误 3.
+- [[40-调研报告/Hermes上下文管理优化方案.md|Hermes 上下文管理优化方案]] — ---  🔴
+- [[40-调研报告/Memory-Agent-架构设计推演.md|Memory Agent 架构设计推演]] — ---  🟡
+- [[40-调研报告/McKinsey-2026-AI报告与5岁AI启蒙.md|McKinsey 2026 AI 报告解读 & 5岁儿童 AI 启蒙路径]] — 基于 McKinsey 2026《State of Organizations》《State of AI》《Agents/Robots/Us》三份报告，结合儿童 AI 教育研究，给出 AI 现状判断 + 5 岁娃三层启蒙路径 + 12 个月落地节奏。  🔴
+- [[40-调研报告/README.md|30-调研报告]] — 深度调研、对比分析、决策报告。**完成后只读**，新版本另开文件。 受 [[SCHEMA]] 约束。完整索引见 [[index]]。
 
 
 ## 📂 目录入口
 
-- [[10-知识库/README.md|10-知识库]]
+- [[30-知识库/README.md|10-知识库]]
 - [[20-项目/README.md|20-项目]]
-- [[30-调研报告/README.md|30-调研报告]]
+- [[40-调研报告/README.md|30-调研报告]]
 
 
 ---
@@ -248,5 +248,5 @@ type: meta
 
 ## 🏠 房产调研
 
-- [[30-调研报告/房产/README|房产调研索引]]
-- [[30-调研报告/房产/2026-05-怡海花园真实成交价|怡海花园真实成交价 (2026-05)]] — 丰台科技园三个分园近期网签 3.5~4.6 万/㎡
+- [[40-调研报告/房产/README|房产调研索引]]
+- [[40-调研报告/房产/2026-05-怡海花园真实成交价|怡海花园真实成交价 (2026-05)]] — 丰台科技园三个分园近期网签 3.5~4.6 万/㎡
