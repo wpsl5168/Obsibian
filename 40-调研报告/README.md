@@ -1,34 +1,12 @@
----
-title: 30-调研报告
-created: 2026-01-01
-updated: 2026-04-21
-type: meta
-tags: [research]
-status: stable
----
+# 40-调研报告
 
-# 30-调研报告
+**定位**: 一次性深度研究报告。区别于知识库,这些是带时间戳的快照(2026-04-XX),完成后基本不再更新。
 
-深度调研、对比分析、决策报告。**完成后只读**，新版本另开文件。
-受 [[SCHEMA]] 约束。完整索引见 [[index]]。
+**典型主题**:
+- `Palantir-FDE/` — FDE 模式调研
+- `2026-04-中美AI模型与Agent全景/` — 国内外 AI 厂商对比
 
-## 系列报告
-
-- **`2026-04-中美AI模型与Agent全景/`** (7篇) — 中美大模型、开源Agent、编码Agent、国产Agent、趋势对比
-  - 入口：[[2026-04-中美AI模型与Agent全景/INDEX|系列总览]]
-
-## 单篇报告
-
-| 文件 | 主题 | tag |
-|------|------|-----|
-| [[AI-Agent-Memory架构借鉴分析]] | Mem0/Letta/Zep 等记忆系统架构对比 | `#memory` `#research` |
-| [[Memory-Agent-架构设计推演]] | 记忆Agent的角色与边界推演 | `#memory` `#architecture` |
-| [[Hermes上下文管理优化方案]] | Hermes三层上下文优化设计 | `#hermes` `#architecture` |
-| [[Claude-Opus-4.7-vs-4.6]] | Claude Opus 模型版本对比 | `#comparison` `#llm` |
-
-## 调研页规范
-
-- 类型 `type: research` 或 `type: comparison`
-- 必须有 `created` 日期，反映报告时效性
-- 时效性内容（"截至XXXX-XX"）必须明确标注
-- 新报告生成后必须由 `research-to-kb` skill 自动注册到 [[index]] 与 [[log]]
+**规则**:
+- 目录名带年月前缀: `YYYY-MM-主题/`
+- 完成后归入 `_archive/`(可选),但不删除
+- 每份调研有 `INDEX.md` 或 `README.md` 作入口

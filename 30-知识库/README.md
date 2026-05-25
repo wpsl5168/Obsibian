@@ -1,29 +1,15 @@
----
-title: 10-知识库
-created: 2025-01-01
-updated: 2026-04-21
-type: meta
-tags: [methodology]
-status: stable
----
+# 30-知识库
 
-# 10-知识库
+**定位**: 长期沉淀的知识与方法论。区别于"调研报告"(一次性),这里的东西反复查阅、持续维护。
 
-长期保留的**结构化知识**。所有内容受 [[SCHEMA]] 约束。
-完整索引见 [[index]]。
+**子目录**:
+- `AI模型与Agent/` — Karpathy 风格 LLM Wiki(基础架构、提示词、Agent 等 12 大类)
+- `DeepLearning.AI学习路径/` — 课程规划与笔记
+- `工具速查/` — CLI、库、API 速查
+- `经典方法论/` — 系统设计、决策、写作方法
+- `家庭教育/` — 学区、择校
+- `旧笔记归档/` — 历史保留
 
-## 子目录导航
-
-| 子目录 | 内容 | 主要tag |
-|--------|------|---------|
-| AI模型与Agent | 22页系统化AI/Agent知识体系。1.x 大模型 / 2.x 提示工程 / 3.x 工具与RAG / 4.x Agent架构 / 5.x 评测安全 / 6.x AI编程 | `#agent` `#llm` `#prompt` |
-| `经典方法论/` | 9页 — ReAct、Reflexion、ToT、HITL、Workflow编排等 | `#methodology` |
-| `DeepLearning.AI学习路径/` | DeepLearning.AI课程笔记与学习路径设计 | `#methodology` |
-| `工具速查/` | Claude Code / CLI / Diagram 等速查表 | `#vibe-coding` `#tooling` |
-| `旧笔记归档/` | 历史归档（SQL Server等不再活跃主题） | `#legacy` |
-
-## 维护原则
-
-- 新页前先查 [[index]] 是否已有
-- 必须遵守 [[SCHEMA]] 的frontmatter和tag规范
-- 修改后写一条 [[log]]
+**规则**:
+- 增量更新,不删除;过时内容打"deprecated"标签
+- 内链使用绝对路径 `[[30-知识库/AI模型与Agent/...]]`

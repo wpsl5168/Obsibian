@@ -1,12 +1,15 @@
-# 40-日报与动态
+# 50-日报与动态
 
-时序型内容：每日订阅、外部信息流、定期更新的快照。
+**定位**: 所有自动/手动生成的"日频/周频"动态。
 
-## 子目录
+**子目录**:
+- `AI日报/` — AI Daily(原 01-新闻速递)
+- `DeepLearning.AI/snapshots/` — DLAI 课程快照(JSON)
+- `DeepLearning.AI/digests/` — DLAI 日摘要
+- `DeepLearning.AI/updates/` — DLAI 增量更新
 
-| 子目录 | 内容 | 更新频率 |
-|--------|------|----------|
-| `AI日报/` | 每日 AI 行业要闻汇总 | 每天 |
-| `DeepLearning.AI/digests/` | 课程目录每日摘要 | 每天 |
-| `DeepLearning.AI/updates/` | 新课程/变更增量 | 有变化时 |
-| `DeepLearning.AI/snapshots/` | 课程目录原始快照 (JSON) | 每天 |
+**自动清理规则**(每周一周报扫描时执行):
+- 超过 **2 周** 的 daily(`YYYY-MM-DD-*.md`、`*-daily.md`、`courses-*.json`)归档到 `.trash/archive-YYYY-MM-DD/`
+- 周报(`YYYY-WXX.md`)保留,不清理
+
+**典型生成源**: cron(daily-brief、blogwatcher)、手动整理。
