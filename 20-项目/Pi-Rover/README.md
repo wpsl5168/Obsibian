@@ -1,3 +1,15 @@
+---
+title: Pi-Rover 知识库
+created: 2026-05-25
+updated: 2026-05-25
+type: concept
+status: draft
+tags:
+  - pi-rover
+  - robotics
+  - raspberry-pi
+---
+
 # Pi-Rover 知识库
 
 > 项目：树莓派Agent级智能小车

@@ -1,3 +1,14 @@
+---
+title: 项目索引
+created: 2026-05-25
+updated: 2026-05-25
+type: meta
+status: stable
+tags:
+  - index
+  - projects
+---
+
 # 20-项目
 
 **定位**: 所有主动开发/运营的项目工程笔记。每个项目一个子目录,内含 README、设计、决策日志、调研。
