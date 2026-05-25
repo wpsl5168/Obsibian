@@ -1,8 +1,11 @@
 ---
 title: Stack-chan 桌面 AI 机器人选型与采购指南
+created: 2026-05-15
+updated: 2026-05-15
+type: research
+tags: [tooling, agent, hermes, research]
+status: stable
 date: 2026-05-14
-tags: [硬件, 机器人, M5Stack, Stack-chan, AI-Agent, Hermes]
-status: 调研完成
 ---
 
 # Stack-chan 桌面 AI 机器人选型与采购指南
