@@ -219,3 +219,5 @@ type: meta
 ## [2026-05-05] research-ingest | 怡海花园真实成交价调研 | 房天下网签数据，3 个分园近期成交单价区间 3.5~4.6 万/㎡，链家参考价偏高 10~20%。放 00-收件箱/。
 
 ## [2026-05-05] schema-update | 新增 #realestate / #family tags + 30-调研报告/房产/ 子分类，迁入怡海花园调研。
+
+## [2026-05-26] research-ingest | 30-调研报告/教育/khan-academy/ | Khan Academy 系统化调研 6 篇：历史/财务/产品/口碑/Khanmigo/竞品对比，覆盖正反两面+给做中文版的启示
