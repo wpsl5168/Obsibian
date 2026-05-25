@@ -86,6 +86,9 @@ type: meta
 - [[30-调研报告/教育/khan-academy/README.md|Khan Academy 可汗学院调研]] — 创业史/财务/口碑/Khanmigo/竞品对比/做中文版的启示，6 篇系列  🟢
 - [[30-调研报告/教育/cool-math-games.md|Cool Math Games 调研]] — 1997 年至今的逻辑/解谜小游戏站，定位"摸鱼神器"非数学课替代，娃可课间/周末用  🟢
 - [[30-调研报告/教育/bluey.md|Bluey 布鲁伊 调研]] — 澳洲学龄前神作，IMDb 9.4，澳音英语启蒙+情绪教育双优，4-8 岁强推  🟢
+- [[30-调研报告/教育/math-startup.md|数学启蒙资源调研]] — DragonBox/Numberblocks/古氏积木/新加坡数学/Beast Academy，4 岁→3 年级路径  🟢
+- [[30-调研报告/教育/english-startup.md|英语启蒙资源调研]] — 16 资源 + 国内 4 大付费方案对比，先磨耳朵 1 年再上拼读  🟢
+- [[30-调研报告/教育/ai-startup.md|AI 启蒙资源调研]] — 娃(ScratchJr/Teachable Machine/micro:bit) + 老王自己(Karpathy/HF/Lilian Weng)双路径  🟢
 
 
 ## 🗄️ 旧笔记归档
