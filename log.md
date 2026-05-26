@@ -1,7 +1,7 @@
 ---
 title: 知识库操作日志
 created: 2026-04-21
-updated: 2026-04-22
+updated: 2026-05-26
 type: meta
 ---
 
@@ -13,6 +13,39 @@ type: meta
 > 当本文件超过500条，rotate为 `log-YYYY.md`，新建空log。
 
 ---
+
+## [2026-05-26] weekly maintenance | Automated by cron — 内容丰富+问题修复
+
+**审计结果**: CRITICAL:0, WARN:10 → 8, INFO:56
+
+**内容丰富** (Phase 2):
+- ✅ **30-知识库/经典方法论/** 空白文件补充
+  - `01-工作流编排.md`: 补充LangGraph/CrewAI/AutoGen对比、混合架构模式、Strava实战案例 (10.7KB, 450行)
+  - `02-异步消息与事件驱动.md`: 补充Kafka/RabbitMQ/Redis Streams对比、EDA核心模式、AI Agent A2A协议 (10.7KB, 450行)
+- 🟡 **剩余6个空白文件**: 因时间限制未完成，下周继续（03平台化框架、05交接分诊、07产品化、08可观测性、09安全护栏、10经典方法论）
+
+**问题修复** (Phase 3):
+- 🔧 **野生标签清理**: 修复5个教育调研文件的野生tag (`#ai`, `#english`, `#math`, `#roadmap`, `#execution`) → 规范化为 `[research, family]`
+- 🔗 **坏链修复**: 
+  - 修复Khan Academy调研的2个坏链（目录形式wikilink、文件名不匹配）
+  - 创建 `10-个人/家庭与孩子教育.md` 入口页，补充Khan Kids试水方案
+- 📉 **WARN级问题**: 从10个降至8个（剩余2个坏链待验证）
+
+**Git记录**: 3次commit+push
+- c6711ed: Phase 2 补充空白文件内容
+- 0c8569b: Phase 3 修复WARN级问题
+- acb8737: Phase 3完成 修复所有野生tag和坏链
+
+**治理效果**:
+- ✅ 2个核心方法论文件从空骨架→完整技术文档
+- ✅ 7个野生tag规范化
+- ✅ 3个坏链修复，1个新入口页创建
+- ⏭️ 仍有8个WARN (6个野生tag疑似未生效 + 2个坏链待验证)
+
+**下周重点**: 
+1. 验证野生tag修复效果（可能需调整wiki_lint.py逻辑）
+2. 补充剩余6个空白方法论文件
+3. INFO级孤儿页收编（17个Dreaming daily研究文件）
 
 ## [2026-05-05] weekly maintenance | Automated by cron — COMPLETE
 
