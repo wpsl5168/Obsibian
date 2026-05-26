@@ -1,0 +1,732 @@
+{
+  "sync_date": "2026-05-26",
+  "total_courses": 121,
+  "courses": [
+    {
+      "course_type": "Short Course",
+      "landing_page": "/courses/a2a-the-agent2agent-protocol",
+      "slug": "a2a-the-agent2agent-protocol",
+      "type": "short_course"
+    },
+    {
+      "course_type": "Short Course",
+      "landing_page": "/courses/advanced-retrieval-for-ai",
+      "slug": "advanced-retrieval-for-ai",
+      "type": "short_course"
+    },
+    {
+      "course_type": "Short Course",
+      "landing_page": "/courses/agent-memory-building-memory-aware-agents",
+      "slug": "agent-memory-building-memory-aware-agents",
+      "type": "short_course"
+    },
+    {
+      "course_type": "Short Course",
+      "landing_page": "/courses/agent-skills-with-anthropic",
+      "slug": "agent-skills-with-anthropic",
+      "type": "short_course"
+    },
+    {
+      "course_type": "Course",
+      "landing_page": "/courses/agentic-ai",
+      "slug": "agentic-ai",
+      "type": "course"
+    },
+    {
+      "course_type": "Short Course",
+      "landing_page": "/courses/agentic-knowledge-graph-construction",
+      "slug": "agentic-knowledge-graph-construction",
+      "type": "short_course"
+    },
+    {
+      "course_type": "Short Course",
+      "landing_page": "/courses/ai-agentic-design-patterns-with-autogen",
+      "slug": "ai-agentic-design-patterns-with-autogen",
+      "type": "short_course"
+    },
+    {
+      "course_type": "Short Course",
+      "landing_page": "/courses/ai-agents-for-image-and-video-generation",
+      "slug": "ai-agents-for-image-and-video-generation",
+      "type": "short_course"
+    },
+    {
+      "course_type": "Short Course",
+      "landing_page": "/courses/ai-agents-in-langgraph",
+      "slug": "ai-agents-in-langgraph",
+      "type": "short_course"
+    },
+    {
+      "course_type": "Course",
+      "landing_page": "/courses/ai-for-everyone",
+      "slug": "ai-for-everyone",
+      "type": "course"
+    },
+    {
+      "course_type": "Professional Certificate",
+      "landing_page": "/specializations/ai-for-good",
+      "slug": "ai-for-good",
+      "type": "professional_certificate"
+    },
+    {
+      "course_type": "Professional Certificate",
+      "landing_page": "/specializations/ai-for-medicine",
+      "slug": "ai-for-medicine",
+      "type": "professional_certificate"
+    },
+    {
+      "course_type": "Course",
+      "landing_page": "/courses/ai-prompting-for-everyone",
+      "slug": "ai-prompting-for-everyone",
+      "type": "course"
+    },
+    {
+      "course_type": "Course",
+      "landing_page": "/courses/ai-python-for-beginners",
+      "slug": "ai-python-for-beginners",
+      "type": "course"
+    },
+    {
+      "course_type": "Short Course",
+      "landing_page": "/courses/attention-in-transformers-concepts-and-code-in-pytorch",
+      "slug": "attention-in-transformers-concepts-and-code-in-pytorch",
+      "type": "short_course"
+    },
+    {
+      "course_type": "Short Course",
+      "landing_page": "/courses/automated-testing-llmops",
+      "slug": "automated-testing-llmops",
+      "type": "short_course"
+    },
+    {
+      "course_type": "Short Course",
+      "landing_page": "/courses/build-ai-apps-with-mcp-server-working-with-box-files",
+      "slug": "build-ai-apps-with-mcp-server-working-with-box-files",
+      "type": "short_course"
+    },
+    {
+      "course_type": "Short Course",
+      "landing_page": "/courses/build-and-train-an-llm-with-jax",
+      "slug": "build-and-train-an-llm-with-jax",
+      "type": "short_course"
+    },
+    {
+      "course_type": "Short Course",
+      "landing_page": "/courses/build-apps-with-windsurfs-ai-coding-agents",
+      "slug": "build-apps-with-windsurfs-ai-coding-agents",
+      "type": "short_course"
+    },
+    {
+      "course_type": "Short Course",
+      "landing_page": "/courses/build-interactive-agents-with-generative-ui",
+      "slug": "build-interactive-agents-with-generative-ui",
+      "type": "short_course"
+    },
+    {
+      "course_type": "Short Course",
+      "landing_page": "/courses/build-long-context-ai-apps-with-jamba",
+      "slug": "build-long-context-ai-apps-with-jamba",
+      "type": "short_course"
+    },
+    {
+      "course_type": "Course",
+      "landing_page": "/courses/build-with-andrew",
+      "slug": "build-with-andrew",
+      "type": "course"
+    },
+    {
+      "course_type": "Short Course",
+      "landing_page": "/courses/building-agentic-rag-with-llamaindex",
+      "slug": "building-agentic-rag-with-llamaindex",
+      "type": "short_course"
+    },
+    {
+      "course_type": "Short Course",
+      "landing_page": "/courses/building-ai-applications-with-haystack",
+      "slug": "building-ai-applications-with-haystack",
+      "type": "short_course"
+    },
+    {
+      "course_type": "Short Course",
+      "landing_page": "/courses/building-ai-browser-agents",
+      "slug": "building-ai-browser-agents",
+      "type": "short_course"
+    },
+    {
+      "course_type": "Short Course",
+      "landing_page": "/courses/building-ai-voice-agents-for-production",
+      "slug": "building-ai-voice-agents-for-production",
+      "type": "short_course"
+    },
+    {
+      "course_type": "Short Course",
+      "landing_page": "/courses/building-an-ai-powered-game",
+      "slug": "building-an-ai-powered-game",
+      "type": "short_course"
+    },
+    {
+      "course_type": "Short Course",
+      "landing_page": "/courses/building-and-evaluating-data-agents",
+      "slug": "building-and-evaluating-data-agents",
+      "type": "short_course"
+    },
+    {
+      "course_type": "Short Course",
+      "landing_page": "/courses/building-applications-vector-databases",
+      "slug": "building-applications-vector-databases",
+      "type": "short_course"
+    },
+    {
+      "course_type": "Short Course",
+      "landing_page": "/courses/building-code-agents-with-hugging-face-smolagents",
+      "slug": "building-code-agents-with-hugging-face-smolagents",
+      "type": "short_course"
+    },
+    {
+      "course_type": "Short Course",
+      "landing_page": "/courses/building-coding-agents-with-tool-execution",
+      "slug": "building-coding-agents-with-tool-execution",
+      "type": "short_course"
+    },
+    {
+      "course_type": "Short Course",
+      "landing_page": "/courses/building-evaluating-advanced-rag",
+      "slug": "building-evaluating-advanced-rag",
+      "type": "short_course"
+    },
+    {
+      "course_type": "Short Course",
+      "landing_page": "/courses/building-live-voice-agents-with-googles-adk",
+      "slug": "building-live-voice-agents-with-googles-adk",
+      "type": "short_course"
+    },
+    {
+      "course_type": "Short Course",
+      "landing_page": "/courses/building-multimodal-data-pipelines",
+      "slug": "building-multimodal-data-pipelines",
+      "type": "short_course"
+    },
+    {
+      "course_type": "Short Course",
+      "landing_page": "/courses/building-toward-computer-use-with-anthropic",
+      "slug": "building-toward-computer-use-with-anthropic",
+      "type": "short_course"
+    },
+    {
+      "course_type": "Short Course",
+      "landing_page": "/courses/building-with-llama-4",
+      "slug": "building-with-llama-4",
+      "type": "short_course"
+    },
+    {
+      "course_type": "Short Course",
+      "landing_page": "/courses/building-your-own-database-agent",
+      "slug": "building-your-own-database-agent",
+      "type": "short_course"
+    },
+    {
+      "course_type": "Short Course",
+      "landing_page": "/courses/carbon-aware-computing-for-genai-developers",
+      "slug": "carbon-aware-computing-for-genai-developers",
+      "type": "short_course"
+    },
+    {
+      "course_type": "Short Course",
+      "landing_page": "/courses/chatgpt-building-system",
+      "slug": "chatgpt-building-system",
+      "type": "short_course"
+    },
+    {
+      "course_type": "Short Course",
+      "landing_page": "/courses/chatgpt-prompt-eng",
+      "slug": "chatgpt-prompt-eng",
+      "type": "short_course"
+    },
+    {
+      "course_type": "Short Course",
+      "landing_page": "/courses/claude-code-a-highly-agentic-coding-assistant",
+      "slug": "claude-code-a-highly-agentic-coding-assistant",
+      "type": "short_course"
+    },
+    {
+      "course_type": "Short Course",
+      "landing_page": "/courses/collaborative-writing-and-coding-with-openai-canvas",
+      "slug": "collaborative-writing-and-coding-with-openai-canvas",
+      "type": "short_course"
+    },
+    {
+      "course_type": "Professional Certificate",
+      "landing_page": "/specializations/data-analytics",
+      "slug": "data-analytics",
+      "type": "professional_certificate"
+    },
+    {
+      "course_type": "Professional Certificate",
+      "landing_page": "/specializations/deep-learning",
+      "slug": "deep-learning",
+      "type": "professional_certificate"
+    },
+    {
+      "course_type": "Course",
+      "landing_page": "/courses/design-develop-and-deploy-multi-agent-systems-with-crewai",
+      "slug": "design-develop-and-deploy-multi-agent-systems-with-crewai",
+      "type": "course"
+    },
+    {
+      "course_type": "Short Course",
+      "landing_page": "/courses/diffusion-models",
+      "slug": "diffusion-models",
+      "type": "short_course"
+    },
+    {
+      "course_type": "Short Course",
+      "landing_page": "/courses/document-ai-from-ocr-to-agentic-doc-extraction",
+      "slug": "document-ai-from-ocr-to-agentic-doc-extraction",
+      "type": "short_course"
+    },
+    {
+      "course_type": "Short Course",
+      "landing_page": "/courses/dspy-build-optimize-agentic-apps",
+      "slug": "dspy-build-optimize-agentic-apps",
+      "type": "short_course"
+    },
+    {
+      "course_type": "Short Course",
+      "landing_page": "/courses/efficient-inference-with-sglang-text-and-image-generation",
+      "slug": "efficient-inference-with-sglang-text-and-image-generation",
+      "type": "short_course"
+    },
+    {
+      "course_type": "Short Course",
+      "landing_page": "/courses/efficiently-serving-llms",
+      "slug": "efficiently-serving-llms",
+      "type": "short_course"
+    },
+    {
+      "course_type": "Short Course",
+      "landing_page": "/courses/embedding-models-from-architecture-to-implementation",
+      "slug": "embedding-models-from-architecture-to-implementation",
+      "type": "short_course"
+    },
+    {
+      "course_type": "Short Course",
+      "landing_page": "/courses/evaluating-ai-agents",
+      "slug": "evaluating-ai-agents",
+      "type": "short_course"
+    },
+    {
+      "course_type": "Short Course",
+      "landing_page": "/courses/evaluating-debugging-generative-ai",
+      "slug": "evaluating-debugging-generative-ai",
+      "type": "short_course"
+    },
+    {
+      "course_type": "Short Course",
+      "landing_page": "/courses/event-driven-agentic-document-workflows",
+      "slug": "event-driven-agentic-document-workflows",
+      "type": "short_course"
+    },
+    {
+      "course_type": "Course",
+      "landing_page": "/courses/fast-prototyping-of-genai-apps-with-streamlit",
+      "slug": "fast-prototyping-of-genai-apps-with-streamlit",
+      "type": "course"
+    },
+    {
+      "course_type": "Course",
+      "landing_page": "/courses/fine-tuning-and-reinforcement-learning-for-llms-intro-to-post-training",
+      "slug": "fine-tuning-and-reinforcement-learning-for-llms-intro-to-post-training",
+      "type": "course"
+    },
+    {
+      "course_type": "Short Course",
+      "landing_page": "/courses/finetuning-large-language-models",
+      "slug": "finetuning-large-language-models",
+      "type": "short_course"
+    },
+    {
+      "course_type": "Short Course",
+      "landing_page": "/courses/function-calling-and-data-extraction-with-llms",
+      "slug": "function-calling-and-data-extraction-with-llms",
+      "type": "short_course"
+    },
+    {
+      "course_type": "Short Course",
+      "landing_page": "/courses/functions-tools-agents-langchain",
+      "slug": "functions-tools-agents-langchain",
+      "type": "short_course"
+    },
+    {
+      "course_type": "Short Course",
+      "landing_page": "/courses/gemini-cli-code-and-create-with-an-open-source-agent",
+      "slug": "gemini-cli-code-and-create-with-an-open-source-agent",
+      "type": "short_course"
+    },
+    {
+      "course_type": "Course",
+      "landing_page": "/courses/generative-ai-for-everyone",
+      "slug": "generative-ai-for-everyone",
+      "type": "course"
+    },
+    {
+      "course_type": "Professional Certificate",
+      "landing_page": "/specializations/generative-ai-for-software-development",
+      "slug": "generative-ai-for-software-development",
+      "type": "professional_certificate"
+    },
+    {
+      "course_type": "Course",
+      "landing_page": "/courses/generative-ai-with-llms",
+      "slug": "generative-ai-with-llms",
+      "type": "course"
+    },
+    {
+      "course_type": "Short Course",
+      "landing_page": "/courses/getting-started-with-mistral",
+      "slug": "getting-started-with-mistral",
+      "type": "short_course"
+    },
+    {
+      "course_type": "Short Course",
+      "landing_page": "/courses/getting-structured-llm-output",
+      "slug": "getting-structured-llm-output",
+      "type": "short_course"
+    },
+    {
+      "course_type": "Short Course",
+      "landing_page": "/courses/google-cloud-vertex-ai",
+      "slug": "google-cloud-vertex-ai",
+      "type": "short_course"
+    },
+    {
+      "course_type": "Short Course",
+      "landing_page": "/courses/governing-ai-agents",
+      "slug": "governing-ai-agents",
+      "type": "short_course"
+    },
+    {
+      "course_type": "Short Course",
+      "landing_page": "/courses/how-transformer-llms-work",
+      "slug": "how-transformer-llms-work",
+      "type": "short_course"
+    },
+    {
+      "course_type": "Short Course",
+      "landing_page": "/courses/huggingface-gradio",
+      "slug": "huggingface-gradio",
+      "type": "short_course"
+    },
+    {
+      "course_type": "Short Course",
+      "landing_page": "/courses/improving-accuracy-of-llm-applications",
+      "slug": "improving-accuracy-of-llm-applications",
+      "type": "short_course"
+    },
+    {
+      "course_type": "Short Course",
+      "landing_page": "/courses/intro-to-federated-learning",
+      "slug": "intro-to-federated-learning",
+      "type": "short_course"
+    },
+    {
+      "course_type": "Short Course",
+      "landing_page": "/courses/intro-to-federated-learning-c2",
+      "slug": "intro-to-federated-learning-c2",
+      "type": "short_course"
+    },
+    {
+      "course_type": "Short Course",
+      "landing_page": "/courses/introducing-multimodal-llama-3-2",
+      "slug": "introducing-multimodal-llama-3-2",
+      "type": "short_course"
+    },
+    {
+      "course_type": "Short Course",
+      "landing_page": "/courses/introduction-to-on-device-ai",
+      "slug": "introduction-to-on-device-ai",
+      "type": "short_course"
+    },
+    {
+      "course_type": "Short Course",
+      "landing_page": "/courses/javascript-rag-web-apps-with-llamaindex",
+      "slug": "javascript-rag-web-apps-with-llamaindex",
+      "type": "short_course"
+    },
+    {
+      "course_type": "Short Course",
+      "landing_page": "/courses/jupyter-ai-coding-in-notebooks",
+      "slug": "jupyter-ai-coding-in-notebooks",
+      "type": "short_course"
+    },
+    {
+      "course_type": "Short Course",
+      "landing_page": "/courses/knowledge-graphs-for-ai-agent-api-discovery",
+      "slug": "knowledge-graphs-for-ai-agent-api-discovery",
+      "type": "short_course"
+    },
+    {
+      "course_type": "Short Course",
+      "landing_page": "/courses/knowledge-graphs-rag",
+      "slug": "knowledge-graphs-rag",
+      "type": "short_course"
+    },
+    {
+      "course_type": "Short Course",
+      "landing_page": "/courses/langchain",
+      "slug": "langchain",
+      "type": "short_course"
+    },
+    {
+      "course_type": "Short Course",
+      "landing_page": "/courses/langchain-chat-with-your-data",
+      "slug": "langchain-chat-with-your-data",
+      "type": "short_course"
+    },
+    {
+      "course_type": "Short Course",
+      "landing_page": "/courses/large-language-models-semantic-search",
+      "slug": "large-language-models-semantic-search",
+      "type": "short_course"
+    },
+    {
+      "course_type": "Short Course",
+      "landing_page": "/courses/large-multimodal-model-prompting-with-gemini",
+      "slug": "large-multimodal-model-prompting-with-gemini",
+      "type": "short_course"
+    },
+    {
+      "course_type": "Short Course",
+      "landing_page": "/courses/llmops",
+      "slug": "llmops",
+      "type": "short_course"
+    },
+    {
+      "course_type": "Short Course",
+      "landing_page": "/courses/llms-as-operating-systems-agent-memory",
+      "slug": "llms-as-operating-systems-agent-memory",
+      "type": "short_course"
+    },
+    {
+      "course_type": "Short Course",
+      "landing_page": "/courses/long-term-agentic-memory-with-langgraph",
+      "slug": "long-term-agentic-memory-with-langgraph",
+      "type": "short_course"
+    },
+    {
+      "course_type": "Professional Certificate",
+      "landing_page": "/specializations/machine-learning",
+      "slug": "machine-learning",
+      "type": "professional_certificate"
+    },
+    {
+      "course_type": "Course",
+      "landing_page": "/courses/machine-learning-in-production",
+      "slug": "machine-learning-in-production",
+      "type": "course"
+    },
+    {
+      "course_type": "Professional Certificate",
+      "landing_page": "/specializations/mathematics-for-machine-learning-and-data-science",
+      "slug": "mathematics-for-machine-learning-and-data-science",
+      "type": "professional_certificate"
+    },
+    {
+      "course_type": "Short Course",
+      "landing_page": "/courses/mcp-build-rich-context-ai-apps-with-anthropic",
+      "slug": "mcp-build-rich-context-ai-apps-with-anthropic",
+      "type": "short_course"
+    },
+    {
+      "course_type": "Short Course",
+      "landing_page": "/courses/microsoft-semantic-kernel",
+      "slug": "microsoft-semantic-kernel",
+      "type": "short_course"
+    },
+    {
+      "course_type": "Short Course",
+      "landing_page": "/courses/multi-ai-agent-systems-with-crewai",
+      "slug": "multi-ai-agent-systems-with-crewai",
+      "type": "short_course"
+    },
+    {
+      "course_type": "Short Course",
+      "landing_page": "/courses/multi-vector-image-retrieval",
+      "slug": "multi-vector-image-retrieval",
+      "type": "short_course"
+    },
+    {
+      "course_type": "Professional Certificate",
+      "landing_page": "/specializations/natural-language-processing",
+      "slug": "natural-language-processing",
+      "type": "professional_certificate"
+    },
+    {
+      "course_type": "Short Course",
+      "landing_page": "/courses/nvidia-nat-making-agents-reliable",
+      "slug": "nvidia-nat-making-agents-reliable",
+      "type": "short_course"
+    },
+    {
+      "course_type": "Short Course",
+      "landing_page": "/courses/open-source-models-hugging-face",
+      "slug": "open-source-models-hugging-face",
+      "type": "short_course"
+    },
+    {
+      "course_type": "Short Course",
+      "landing_page": "/courses/orchestrating-workflows-for-genai-applications",
+      "slug": "orchestrating-workflows-for-genai-applications",
+      "type": "short_course"
+    },
+    {
+      "course_type": "Short Course",
+      "landing_page": "/courses/pair-programming-llm",
+      "slug": "pair-programming-llm",
+      "type": "short_course"
+    },
+    {
+      "course_type": "Short Course",
+      "landing_page": "/courses/post-training-of-llms",
+      "slug": "post-training-of-llms",
+      "type": "short_course"
+    },
+    {
+      "course_type": "Short Course",
+      "landing_page": "/courses/practical-multi-ai-agents-and-advanced-use-cases-with-crewai",
+      "slug": "practical-multi-ai-agents-and-advanced-use-cases-with-crewai",
+      "type": "short_course"
+    },
+    {
+      "course_type": "Short Course",
+      "landing_page": "/courses/preprocessing-unstructured-data-for-llm-applications",
+      "slug": "preprocessing-unstructured-data-for-llm-applications",
+      "type": "short_course"
+    },
+    {
+      "course_type": "Short Course",
+      "landing_page": "/courses/pretraining-llms",
+      "slug": "pretraining-llms",
+      "type": "short_course"
+    },
+    {
+      "course_type": "Short Course",
+      "landing_page": "/courses/prompt-compression-and-query-optimization",
+      "slug": "prompt-compression-and-query-optimization",
+      "type": "short_course"
+    },
+    {
+      "course_type": "Short Course",
+      "landing_page": "/courses/prompt-engineering-for-vision-models",
+      "slug": "prompt-engineering-for-vision-models",
+      "type": "short_course"
+    },
+    {
+      "course_type": "Short Course",
+      "landing_page": "/courses/prompt-engineering-with-llama-2",
+      "slug": "prompt-engineering-with-llama-2",
+      "type": "short_course"
+    },
+    {
+      "course_type": "Short Course",
+      "landing_page": "/courses/pydantic-for-llm-workflows",
+      "slug": "pydantic-for-llm-workflows",
+      "type": "short_course"
+    },
+    {
+      "course_type": "Professional Certificate",
+      "landing_page": "/specializations/pytorch-for-deep-learning-professional-certificate",
+      "slug": "pytorch-for-deep-learning-professional-certificate",
+      "type": "professional_certificate"
+    },
+    {
+      "course_type": "Short Course",
+      "landing_page": "/courses/quantization-fundamentals",
+      "slug": "quantization-fundamentals",
+      "type": "short_course"
+    },
+    {
+      "course_type": "Short Course",
+      "landing_page": "/courses/quantization-in-depth",
+      "slug": "quantization-in-depth",
+      "type": "short_course"
+    },
+    {
+      "course_type": "Short Course",
+      "landing_page": "/courses/reasoning-with-o1",
+      "slug": "reasoning-with-o1",
+      "type": "short_course"
+    },
+    {
+      "course_type": "Short Course",
+      "landing_page": "/courses/red-teaming-llm-applications",
+      "slug": "red-teaming-llm-applications",
+      "type": "short_course"
+    },
+    {
+      "course_type": "Short Course",
+      "landing_page": "/courses/reinforcement-fine-tuning-llms-grpo",
+      "slug": "reinforcement-fine-tuning-llms-grpo",
+      "type": "short_course"
+    },
+    {
+      "course_type": "Short Course",
+      "landing_page": "/courses/reinforcement-learning-from-human-feedback",
+      "slug": "reinforcement-learning-from-human-feedback",
+      "type": "short_course"
+    },
+    {
+      "course_type": "Course",
+      "landing_page": "/courses/retrieval-augmented-generation",
+      "slug": "retrieval-augmented-generation",
+      "type": "course"
+    },
+    {
+      "course_type": "Short Course",
+      "landing_page": "/courses/retrieval-optimization-from-tokenization-to-vector-quantization",
+      "slug": "retrieval-optimization-from-tokenization-to-vector-quantization",
+      "type": "short_course"
+    },
+    {
+      "course_type": "Short Course",
+      "landing_page": "/courses/safe-and-reliable-ai-via-guardrails",
+      "slug": "safe-and-reliable-ai-via-guardrails",
+      "type": "short_course"
+    },
+    {
+      "course_type": "Short Course",
+      "landing_page": "/courses/semantic-caching-for-ai-agents",
+      "slug": "semantic-caching-for-ai-agents",
+      "type": "short_course"
+    },
+    {
+      "course_type": "Short Course",
+      "landing_page": "/courses/spec-driven-development-with-coding-agents",
+      "slug": "spec-driven-development-with-coding-agents",
+      "type": "short_course"
+    },
+    {
+      "course_type": "Professional Certificate",
+      "landing_page": "/specializations/tensorflow-developer-professional-certificate",
+      "slug": "tensorflow-developer-professional-certificate",
+      "type": "professional_certificate"
+    },
+    {
+      "course_type": "Course",
+      "landing_page": "/courses/transformers-in-practice",
+      "slug": "transformers-in-practice",
+      "type": "course"
+    },
+    {
+      "course_type": "Short Course",
+      "landing_page": "/courses/vector-databases-embeddings-applications",
+      "slug": "vector-databases-embeddings-applications",
+      "type": "short_course"
+    },
+    {
+      "course_type": "Short Course",
+      "landing_page": "/courses/vibe-coding-101-with-replit",
+      "slug": "vibe-coding-101-with-replit",
+      "type": "short_course"
+    }
+  ]
+}
