@@ -3,7 +3,7 @@ title: Bluey 布鲁伊 调研
 created: 2026-05-26
 updated: 2026-05-26
 type: research
-tags: [research, family, english]
+tags: [research, family]
 status: stable
 sources:
   - https://en.wikipedia.org/wiki/Bluey_(2018_TV_series)

@@ -3,7 +3,7 @@ title: 孩子数学启蒙资源调研
 created: 2026-05-26
 updated: 2026-05-26
 type: research
-tags: [research, family, math]
+tags: [research, family]
 status: stable
 ---
 

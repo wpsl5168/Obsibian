@@ -3,7 +3,7 @@ title: AI 启蒙资源调研（娃 + 自己）
 created: 2026-05-26
 updated: 2026-05-26
 type: research
-tags: [research, family, ai]
+tags: [research, family]
 status: stable
 ---
 

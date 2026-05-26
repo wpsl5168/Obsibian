@@ -3,7 +3,7 @@ title: 孩子英语启蒙资源调研
 created: 2026-05-26
 updated: 2026-05-26
 type: research
-tags: [research, family, english]
+tags: [research, family]
 status: stable
 ---
 
