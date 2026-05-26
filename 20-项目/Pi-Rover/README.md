@@ -3,8 +3,8 @@ title: Pi-Rover 知识库
 created: 2026-05-25
 updated: 2026-05-25
 type: concept
-status: draft
 tags:
+status: draft
   - pi-rover
   - robotics
   - raspberry-pi

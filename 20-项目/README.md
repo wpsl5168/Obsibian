@@ -3,8 +3,8 @@ title: 项目索引
 created: 2026-05-25
 updated: 2026-05-25
 type: meta
-status: stable
 tags:
+status: stable
   - index
   - projects
 ---
