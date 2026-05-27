@@ -220,3 +220,4 @@ type: meta
 
 ## [2026-05-05] schema-update | 新增 #realestate / #family tags + 40-调研报告/房产/ 子分类，迁入怡海花园调研。
 ## [2026-05-28] index | full rebuild — 341 pages across 28 sections
+[2026-05-28] structure | rename 10-个人/ → 05-个人/ (resolve numbering collision with 10-知识库)
