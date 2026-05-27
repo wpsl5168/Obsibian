@@ -7,7 +7,7 @@ tags: [OpenClaw, Memory, 摘要, 治理]
 # OpenClaw 迁移摘要
 
 > 本文件由小贝（二秘/知识库整理员）于 2026-04-14 从 Daily 日志中提炼合并。
-> 原始日志已归档至 git 历史，可通过 `git log -- 99-Governance/OpenClaw-Memory/Daily/` 查阅。
+> 原始日志已归档至 git 历史，可通过 `git log -- 90-治理/OpenClaw-Memory/Daily/` 查阅。
 
 ---
 

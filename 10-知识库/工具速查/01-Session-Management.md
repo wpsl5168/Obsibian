@@ -20,8 +20,8 @@ category: Notes
 
 ## 压缩前必做
 - 把当日关键决策/偏好/规则更新写入 Obsidian 仓库：
-  - `99-Governance/Rules/`
-  - `99-Governance/OpenClaw-Memory/`
+  - `90-治理/Rules/`
+  - `90-治理/OpenClaw-Memory/`
 
 ## 压缩方式
 - 优先：总结最近 N 条对话并保留关键事实（角色分工/定时任务/仓库地址/偏好）

@@ -12,4 +12,4 @@ tags: [索引, OpenClaw, Memory]
 - `heartbeat-state.json` — Agent 心跳状态文件（自动维护）
 
 > 原始 Daily 日志已于 2026-04-14 压缩归档。如需查看原文，请通过 git 历史回溯：
-> `git log -- 99-Governance/OpenClaw-Memory/Daily/`
+> `git log -- 90-治理/OpenClaw-Memory/Daily/`
