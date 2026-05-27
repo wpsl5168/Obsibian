@@ -5,6 +5,7 @@ updated: 2026-04-21
 type: entity
 tags: [openhippo, memory, architecture]
 status: draft
+oversized_ok: true
 ---
 
 # F5 Dream（记忆整合）设计 — v0.1 草案

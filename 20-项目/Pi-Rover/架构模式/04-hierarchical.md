@@ -5,6 +5,7 @@ updated: 2026-04-23
 type: concept
 tags: [pi-rover]
 status: draft
+oversized_ok: true
 ---
 # 模式04：分层反射架构
 

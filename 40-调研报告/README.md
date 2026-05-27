@@ -1,5 +1,5 @@
 ---
-title: 30-调研报告
+title: 40-调研报告
 created: 2026-01-01
 updated: 2026-04-21
 type: meta
@@ -7,7 +7,7 @@ tags: [research]
 status: stable
 ---
 
-# 30-调研报告
+# 40-调研报告
 
 深度调研、对比分析、决策报告。**完成后只读**，新版本另开文件。
 受 [[SCHEMA]] 约束。完整索引见 [[index]]。

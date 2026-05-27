@@ -5,6 +5,7 @@ updated: 2026-04-21
 type: entity
 tags: [hermes, memory, architecture]
 status: stable
+oversized_ok: true
 ---
 
 # Hermes Memory System Upgrade

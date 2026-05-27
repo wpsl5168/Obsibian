@@ -5,6 +5,7 @@ updated: 2026-04-23
 type: concept
 tags: [pi-rover]
 status: draft
+oversized_ok: true
 ---
 # 模式05：行为树 + LLM 架构
 

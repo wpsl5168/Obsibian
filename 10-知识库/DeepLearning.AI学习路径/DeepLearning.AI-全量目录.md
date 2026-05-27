@@ -5,6 +5,7 @@ updated: 2026-04-21
 type: concept
 tags: []
 status: draft
+oversized_ok: true
 ---
 
 # DeepLearning.AI 全量课程目录

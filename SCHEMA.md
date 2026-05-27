@@ -7,7 +7,7 @@ type: meta
 
 # 知识库 Schema（治理宪法）
 
-> 本Schema约束 `10-知识库/`、`20-项目/`、`30-调研报告/` 三个目录下的所有页面。
+> 本Schema约束 `10-知识库/`、`20-项目/`、`40-调研报告/` 三个目录下的所有页面。
 > 其他目录（00-收件箱、40-日报、90-治理）保持自由，不受本Schema约束。
 > 受 [Karpathy LLM Wiki](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f) 启发。
 
@@ -18,7 +18,7 @@ type: meta
 **Wiki范围**（受治理）：
 - `10-知识库/` — 概念页（concepts），AI/Agent/工程领域的稳定知识
 - `20-项目/` — 实体页（entities），每个项目一组主索引+子页
-- `30-调研报告/` — 调研/对比/综合分析（research/comparison）
+- `40-调研报告/` — 调研/对比/综合分析（research/comparison）
 
 **Wiki外**（自由区）：
 - `00-收件箱/` — 草稿、待整理（不索引、不lint）
