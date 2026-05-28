@@ -1,0 +1,72 @@
+{
+  "total_courses": 121,
+  "extracted_date": "2026-05-28",
+  "extracted_timestamp": "2026-05-28T19:17:05.481314+08:00",
+  "courses": [
+    {
+      "slug": "ai-prompting-for-everyone",
+      "title": "AI Prompting for Everyone",
+      "type": "course",
+      "level": "Beginner",
+      "topics": [
+        "Prompt Engineering"
+      ]
+    },
+    {
+      "slug": "build-with-andrew",
+      "title": "Build with Andrew",
+      "type": "course",
+      "level": "Beginner",
+      "topics": [
+        "AI Coding"
+      ]
+    },
+    {
+      "slug": "agentic-ai",
+      "title": "Agentic AI",
+      "type": "course",
+      "level": "Intermediate",
+      "topics": [
+        "Agents"
+      ]
+    },
+    {
+      "slug": "ai-agents-for-image-and-video-generation",
+      "title": "AI Agents for Image and Video Generation",
+      "type": "short_course",
+      "level": "Intermediate",
+      "topics": [
+        "Agents",
+        "Computer Vision"
+      ]
+    },
+    {
+      "slug": "transformers-in-practice",
+      "title": "Transformers in Practice",
+      "type": "course",
+      "level": "Intermediate",
+      "topics": [
+        "Transformers",
+        "Deep Learning"
+      ]
+    }
+  ],
+  "aggregations": {
+    "courseLevels": {
+      "Beginner": 63,
+      "Intermediate": 58
+    },
+    "courseTypes": {
+      "short_course": 98,
+      "course": 13,
+      "specialization": 10
+    },
+    "topTopics": [
+      "GenAI Applications",
+      "Prompt Engineering",
+      "Agents",
+      "RAG",
+      "Generative Models"
+    ]
+  }
+}
