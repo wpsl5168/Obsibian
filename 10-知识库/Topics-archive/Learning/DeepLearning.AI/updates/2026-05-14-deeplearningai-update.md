@@ -2,7 +2,7 @@
 title: 2026-05-14-deeplearningai-update
 created: 2026-05-14
 updated: 2026-05-27
-type: deeplearningai-update
+type: meta
 tags: []
 status: draft
 date: 2026-05-14

@@ -1,3 +1,13 @@
+---
+title: 2026-05-10-deeplearningai-update
+created: 2026-05-10
+updated: 2026-05-28
+type: meta
+tags: []
+status: archived
+date: 2026-05-10
+---
+
 # DeepLearning.AI Course Catalog Update
 
 **Date**: 2026-05-10  

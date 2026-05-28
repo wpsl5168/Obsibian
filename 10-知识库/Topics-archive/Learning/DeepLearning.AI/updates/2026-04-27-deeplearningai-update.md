@@ -3,7 +3,7 @@ title: 2026-04-27-deeplearningai-update
 created: 2026-04-27
 updated: 2026-05-27
 type: meta
-tags: [deeplearning-ai, courses, sync]
+tags: []
 status: draft
 date: 2026-04-27
 previous: 2026-04-26
