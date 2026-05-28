@@ -1,6 +1,11 @@
 ---
-date: 2026-05-03
+title: 2026-05-03-deeplearningai-update
+created: 2026-04-29
+updated: 2026-05-27
 type: deeplearningai-update
+tags: []
+status: draft
+date: 2026-05-03
 previous_snapshot: 2026-05-02
 ---
 

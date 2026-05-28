@@ -1,6 +1,11 @@
 ---
-date: 2026-05-06
+title: 2026-05-06-deeplearningai-update
+created: 2026-05-06
+updated: 2026-05-27
 type: deeplearningai-update
+tags: []
+status: draft
+date: 2026-05-06
 total_courses: 122
 new_courses: 0
 removed_courses: 0

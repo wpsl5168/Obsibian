@@ -1,11 +1,16 @@
 ---
+title: 2026-04-27-deeplearningai-update
+created: 2026-04-27
+updated: 2026-05-27
+type: meta
+tags: [deeplearning-ai, courses, sync]
+status: draft
 date: 2026-04-27
 previous: 2026-04-26
 total_courses: 121
 new: 0
 removed: 0
 modified: 0
-tags: [deeplearning-ai, courses, sync]
 ---
 
 # DeepLearning.AI 课程同步 — 2026-04-27

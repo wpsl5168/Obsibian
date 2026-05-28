@@ -1,6 +1,11 @@
 ---
-date: 2026-05-05
+title: 2026-05-05-deeplearningai-update
+created: 2026-05-05
+updated: 2026-05-27
 type: deeplearningai-update
+tags: []
+status: draft
+date: 2026-05-05
 total: 122
 new: 0
 removed: 0

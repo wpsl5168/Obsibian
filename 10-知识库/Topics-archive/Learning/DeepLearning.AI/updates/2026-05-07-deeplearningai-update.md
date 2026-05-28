@@ -1,6 +1,11 @@
 ---
-date: 2026-05-07
+title: 2026-05-07-deeplearningai-update
+created: 2026-05-07
+updated: 2026-05-27
 type: deeplearningai-update
+tags: []
+status: draft
+date: 2026-05-07
 prev_snapshot: deeplearningai-courses-2026-05-06.compact.json
 ---
 

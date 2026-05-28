@@ -1,6 +1,11 @@
 ---
-date: 2026-05-16
+title: 2026-05-16-deeplearningai-update
+created: 2026-04-29
+updated: 2026-05-27
 type: deeplearningai-update
+tags: []
+status: draft
+date: 2026-05-16
 ---
 
 # DeepLearning.AI 课程索引更新 — 2026-05-16

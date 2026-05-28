@@ -1,4 +1,10 @@
 ---
+title: 2026-04-26-deeplearningai-update
+created: 2026-04-26
+updated: 2026-05-27
+type: meta
+tags: []
+status: draft
 date: 2026-04-26
 source: deeplearning.ai
 total_courses: 121

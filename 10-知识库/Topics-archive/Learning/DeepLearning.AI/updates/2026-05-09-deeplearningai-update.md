@@ -1,6 +1,11 @@
 ---
-date: 2026-05-09
+title: 2026-05-09-deeplearningai-update
+created: 2026-05-09
+updated: 2026-05-27
 type: deeplearningai-update
+tags: []
+status: draft
+date: 2026-05-09
 previous_sync: 2026-05-08
 current_total: 123
 previous_total: 123
