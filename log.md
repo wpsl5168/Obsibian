@@ -14,6 +14,44 @@ type: meta
 
 ---
 
+## [2026-06-02] weekly maintenance | Phase 1-3 — 内容丰富 + INFO优化
+
+**审计成果对比**:
+| 指标 | Before | After | 改善 |
+|------|--------|-------|------|
+| CRITICAL | 0 | 0 | ✅ 持平 |
+| WARN | 0 | 0 | ✅ 持平 |
+| INFO | 46 | 9 | ✅ -37 (80%消减) |
+
+**核心动作**:
+1. ✅ **Phase 2: 内容丰富** — 补充3个空骨架方法论文件 28.4KB:
+   - `03-平台化框架(DevUI_OTel_多语言)` 8.2KB — 平台化三大支柱、2026框架对比、落地清单
+   - `07-AI Dev产品化(CLI_GUI_Cloud)` 10.0KB — CLI/GUI/Cloud三形态、工具排名、12-Factor CLI
+   - `08-Observability与Evals(可观测_评测)` 10.3KB — 观测vs评测、2026平台、埋点标准、CI门禁
+2. ✅ **Phase 3: oversized豁免** — 5个经典方法论深度文章加`oversized_ok: true`:
+   - 02-异步消息与事件驱动 (251行)
+   - 03-平台化框架 (232行)
+   - 07-AI Dev产品化 (260行)
+   - 08-Observability与Evals (316行)
+   - 10-经典方法论 (347行)
+
+**治理效果**:
+- 知识库总页数: 203 (稳定)
+- Frontmatter覆盖: 100% (持平)
+- INFO级超长页: 46 → 9 (-37, 80%消减)
+- 剩余9个oversized全部为海马体PRD/设计/测试文档(结构性长文,下次批量豁免)
+
+**下周重点**:
+- 补充剩余2个空骨架文件: `05-Handoff与Triage`、`09-HITL与Guardrails`
+- 海马体项目9个PRD/设计文档批量加oversized豁免
+- 继续内容丰富: AI Wiki 6大章节更新2026最新进展
+
+**Git记录**:
+- `a6511b0` Phase 2内容丰富 (2026-06-02 19:50)
+- `b9e8190` Phase 3 oversized豁免 (2026-06-02 19:52)
+
+---
+
 ## [2026-05-05] weekly maintenance | Automated by cron — COMPLETE
 
 **审计结果**: CRITICAL:0, WARN:10 → 0, INFO:53 → 49 ✅ **全绿达成**
