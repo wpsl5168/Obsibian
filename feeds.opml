@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<opml version="2.0">
+  <head>
+    <title>RSS dashboard feeds</title>
+    <dateCreated>Tue, 02 Jun 2026 17:17:50 GMT</dateCreated>
+  </head>
+  <body>
+    <outline text="Uncategorized" title="Uncategorized">
+      <outline text="数字生命卡兹克" title="数字生命卡兹克" type="rss" xmlUrl="https://wewe.brickhub.cc/feeds/MP_WXS_3223096120.atom" category="Uncategorized"/>
+      <outline text="机器之心" title="机器之心" type="rss" xmlUrl="https://wewe.brickhub.cc/feeds/MP_WXS_3073282833.atom" category="Uncategorized"/>
+      <outline text="量子位" title="量子位" type="rss" xmlUrl="https://wewe.brickhub.cc/feeds/MP_WXS_3236757533.atom" category="Uncategorized"/>
+      <outline text="宝玉AI" title="宝玉AI" type="rss" xmlUrl="https://wewe.brickhub.cc/feeds/MP_WXS_3957812448.atom" category="Uncategorized"/>
+    </outline>
+    <outline text="Videos" title="Videos">
+      <outline text="Two Minute Papers (YouTube)" title="Two Minute Papers (YouTube)" type="rss" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCbfYPyITQ-7l4upoX8nvctg" category="Videos"/>
+      <outline text="TED (YouTube)" title="TED (YouTube)" type="rss" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCsT0YIqwnpJCM-mx7-gSA4Q" category="Videos"/>
+    </outline>
+    <outline text="Podcasts" title="Podcasts">
+      <outline text="Dwarkesh Podcast" title="Dwarkesh Podcast" type="rss" xmlUrl="https://apple.dwarkesh-podcast.workers.dev/feed.rss" category="Podcasts"/>
+    </outline>
+    <outline text="RSS" title="RSS">
+      <outline text="arXiv AI (cs.AI) New Papers" title="arXiv AI (cs.AI) New Papers" type="rss" xmlUrl="https://export.arxiv.org/rss/cs.AI" category="RSS"/>
+      <outline text="GitHub Blog" title="GitHub Blog" type="rss" xmlUrl="https://github.blog/feed/" category="RSS"/>
+      <outline text="NASA Breaking News" title="NASA Breaking News" type="rss" xmlUrl="http://www.nasa.gov/rss/dyn/breaking_news.rss" category="RSS"/>
+      <outline text="Last Week in AI" title="Last Week in AI" type="rss" xmlUrl="https://lastweekin.ai/feed" category="RSS"/>
+      <outline text="MIT Technology Review" title="MIT Technology Review" type="rss" xmlUrl="https://www.technologyreview.com/feed/" category="RSS"/>
+    </outline>
+  </body>
+</opml>
