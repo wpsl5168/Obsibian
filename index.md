@@ -277,6 +277,7 @@ status: stable
 - [[40-调研报告/2026-04-中美AI模型与Agent全景/06-中美对比与趋势.md|中美 AI 全景对比与 2026 趋势研判]] — 1. 海马体定位：本地优先 + 用户可审查，正好抓住"自主可控"+"开源"两大风口 🟡
 - [[40-调研报告/2026-04-中美AI模型与Agent全景/INDEX.md|2026 中美 AI 模型与 Agent 全景报告]]
 - [[40-调研报告/agent/2026-06-微软Agent全景与战略点评.md|微软 AI Agent 全景与战略点评（2026-06）]] — 六层产品线 + Open Agentic Web 战略 + 四家竞品对比；最强护城河治理/MCP，最大短板生产化鸿沟+16% 落地率 🟡
+- [[40-调研报告/agent/2026-06-Agent编排框架横评-SK-MAF-LangChain.md|Agent 编排框架横评 — SK/MAF/LangChain（2026-06）]] — 8 框架按四范式横评(graph/对话/角色/事件)；SK→AutoGen→MAF 三代演进，LangChain 三件套，含选型表+star 实测 🟡
 
 ## 🏦 调研 · 银行业AI转型  *(8)*
 
