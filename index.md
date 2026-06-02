@@ -260,6 +260,7 @@ status: stable
 - [[20-项目/Dreaming/2026-05-19-research.md|BrickHub Dream B 2026-05-19]] — 选取理由：rotation.json 中未审过的核心组件（候选池里仅剩 LDrawModal / LDrawEditorPanel / FloatingControls / MenuPanel / H
 - [[20-项目/Dreaming/2026-05-20-research.md|BrickHub Dream B 2026-05-20]] — AI 生成提示输入栏 + 语音入口 + 提交按钮组合组件。VoiceInput / Submit / 文本输入三件套布局。
 - [[20-项目/Dreaming/2026-05-27-research.md|BrickHub Dream B 2026-05-27]] — 129 LOC，LDraw 文本处理工具集（extract/dedup/normalize/fallback），被 `lib/pipeline/index.js` 5 处调用。无直接单测，依赖 `ge
+- [[20-项目/BrickHub/dreaming/2026-05-28-research.md|BrickHub Dream B 2026-05-28]] — LDrawEditorPanel modal组件审查，修复4处a11y与触控问题（PR #30）
 
 ## 💼 项目 · AI风口/盈利方案  *(3)*
 

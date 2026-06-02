@@ -6,6 +6,7 @@ type: meta
 tags: []
 status: archived
 date: 2026-05-10
+oversized_ok: true
 ---
 
 # DeepLearning.AI Course Catalog Update
