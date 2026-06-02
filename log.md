@@ -221,3 +221,23 @@ type: meta
 ## [2026-05-05] schema-update | 新增 #realestate / #family tags + 40-调研报告/房产/ 子分类，迁入怡海花园调研。
 ## [2026-05-28] index | full rebuild — 341 pages across 28 sections
 [2026-05-28] structure | rename 10-个人/ → 05-个人/ (resolve numbering collision with 10-知识库)
+
+## [2026-06-02] weekly maintenance | Phase 2+3 内容丰富 + 问题修复
+
+**审计结果**: CRITICAL:0, WARN:1 → 0, INFO:11 → 10
+
+**Phase 2: 内容丰富 (3个核心方法论文件)**:
+- `01-工作流编排（Graphs & Workflows）.md` (114字 → 7.2KB) — 补充DAG/状态机/事件驱动三种编排模式对比、LangGraph/CrewAI/Claude SDK 2026框架排名、工程落地清单（状态管理/失败恢复/成本控制/可观测性）
+- `02-异步消息与事件驱动（Event-driven Messaging）.md` (122字 → 9.8KB) — 补充EDA核心概念、同步vs异步决策表、Kafka/RabbitMQ框架对比、工程落地清单（幂等性/DLQ/背压/可观测性）、银行反欺诈案例
+- `10-经典方法论（ReAct_Reflexion_ToT_MetaGPT）.md` (123字 → 12.8KB) — 补充四大方法论（ReAct/Reflexion/ToT/MetaGPT）核心概念、论文链接、代码示例、HumanEval实际提升数据、工程落地清单（选型/成本控制/监控）
+
+**Phase 3: 问题修复**:
+- WARN: `2026-05-10-deeplearningai-update.md` (554行) 加 `oversized_ok: true` 豁免（结构性长文）
+- INFO: `20-项目/BrickHub/dreaming/2026-05-28-research.md` 补充到 index.md，消除孤儿+未登记问题
+
+**治理效果**:
+- ✅ 3个空洞文件丰富为实质内容（共29.8KB新增）
+- ✅ 1个WARN问题修复（oversized豁免）
+- ✅ 1个孤儿页面入库
+
+**Git记录**: commit c2e8b48
