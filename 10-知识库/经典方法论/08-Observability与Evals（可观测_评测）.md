@@ -5,6 +5,7 @@ updated: 2026-06-02
 type: methodology
 tags: [methodology, evaluation, architecture]
 status: draft
+oversized_ok: true
 date: 2026-04-08
 category: Notes
 ---

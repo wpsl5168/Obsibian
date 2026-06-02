@@ -5,6 +5,7 @@ updated: 2026-06-02
 type: methodology
 tags: [methodology, tooling, vibe-coding]
 status: draft
+oversized_ok: true
 date: 2026-04-08
 category: Notes
 ---
