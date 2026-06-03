@@ -1,0 +1,374 @@
+<!DOCTYPE html><html lang='zh-CN'><head><meta charset='utf-8'>
+<style>
+@page{margin:1.4cm;}
+*{box-sizing:border-box;}
+body{font-family:'WenQuanYi Zen Hei','Droid Sans Fallback',sans-serif;
+ color:#222;line-height:1.7;font-size:13px;background:#fdfcf8;margin:0;padding:24px;}
+h1{color:#1a4731;font-size:24px;border-bottom:3px solid #1a4731;padding-bottom:8px;margin-top:8px;}
+h2{color:#1a4731;font-size:19px;border-left:5px solid #1a4731;padding-left:10px;margin-top:26px;}
+h3{color:#2d5f44;font-size:15px;margin-top:20px;}
+h4{color:#3a6b50;font-size:13.5px;margin-top:14px;}
+p{margin:7px 0;}
+a{color:#1a6fb5;text-decoration:none;word-break:break-all;}
+code{background:#eef2ee;color:#9a3b2e;padding:1px 5px;border-radius:3px;font-family:'Courier New',monospace;font-size:12px;}
+pre{background:#1e2a24;color:#e8f0ea;padding:12px 14px;border-radius:6px;border-left:4px solid #4a8b6a;
+ overflow-x:auto;font-size:11.5px;line-height:1.5;}
+pre code{background:none;color:#e8f0ea;padding:0;}
+blockquote{background:#f0f5f1;border-left:4px solid #4a8b6a;margin:8px 0;padding:8px 14px;color:#2d5f44;}
+table{border-collapse:collapse;width:100%;margin:12px 0;font-size:11.5px;}
+th{background:#1a4731;color:#fff;padding:7px 9px;text-align:left;border:1px solid #1a4731;}
+td{padding:6px 9px;border:1px solid #cdd8d0;vertical-align:top;}
+tr:nth-child(even) td{background:#f4f8f5;}
+hr{border:none;border-top:1px solid #cdd8d0;margin:18px 0;}
+ul,ol{margin:6px 0;padding-left:24px;}
+li{margin:3px 0;}
+strong{color:#1a4731;}
+</style></head><body><h1>PnP PowerShell 知识图谱与实战参考</h1>
+<blockquote>面向 M365 跨租户迁移(含 21Vianet→Global)的工程师手册。版本基准:PnP.PowerShell <strong>2.x</strong>(.NET / PowerShell 7+)。</blockquote>
+<blockquote>关键时效:<strong>2024/9/9 起多租户 PnP Management Shell 应用已被微软删除,所有连接必须自注册 Entra App 并显式传 <code>-ClientId</code></strong>〔信源 1,2〕。沿用旧脚本(不带 ClientId)会直接报 <code>AADSTS700016</code>。</blockquote>
+<hr>
+<h2>第 0 章 速查:30 秒拿到能用的连接</h2>
+<pre><code># 1) 装模块(PowerShell 7+,Windows/macOS/Linux 均可)
+Install-Module PnP.PowerShell -Scope CurrentUser
+
+# 2) 一次性给本租户注册一个 Entra App(交互式),记下输出的 ClientId
+Register-PnPEntraIDApp -ApplicationName &quot;PnP-Mig-Tool&quot; -Tenant contoso.onmicrosoft.com -Interactive
+
+# 3) 用 ClientId 连接(Global)
+Connect-PnPOnline -Url https://contoso.sharepoint.com/sites/A -ClientId &lt;client-id&gt; -Interactive
+
+# 3&#x27;) 连 21Vianet(China)——端点不同,必须加 -AzureEnvironment China
+Connect-PnPOnline -Url https://contoso.sharepoint.cn/sites/A -ClientId &lt;client-id&gt; -AzureEnvironment China -Interactive</code></pre>
+<blockquote>记住三件事:<strong>自己的 ClientId</strong>、<strong>对的 URL 后缀(.com vs .cn)</strong>、<strong>China 必须 <code>-AzureEnvironment China</code></strong>。</blockquote>
+<hr>
+<h2>第 1 章 知识图谱(全景)</h2>
+<pre><code>                         ┌─────────────────────────────┐
+                         │      PnP PowerShell 2.x      │
+                         │   (.NET, PowerShell 7+)      │
+                         └──────────────┬──────────────┘
+                                        │
+            ┌───────────────────────────┼───────────────────────────┐
+            │                           │                           │
+      [认证 Auth]                 [操作对象 Scope]              [运行形态 Runtime]
+            │                           │                           │
+  ┌─────────┼─────────┐       ┌─────────┼─────────┐       ┌─────────┼─────────┐
+  │         │         │       │         │         │       │         │         │
+交互式   App-Only   Device   租户级   站点级   列表/项级   本地交互  无人值守  CI/CD
+-Interactive 证书   -Device  Tenant   Site     List/Item  脚本     计划任务  Pipeline
+  │      Thumbprint  Login   Admin    Web       Folder/File         证书登录  证书+Secret
+  │      /Base64           Get-PnP    Get-PnP   Get-PnP
+必须      App-Only        TenantSite  Web       ListItem
+ClientId  无人值守                    Get-PnP   Add/Set/
+                                      List      Remove
+                                                Get-PnPFile
+
+            ┌───────────────────────────┴───────────────────────────┐
+            │                  [环境 Environment]                     │
+            │   Global(.com / -AzureEnvironment Production 默认)      │
+            │   China 21Vianet(.cn / -AzureEnvironment China)        │
+            │   USGov / USGovHigh / USGovDoD / Germany                │
+            └─────────────────────────────────────────────────────────┘</code></pre>
+<h3>1.1 三条主轴</h3>
+<table>
+<tr><th>轴</th><th>选项</th><th>何时用</th></tr>
+<tr><td><strong>认证</strong></td><td>交互式 / App-Only 证书 / Device Login</td><td>人工跑用交互;批处理/夜跑用 App-Only 证书;无浏览器环境用 Device</td></tr>
+<tr><td><strong>操作对象</strong></td><td>租户 → 站点 → 列表 → 项/文件</td><td>一个连接锁定一个站点上下文;切站点要重连或多连接</td></tr>
+<tr><td><strong>运行形态</strong></td><td>交互脚本 / 计划任务 / CI/CD</td><td>迁移盘点用交互;批量搬运用 App-Only 无人值守</td></tr>
+</table>
+<h3>1.2 四类核心 cmdlet(按对象层级)</h3>
+<table>
+<tr><th>层级</th><th>代表 cmdlet</th><th>用途</th></tr>
+<tr><td><strong>连接</strong></td><td><code>Connect-PnPOnline</code> <code>Disconnect-PnPOnline</code> <code>Get-PnPConnection</code></td><td>建立/切换上下文</td></tr>
+<tr><td><strong>租户</strong></td><td><code>Get-PnPTenantSite</code> <code>New-PnPSite</code> <code>Set-PnPTenantSite</code> <code>Get-PnPTenant</code></td><td>站点清单、建站、租户配置(需 admin URL)</td></tr>
+<tr><td><strong>站点结构</strong></td><td><code>Get-PnPSiteTemplate</code> <code>Invoke-PnPSiteTemplate</code> <code>Get-PnPWeb</code> <code>Get-PnPList</code> <code>Get-PnPField</code> <code>Get-PnPContentType</code></td><td>导出/重放站点模板、列表、字段、内容类型</td></tr>
+<tr><td><strong>内容/项</strong></td><td><code>Get-PnPListItem</code> <code>Add-PnPListItem</code> <code>Set-PnPListItem</code> <code>Get-PnPFile</code> <code>Add-PnPFile</code> <code>Copy-PnPFile</code> <code>Move-PnPFile</code></td><td>数据读写、文件搬运</td></tr>
+<tr><td><strong>权限</strong></td><td><code>Get-PnPGroup</code> <code>Get-PnPGroupMember</code> <code>Set-PnPListItemPermission</code> <code>Grant-PnPAzureADAppSitePermission</code></td><td>组、独立权限、App 站点授权</td></tr>
+<tr><td><strong>元数据</strong></td><td><code>Get-PnPTerm</code> <code>Get-PnPTermSet</code> <code>Export-PnPTermGroupToXml</code> <code>Import-PnPTermGroupFromXml</code></td><td>托管元数据/术语库迁移</td></tr>
+</table>
+<hr>
+<h2>第 2 章 认证详解(2024 新规后)</h2>
+<h3>2.1 为什么旧脚本突然失效</h3>
+<p>2024/9/9 微软删除了多租户应用 <code>PnP Management Shell</code>(AppId <code>31359c7f-bd7e-475c-86db-fdb8c937548e</code>)。此前 <code>Connect-PnPOnline -Interactive</code> 无需 ClientId,靠这个共享应用。现在直接报:</p>
+<pre><code>AADSTS700016: Application with identifier &#x27;31359c7f-...&#x27; was not found in the directory</code></pre>
+<p>→ <strong>每个租户必须自注册一个 Entra App,连接时显式 <code>-ClientId</code></strong>〔信源 1〕。</p>
+<h3>2.2 注册自己的 App(两法)</h3>
+<p><strong>法 A:PnP cmdlet 自动注册(推荐,最快)</strong></p>
+<pre><code># 交互登录用
+Register-PnPEntraIDApp -ApplicationName &quot;PnP-Mig-Tool&quot; `
+  -Tenant contoso.onmicrosoft.com -Interactive
+# 输出含 ClientId、证书(pfx/cer)、thumbprint、base64 key —— 全部记录归档
+
+# App-Only 无人值守用(自动生成并上传证书)
+Register-PnPEntraIDApp -ApplicationName &quot;PnP-Mig-AppOnly&quot; `
+  -Tenant contoso.onmicrosoft.com -OutPath C:\certs -DeviceLogin</code></pre>
+<p>可选权限范围参数:<code>-GraphApplicationPermissions</code> <code>-GraphDelegatePermissions</code> <code>-SharePointApplicationPermissions</code> <code>-SharePointDelegatePermissions</code>。</p>
+<p><strong>法 B:Entra 管理中心手动注册</strong>(无 PowerShell 注册权限时)</p>
+<ol><li>entra.microsoft.com → 应用注册 → 新注册,记下 <strong>Application (client) ID</strong></li><li>身份验证 → 添加平台 → <strong>移动和桌面应用</strong> → 重定向 URI 填 <code>http://localhost</code></li><li>API 权限 → 加 <strong>SharePoint 委派权限</strong>(<code>AllSites.FullControl</code> 或按需)+ Graph</li><li><strong>授予管理员同意</strong>(需 Global Admin,灰显说明你权限不够)</li></ol>
+<h3>2.3 四种连接方式</h3>
+<pre><code># ① 交互式(人工跑,支持 MFA)—— 迁移盘点首选
+Connect-PnPOnline -Url https://contoso.sharepoint.com/sites/A `
+  -ClientId &lt;id&gt; -Interactive
+
+# ② App-Only 证书(thumbprint,Windows 证书库)—— 无人值守首选
+Connect-PnPOnline -Url https://contoso.sharepoint.com/sites/A `
+  -ClientId &lt;id&gt; -Tenant contoso.onmicrosoft.com -Thumbprint &lt;thumb&gt;
+
+# ③ App-Only 证书(base64/路径)—— 跨平台/CI
+Connect-PnPOnline -Url https://contoso.sharepoint.com/sites/A `
+  -ClientId &lt;id&gt; -Tenant contoso.onmicrosoft.com `
+  -CertificatePath C:\certs\app.pfx -CertificatePassword (Read-Host -AsSecureString)
+
+# ④ Device Login(无浏览器的服务器)
+Connect-PnPOnline -Url https://contoso.sharepoint.com/sites/A `
+  -ClientId &lt;id&gt; -Tenant contoso.onmicrosoft.com -DeviceLogin</code></pre>
+<blockquote><strong>迁移项目建议</strong>:盘点阶段用①交互式(快、能 MFA);批量搬运用②/③App-Only 证书(无人值守、夜跑不掉线)。<code>-UseWebLogin</code>/<code>-Credentials</code>(纯账密)在启用 MFA/CA 的租户上基本不可用,<strong>别用</strong>。</blockquote>
+<hr>
+<h2>第 3 章 China(21Vianet)专项 —— 迁移项目重点</h2>
+<h3>3.1 端点差异(连错就落到空 Global 租户)</h3>
+<table>
+<tr><th>项</th><th>Global</th><th>China(21Vianet)</th></tr>
+<tr><td>SharePoint URL</td><td><code>*.sharepoint.com</code></td><td><code>*.sharepoint.cn</code></td></tr>
+<tr><td>OneDrive URL</td><td><code>*-my.sharepoint.com</code></td><td><code>*-my.sharepoint.cn</code></td></tr>
+<tr><td>Admin URL</td><td><code>*-admin.sharepoint.com</code></td><td><code>*-admin.sharepoint.cn</code></td></tr>
+<tr><td>连接参数</td><td>默认(Production)</td><td><strong>必须 <code>-AzureEnvironment China</code></strong></td></tr>
+<tr><td>登录端点</td><td>login.microsoftonline.com</td><td>login.partner.microsoftonline.cn</td></tr>
+<tr><td>Graph 端点</td><td>graph.microsoft.com</td><td>microsoftgraph.chinacloudapi.cn</td></tr>
+</table>
+<pre><code># 连 21V 租户管理(站点清单)
+Connect-PnPOnline -Url https://contoso-admin.sharepoint.cn `
+  -ClientId &lt;china-app-id&gt; -AzureEnvironment China -Interactive
+
+# 连 21V 单站点
+Connect-PnPOnline -Url https://contoso.sharepoint.cn/sites/A `
+  -ClientId &lt;china-app-id&gt; -AzureEnvironment China -Interactive</code></pre>
+<h3>3.2 China 三个真实坑〔信源 2,实测社区案例〕</h3>
+<ol><li><strong>ClientId 必须是 China 租户里注册的 App</strong> —— Global 注册的 App 在 21V 用不了,要在 21V 端单独 <code>Register-PnPEntraIDApp</code>(连接时同样带 <code>-AzureEnvironment China</code>)。</li><li><strong>403 FORBIDDEN 高发</strong>:21V 上用 <code>-UseWebLogin</code> 连上后跑 <code>Get-PnPListItem</code> 常报 403(GitHub issue #3118 实例)。根因是<strong>委派权限不足/登录方式弱</strong>——改用 <code>-Interactive</code> + 正确的 <code>AllSites.FullControl</code> 委派权限。</li><li><strong>Site.Selected 授权变化</strong>:<code>-Interactive</code> 近期收紧,给 App 授站点权限用 <code>Grant-PnPAzureADAppSitePermission</code>,需先在 Entra 授 <code>Sites.Selected</code>。</li></ol>
+<h3>3.3 跨云迁移的 PnP 角色定位</h3>
+<p>PnP <strong>不能</strong>直接 21V↔Global 云内搬运(无云内信任通道)。它在迁移里干三件事:</p>
+<ul><li><strong>采集盘点</strong>(连 21V 读结构/权限/容量,导 CSV)</li><li><strong>结构重放</strong>(把 21V 导出的站点模板/列表/字段/内容类型 <code>Invoke</code> 到 Global)</li><li><strong>权限重挂</strong>(按身份映射表在 Global 重建组和独立权限)</li></ul>
+<p>文件内容本体走 BitTitan 或 PnP <code>Get-PnPFile</code>→<code>Add-PnPFile</code> 两段式(经本地/中转),详见主方案 §3.6。</p>
+<hr>
+<h2>第 4 章 使用方法(按迁移场景分)</h2>
+<h3>4.1 站点结构导出 → 重放(Provisioning Engine)</h3>
+<pre><code># 源(21V)导出整站模板:列表/字段/内容类型/页面/导航/品牌
+Connect-PnPOnline -Url https://src.sharepoint.cn/sites/A `
+  -ClientId &lt;id&gt; -AzureEnvironment China -Interactive
+Get-PnPSiteTemplate -Out A.pnp -IncludeAllPages -PersistBrandingFiles `
+  -Handlers Lists,Fields,ContentTypes,Pages,Navigation,SiteSecurity
+
+# 目标(Global)重放
+Connect-PnPOnline -Url https://dst.sharepoint.com/sites/A -ClientId &lt;id&gt; -Interactive
+Invoke-PnPSiteTemplate -Path A.pnp</code></pre>
+<blockquote>模板是 XML+文件包,可手改(改 URL/去掉不兼容 WebPart)再重放。<strong>复杂自定义(SPFx/旧工作流)不会自动迁</strong>,需单独处理。</blockquote>
+<h3>4.2 列表数据批量读写</h3>
+<pre><code># 分页读(大列表必须 -PageSize,否则超时)
+$items = Get-PnPListItem -List &quot;Documents&quot; -PageSize 2000
+
+# 批量写(用 Add-PnPListItem 循环;&gt;5000 项考虑 Batch)
+$batch = New-PnPBatch
+foreach ($row in Import-Csv data.csv) {
+  Add-PnPListItem -List &quot;Tasks&quot; -Values @{Title=$row.Title; Status=$row.Status} -Batch $batch
+}
+Invoke-PnPBatch -Batch $batch   # 批量提交,远快于逐条</code></pre>
+<h3>4.3 文件搬运(两段式跨云)</h3>
+<pre><code># 从 21V 下载
+Connect-PnPOnline -Url https://src.sharepoint.cn/sites/A -ClientId &lt;id&gt; -AzureEnvironment China -Interactive
+Get-PnPFile -Url &quot;/sites/A/Shared Documents/Report.docx&quot; -Path C:\stage -AsFile -Force
+
+# 上传到 Global(保留文件夹结构)
+Connect-PnPOnline -Url https://dst.sharepoint.com/sites/A -ClientId &lt;id&gt; -Interactive
+Add-PnPFile -Path C:\stage\Report.docx -Folder &quot;Shared Documents&quot;</code></pre>
+<blockquote>大批量别用这个逐文件搬——慢。批量用 BitTitan 或 <code>rclone</code>(主方案 §3.6)。PnP 文件操作适合<strong>小批量/补漏/特殊文件</strong>。</blockquote>
+<h3>4.4 权限盘点与重挂</h3>
+<pre><code># 盘点:找出独立权限项(broken inheritance)—— 决定权限工期
+$lists = Get-PnPList | ? {$_.Hidden -eq $false}
+foreach ($l in $lists) {
+  $items = Get-PnPListItem -List $l -PageSize 500
+  $u = $items | ? { Get-PnPProperty -ClientObject $_ -Property HasUniqueRoleAssignments }
+  &quot;[$($l.Title)] 独立权限项 $($u.Count) / 总 $($items.Count)&quot;
+}
+
+# 重挂:按映射表给目标项重设权限
+Set-PnPListItemPermission -List &quot;Documents&quot; -Identity 12 `
+  -User &quot;user@contoso.com&quot; -AddRole &quot;Contribute&quot;</code></pre>
+<h3>4.5 托管元数据(术语库)迁移</h3>
+<pre><code># 源导出
+Export-PnPTermGroupToXml -Identity &quot;公司分类&quot; -Out terms.xml
+# 目标导入
+Import-PnPTermGroupFromXml -Path terms.xml</code></pre>
+<hr>
+<h2>第 5 章 实战案例</h2>
+<h3>案例 1:迁移前全租户盘点(21V)</h3>
+<p><strong>目标</strong>:一次性导出所有站点容量/项数/owner,筛超限项。</p>
+<pre><code>Connect-PnPOnline -Url https://contoso-admin.sharepoint.cn `
+  -ClientId &lt;id&gt; -AzureEnvironment China -Interactive
+Get-PnPTenantSite -IncludeOneDriveSites |
+  Select Url,Template,StorageUsageCurrent,Owner |
+  Export-Csv sites.csv -NoTypeInformation -Encoding UTF8
+# 筛 &gt;5TB(迁移工具上限)
+Import-Csv sites.csv | ? {[int]$_.StorageUsageCurrent -gt 5242880} |
+  Export-Csv over_5tb.csv -NoTypeInformation -Encoding UTF8</code></pre>
+<p><strong>产出</strong>:<code>sites.csv</code> 作报价依据,<code>over_5tb.csv</code> 作清洗清单。</p>
+<h3>案例 2:深路径预清洗(迁移硬约束 400 字符)</h3>
+<pre><code>Connect-PnPOnline -Url https://src.sharepoint.cn/sites/A -ClientId &lt;id&gt; -AzureEnvironment China -Interactive
+Get-PnPListItem -List &quot;Documents&quot; -PageSize 500 -Fields FileRef |
+  ? { $_.FieldValues.FileRef.Length -gt 380 } |
+  Select @{N=&#x27;Path&#x27;;E={$_.FieldValues.FileRef}}, @{N=&#x27;Len&#x27;;E={$_.FieldValues.FileRef.Length}} |
+  Export-Csv deep_paths.csv -NoTypeInformation -Encoding UTF8</code></pre>
+<p><strong>用途</strong>:迁移前必须把 &gt;400 字符路径改短,否则该文件迁移失败。</p>
+<h3>案例 3:无人值守批量结构重放(夜跑)</h3>
+<pre><code># 用 App-Only 证书,无需人盯
+Connect-PnPOnline -Url https://dst.sharepoint.com/sites/A `
+  -ClientId &lt;id&gt; -Tenant contoso.onmicrosoft.com -Thumbprint &lt;thumb&gt;
+Get-ChildItem .\templates\*.pnp | ForEach-Object {
+  $url = &quot;https://dst.sharepoint.com/sites/&quot; + $_.BaseName
+  Connect-PnPOnline -Url $url -ClientId &lt;id&gt; -Tenant contoso.onmicrosoft.com -Thumbprint &lt;thumb&gt;
+  Invoke-PnPSiteTemplate -Path $_.FullName
+  Write-Host &quot;Done: $($_.BaseName)&quot;
+}</code></pre>
+<h3>案例 4:身份映射驱动的权限重建</h3>
+<pre><code>$map = Import-Csv identity_map.csv  # 源 UPN → 目标 UPN
+Connect-PnPOnline -Url https://dst.sharepoint.com/sites/A -ClientId &lt;id&gt; -Interactive
+foreach ($m in $map) {
+  # 把源端某用户的角色,在目标端授给映射后的新 UPN
+  Set-PnPListItemPermission -List &quot;Documents&quot; -Identity $m.ItemId `
+    -User $m.TargetUPN -AddRole &quot;Contribute&quot;
+}</code></pre>
+<hr>
+<h2>第 6 章 避坑清单</h2>
+<table>
+<tr><th>坑</th><th>现象</th><th>解法</th></tr>
+<tr><td>旧脚本无 ClientId</td><td><code>AADSTS700016</code></td><td>自注册 App,显式 <code>-ClientId</code>〔1〕</td></tr>
+<tr><td>China 连错环境</td><td>登录失败/落到空租户</td><td>加 <code>-AzureEnvironment China</code> + <code>.cn</code> URL</td></tr>
+<tr><td>China 用 Global App</td><td>应用找不到</td><td>在 21V 端单独注册 App</td></tr>
+<tr><td>21V 跑命令 403</td><td><code>Get-PnPListItem</code> 403 FORBIDDEN</td><td>用 <code>-Interactive</code>(非 UseWebLogin)+ 足够委派权限〔2〕</td></tr>
+<tr><td>大列表超时</td><td>卡死/超时</td><td>必加 <code>-PageSize</code>(≤5000),用 <code>New-PnPBatch</code> 批量</td></tr>
+<tr><td>逐文件搬运慢</td><td>大批量耗时离谱</td><td>内容本体走 BitTitan/rclone,PnP 只补漏</td></tr>
+<tr><td>证书过期</td><td>无人值守突然掉线</td><td>证书有效期登记,到期前轮换</td></tr>
+<tr><td>节流(429)</td><td>大批量被限速</td><td>重试+退避,夜间/周末跑批</td></tr>
+<tr><td>模板重放报错</td><td>SPFx/旧工作流不兼容</td><td>手改模板 XML,剔除不兼容 Handler 单独处理</td></tr>
+</table>
+<hr>
+<h2>第 7 章 跨云迁移完整命令(21V → Global,CSV 本地 + 正文 Azure 暂存)</h2>
+<blockquote>配套主迁移方案 §3.6。核心分流:<strong>CSV/映射/日志放本地磁盘,文件正文走 Global 区域 Azure Blob 暂存</strong>。下面是端到端可跑的命令骨架。</blockquote>
+<h3>7.1 数据分流原则(命令视角)</h3>
+<table>
+<tr><th>数据</th><th>存放</th><th>对应命令产物</th></tr>
+<tr><td>结构(站点/列表/字段/内容类型)</td><td>本地 <code>.pnp</code> 模板包</td><td><code>Get-PnPSiteTemplate</code> → <code>Invoke-PnPSiteTemplate</code></td></tr>
+<tr><td>术语库</td><td>本地 XML</td><td><code>Export-PnPTermGroupToXml</code></td></tr>
+<tr><td>清单/映射/checkpoint</td><td>本地 CSV</td><td><code>Export-Csv</code> / <code>Import-Csv</code></td></tr>
+<tr><td>文件正文</td><td>Global 区域 Azure Blob 暂存</td><td><code>Get-PnPFile -AsMemoryStream</code> → Az.Storage → <code>Add-PnPFile</code></td></tr>
+</table>
+<h3>7.2 前置:本地目录 + Azure 暂存</h3>
+<pre><code># 本地工作目录(放所有 CSV/模板/日志,建议在 Git 仓内)
+$Work = &quot;D:\mig&quot;
+New-Item -ItemType Directory -Force -Path $Work,&quot;$Work\templates&quot;,&quot;$Work\logs&quot; | Out-Null
+
+# Global 区域开一个临时 Blob 容器作暂存(就近目标,弹性容量)
+Connect-AzAccount   # Global Azure
+$ctx = (New-AzStorageContext -StorageAccountName &quot;migstage&quot; -UseConnectedAccount)
+New-AzStorageContainer -Name &quot;spo-stage&quot; -Context $ctx -Permission Off
+# 生命周期:7 天自动清(在存储账户 Lifecycle Management 配,或下方迁完手动清)</code></pre>
+<h3>7.3 第一步:盘点(21V → 本地 CSV)</h3>
+<pre><code>Connect-PnPOnline -Url https://contoso-admin.sharepoint.cn `
+  -ClientId &lt;cn-app-id&gt; -AzureEnvironment China -Interactive
+
+# 站点清单 → 本地 CSV
+Get-PnPTenantSite -IncludeOneDriveSites |
+  Select Url,Template,StorageUsageCurrent,Owner |
+  Export-Csv &quot;$Work\sites.csv&quot; -NoTypeInformation -Encoding UTF8
+
+# 身份映射表模板 → 本地 CSV(人工/规则填目标 UPN)
+# (用户从 Graph 导,见主方案 §8.2 ①)</code></pre>
+<h3>7.4 第二步:结构 + 术语库(本地中转包,不落 CSV)</h3>
+<pre><code># 源(21V)导出结构
+Connect-PnPOnline -Url https://contoso.sharepoint.cn/sites/A `
+  -ClientId &lt;cn-app-id&gt; -AzureEnvironment China -Interactive
+Get-PnPSiteTemplate -Out &quot;$Work\templates\A.pnp&quot; -IncludeAllPages -PersistBrandingFiles `
+  -Handlers Lists,Fields,ContentTypes,Pages,Navigation,SiteSecurity
+Export-PnPTermGroupToXml -Identity &quot;公司分类&quot; -Out &quot;$Work\terms.xml&quot;
+
+# 目标(Global)重放
+Connect-PnPOnline -Url https://contoso.sharepoint.com/sites/A -ClientId &lt;global-id&gt; -Interactive
+Invoke-PnPSiteTemplate -Path &quot;$Work\templates\A.pnp&quot;
+Import-PnPTermGroupFromXml -Path &quot;$Work\terms.xml&quot;</code></pre>
+<h3>7.5 第三步:文件正文(21V → Azure 暂存 → Global,带 checkpoint)</h3>
+<pre><code>$log = &quot;$Work\logs\progress.csv&quot;
+$done = @{}
+if (Test-Path $log) { Import-Csv $log | % { $done[$_.FileRef] = $_.Status } }  # 断点续传
+
+# 大文件阈值:超过此值不走内存流,改临时磁盘文件,避免 OOM
+$BigFileBytes = 250MB
+$tmp = &quot;$Work\filetmp&quot;; New-Item -ItemType Directory -Force -Path $tmp | Out-Null
+
+# 连源(21V)与目标(Global)——两条连接都要显式持有
+$src = Connect-PnPOnline -Url https://contoso.sharepoint.cn/sites/A `
+  -ClientId &lt;cn-app-id&gt; -AzureEnvironment China -Interactive -ReturnConnection
+$dst = Connect-PnPOnline -Url https://contoso.sharepoint.com/sites/A `
+  -ClientId &lt;global-app-id&gt; -Interactive -ReturnConnection
+
+$items = Get-PnPListItem -List &quot;Documents&quot; -PageSize 2000 -Connection $src
+
+foreach ($it in $items) {
+  $ref  = $it.FieldValues.FileRef
+  if ($done[$ref] -eq &quot;OK&quot;) { continue }   # 已迁跳过
+  $size = [int64]$it.FieldValues.File_x0020_Size   # 字节
+  $blobName = $ref.TrimStart(&#x27;/&#x27;)
+  $leaf   = Split-Path $ref -Leaf
+  $folder = Split-Path $ref -Parent
+  try {
+    if ($size -ge $BigFileBytes) {
+      # ── 大文件:全程走磁盘临时文件,内存占用恒定 ──
+      $local = Join-Path $tmp ([guid]::NewGuid().ToString(&#x27;N&#x27;))
+      Get-PnPFile -Url $ref -Path $tmp -FileName (Split-Path $local -Leaf) -AsFile -Force -Connection $src
+      Set-AzStorageBlobContent -Container &quot;spo-stage&quot; -Blob $blobName `
+        -BlobType Block -Context $ctx -Force -File $local | Out-Null
+      $dl = Get-AzStorageBlob -Container &quot;spo-stage&quot; -Blob $blobName -Context $ctx
+      $dl.ICloudBlob.DownloadToFile($local, [System.IO.FileMode]::Create)
+      # Add-PnPFile -Path 对大文件自动分块上传(SPO REST chunked upload)
+      Add-PnPFile -Path $local -Folder $folder `
+        -Values @{ Title = $it[&quot;Title&quot;]; Modified = $it[&quot;Modified&quot;] } -Connection $dst | Out-Null
+      Remove-Item $local -Force -ErrorAction SilentlyContinue
+    } else {
+      # ── 小文件:内存流直传,省磁盘 IO ──
+      $stream = Get-PnPFile -Url $ref -AsMemoryStream -Connection $src
+      Set-AzStorageBlobContent -Container &quot;spo-stage&quot; -Blob $blobName `
+        -BlobType Block -Context $ctx -Force -Stream $stream | Out-Null
+      $dl = Get-AzStorageBlob -Container &quot;spo-stage&quot; -Blob $blobName -Context $ctx
+      $ms = New-Object System.IO.MemoryStream
+      $dl.ICloudBlob.DownloadToStream($ms); $ms.Position = 0
+      Add-PnPFile -Stream $ms -FileName $leaf -Folder $folder `
+        -Values @{ Title = $it[&quot;Title&quot;]; Modified = $it[&quot;Modified&quot;] } -Connection $dst | Out-Null
+      $ms.Dispose()
+    }
+    &quot;$ref,OK&quot; | Out-File $log -Append -Encoding UTF8
+  } catch {
+    &quot;$ref,FAIL:$($_.Exception.Message)&quot; | Out-File $log -Append -Encoding UTF8
+  }
+}</code></pre>
+<blockquote><strong>两条连接必须分别持有</strong>(<code>$src</code> 连 21V、<code>$dst</code> 连 Global),跨云迁移没有云内信任,不能复用同一上下文。</blockquote>
+<blockquote><strong>大文件</strong>(默认 ≥250MB)全程走磁盘临时文件:<code>Get-PnPFile -AsFile</code> 落盘、<code>Add-PnPFile -Path</code> 触发 SPO 分块上传,内存占用恒定;小文件保留内存流以省磁盘 IO。阈值按中转机内存调整。</blockquote>
+<h3>7.6 第四步:权限重挂(按本地 CSV 映射)</h3>
+<pre><code>$map = Import-Csv &quot;$Work\identity_map.csv&quot;   # 源 UPN → 目标 UPN
+$lookup = @{}; $map | % { $lookup[$_.UserPrincipalName] = $_.TargetUPN }
+
+# 重挂独立权限(示例:把源端授权翻译到目标新 UPN)
+Set-PnPListItemPermission -List &quot;Documents&quot; -Identity 12 `
+  -User $lookup[&quot;user@contoso.cn&quot;] -AddRole &quot;Contribute&quot; -Connection $dst</code></pre>
+<h3>7.7 收尾:清暂存 + 核对</h3>
+<pre><code># 迁完删 Azure 暂存(或靠 7 天生命周期自动清)
+Remove-AzStorageContainer -Name &quot;spo-stage&quot; -Context $ctx -Force
+
+# 失败项复核
+Import-Csv $log | ? { $_.Status -like &quot;FAIL*&quot; } | Format-Table</code></pre>
+<blockquote>安全提醒:Azure 暂存用 SAS 临时授权或 <code>-UseConnectedAccount</code>(RBAC),别硬编码 account key;暂存容器权限设 <code>Off</code>(私有);迁完即清,留访问日志备审计。正文出境须客户已完成数据出境合规评估(见主方案 §3.6)。</blockquote>
+<hr>
+<h2>附录:信源</h2>
+<ol><li>Register an Entra ID Application to Use with PnP PowerShell — O365Reports(2024/9/11,确认 2024/9/9 多租户应用删除、必须自注册+ClientId、注册两法)</li></ol>
+<p>   <code>https://o365reports.com/register-an-entra-id-application-to-use-with-pnp-powershell</code></p>
+<ol><li>Connect-PnPOnline 官方 cmdlet 参考(全部参数集:Interactive/证书/Device/ClientSecret、AzureEnvironment、China 端点参数)</li></ol>
+<p>   <code>https://pnp.github.io/powershell/cmdlets/Connect-PnPOnline.html</code></p>
+<ol><li>PnP/powershell issue #3118 — Azure China 连接后 Get-PnPListItem 403 实例</li></ol>
+<p>   <code>https://github.com/pnp/powershell/issues/3118</code></p>
+<ol><li>Changes in PnP Management Shell registration — GitHub pnp/blog #1909(2024/9/9 生效公告)</li></ol>
+<p>   <code>https://github.com/pnp/blog/issues/1909</code></p></body></html>
