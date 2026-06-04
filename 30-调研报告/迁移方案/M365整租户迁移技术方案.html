@@ -26,9 +26,21 @@ strong{color:#1a4731;}
 figure{margin:14px 0;text-align:center;}
 figure img{max-width:100%;border:1px solid #cdd8d0;border-radius:6px;}
 figcaption{font-size:11px;color:#666;margin-top:5px;font-style:italic;}
-</style></head><body><h1>Microsoft 365 整租户迁移技术方案（落地版）</h1>
+</style></head><body><hr>
+<p>title: Microsoft 365 整租户迁移技术方案</p>
+<p>created: 2026-06-04</p>
+<p>updated: 2026-06-04</p>
+<p>type: research</p>
+<p>tags:</p>
+<ul><li>M365</li><li>迁移</li><li>技术方案</li></ul>
+<p>version: v4.3.1</p>
+<p>oversized_ok: true</p>
+<hr>
+<h1>Microsoft 365 整租户迁移技术方案（落地版）</h1>
 <h2>从 Microsoft 365（21Vianet 世纪互联）到 Microsoft 365 Global</h2>
-<blockquote>版本 v4.2 ｜ 可交付客户 ｜ 覆盖身份/邮箱/Teams/OneDrive/SharePoint 五大负载</blockquote>
+<blockquote>版本 v4.3.1 ｜ 可交付客户 ｜ 覆盖身份/邮箱/Teams/OneDrive/SharePoint 五大负载</blockquote>
+<blockquote></blockquote>
+<blockquote><strong>v4.3.1 修订（2026-06-04）</strong>：经与微软官方文档逐项核对，纠正 Teams 聊天迁移的关键判断——聊天/频道历史<strong>可经官方 Graph 迁移模式（导入）API 写入目标为活跃会话（保真有损），且支持 21Vianet</strong>；此前&quot;仅能导出归档、无回写 API&quot;的表述有误（实为 Export API 在 21V 不支持、Import API 支持）。涉及 §0.3、§2.4、§3.3、§3A.1、§3A.5、§3A.6、§4.5，新增信源 13。</blockquote>
 <blockquote>数据基准：Microsoft 官方文档（每条硬论断附信源，见文末附录 A）；最后核实 2026-06</blockquote>
 <blockquote>合规性由客户自行承担，本方案为纯技术工程方案</blockquote>
 <hr>
@@ -234,6 +246,7 @@ figcaption{font-size:11px;color:#666;margin-top:5px;font-style:italic;}
 <tr><td>SharePoint</td><td>PnP PowerShell(结构) + PnP/BitTitan(内容)</td><td>PnP.Framework(.NET)</td><td>开源主力，能连 <code>.cn</code></td></tr>
 </table>
 <p><strong>原则</strong>：结构与文件优先使用开源工具（PnP，零 License 成本）；邮箱与 Teams 跨云无原生路径，须采购商业工具保障可靠性。<strong>不推荐 ShareGate</strong>（对 21V 端点的支持情况未经官方确认）。</p>
+<blockquote><strong>客户不认可商业工具时</strong>：邮箱与 Teams 提供全开源 / 自研脚本替代路线（imapsync+OAuth2 自建邮箱管线、Graph 迁移模式 API 自建 Teams 聊天导入、PnP/Graph 自研文件管线），能力边界、保真度差距与投入对比详见<strong>第 3A 章</strong>。核心取舍：身份+文件走开源无让步，邮箱可自建（日历/联系人需补管线），Teams 聊天可经官方迁移模式 API 导入为活跃会话（保真有损，支持 21V），非仅归档。</blockquote>
 <h3>2.5 步骤与时间成本（中型 ~500 用户 / 500GB 参考）</h3>
 <blockquote>下表周期为经验估算区间，最终工期以 P1（POC）实测跨境速率为准锁定，详见第 6 章测算方法。</blockquote>
 <table>
@@ -262,18 +275,20 @@ figcaption{font-size:11px;color:#666;margin-top:5px;font-style:italic;}
 <p><strong>有条件</strong>：共享/资源邮箱（单独建+重授权）、委派权限（重设）、Hold 邮箱（先解 hold）。</p>
 <p><strong>不可迁</strong>：客户端配置、部分传输规则/MailTips（Global 重建）。</p>
 <h3>3.3 Teams</h3>
-<p><strong>要点：微软无原生跨云 Teams 迁移；聊天与频道依赖第三方工具（Cloudiway / Apps4.Pro / AvePoint）。Teams 私有频道合规模型在 2026 年有调整计划（具体日期待向微软渠道核实），迁移前需确认目标端合规策略已应用到团队 group。</strong></p>
+<p><strong>要点（v4.3.1 修正）：Teams 聊天/频道历史可经微软官方 Graph 迁移模式 API（<code>startMigration</code> → <code>importMessage</code> → <code>completeMigration</code>）写入目标频道/聊天，保真有损但可迁移；该 API 官方标注支持 China（21Vianet）〔信源 13〕。</strong> 商业工具（Cloudiway / Apps4.Pro / AvePoint）封装的正是这套机制，亦可自行脚本化（见 §3A.5）。Teams 私有频道合规模型在 2026 年有调整计划（具体日期待向微软渠道核实），迁移前需确认目标端合规策略已应用到团队 group。</p>
+<blockquote><strong>重要更正</strong>：本方案早期版本曾表述&quot;微软无原生跨云 Teams 聊天迁移、只能导出归档&quot;，经与微软官方文档逐项核对，该表述有误，现予纠正——<strong>迁移模式导入 API 可将消息写入目标为活跃会话（保真有损），且支持 21V</strong>；反而是 <strong>Teams Export（导出）API 在 21V 不受支持</strong>〔信源 13〕。</blockquote>
 <table>
 <tr><th>Teams 对象</th><th>可迁性</th><th>工具/处置</th></tr>
-<tr><td>团队 + 标准频道结构</td><td>✅</td><td>第三方/脚本重建</td></tr>
-<tr><td>私有频道</td><td>⚠️</td><td>第三方，注意合规模型变更</td></tr>
+<tr><td>团队 + 标准频道结构</td><td>✅</td><td>Graph 建团队/第三方/脚本重建</td></tr>
+<tr><td>私有频道</td><td>⚠️</td><td>迁移模式 API/第三方，注意合规模型变更</td></tr>
 <tr><td>频道文件（后端 SharePoint）</td><td>✅</td><td>PnP/第三方（同文件迁移）</td></tr>
-<tr><td>频道消息历史</td><td>⚠️ 保真有损</td><td>Cloudiway/Apps4.Pro，常以 HTML 归档</td></tr>
-<tr><td>1:1/群聊私聊</td><td>⚠️ 难</td><td>专用工具，保真度低</td></tr>
+<tr><td>频道消息历史</td><td>⚠️ 保真有损</td><td><strong>Graph 迁移模式 API 导入</strong>（第三方/自研脚本封装同一机制）</td></tr>
+<tr><td>1:1/群聊私聊</td><td>⚠️ 保真有损</td><td><strong>Graph <code>chat</code> 迁移模式 API 导入</strong>（保真度低于频道）</td></tr>
 <tr><td>Tabs/Apps/Connectors</td><td>❌</td><td>Global 端重新配置</td></tr>
 <tr><td>Planner（团队关联）</td><td>⚠️</td><td>第三方部分支持</td></tr>
 </table>
-<p><strong>策略</strong>：文件优先（高价值、可高保真）；聊天历史<strong>多数项目做归档留存而非强迁</strong>，预算投在文件和团队结构。</p>
+<blockquote><strong>迁移模式 API 约束</strong>：仅应用权限 <code>Teamwork.Migrate.All</code>（不支持委派）；导入期间频道对用户显示&quot;导入模式&quot;横幅，完成后移除；作者须为同租户身份（按身份映射表翻译）；消息时间戳须毫秒级唯一。保真损失点：@提及、reactions、部分富格式、附件内联关系可能降级，须 POC 实测确认客户可接受度。</blockquote>
+<p><strong>策略</strong>：文件优先（高价值、可高保真）；聊天历史<strong>可经迁移模式 API 导入为活跃会话（保真有损），亦可按项目需要仅做归档</strong>——按客户对聊天保真度的诉求与预算二选一，POC 阶段实测保真损失后定。</p>
 <h3>3.4 OneDrive for Business</h3>
 <p><strong>要点：OneDrive 本质为每用户一个 SharePoint 文档库，迁移方式同 SharePoint 文件（PnP / BitTitan）。</strong></p>
 <p><strong>步骤：</strong></p>
@@ -340,6 +355,86 @@ rclone copy 21v:&quot;Shared Documents&quot; /mnt/stage/siteA \
 <blockquote>具体 PnP 命令(跨云盘点→Azure 暂存→重放)见配套《PnP PowerShell 知识图谱与实战》§7。</blockquote>
 <blockquote><strong>合规红线</strong>：正文出境触发数据出境评估（数据分类、是否含个人信息/重要数据），属法务/客户决策，技术不能绕过。正式迁移前须客户书面确认已完成出境合规评估。</blockquote>
 <p><strong>小结</strong>：数据默认不经客户本地磁盘；仅当 POC 证明直连不可行时，才启用境内中转 VM，且仅对大文件、加密、不稳定负载使用。</p>
+<hr>
+<h2>第 3A 章 纯开源 / 自研脚本替代路线（商业工具不可用时）</h2>
+<blockquote><strong>本章定位</strong>：第 3 章默认路线在邮箱与 Teams 上采购商业工具（BitTitan / Cloudiway）换取可靠性与保真度。<strong>若客户因预算、数据敏感（不接受数据过第三方 SaaS 云）、采购合规或自主可控要求，不认可商业工具</strong>，本章给出<strong>全程开源工具 + 自研脚本</strong>的等价替代路线。两条路线就同一负载<strong>二选一</strong>，不叠加。</blockquote>
+<blockquote></blockquote>
+<blockquote><strong>诚实定性</strong>：文件类负载（SharePoint/OneDrive）本就以开源 PnP 为主力，替代成本低、保真度等价；<strong>邮箱与 Teams 没有等价开源工具</strong>，自研路线用开源协议库 + 微软官方 API 自建管线，<strong>可达成数据搬运，但在保真度、自动化度、工程人力上对商业工具有明确折损</strong>——下表逐项标注，不掩盖差距。</blockquote>
+<h3>3A.1 开源 / 自研替代能力边界对照</h3>
+<table>
+<tr><th>负载</th><th>默认（商业/原生）</th><th>开源 / 自研替代</th><th>保真度差距</th><th>主要代价</th></tr>
+<tr><td>身份 AAD</td><td>手工脚本 + CSV（<strong>本就是脚本</strong>）</td><td>同上，无差异</td><td>无</td><td>—</td></tr>
+<tr><td>邮箱 Exchange</td><td>BitTitan（21V 端点官方支持〔信源 3〕）</td><td><strong>imapsync + OAuth2</strong> 自建〔信源 10、11〕</td><td>邮件正文/文件夹高保真；<strong>日历/联系人/任务需另走 EWS/Graph</strong>，规则/委派/MailTips 重建</td><td>自研脚本 + 逐账号 OAuth；并发与限流要自己控</td></tr>
+<tr><td>Teams 聊天</td><td>Cloudiway / Apps4.Pro</td><td><strong>Graph 迁移模式 API 自研导入</strong>〔信源 13〕</td><td>保真有损（@提及/reactions/富格式可能降级），但可写入为活跃会话</td><td>仅 App 权限 <code>Teamwork.Migrate.All</code>；导入态横幅；时间戳毫秒唯一；自写编排</td></tr>
+<tr><td>Teams 结构/文件</td><td>第三方</td><td><strong>Graph 建团队 + PnP 迁后端文件</strong>（开源）</td><td>等价</td><td>自研建团队脚本</td></tr>
+<tr><td>OneDrive</td><td>PnP / BitTitan</td><td><strong>PnP / Graph 自研</strong>（开源）</td><td>等价</td><td>同 SharePoint</td></tr>
+<tr><td>SharePoint 结构</td><td>PnP（<strong>本就开源</strong>）</td><td>同上，无差异</td><td>无</td><td>—</td></tr>
+<tr><td>SharePoint 内容/权限</td><td>PnP / BitTitan</td><td><strong>PnP + 自研 .NET/Python 多线程</strong>（开源）</td><td>等价（元数据靠 <code>SystemUpdate</code>、权限靠映射表，与默认路线同机制）</td><td>大体量需自写并发/重试/checkpoint</td></tr>
+</table>
+<p><strong>一句话决策</strong>：身份与 SharePoint/OneDrive 走开源<strong>无任何让步</strong>；邮箱用 imapsync 自建管线可接受（差距在日历/联系人需补管线）；<strong>Teams 聊天可经官方迁移模式 API 自研导入为活跃会话（保真有损）</strong>——开源路线相比商业工具不损失&quot;可迁性&quot;本身，仅在保真度（@提及/reactions/富格式）与编排工程量上有差距，须 POC 实测保真损失并与客户书面确认可接受度。</p>
+<h3>3A.2 身份（AAD）—— 纯脚本，与默认路线一致</h3>
+<p>默认路线本就是「Graph 导出 + CSV 映射 + 批量建号」，<strong>无商业工具依赖</strong>，开源路线完全相同。补充自动化要点：</p>
+<pre><code># 源端 21V 导出（China 端点）
+Connect-MgGraph -Environment China -Scopes &quot;User.Read.All&quot;,&quot;Group.Read.All&quot;
+Get-MgUser  -All -Property UserPrincipalName,DisplayName,Mail,Department |
+  Export-Csv source_users.csv -NoTypeInformation
+Get-MgGroup -All | ForEach-Object {
+  $m = Get-MgGroupMember -GroupId $_.Id -All
+  [PSCustomObject]@{ Group=$_.DisplayName; Members=($m.AdditionalProperties.userPrincipalName -join &#x27;;&#x27;) }
+} | Export-Csv source_group_members.csv -NoTypeInformation
+
+# 目标端 Global 批量建号（按映射表 targetUPN 列）
+Import-Csv id_mapping.csv | ForEach-Object {
+  New-MgUser -UserPrincipalName $_.targetUPN -DisplayName $_.DisplayName `
+    -MailNickname $_.Nickname -AccountEnabled `
+    -PasswordProfile @{ Password=$_.InitPwd; ForceChangePasswordNextSignIn=$true }
+}</code></pre>
+<ul><li>身份映射表 Schema 见 §2.2.1（全程所有负载共用同一张表）。</li><li>密码/MFA/CA 策略不可迁，目标端重建，与默认路线一致。</li></ul>
+<h3>3A.3 邮箱（Exchange）—— imapsync + OAuth2 自建管线</h3>
+<p><strong>核心可行性依据</strong>：微软 Basic Auth 仅在 <strong>2026 年底</strong>默认禁用 SMTP AUTH，而 <strong>IMAP/POP/SMTP 的 OAuth2（XOAUTH2）现代认证一直受官方支持且为长期方向</strong>〔信源 10〕。开源工具 <code>imapsync</code> 支持以 OAuth2 token 登录 Microsoft 365，是跨服务器逐邮件复制的成熟方案〔信源 11〕。</p>
+<p><strong>端点（21V 走 China 域名）</strong>：</p>
+<ul><li>源 IMAP：<code>outlook.office365.com</code> 在 Global；<strong>21V 为 <code>partner.outlook.cn</code>（IMAP 主机 <code>imap-mail.partner.outlook.cn</code>，993/SSL）</strong>。</li><li>认证：两端各注册一个 Entra App（源在 21V 租户、目标在 Global 租户，App 不跨云通用），授 <code>IMAP.AccessAsUser.All</code> / <code>https://outlook.office365.com/IMAP.AccessAsApp</code>（App-only）权限，用 client_credentials 取每用户 token。</li></ul>
+<p><strong>步骤：</strong></p>
+<ol><li><strong>预检</strong>：盘点邮箱容量、归档、共享/资源邮箱、转发规则、委派；<strong>确认无 Legal Hold / In-Place Hold</strong>（hold 阻断或干扰迁移，先解除迁后重挂）。</li><li><strong>目标准备</strong>：Global 端按映射表建邮箱（随身份阶段），确认目标 IMAP 已启用。</li><li><strong>两端 App 授权</strong>：分别注册 App，App-only 模式授 <code>IMAP.AccessAsApp</code> 并经管理员同意；脚本用 MSAL 取目标用户 token。</li><li><strong>逐账号同步</strong>（可并发，建议夜间批跑）：</li></ol>
+<pre><code># 每账号一行，token 由 MSAL 脚本预取注入（--oauth2 走 XOAUTH2）
+imapsync \
+  --host1 imap-mail.partner.outlook.cn --user1 &quot;$SRC_UPN&quot; \
+  --oauth2 &quot;$SRC_TOKEN&quot; \
+  --host2 outlook.office365.com        --user2 &quot;$DST_UPN&quot; \
+  --oauth2 &quot;$DST_TOKEN&quot; \
+  --automap --addheader --useuid \
+  --maxsize 150000000 --skipsize 0 \
+  --logdir ./imapsync_logs --logfile &quot;$SRC_UPN.log&quot;
+# --automap 自动匹配 Inbox/Sent/已发送等本地化文件夹名；--useuid 支持增量重跑</code></pre>
+<ol><li><strong>多轮 Delta</strong>：imapsync 以 UID 去重，反复跑即增量（已迁邮件跳过），与商业工具的 Delta 等价。</li><li><strong>窗口期最终增量 → 切 MX/Autodiscover</strong> 指向 Global，与默认路线一致。</li></ol>
+<p><strong>保真度与边界（必须如实告知客户）：</strong></p>
+<ul><li>✅ <strong>可迁</strong>：邮件正文、附件、文件夹结构、已读/未读/标记状态、单封邮件元数据（IMAP 范围内）。</li><li>⚠️ <strong>IMAP 协议范围外，须另建管线</strong>：</li><li><strong>日历 / 联系人 / 任务</strong> 不走 IMAP — 用 <strong>EWS（OAuth）或 Graph 导出 <code>.ics</code>/<code>.vcf</code> 后导入目标</strong>，或目标端经 Graph <code>POST /users/{id}/events</code>、<code>/contacts</code> 重建。</li><li><strong>收件规则 / 委派 / 自动答复 / MailTips</strong> — 目标端经 Exchange Online PowerShell 脚本重建。</li><li><strong>归档邮箱（In-Place Archive）</strong> — 作为独立 IMAP 根另跑一轮。</li><li>❌ <strong>不可迁</strong>：客户端配置、部分传输规则（Global 重建）。</li><li><strong>限流</strong>：M365 IMAP 有每连接节流，单账号过高并发会触发临时锁定；脚本须实现指数退避 + per-mailbox 并发上限（经验值 ≤4 并发/账号、租户级总连接受控），这部分<strong>节流控制是自研路线的主要工程量</strong>，商业工具已内置。</li></ul>
+<h3>3A.4 文件三负载（SharePoint / OneDrive）—— 本就开源，自研补强大体量</h3>
+<p>SharePoint 结构层（PnP <code>Get-PnPSiteTemplate</code> / <code>Invoke-PnPSiteTemplate</code>）与内容层（PnP 批处理 + <code>SystemUpdate</code> 保元数据 + 术语库单独迁）<strong>默认路线已是开源 PnP，无需替代</strong>。商业工具在此仅为「省人力」，非「补能力」。客户拒绝商业工具时，大体量靠<strong>自研并发管线</strong>补强：</p>
+<ul><li><strong>方案 A：PnP.Framework（.NET）多线程</strong> — <code>CopyTo</code> / <code>Add-PnPFile -Stream</code> 并发，自写 checkpoint（已迁/失败/重试落 CSV，断点续传）。</li><li><strong>方案 B：Microsoft Graph + Python/Node 自研</strong> — <code>GET /sites/{id}/drive/root/delta</code> 拉增量，<code>PUT /drive/items/{id}/content</code>（&gt;4MB 走 <code>createUploadSession</code> 分块）写目标；用 <code>asyncio</code>/worker pool 控并发。</li><li><strong>元数据/版本/权限机制与默认路线完全相同</strong>：版本历史显式开、<code>SystemUpdate</code> 保作者时间、独立权限项（<code>HasUniqueRoleAssignments</code>）按映射表逐条重挂。<strong>自研只换&quot;搬运引擎&quot;，不改&quot;保真机制&quot;</strong>。</li><li><strong>大文件不用 <code>-AsMemoryStream</code></strong>（GB 级整文件进内存必 OOM）：≥250MB 走磁盘临时文件 + <code>Add-PnPFile -Path</code> 触发 SPO 分块上传（详配套手册 §7.5）。</li></ul>
+<h3>3A.5 Teams —— 结构/文件可自研等价，聊天可经迁移模式 API 自研导入</h3>
+<table>
+<tr><th>Teams 对象</th><th>开源 / 自研替代</th><th>保真度</th></tr>
+<tr><td>团队 + 标准频道结构</td><td>Graph <code>POST /teams</code>、<code>/channels</code> 自研重建（读源结构→目标重建）</td><td>✅ 等价</td></tr>
+<tr><td>频道文件（后端 SharePoint）</td><td>PnP 迁文档库（同 §3A.4）</td><td>✅ 等价</td></tr>
+<tr><td>频道 / 1:1 / 群聊消息历史</td><td><strong>Graph 迁移模式 API 自研导入</strong>（<code>startMigration</code> → <code>importMessage</code> → <code>completeMigration</code>）〔信源 13〕</td><td>⚠️ 保真有损，但可写为活跃会话</td></tr>
+<tr><td>Tabs / Apps / Connectors</td><td>Global 端重新配置</td><td>❌ 重建</td></tr>
+<tr><td>Planner（团队关联）</td><td>Graph Planner API 自研部分迁</td><td>⚠️ 部分</td></tr>
+</table>
+<p><strong>Teams 聊天的自研导入路线（关键纠正）：</strong></p>
+<ul><li><strong>可迁，且支持 21V</strong>：微软官方 Graph <strong>迁移模式（migration mode）</strong> API 允许把外部/源消息<strong>写入</strong>目标频道或聊天为活跃会话。<code>channel:completeMigration</code> 与 <code>chat:startMigration</code> 官方页 National Cloud 栏均标注 <strong>✅ China（21Vianet）</strong>〔信源 13〕；微软产品组在 sp-dev-docs Issue #9019 亦确认 Import Migration API 支持 21V 用户。商业工具（Cloudiway/Apps4.Pro）封装的正是这套机制,可自行脚本化。</li><li><strong>此前误判已纠正</strong>：本方案早期版本把 Teams 聊天错述为&quot;仅能用 Export API 导出归档、无回写 API&quot;。事实相反——<strong>Export（导出）API 在 21V 不受支持</strong>，而<strong>迁移模式 Import API 受支持</strong>。Export 路线在本场景反而走不通,Import 才是正解。</li><li><strong>约束与保真损失</strong>：① 仅应用权限 <code>Teamwork.Migrate.All</code>（不支持委派）；② 导入期间频道/聊天显示&quot;导入模式&quot;横幅，<code>completeMigration</code> 后移除；③ 消息作者须为目标租户已存在身份（按身份映射表翻译,跨云身份须先建好）；④ 时间戳须毫秒级唯一且早于线程 <code>createdDateTime</code>；⑤ 保真损失点：@提及解析、reactions、部分富格式/卡片、附件内联关系可能降级。<strong>须 POC 实测保真损失并与客户书面确认可接受度</strong>。</li><li><strong>结论</strong>：开源/自研路线<strong>不损失&quot;可迁性&quot;本身</strong>——聊天可迁为活跃会话；相比商业工具的差距在保真度细节与编排工程量（自写 startMigration/importMessage 批处理、限流、checkpoint、身份映射）。文件与团队结构开源等价交付。若客户核心诉求是&quot;聊天迁过去还能接着聊&quot;,此路线可满足,保真度以 POC 为准。</li></ul>
+<h3>3A.6 投入对比：License 省了，人力涨了</h3>
+<table>
+<tr><th>维度</th><th>默认（商业工具）路线</th><th>开源 / 自研路线</th></tr>
+<tr><td>工具 License</td><td>BitTitan ~$14/邮箱、UMB ~$17.5/用户〔信源 9〕；Teams 第三方订阅</td><td><strong>¥0</strong>（imapsync/PnP/Graph SDK 全免费）</td></tr>
+<tr><td>邮箱工程</td><td>配置即用，Delta/限流内置</td><td>自研 OAuth 取 token + 并发/退避/日历联系人补管线（<strong>主要新增人力</strong>）</td></tr>
+<tr><td>文件工程</td><td>工具托管</td><td>与默认路线相近（本就 PnP）</td></tr>
+<tr><td>Teams</td><td>第三方聊天迁移（保真有损但自动）</td><td>Graph 迁移模式 API 自研导入 + 自研建团队（<strong>可迁为活跃会话，工程量增</strong>）</td></tr>
+<tr><td>数据路径</td><td>经 BitTitan SaaS 云（数据过第三方）</td><td><strong>不过任何第三方 SaaS</strong>（数据仅经自控脚本 + Azure 暂存，<strong>自主可控更强</strong>）</td></tr>
+<tr><td>可靠性</td><td>厂商 SLA + 报告</td><td>自负责，须自建监控/校验</td></tr>
+<tr><td>工期影响</td><td>基准 9–14 周</td><td><strong>+1～3 周</strong>（邮箱补管线 + Teams 自研 + 联调），规模越大并发工程占比越高</td></tr>
+</table>
+<blockquote><strong>本质权衡</strong>：开源/自研路线用<strong>工程人力 + 自主可控性</strong>换取<strong>零 License + 数据不过第三方</strong>。对数据敏感、强调自主可控、或邮箱/用户量不大的客户更划算；对超大规模（数千邮箱）且预算充足的客户，商业工具的内置限流/Delta/报告仍更省心。<strong>建议按&quot;身份+文件走开源、邮箱看规模、Teams 聊天确认预期&quot;做混合选型</strong>，而非全盘二选一。</blockquote>
 <hr>
 <h2>第 4 章 迁移范围矩阵（细颗粒：产品 → 组件 → 对象 → 工具）</h2>
 <blockquote>维度说明：<strong>可迁性</strong> ✅可迁 / ⚠️有条件（需预处理或保真有损） / ❌不可迁（目标端重建）。</blockquote>
@@ -434,8 +529,8 @@ rclone copy 21v:&quot;Shared Documents&quot; /mnt/stage/siteA \
 <tr><td>团队</td><td>团队成员 / 所有者</td><td>⚠️</td><td>按映射表重挂</td></tr>
 <tr><td>频道</td><td>私有频道</td><td>⚠️</td><td>第三方，注意 2026 年合规模型调整（日期待核实）</td></tr>
 <tr><td>频道</td><td>共享频道(Shared Channel)</td><td>⚠️</td><td>第三方支持有限</td></tr>
-<tr><td>消息</td><td>频道消息历史</td><td>⚠️</td><td>Cloudiway/Apps4.Pro，常 HTML 归档，保真有损</td></tr>
-<tr><td>消息</td><td>1:1 / 群组私聊历史</td><td>⚠️</td><td>专用工具，保真度低，多数归档</td></tr>
+<tr><td>消息</td><td>频道消息历史</td><td>⚠️ 保真有损</td><td>Graph 迁移模式 API 导入（第三方/自研封装同机制）</td></tr>
+<tr><td>消息</td><td>1:1 / 群组私聊历史</td><td>⚠️ 保真有损</td><td>Graph <code>chat</code> 迁移模式 API 导入（保真度低于频道）</td></tr>
 <tr><td>应用</td><td>Tabs（标签页）</td><td>❌</td><td>Global 重新配置</td></tr>
 <tr><td>应用</td><td>Apps / Bots / Connectors</td><td>❌</td><td>Global 重新安装配置</td></tr>
 <tr><td>通话</td><td>通话记录 / 语音信箱</td><td>❌</td><td>不迁</td></tr>
@@ -689,6 +784,20 @@ $rows | Export-Csv .\source_teams.csv -NoTypeInformation -Encoding UTF8</code></
 <ol><li>BitTitan MigrationWiz Pricing（Mailbox License $14.00 / UMB $17.50，2025-06-01 调整；UMB 的 Teams 与共享文档各 100GB 上限）— 厂商官方</li></ol>
 <p>   <code>https://www.bittitan.com/pricing-bittitan-migrationwiz</code></p>
 <p>   User Migration Bundle 说明：<code>https://www.bittitan.com/migrationwiz/user-migration-bundle</code></p>
+<ol><li>Authenticate an IMAP, POP or SMTP connection using OAuth — Microsoft Learn（IMAP/POP/SMTP 的 OAuth2/XOAUTH2 官方支持，开源邮箱自研路线的认证依据）</li></ol>
+<p>    <code>https://learn.microsoft.com/en-us/exchange/client-developer/legacy-protocols/how-to-authenticate-an-imap-pop-smtp-application-by-using-oauth</code></p>
+<p>    Deprecation of Basic authentication in Exchange Online（Basic Auth 2026 年底默认禁用、OAuth2 为长期方向）</p>
+<p>    <code>https://learn.microsoft.com/en-us/exchange/clients-and-mobile-in-exchange-online/deprecation-of-basic-authentication-exchange-online</code></p>
+<ol><li>imapsync — 开源 IMAP 邮箱迁移工具，支持 Microsoft 365 OAuth2 登录 — 官方/社区文档</li></ol>
+<p>    <code>https://imapsync.lamiral.info/</code> ｜ <code>https://github.com/imapsync/imapsync/discussions/435</code></p>
+<ol><li>Export content with the Microsoft Teams Export APIs + Payment models（Teams <strong>Export/导出</strong> API，2025-08-25 起不再计费、仍为 protected API 需审批且用户须 E5/G5；<strong>注：Export API 在 21V 不受支持</strong>，本场景聊天迁移改用迁移模式 Import API，见信源 13）— Microsoft Learn</li></ol>
+<p>    <code>https://learn.microsoft.com/en-us/microsoftteams/export-teams-content</code></p>
+<p>    <code>https://learn.microsoft.com/en-us/graph/teams-licenses</code></p>
+<ol><li>Teams <strong>迁移模式（导入）</strong> API：channel/chat <code>startMigration</code> → <code>importMessage</code> → <code>completeMigration</code>，把外部消息写入目标为活跃会话；官方 National Cloud 栏标注 <strong>✅ China（21Vianet）</strong>，仅应用权限 <code>Teamwork.Migrate.All</code>；产品组 sp-dev-docs Issue #9019 确认支持 21V 用户 — Microsoft Learn / GitHub</li></ol>
+<p>    <code>https://learn.microsoft.com/en-us/microsoftteams/platform/graph-api/import-messages/import-external-messages-to-teams</code></p>
+<p>    <code>https://learn.microsoft.com/en-us/graph/api/channel-completemigration?view=graph-rest-1.0</code></p>
+<p>    <code>https://learn.microsoft.com/en-us/graph/api/chat-startmigration?view=graph-rest-1.0</code></p>
+<p>    <code>https://github.com/SharePoint/sp-dev-docs/issues/9019</code></p>
 <blockquote><strong>信源性质声明</strong>：第 0.1、1.3 节关于&quot;21V 不适用原生跨租户迁移&quot;的结论，是基于信源 1、2 中对独立云环境（GCC/Consumer 等）的明文排除条款，结合信源 4、5 所述 21V 主权云隔离架构作出的工程推断，非微软对 21V 的逐字声明，须在 POC 阶段二次确认。</blockquote>
 <hr>
 <h2>附录 B：核心命令参考</h2>
