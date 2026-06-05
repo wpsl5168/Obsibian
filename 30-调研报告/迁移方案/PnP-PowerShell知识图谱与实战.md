@@ -4,12 +4,13 @@ created: 2026-06-04
 updated: 2026-06-04
 type: research
 tags:
+status: stable
+version: 2.x
+oversized_ok: true
   - M365
   - PowerShell
   - PnP
   - 迁移
-version: 2.x
-oversized_ok: true
 ---
 
 # PnP PowerShell 知识图谱与实战参考

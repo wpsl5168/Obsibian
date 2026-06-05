@@ -1,3 +1,15 @@
+---
+title: M365跨云迁移客户环境摸排表
+tags:
+  - m365
+  - migration
+  - template
+type: meta
+status: stable
+created: 2026-06-06
+updated: 2026-06-06
+---
+
 # Microsoft 365 跨云迁移（21Vianet → Global）客户环境摸排表
 
 > 用途：迁移方案/报价前的客户访谈采集表
