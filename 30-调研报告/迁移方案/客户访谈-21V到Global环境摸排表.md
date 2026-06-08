@@ -1,13 +1,13 @@
 ---
 title: M365跨云迁移客户环境摸排表
+created: 2026-06-06
+updated: 2026-06-06
+type: meta
 tags:
+status: stable
   - m365
   - migration
   - template
-type: meta
-status: stable
-created: 2026-06-06
-updated: 2026-06-06
 ---
 
 # Microsoft 365 跨云迁移（21Vianet → Global）客户环境摸排表
