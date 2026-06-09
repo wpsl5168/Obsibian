@@ -282,6 +282,11 @@ status: stable
 - [[40-调研报告/agent/2026-06-00-Agent编排入门-由浅入深.md|Agent 编排入门 — 由浅入深（初学者向）]] — 0→4 层概念地图：为什么要编排→四范式比喻→框架认识→上手路径+避坑 🟢
 - [[40-调研报告/agent/2026-06-01-LangGraph实操入门.md|LangGraph 实操入门 — 从零到能跑的多 Agent]] — 环境→三概念→多agent循环图→HITL断点续跑→接真实LLM；代码本机实测跑通 🟢
 
+## 💡 调研 · AI洞察  *(2)*
+
+- [[40-调研报告/AI洞察/2026-04-Karpathy-Sequoia-Ascent-Software3.0.md|Karpathy @ Sequoia Ascent 2026 — Software 3.0 / Agentic Engineering / Jagged Intelligence]] — 2025/12 agentic 拐点系统化：稀缺性从"写代码"转向"理解/品味/验证/编排"；核心理论=verifiability×训练关注度；含对老王 KB/skill/班子体系的映射 🟢
+- [[40-调研报告/AI洞察/2026-盈利线索-可验证RL环境wedge.md|盈利线索 · 可验证 RL 环境 wedge]] — Karpathy 创业建议落地：高价值+可验证+labs未训 三筛选标准；候选含企业IT迁移校验(主业协同)；待老王拍是否做验证器 spike 🟡
+
 ## 🏦 调研 · 银行业AI转型  *(8)*
 
 - [[40-调研报告/银行业AI转型/00-行业全景与大行案例对标.md|行业全景与 12 家大行 AI 案例对标（2025）]] — 1. 大模型 + 小模型双引擎 —— 大模型搞复杂语义/生成，小模型搞精准风控/识别 🟡

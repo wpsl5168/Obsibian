@@ -279,3 +279,19 @@ type: meta
 - ✅ 1个孤儿页面入库
 
 **Git记录**: commit c2e8b48
+
+---
+
+## 2026-06-09 ingest — Karpathy Sequoia Ascent 2026
+
+**触发**: 老王要求分析 https://karpathy.bearblog.dev/sequoia-ascent-2026 并入库
+
+**操作**:
+- 新建 `40-调研报告/AI洞察/2026-04-Karpathy-Sequoia-Ascent-Software3.0.md`（research/stable）— 12 节论点链 + 稀缺性转移大图景 + 对老王 KB/skill/班子体系映射
+- 新建 `40-调研报告/AI洞察/2026-盈利线索-可验证RL环境wedge.md`（research/draft）— 第⑥节衍生盈利线索，三筛选标准 + 候选领域
+- index.md 新增「💡 调研 · AI洞察」区块（2 条）
+- 修正：初稿误放 `30-调研报告/`（企业IT迁移专区），已迁至 `40-调研报告/`（AI调研主区）
+
+**信源**: bearblog 反爬，走 jina reader 取全文（含 Karpathy 用 Codex 5.5 生成的 summary+transcript）
+
+**待决策**: 可验证 RL 环境 wedge 是否做"验证器可行性 spike"（企业IT迁移校验为优先候选）
