@@ -3,7 +3,7 @@ title: LangGraph 实操入门 — 从零到能跑的多 Agent
 created: 2026-06-02
 updated: 2026-06-02
 type: methodology
-tags: [agent, methodology, tutorial]
+tags: [agent, methodology]
 status: stable
 sources: [https://langchain-ai.github.io/langgraph, "本机实测 langgraph 1.2.2"]
 ---

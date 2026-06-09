@@ -154,8 +154,9 @@ status: stable
 - [[20-项目/Hermes/README.md|Hermes 项目]]
 - [[20-项目/Hermes/memory-system-upgrade.md|Hermes Memory System Upgrade]] — Hermes记忆系统存在三个核心问题： 🔴
 
-## 🦛 项目 · 海马体 OpenHippo  *(33)*
+## 🦛 项目 · 海马体 OpenHippo  *(34)*
 
+- [[20-项目/海马体/决策记录.md|海马体决策记录]] — 关键技术决策及理由追溯
 - [[20-项目/海马体/F5-Dream设计-v0.1.md|F5 Dream（记忆整合）设计 v0.1]] — PRD F5 标 P0，但市面上的记忆系统（Mem0/Letta/Zep）几乎都没真正做这件事——它们停在"存"和"检索"，而 Dream 是整理 + 遗忘。这是项目需求文档(PRD)相对它们的护城河 🔴
 - [[20-项目/海马体/PRD分卷/prd-01-目的与痛点.md|PRD 一·二｜项目目的与解决痛点]] — 为AI Agent提供本地优先、隐私第一的持久化记忆引擎。让任何Agent框架通过标准协议（REST API / CLI / Hook Plugin）即插即用地获得跨会话记忆能力，数据永远不离开用户的
 - [[20-项目/海马体/PRD分卷/prd-02-用户与开源形态.md|PRD 三·四｜目标用户与开源形态]]
@@ -281,6 +282,8 @@ status: stable
 - [[40-调研报告/agent/2026-06-Agent编排框架横评-SK-MAF-LangChain.md|Agent 编排框架横评 — SK/MAF/LangChain（2026-06）]] — 8 框架按四范式横评(graph/对话/角色/事件)；SK→AutoGen→MAF 三代演进，LangChain 三件套，含选型表+star 实测 🟡
 - [[40-调研报告/agent/2026-06-00-Agent编排入门-由浅入深.md|Agent 编排入门 — 由浅入深（初学者向）]] — 0→4 层概念地图：为什么要编排→四范式比喻→框架认识→上手路径+避坑 🟢
 - [[40-调研报告/agent/2026-06-01-LangGraph实操入门.md|LangGraph 实操入门 — 从零到能跑的多 Agent]] — 环境→三概念→多agent循环图→HITL断点续跑→接真实LLM；代码本机实测跑通 🟢
+- [[40-调研报告/agent/2026-05-多Agent跨设备互联方案调研.md|多 Agent 跨设备互联方案调研]] — 跨设备 Agent 互联技术方案对比
+- [[40-调研报告/agent/2026-06-AI-Agent优质信息源盘点.md|AI Agent 优质信息源盘点]] — Agent 领域权威信息源与学习资源汇总
 
 ## 💡 调研 · AI洞察  *(2)*
 
@@ -356,11 +359,13 @@ status: stable
 - [[40-调研报告/Memory-Agent-架构设计推演.md|Memory Agent 架构设计推演]] — 1. 合并重复记忆 🟡
 - [[40-调研报告/README.md|40-调研报告]] — 深度调研、对比分析、决策报告。完成后只读，新版本另开文件。
 - [[40-调研报告/Stack-chan-桌面AI机器人选型与采购.md|Stack-chan 桌面 AI 机器人选型与采购指南]] — 老王想在桌上养一个可接入 Hermes Agent 的 AI 机器人，能听话、说话、显示表情、转头看人，进阶版还能在桌面跑动避障。 🔴
+- [[40-调研报告/绘画风格/2026-06-主流绘画风与涂鸦风设计token.md|主流绘画风与涂鸦风设计 token 调研]] — NotebookLM 16 风格菜单、涂鸦风三层光谱、本地 SVG 可复现方案
 
-## 🏢 调研 · 迁移方案（企业 IT 交付）  *(2)*
+## 🏢 调研 · 迁移方案（企业 IT 交付）  *(3)*
 
 - [[40-调研报告/迁移方案/M365整租户迁移技术方案.md|M365 整租户跨云迁移技术方案]] — 21V→Global 跨云迁移：源端采集→目标建号→结构重放→数据搬运→权限收尾；md+docx+pptx+pdf 四件套对客交付物 🟢
 - [[40-调研报告/迁移方案/客户访谈-21V到Global环境摸排表.md|客户访谈 · 21V→Global 环境摸排表]] — AAD/Teams/Exchange/SP/OneDrive/邮箱/用户数/数据量必填项采集，精修排版交付版 🟢
+- [[40-调研报告/迁移方案/PnP-PowerShell知识图谱与实战.md|PnP PowerShell 知识图谱与实战]] — M365 迁移/运维场景下的 PnP PowerShell 知识体系与实战案例
 
 ## 📰 日报与动态 · AI日报  *(42)*
 
