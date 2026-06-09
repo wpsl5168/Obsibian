@@ -14,6 +14,38 @@ type: meta
 
 ---
 
+## [2026-06-09] weekly maintenance | Phase 1-3 — WARN全清零
+
+**审计成果对比**:
+| 指标 | Before | After | 改善 |
+|------|--------|-------|------|
+| CRITICAL | 0 | 0 | ✅ 持平 |
+| WARN | 13 | 0 | ✅ -13 (100%清零) |
+| INFO | 23 | 17 | ✅ -6 |
+
+**核心动作**:
+1. ✅ **野生tag清理** — 修复3个文件的野生tag:
+   - `40-调研报告/绘画风格/2026-06-主流绘画风与涂鸦风设计token.md` — 7野生tag → `[research, multimodal]`
+   - `40-调研报告/agent/2026-06-01-LangGraph实操入门.md` — 移除 `#tutorial`
+   
+2. ✅ **Frontmatter规范化**:
+   - 补齐 `created/updated/type` 字段
+   - 修正非法 `status: done` → `stable`
+   - 修正非法 `type: architecture` → `research`
+
+3. ✅ **index.md补全** — 添加5个缺失条目:
+   - `20-项目/海马体/决策记录.md`
+   - `40-调研报告/agent/2026-05-多Agent跨设备互联方案调研.md`
+   - `40-调研报告/agent/2026-06-AI-Agent优质信息源盘点.md`
+   - `40-调研报告/绘画风格/2026-06-主流绘画风与涂鸦风设计token.md`
+   - `40-调研报告/迁移方案/PnP-PowerShell知识图谱与实战.md`
+
+**治理效果**: 达成全绿状态 — 0 CRITICAL, 0 WARN, 仅剩17个INFO级超长页提醒(均为PRD/调研报告,属结构性长文不拆分)
+
+**下周重点**: 继续内容丰富,优先补充核心方法论空骨架文件
+
+---
+
 ## [2026-06-02] weekly maintenance | Phase 1-3 — 内容丰富 + INFO优化
 
 **审计成果对比**:
