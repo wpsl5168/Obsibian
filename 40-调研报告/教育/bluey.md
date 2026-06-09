@@ -124,6 +124,6 @@ Joe Brumm 受早教学者 **Sara Smilansky** 和 **Vivian Paley** 关于"社会�
 ## 关联
 
 - [[index|知识库总索引]]
-- [[30-调研报告/教育/cool-math-games|Cool Math Games 调研]]
-- [[30-调研报告/教育/khan-academy/README|Khan Academy 调研]]
+- [[40-调研报告/教育/cool-math-games|Cool Math Games 调研]]
+- [[40-调研报告/教育/khan-academy/README|Khan Academy 调研]]
 - [[30-知识库/家庭教育/初一英语学习方案|初一英语学习方案]]

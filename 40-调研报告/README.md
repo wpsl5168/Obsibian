@@ -25,7 +25,7 @@ status: stable
 | [[Memory-Agent-架构设计推演]] | 记忆Agent的角色与边界推演 | `#memory` `#architecture` |
 | [[Hermes上下文管理优化方案]] | Hermes三层上下文优化设计 | `#hermes` `#architecture` |
 | [[Claude-Opus-4.7-vs-4.6]] | Claude Opus 模型版本对比 | `#comparison` `#llm` |
-| [[40-调研报告/agent/2026-06-AI-Agent优质信息源盘点\|AI Agent 优质信息源盘点]] | B站/公众号/抖音讲 Agent 干货的大V盘点+订阅建议 | `#agent` `#research` |
+| [[40-调研报告/agent/2026-06-AI-Agent优质信息源盘点|AI Agent 优质信息源盘点]] | B站/公众号/抖音讲 Agent 干货的大V盘点+订阅建议 | `#agent` `#research` |
 
 ## 调研页规范
 

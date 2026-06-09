@@ -190,6 +190,6 @@ status: stable
 
 ## 关联
 
-- [[30-调研报告/教育/khan-academy/README|Khan Academy 调研]]
-- [[30-调研报告/教育/math-startup|数学启蒙调研]]
-- [[30-调研报告/教育/english-startup|英语启蒙调研]]
+- [[40-调研报告/教育/khan-academy/README|Khan Academy 调研]]
+- [[40-调研报告/教育/math-startup|数学启蒙调研]]
+- [[40-调研报告/教育/english-startup|英语启蒙调研]]
