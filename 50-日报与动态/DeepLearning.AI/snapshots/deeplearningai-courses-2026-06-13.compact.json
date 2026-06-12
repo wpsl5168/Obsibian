@@ -1,0 +1,30 @@
+{
+  "timestamp": "2026-06-12T20:11:50.314390Z",
+  "total": 24,
+  "courses": [
+    "AI Prompting for Everyone",
+    "AI for Good",
+    "AI for Medicine",
+    "Advanced Retrieval for AI with Chroma",
+    "Agentic AI",
+    "Attention in Transformers: Concepts and Code in PyTorch",
+    "Build with Andrew",
+    "Building Agentic RAG with Llamaindex",
+    "Building Applications with Vector Databases",
+    "Building and Evaluating Advanced RAG",
+    "ChatGPT Prompt Engineering for Developers",
+    "Data Analytics",
+    "Deep Learning Specialization",
+    "Generative AI with Large Language Models",
+    "How Transformer LLMs Work",
+    "Knowledge Graphs for RAG",
+    "LangChain Chat with Your Data",
+    "Machine Learning Specialization",
+    "Mathematics for Machine Learning and Data Science",
+    "Natural Language Processing Specialization",
+    "PyTorch for Deep Learning",
+    "Retrieval Augmented Generation (RAG)",
+    "TensorFlow Developer Professional Certificate",
+    "Vector Databases: from Embeddings to Applications"
+  ]
+}

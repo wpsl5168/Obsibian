@@ -1,0 +1,151 @@
+{
+  "timestamp": "2026-06-12T20:11:50.314390Z",
+  "source": "https://www.deeplearning.ai/courses/",
+  "total_courses": 24,
+  "courses": [
+    {
+      "title": "AI Prompting for Everyone",
+      "level": "Beginner",
+      "instructor": "Andrew Ng",
+      "description": "Master prompting skills for real, useful results from AI models"
+    },
+    {
+      "title": "AI for Good",
+      "level": "Beginner",
+      "instructor": "DeepLearning.AI",
+      "description": "Air quality, wind energy, biodiversity, disaster management"
+    },
+    {
+      "title": "AI for Medicine",
+      "level": "Intermediate",
+      "instructor": "DeepLearning.AI",
+      "description": "Treatment effects, diagnostic/prognostic models"
+    },
+    {
+      "title": "Advanced Retrieval for AI with Chroma",
+      "level": "Intermediate",
+      "instructor": "Chroma",
+      "description": "Advanced retrieval techniques, query improvement"
+    },
+    {
+      "title": "Agentic AI",
+      "level": "Intermediate",
+      "instructor": "Andrew Ng",
+      "description": "Build agentic AI systems that take action through iterative, multi-step workflows"
+    },
+    {
+      "title": "Attention in Transformers: Concepts and Code in PyTorch",
+      "level": "Beginner",
+      "instructor": "StatQuest",
+      "description": "Attention mechanism implementation"
+    },
+    {
+      "title": "Build with Andrew",
+      "level": "Beginner",
+      "instructor": "DeepLearning.AI",
+      "description": "Learn to describe ideas in words and have AI transform them into apps"
+    },
+    {
+      "title": "Building Agentic RAG with Llamaindex",
+      "level": "Beginner",
+      "instructor": "LlamaIndex",
+      "description": "Autonomous agents for document Q&A"
+    },
+    {
+      "title": "Building Applications with Vector Databases",
+      "level": "Beginner",
+      "instructor": "Pinecone",
+      "description": "Semantic search, RAG, anomaly detection"
+    },
+    {
+      "title": "Building and Evaluating Advanced RAG",
+      "level": "Beginner",
+      "instructor": "TruEra, LlamaIndex",
+      "description": "Sentence-window, auto-merging retrieval methods"
+    },
+    {
+      "title": "ChatGPT Prompt Engineering for Developers",
+      "level": "Beginner",
+      "instructor": "OpenAI",
+      "description": "Summarizing, inferring, transforming, expanding"
+    },
+    {
+      "title": "Data Analytics",
+      "level": "Beginner",
+      "instructor": "DeepLearning.AI",
+      "description": "Industry standard tools for extracting insights"
+    },
+    {
+      "title": "Deep Learning Specialization",
+      "level": "Intermediate",
+      "instructor": "DeepLearning.AI",
+      "description": "Neural networks (CNNs, RNNs, LSTMs, Transformers)"
+    },
+    {
+      "title": "Generative AI with Large Language Models",
+      "level": "Intermediate",
+      "instructor": "AWS",
+      "description": "Generative AI lifecycle, transformer architecture"
+    },
+    {
+      "title": "How Transformer LLMs Work",
+      "level": "Beginner",
+      "instructor": "Jay Alammar, Maarten Grootendorst",
+      "description": "Transformer architecture for effective LLM usage"
+    },
+    {
+      "title": "Knowledge Graphs for RAG",
+      "level": "Intermediate",
+      "instructor": "Neo4j",
+      "description": "Knowledge graph systems using Cypher query language"
+    },
+    {
+      "title": "LangChain Chat with Your Data",
+      "level": "Beginner",
+      "instructor": "LangChain",
+      "description": "Chatbots interfacing with private data/documents"
+    },
+    {
+      "title": "Machine Learning Specialization",
+      "level": "Beginner",
+      "instructor": "DeepLearning.AI",
+      "description": "Foundational AI concepts with visual approach + implementation code"
+    },
+    {
+      "title": "Mathematics for Machine Learning and Data Science",
+      "level": "Beginner",
+      "instructor": "DeepLearning.AI",
+      "description": "Calculus, linear algebra, statistics, probability"
+    },
+    {
+      "title": "Natural Language Processing Specialization",
+      "level": "Intermediate",
+      "instructor": "DeepLearning.AI",
+      "description": "Question-answering, sentiment analysis, translation"
+    },
+    {
+      "title": "PyTorch for Deep Learning",
+      "level": "Intermediate",
+      "instructor": "DeepLearning.AI",
+      "description": "Core principles of building, optimizing, deploying deep learning models"
+    },
+    {
+      "title": "Retrieval Augmented Generation (RAG)",
+      "level": "Intermediate",
+      "instructor": "DeepLearning.AI",
+      "description": "Production-ready RAG: architecture to deployment"
+    },
+    {
+      "title": "TensorFlow Developer Professional Certificate",
+      "level": "Intermediate",
+      "instructor": "DeepLearning.AI",
+      "description": "TensorFlow API, best practices, hands-on experience"
+    },
+    {
+      "title": "Vector Databases: from Embeddings to Applications",
+      "level": "Intermediate",
+      "instructor": "DeepLearning.AI",
+      "description": "Efficient practical applications"
+    }
+  ]
+}
