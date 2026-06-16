@@ -3,8 +3,8 @@ title: "09-HITL与Guardrails（人类在环_安全）"
 created: 2026-03-28
 updated: 2026-06-16
 type: methodology
-tags: [hitl, guardrails, safety, security, llm]
-status: active
+tags: [agent, security, methodology]
+status: stable
 date: 2026-04-08
 category: Notes
 ---

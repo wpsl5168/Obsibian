@@ -3,8 +3,8 @@ title: "30-Checkpointing"
 created: 2026-03-29
 updated: 2026-06-16
 type: methodology
-tags: [checkpointing, state-management, persistence, recovery]
-status: active
+tags: [agent, methodology]
+status: stable
 date: 2026-04-08
 category: Notes
 ---
