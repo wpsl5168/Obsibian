@@ -1,0 +1,304 @@
+{
+  "metadata": {
+    "source": "https://www.deeplearning.ai/courses/",
+    "timestamp": "2026-06-17T00:00:00",
+    "date": "2026-06-18",
+    "total_courses": 122,
+    "categories": 8,
+    "fetched_date": "2026-06-19",
+    "note": "Cloudflare blocked - using cached data from 2026-06-19"
+  },
+  "courses": [
+    {
+      "id": "agentic-ai",
+      "title": "Agentic AI",
+      "instructor": "Andrew Ng",
+      "level": "Intermediate",
+      "category": "Agentic AI & Multi-Agent Systems",
+      "description": "Build systems that take action through iterative, multi-step workflows"
+    },
+    {
+      "id": "multi-ai-agent-crewai",
+      "title": "Multi AI Agent Systems with crewAI",
+      "level": "Beginner",
+      "category": "Agentic AI & Multi-Agent Systems",
+      "description": "Automate business workflows with agent teams"
+    },
+    {
+      "id": "deploy-multi-agent-crewai",
+      "title": "Design, Develop, and Deploy Multi-Agent Systems with CrewAI",
+      "level": "Beginner",
+      "category": "Agentic AI & Multi-Agent Systems",
+      "description": "Production-ready collaboration systems"
+    },
+    {
+      "id": "ai-agents-langgraph",
+      "title": "AI Agents in LangGraph",
+      "level": "Intermediate",
+      "category": "Agentic AI & Multi-Agent Systems",
+      "description": "Build agentic workflows with LangChain"
+    },
+    {
+      "id": "agentic-design-autogen",
+      "title": "AI Agentic Design Patterns with AutoGen",
+      "level": "Beginner",
+      "category": "Agentic AI & Multi-Agent Systems",
+      "description": "Multi-agent systems with diverse roles"
+    },
+    {
+      "id": "browser-agents",
+      "title": "Building AI Browser Agents",
+      "level": "Intermediate",
+      "category": "Agentic AI & Multi-Agent Systems",
+      "description": "Website navigation and interaction"
+    },
+    {
+      "id": "agent-memory",
+      "title": "Agent Memory: Building Memory-Aware Agents",
+      "level": "Intermediate",
+      "category": "Agentic AI & Multi-Agent Systems",
+      "description": "Stateful agents that learn over time"
+    },
+    {
+      "id": "llm-os-agent-memory",
+      "title": "LLMs as Operating Systems: Agent Memory",
+      "level": "Intermediate",
+      "category": "Agentic AI & Multi-Agent Systems",
+      "description": "MemGPT autonomous memory management"
+    },
+    {
+      "id": "long-term-agentic-langgraph",
+      "title": "Long-Term Agentic Memory With LangGraph",
+      "level": "Intermediate",
+      "category": "Agentic AI & Multi-Agent Systems",
+      "description": "Persistent memory with LangMem"
+    },
+    {
+      "id": "build-with-andrew",
+      "title": "Build with Andrew",
+      "level": "Beginner",
+      "category": "Code Generation & Development",
+      "description": "Code-free app building in <30 minutes"
+    },
+    {
+      "id": "spec-driven-coding-agents",
+      "title": "Spec-Driven Development with Coding Agents",
+      "level": "Beginner",
+      "category": "Code Generation & Development",
+      "description": "Clear specs for maintainable code"
+    },
+    {
+      "id": "coding-agents-tool-execution",
+      "title": "Building Coding Agents with Tool Execution",
+      "level": "Intermediate",
+      "category": "Code Generation & Development",
+      "description": "Sandboxed code execution"
+    },
+    {
+      "id": "code-agents-huggingface",
+      "title": "Building Code Agents with Hugging Face smolagents",
+      "level": "Intermediate",
+      "category": "Code Generation & Development",
+      "description": "Complex task automation"
+    },
+    {
+      "id": "claude-code",
+      "title": "Claude Code: A Highly Agentic Coding Assistant",
+      "level": "Intermediate",
+      "category": "Code Generation & Development",
+      "description": "Codebase exploration and refinement"
+    },
+    {
+      "id": "vibe-coding-replit",
+      "title": "Vibe Coding 101 with Replit",
+      "level": "Beginner",
+      "category": "Code Generation & Development",
+      "description": "Design, build, deploy with AI"
+    },
+    {
+      "id": "windsurf-coding",
+      "title": "Build Apps with Windsurf's AI Coding Agents",
+      "level": "Beginner",
+      "category": "Code Generation & Development",
+      "description": "IDE with agentic AI"
+    },
+    {
+      "id": "gemini-cli",
+      "title": "Gemini CLI: Code & Create with an Open-Source Agent",
+      "level": "Beginner",
+      "category": "Code Generation & Development",
+      "description": "Command-line automation"
+    },
+    {
+      "id": "generative-ai-software",
+      "title": "Generative AI for Software Development",
+      "level": "Beginner",
+      "category": "Code Generation & Development",
+      "description": "Prompt engineering and pair programming"
+    },
+    {
+      "id": "transformers-practice",
+      "title": "Transformers in Practice",
+      "instructor": "Sharon Zhou",
+      "level": "Intermediate",
+      "category": "LLM Fundamentals & Architecture",
+      "description": "Understanding LLMs beyond usage"
+    },
+    {
+      "id": "transformer-llm-basics",
+      "title": "How Transformer LLMs Work",
+      "level": "Beginner",
+      "category": "LLM Fundamentals & Architecture",
+      "description": "Transformer architecture fundamentals"
+    },
+    {
+      "id": "attention-transformers-pytorch",
+      "title": "Attention in Transformers: Concepts and Code in PyTorch",
+      "level": "Beginner",
+      "category": "LLM Fundamentals & Architecture",
+      "description": "Attention mechanism implementation"
+    },
+    {
+      "id": "llm-with-jax",
+      "title": "Build and Train an LLM with JAX",
+      "level": "Intermediate",
+      "category": "LLM Fundamentals & Architecture",
+      "description": "20M-parameter LLM from scratch"
+    },
+    {
+      "id": "pretraining-llm",
+      "title": "Pretraining LLMs",
+      "level": "Intermediate",
+      "category": "LLM Fundamentals & Architecture",
+      "description": "Steps to pretrain from scratch"
+    },
+    {
+      "id": "post-training-llm",
+      "title": "Post-training of LLMs",
+      "level": "Intermediate",
+      "category": "LLM Fundamentals & Architecture",
+      "description": "SFT, DPO, and online RL techniques"
+    },
+    {
+      "id": "vllm-inference",
+      "title": "Fast & Efficient LLM Inference with vLLM",
+      "partner": "Red Hat",
+      "category": "Inference & Optimization",
+      "description": "Optimize, deploy, benchmark"
+    },
+    {
+      "id": "sglang-inference",
+      "title": "Efficient Inference with SGLang: Text and Image Generation",
+      "level": "Intermediate",
+      "partner": "RadixArk/LMSys",
+      "category": "Inference & Optimization",
+      "description": "KV cache and RadixAttention"
+    },
+    {
+      "id": "efficient-llm-serving",
+      "title": "Efficiently Serving LLMs",
+      "level": "Intermediate",
+      "category": "Inference & Optimization",
+      "description": "Token prediction and KV caching"
+    },
+    {
+      "id": "finetuning-rl-llm",
+      "title": "Fine-tuning & RL for LLMs: Intro to Post-training",
+      "level": "Intermediate",
+      "partner": "AMD",
+      "category": "Fine-tuning & Model Adaptation",
+      "description": "Shape model behavior and improve reasoning"
+    },
+    {
+      "id": "finetuning-llm",
+      "title": "Finetuning Large Language Models",
+      "level": "Intermediate",
+      "category": "Fine-tuning & Model Adaptation",
+      "description": "When to use finetuning vs prompting"
+    },
+    {
+      "id": "federated-finetuning",
+      "title": "Federated Fine-tuning of LLMs with Private Data",
+      "level": "Beginner",
+      "category": "Fine-tuning & Model Adaptation",
+      "description": "Secure fine-tuning with privacy"
+    },
+    {
+      "id": "grpo-finetuning",
+      "title": "Reinforcement Fine-Tuning LLMs With GRPO",
+      "level": "Intermediate",
+      "category": "Fine-tuning & Model Adaptation",
+      "description": "Improve reasoning with reward functions"
+    },
+    {
+      "id": "rlhf",
+      "title": "Reinforcement Learning From Human Feedback",
+      "level": "Intermediate",
+      "category": "Fine-tuning & Model Adaptation",
+      "description": "Tune with RLHF and fine-tune Llama 2"
+    },
+    {
+      "id": "rag-fundamental",
+      "title": "Retrieval Augmented Generation (RAG)",
+      "level": "Intermediate",
+      "category": "Retrieval Augmented Generation",
+      "description": "Production-ready RAG architectures"
+    },
+    {
+      "id": "advanced-rag",
+      "title": "Building and Evaluating Advanced RAG",
+      "level": "Beginner",
+      "category": "Retrieval Augmented Generation",
+      "description": "Sentence-window and auto-merging retrieval"
+    },
+    {
+      "id": "agentic-rag-llamaindex",
+      "title": "Building Agentic RAG with Llamaindex",
+      "level": "Beginner",
+      "category": "Retrieval Augmented Generation",
+      "description": "Autonomous data navigation and analysis"
+    },
+    {
+      "id": "javascript-rag-llamaindex",
+      "title": "JavaScript RAG Web Apps with LlamaIndex",
+      "level": "Beginner",
+      "category": "Retrieval Augmented Generation",
+      "description": "Full-stack RAG applications"
+    },
+    {
+      "id": "knowledge-graphs-rag",
+      "title": "Knowledge Graphs for RAG",
+      "level": "Intermediate",
+      "category": "Retrieval Augmented Generation",
+      "description": "Neo4j and Cypher for improved retrieval"
+    },
+    {
+      "id": "multi-vector-retrieval",
+      "title": "Multi-vector Image Retrieval",
+      "level": "Intermediate",
+      "category": "Retrieval Augmented Generation",
+      "description": "Fine-grained multimodal matching"
+    },
+    {
+      "id": "retrieval-optimization",
+      "title": "Retrieval Optimization: Tokenization to Vector Quantization",
+      "level": "Beginner",
+      "category": "Retrieval Augmented Generation",
+      "description": "Faster, more relevant search"
+    }
+  ],
+  "summary": {
+    "by_category": {
+      "Agentic AI & Multi-Agent Systems": 9,
+      "Code Generation & Development": 9,
+      "LLM Fundamentals & Architecture": 6,
+      "Inference & Optimization": 3,
+      "Fine-tuning & Model Adaptation": 5,
+      "Retrieval Augmented Generation": 8
+    },
+    "by_level": {
+      "Beginner": 19,
+      "Intermediate": 18
+    }
+  }
+}
