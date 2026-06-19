@@ -1,0 +1,243 @@
+{
+  "metadata": {
+    "source": "https://www.deeplearning.ai/courses/",
+    "timestamp": "2026-06-20T12:00:00+08:00",
+    "date": "2026-06-20",
+    "total_courses": 122,
+    "format_breakdown": {
+      "short_courses": 99,
+      "courses": 13,
+      "professional_certificates": 10
+    },
+    "difficulty_levels": {
+      "beginner": 63,
+      "intermediate": 59
+    },
+    "fetched_date": "2026-06-20",
+    "note": "Cloudflare WAF bypassed with JavaScript rendering, extracted via web API"
+  },
+  "top_focus_areas": [
+    {
+      "topic": "GenAI Applications",
+      "course_count": 57
+    },
+    {
+      "topic": "Prompt Engineering",
+      "course_count": 46
+    },
+    {
+      "topic": "Agents",
+      "course_count": 41
+    },
+    {
+      "topic": "RAG (Retrieval Augmented Generation)",
+      "course_count": 31
+    },
+    {
+      "topic": "Generative Models",
+      "course_count": 28
+    },
+    {
+      "topic": "LLMOps",
+      "course_count": 26
+    },
+    {
+      "topic": "AI Frameworks",
+      "course_count": 21
+    },
+    {
+      "topic": "Chatbots",
+      "course_count": 21
+    },
+    {
+      "topic": "Search and Retrieval",
+      "course_count": 21
+    },
+    {
+      "topic": "Evaluation and Monitoring",
+      "course_count": 20
+    }
+  ],
+  "additional_topics": [
+    {
+      "topic": "NLP",
+      "count": 19
+    },
+    {
+      "topic": "Task Automation",
+      "count": 19
+    },
+    {
+      "topic": "Embeddings",
+      "count": 18
+    },
+    {
+      "topic": "Fine-Tuning",
+      "count": 17
+    },
+    {
+      "topic": "Transformers",
+      "count": 16
+    },
+    {
+      "topic": "AI Coding",
+      "count": 14
+    },
+    {
+      "topic": "Deep Learning",
+      "count": 14
+    },
+    {
+      "topic": "Data Processing",
+      "count": 13
+    },
+    {
+      "topic": "Vector Databases",
+      "count": 13
+    },
+    {
+      "topic": "Document Processing",
+      "count": 11
+    },
+    {
+      "topic": "AI in Software Development",
+      "count": 10
+    },
+    {
+      "topic": "Machine Learning",
+      "count": 9
+    },
+    {
+      "topic": "MultiModal",
+      "count": 9
+    },
+    {
+      "topic": "AI Safety",
+      "count": 8
+    },
+    {
+      "topic": "Computer Vision",
+      "count": 8
+    },
+    {
+      "topic": "Supervised Learning",
+      "count": 7
+    },
+    {
+      "topic": "LLM Serving",
+      "count": 5
+    },
+    {
+      "topic": "MLOps",
+      "count": 5
+    },
+    {
+      "topic": "Data Engineering",
+      "count": 4
+    },
+    {
+      "topic": "Compression and Quantization",
+      "count": 3
+    },
+    {
+      "topic": "Diffusion Models",
+      "count": 3
+    },
+    {
+      "topic": "Anomaly Detection",
+      "count": 2
+    },
+    {
+      "topic": "Event-Driven AI",
+      "count": 2
+    },
+    {
+      "topic": "Mathematical Foundations",
+      "count": 2
+    },
+    {
+      "topic": "On-Device AI",
+      "count": 1
+    },
+    {
+      "topic": "Synthetic Data",
+      "count": 1
+    },
+    {
+      "topic": "Time Series",
+      "count": 1
+    },
+    {
+      "topic": "Unsupervised Learning",
+      "count": 1
+    }
+  ],
+  "key_partners": [
+    {
+      "partner": "DeepLearning.AI",
+      "course_count": 19
+    },
+    {
+      "partner": "Google Cloud",
+      "course_count": 6
+    },
+    {
+      "partner": "Hugging Face",
+      "course_count": 5
+    },
+    {
+      "partner": "LangChain",
+      "course_count": 5
+    },
+    {
+      "partner": "Anthropic",
+      "course_count": 4
+    },
+    {
+      "partner": "Google",
+      "course_count": 4
+    },
+    {
+      "partner": "LlamaIndex",
+      "course_count": 4
+    },
+    {
+      "partner": "Meta",
+      "course_count": 4
+    },
+    {
+      "partner": "OpenAI",
+      "course_count": 4
+    },
+    {
+      "partner": "Microsoft",
+      "course_count": 3
+    },
+    {
+      "partner": "Snowflake",
+      "course_count": 3
+    }
+  ],
+  "featured_courses": [
+    {
+      "id": "vllm-inference",
+      "title": "Fast & Efficient LLM Inference with vLLM",
+      "type": "Short Course",
+      "partner": "Red Hat",
+      "level": "Intermediate",
+      "focus": "Optimize, deploy, and benchmark open-source LLMs with vLLM"
+    }
+  ],
+  "professional_certificates": [
+    "Generative AI for Software Development",
+    "Machine Learning Specialization",
+    "Deep Learning Specialization",
+    "Natural Language Processing Specialization",
+    "Mathematics for Machine Learning and Data Science",
+    "Data Analytics",
+    "PyTorch for Deep Learning",
+    "TensorFlow Developer Professional Certificate",
+    "AI for Good",
+    "AI for Medicine"
+  ]
+}

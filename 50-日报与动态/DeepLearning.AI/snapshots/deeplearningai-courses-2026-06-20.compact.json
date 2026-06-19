@@ -1,0 +1,42 @@
+{
+  "metadata": {
+    "source": "https://www.deeplearning.ai/courses/",
+    "date": "2026-06-20",
+    "total_courses": 122,
+    "format": {
+      "short_courses": 99,
+      "courses": 13,
+      "certificates": 10
+    },
+    "level": {
+      "beginner": 63,
+      "intermediate": 59
+    }
+  },
+  "top_10_topics": [
+    "GenAI Applications (57)",
+    "Prompt Engineering (46)",
+    "Agents (41)",
+    "RAG (31)",
+    "Generative Models (28)",
+    "LLMOps (26)",
+    "AI Frameworks (21)",
+    "Chatbots (21)",
+    "Search & Retrieval (21)",
+    "Evaluation & Monitoring (20)"
+  ],
+  "key_partners": {
+    "DeepLearning.AI": 19,
+    "Google Cloud": 6,
+    "Hugging Face": 5,
+    "LangChain": 5,
+    "Anthropic": 4,
+    "Google": 4,
+    "LlamaIndex": 4,
+    "Meta": 4,
+    "OpenAI": 4,
+    "Microsoft": 3,
+    "Snowflake": 3
+  },
+  "new_featured": "Fast & Efficient LLM Inference with vLLM (Red Hat, Intermediate)"
+}
