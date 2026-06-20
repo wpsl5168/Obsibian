@@ -1,0 +1,26 @@
+{
+  "date": "2026-06-21",
+  "total": 122,
+  "stats": {
+    "short_courses": 99,
+    "courses": 13,
+    "professional_certificates": 10,
+    "difficulty_levels": {
+      "beginner": 63,
+      "intermediate": 59
+    }
+  },
+  "new": 5,
+  "top_topics": {
+    "GenAI Applications": 57,
+    "Prompt Engineering": 46,
+    "Agents": 41,
+    "RAG": 31,
+    "Generative Models": 28,
+    "LLMOps": 26,
+    "AI Frameworks": 21,
+    "Chatbots": 21,
+    "Search and Retrieval": 21,
+    "Evaluation and Monitoring": 20
+  }
+}

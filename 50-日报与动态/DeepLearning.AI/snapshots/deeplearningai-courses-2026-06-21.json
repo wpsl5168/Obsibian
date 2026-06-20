@@ -1,0 +1,109 @@
+{
+  "metadata": {
+    "source": "https://www.deeplearning.ai/courses/",
+    "fetched_date": "2026-06-21",
+    "fetched_timestamp": "2026-06-21T04:11:38.387120+08:00",
+    "total_courses": 122
+  },
+  "statistics": {
+    "short_courses": 99,
+    "courses": 13,
+    "professional_certificates": 10,
+    "difficulty_levels": {
+      "beginner": 63,
+      "intermediate": 59
+    }
+  },
+  "popular_topics": {
+    "GenAI Applications": 57,
+    "Prompt Engineering": 46,
+    "Agents": 41,
+    "RAG": 31,
+    "Generative Models": 28,
+    "LLMOps": 26,
+    "AI Frameworks": 21,
+    "Chatbots": 21,
+    "Search and Retrieval": 21,
+    "Evaluation and Monitoring": 20,
+    "NLP": 19,
+    "Task Automation": 19,
+    "Embeddings": 18,
+    "Fine-Tuning": 17,
+    "Transformers": 16,
+    "AI Coding": 14,
+    "Deep Learning": 14,
+    "Data Processing": 13,
+    "Vector Databases": 13,
+    "Document Processing": 11,
+    "AI in Software Development": 10,
+    "Machine Learning": 9,
+    "MultiModal": 9,
+    "AI Safety": 8,
+    "Computer Vision": 8,
+    "Supervised Learning": 7,
+    "LLM Serving": 5,
+    "MLOps": 5,
+    "Data Engineering": 4,
+    "Compression and Quantization": 3,
+    "Diffusion Models": 3,
+    "Anomaly Detection": 2,
+    "Event-Driven AI": 2,
+    "Mathematical Foundations": 2,
+    "On-Device AI": 1,
+    "Synthetic Data": 1,
+    "Time Series": 1,
+    "Unsupervised Learning": 1
+  },
+  "top_partners": {
+    "DeepLearning.AI": 19,
+    "Google Cloud": 6,
+    "Hugging Face": 5,
+    "LangChain": 5,
+    "Anthropic": 4,
+    "Google": 4,
+    "LlamaIndex": 4,
+    "Meta": 4,
+    "OpenAI": 4,
+    "Microsoft": 3,
+    "Snowflake": 3
+  },
+  "new_courses": [
+    {
+      "title": "Fast & Efficient LLM Inference with vLLM",
+      "difficulty": "Intermediate",
+      "type": "Short Course",
+      "partner": "Red Hat",
+      "description": "Optimize, deploy, and benchmark an open-source LLM with vLLM"
+    },
+    {
+      "title": "AI Agents for Image and Video Generation",
+      "difficulty": "Intermediate",
+      "type": "Short Course",
+      "partner": "Google",
+      "description": "Build AI agents that generate images and videos"
+    },
+    {
+      "title": "Transformers in Practice",
+      "difficulty": "Intermediate",
+      "type": "Course",
+      "partner": "AMD",
+      "instructor": "Sharon Zhou",
+      "description": "Build intuition about transformer-based models"
+    },
+    {
+      "title": "Build Interactive Agents with Generative UI",
+      "difficulty": "Beginner",
+      "type": "Short Course",
+      "partner": "CopilotKit",
+      "description": "Build fullstack agent apps with custom UIs"
+    },
+    {
+      "title": "AI Prompting for Everyone",
+      "difficulty": "Beginner",
+      "type": "Course",
+      "partner": "DeepLearning.AI",
+      "instructor": "Andrew Ng",
+      "description": "Develop prompting skills for AI models"
+    }
+  ]
+}
