@@ -1,0 +1,149 @@
+{
+  "timestamp": "2026-06-23T04:11:53.377716+08:00",
+  "date": "2026-06-23",
+  "total_courses": 122,
+  "course_types": {
+    "short_courses": 99,
+    "full_courses": 13,
+    "professional_certificates": 10
+  },
+  "difficulty_levels": {
+    "beginner": 63,
+    "intermediate": 59
+  },
+  "popular_topics": [
+    {
+      "topic": "GenAI Applications",
+      "count": 57
+    },
+    {
+      "topic": "Prompt Engineering",
+      "count": 46
+    },
+    {
+      "topic": "Agents",
+      "count": 41
+    },
+    {
+      "topic": "RAG",
+      "count": 31
+    },
+    {
+      "topic": "Generative Models",
+      "count": 28
+    },
+    {
+      "topic": "LLMOps",
+      "count": 26
+    },
+    {
+      "topic": "AI Frameworks",
+      "count": 21
+    },
+    {
+      "topic": "Chatbots",
+      "count": 21
+    },
+    {
+      "topic": "Search & Retrieval",
+      "count": 21
+    },
+    {
+      "topic": "Evaluation & Monitoring",
+      "count": 20
+    },
+    {
+      "topic": "NLP",
+      "count": 19
+    },
+    {
+      "topic": "Task Automation",
+      "count": 19
+    },
+    {
+      "topic": "Embeddings",
+      "count": 18
+    },
+    {
+      "topic": "Fine-Tuning",
+      "count": 17
+    },
+    {
+      "topic": "Transformers",
+      "count": 16
+    },
+    {
+      "topic": "AI Coding",
+      "count": 14
+    },
+    {
+      "topic": "Deep Learning",
+      "count": 14
+    },
+    {
+      "topic": "Data Processing",
+      "count": 13
+    },
+    {
+      "topic": "Vector Databases",
+      "count": 13
+    },
+    {
+      "topic": "Document Processing",
+      "count": 11
+    }
+  ],
+  "major_collaborators": [
+    {
+      "name": "DeepLearning.AI",
+      "count": 19
+    },
+    {
+      "name": "Google Cloud",
+      "count": 6
+    },
+    {
+      "name": "Google",
+      "count": 4
+    },
+    {
+      "name": "Hugging Face",
+      "count": 5
+    },
+    {
+      "name": "LangChain",
+      "count": 5
+    },
+    {
+      "name": "Anthropic",
+      "count": 4
+    },
+    {
+      "name": "Meta",
+      "count": 4
+    },
+    {
+      "name": "LlamaIndex",
+      "count": 4
+    },
+    {
+      "name": "OpenAI",
+      "count": 4
+    },
+    {
+      "name": "Microsoft",
+      "count": 3
+    },
+    {
+      "name": "Snowflake",
+      "count": 3
+    }
+  ],
+  "recent_releases": [
+    "Fast & Efficient LLM Inference with vLLM"
+  ],
+  "trending_topics": [
+    "Agent Development & Orchestration",
+    "LLM Efficiency & Serving"
+  ]
+}
