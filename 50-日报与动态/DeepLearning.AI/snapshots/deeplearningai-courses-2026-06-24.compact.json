@@ -1,0 +1,63 @@
+{
+  "metadata": {
+    "source": "https://www.deeplearning.ai/courses/",
+    "fetched_at": "2026-06-24T00:00:00+08:00",
+    "timezone": "Asia/Shanghai"
+  },
+  "summary": {
+    "total_courses": 122,
+    "short_courses": 99,
+    "full_courses": 13,
+    "professional_certificates": 10,
+    "beginner_count": 63,
+    "intermediate_count": 59
+  },
+  "top_topics": [
+    {
+      "topic": "GenAI Applications",
+      "courses": 57
+    },
+    {
+      "topic": "Prompt Engineering",
+      "courses": 46
+    },
+    {
+      "topic": "Agents",
+      "courses": 41
+    },
+    {
+      "topic": "RAG (Retrieval Augmented Generation)",
+      "courses": 31
+    },
+    {
+      "topic": "Generative Models",
+      "courses": 28
+    },
+    {
+      "topic": "LLMOps",
+      "courses": 26
+    },
+    {
+      "topic": "AI Frameworks",
+      "courses": 21
+    },
+    {
+      "topic": "Chatbots",
+      "courses": 21
+    },
+    {
+      "topic": "Search and Retrieval",
+      "courses": 21
+    },
+    {
+      "topic": "Evaluation and Monitoring",
+      "courses": 20
+    }
+  ],
+  "new_courses_count": 5,
+  "featured": [
+    "Fast & Efficient LLM Inference with vLLM",
+    "AI Agents for Image and Video Generation",
+    "Transformers in Practice"
+  ]
+}
