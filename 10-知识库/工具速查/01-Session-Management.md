@@ -1,10 +1,10 @@
 ---
 title: Hermes Session Management
 created: 2026-06-23
-updated: 2026-06-23
-type: reference
-tags: [hermes, cli, session]
-status: active
+updated: 2026-06-24
+type: methodology
+tags: [hermes, workflow]
+status: stable
 ---
 
 # Hermes Session Management
