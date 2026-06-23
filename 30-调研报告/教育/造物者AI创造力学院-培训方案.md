@@ -1,3 +1,12 @@
+---
+title: 造物者AI创造力学院-培训方案
+created: 2026-06-15
+updated: 2026-06-15
+type: report
+tags: []
+status: draft
+---
+
 # 「造物者」AI 创造力学院
 
 ## 一套面向中国中小学的差异化 AI 编程培训方案

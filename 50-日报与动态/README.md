@@ -1,3 +1,12 @@
+---
+title: README
+created: 2026-05-27
+updated: 2026-05-27
+type: index
+tags: []
+status: stable
+---
+
 # 50-日报与动态
 
 时序型内容：每日订阅、外部信息流、定期更新的快照。

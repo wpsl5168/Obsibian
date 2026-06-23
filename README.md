@@ -1,3 +1,12 @@
+---
+title: README
+created: 2026-05-27
+updated: 2026-05-27
+type: index
+tags: []
+status: stable
+---
+
 # 老王的 Obsidian 知识库
 
 > 本地优先的个人知识管理系统，采用 PARA 风格目录结构（编号制）。
