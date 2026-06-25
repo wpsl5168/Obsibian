@@ -1,0 +1,77 @@
+{
+  "metadata": {
+    "source": "https://www.deeplearning.ai/courses/",
+    "fetched_at": "2026-06-26T00:00:00+08:00",
+    "timezone": "Asia/Shanghai",
+    "status": "BLOCKED_BY_CLOUDFLARE",
+    "note": "Unable to fetch live data due to Cloudflare bot detection. Using snapshot from 2026-06-24 (last successful fetch). Previous day (2026-06-25) also blocked."
+  },
+  "summary": {
+    "total_courses": 122,
+    "short_courses": 99,
+    "full_courses": 13,
+    "professional_certificates": 10,
+    "beginner_count": 63,
+    "intermediate_count": 59
+  },
+  "top_topics": [
+    {"rank": 1, "topic": "GenAI Applications", "courses": 57},
+    {"rank": 2, "topic": "Prompt Engineering", "courses": 46},
+    {"rank": 3, "topic": "Agents", "courses": 41},
+    {"rank": 4, "topic": "RAG (Retrieval Augmented Generation)", "courses": 31},
+    {"rank": 5, "topic": "Generative Models", "courses": 28},
+    {"rank": 6, "topic": "LLMOps", "courses": 26},
+    {"rank": 7, "topic": "AI Frameworks", "courses": 21},
+    {"rank": 8, "topic": "Chatbots", "courses": 21},
+    {"rank": 9, "topic": "Search and Retrieval", "courses": 21},
+    {"rank": 10, "topic": "Evaluation and Monitoring", "courses": 20}
+  ],
+  "top_partners": [
+    {"partner": "DeepLearning.AI", "courses": 19},
+    {"partner": "Google Cloud", "courses": 6},
+    {"partner": "Hugging Face", "courses": 5},
+    {"partner": "LangChain", "courses": 5},
+    {"partner": "Anthropic", "courses": 4},
+    {"partner": "Google", "courses": 4},
+    {"partner": "LlamaIndex", "courses": 4},
+    {"partner": "Meta", "courses": 4},
+    {"partner": "OpenAI", "courses": 4}
+  ],
+  "new_courses": [
+    {
+      "title": "Fast & Efficient LLM Inference with vLLM",
+      "partner": "Red Hat",
+      "type": "Short Course",
+      "level": "Intermediate",
+      "description": "Learn to optimize, deploy, and benchmark an open-source LLM with vLLM"
+    },
+    {
+      "title": "AI Agents for Image and Video Generation",
+      "partner": "Google",
+      "type": "Short Course",
+      "level": "Intermediate",
+      "description": "Build AI agents that generate images and videos, evaluate output automatically, and iterate until results meet quality standards"
+    },
+    {
+      "title": "Transformers in Practice",
+      "partner": "AMD",
+      "type": "Course",
+      "level": "Intermediate",
+      "description": "Go beyond using LLMs to understanding them. Build intuition to reason about model behavior, debug problems, and make smarter deployment decisions"
+    },
+    {
+      "title": "Build Interactive Agents with Generative UI",
+      "partner": "CopilotKit",
+      "type": "Short Course",
+      "level": "Beginner",
+      "description": "Build fullstack agent apps generating custom UIs like charts, forms, and whiteboards on demand"
+    },
+    {
+      "title": "AI Prompting for Everyone",
+      "partner": "DeepLearning.AI",
+      "type": "Course",
+      "level": "Beginner",
+      "description": "Taught by Andrew Ng. Develop prompting skills for real, useful results from today's AI models"
+    }
+  ]
+}
