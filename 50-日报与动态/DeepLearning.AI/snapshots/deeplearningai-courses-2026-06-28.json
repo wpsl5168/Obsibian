@@ -1,0 +1,79 @@
+{
+  "metadata": {
+    "fetched_date": "2026-06-28",
+    "source": "web_extract",
+    "timezone": "Asia/Shanghai",
+    "data_type": "llm_summary",
+    "note": "LLM-generated summary from web_extract; topic names normalized"
+  },
+  "summary": {
+    "total_courses": 122,
+    "short_courses": 99,
+    "full_courses": 13,
+    "professional_certificates": 10,
+    "beginner_level": 63,
+    "intermediate_level": 59
+  },
+  "top_topics": {
+    "GenAI Applications": 57,
+    "Prompt Engineering": 46,
+    "Agents": 41,
+    "RAG": 31,
+    "Generative Models": 28,
+    "LLMOps": 26,
+    "AI Frameworks": 21,
+    "Chatbots": 21,
+    "Search and Retrieval": 21,
+    "Evaluation and Monitoring": 20
+  },
+  "other_topics": {
+    "NLP": 19,
+    "Task Automation": 19,
+    "Embeddings": 18,
+    "Fine-Tuning": 17,
+    "Transformers": 16,
+    "AI Coding": 14,
+    "Deep Learning": 14,
+    "Data Processing": 13,
+    "Vector Databases": 13,
+    "Document Processing": 11,
+    "AI in Software Development": 10,
+    "Machine Learning": 9,
+    "MultiModal": 9,
+    "AI Safety": 8,
+    "Computer Vision": 8,
+    "Supervised Learning": 7,
+    "LLM Serving": 5,
+    "MLOps": 5,
+    "Data Engineering": 4,
+    "Compression & Quantization": 3,
+    "Diffusion Models": 3,
+    "Anomaly Detection": 2,
+    "Event-Driven AI": 2,
+    "Mathematical Foundations": 2,
+    "On-Device AI": 1,
+    "Synthetic Data": 1,
+    "Time Series": 1,
+    "Unsupervised Learning": 1
+  },
+  "key_partners": {
+    "DeepLearning.AI": 19,
+    "Google Cloud": 6,
+    "Hugging Face": 5,
+    "LangChain": 5,
+    "Anthropic": 4,
+    "Google": 4,
+    "LlamaIndex": 4,
+    "Meta": 4,
+    "OpenAI": 4,
+    "Microsoft": 3,
+    "Snowflake": 3
+  },
+  "new_courses": {
+    "Fast & Efficient LLM Inference with vLLM": {
+      "type": "Short Course",
+      "level": "Intermediate",
+      "partner": "Red Hat"
+    }
+  }
+}
