@@ -1,0 +1,871 @@
+{
+  "metadata": {
+    "source": "https://www.deeplearning.ai/courses/",
+    "timestamp": "2026-06-29T04:12:29.962832",
+    "total_courses_shown": 124,
+    "parsed_courses": 123
+  },
+  "courses": [
+    {
+      "title": "Voice for AI Agents and Applications",
+      "description": "Add voice to your AI agents and applications using three integration patterns: embedded voice, voice layered on existing agents, and voice as a callable tool.",
+      "level": "Beginner",
+      "url": "https://www.deeplearning.ai/courses/voice-for-ai-agents-and-applications",
+      "slug": "voice-for-ai-agents-and-applications"
+    },
+    {
+      "title": "Fast & Efficient",
+      "description": "LLM Inference with vLLM Optimize, deploy, and benchmark an open-source LLM with vLLM.",
+      "level": "Intermediate",
+      "url": "https://www.deeplearning.ai/courses/fast-and-efficient-llm-inference-with-vllm",
+      "slug": "fast-and-efficient-llm-inference-with-vllm"
+    },
+    {
+      "title": "AI Agents for Image and Video Generation",
+      "description": "Build AI agents that generate images and videos, evaluate output automatically, and iterate until results meet your quality standards",
+      "level": "Intermediate",
+      "url": "https://www.deeplearning.ai/courses/ai-agents-for-image-and-video-generation",
+      "slug": "ai-agents-for-image-and-video-generation"
+    },
+    {
+      "title": "Transformers in Practice",
+      "description": "Go beyond just using LLMs to actually understanding them. In this course taught by Sharon Zhou, you'll build the intuition to reason about model behavior, debug real problems, and make smarter decisions about deploying transformer-based models.",
+      "level": "Intermediate",
+      "url": "https://www.deeplearning.ai/courses/transformers-in-practice",
+      "slug": "transformers-in-practice"
+    },
+    {
+      "title": "Build Interactive Agents",
+      "description": "with Generative UI Build fullstack agent apps that go beyond plain text, generating custom UIs like charts, forms, and whiteboards on demand.",
+      "level": "Beginner",
+      "url": "https://www.deeplearning.ai/courses/build-interactive-agents-with-generative-ui",
+      "slug": "build-interactive-agents-with-generative-ui"
+    },
+    {
+      "title": "AI Prompting for",
+      "description": "Everyone Become an AI power user in this new course taught by Andrew Ng. From finding information to building apps, you'll develop the prompting skills that get real, useful results from today's most powerful AI models.",
+      "level": "Beginner",
+      "url": "https://www.deeplearning.ai/courses/ai-prompting-for-everyone",
+      "slug": "ai-prompting-for-everyone"
+    },
+    {
+      "title": "Building Multimodal Data Pipelines",
+      "description": "Learn to build AI-powered pipelines that turn images, audio, and video into LLM-ready text, and power multimodal applications on top.",
+      "level": "Intermediate",
+      "url": "https://www.deeplearning.ai/courses/building-multimodal-data-pipelines",
+      "slug": "building-multimodal-data-pipelines"
+    },
+    {
+      "title": "Spec-Driven Development with",
+      "description": "Coding Agents Move beyond vibe coding: write clear specs that give your coding agent the context it needs to build intentional, maintainable software.",
+      "level": "Beginner",
+      "url": "https://www.deeplearning.ai/courses/spec-driven-development-with-coding-agents",
+      "slug": "spec-driven-development-with-coding-agents"
+    },
+    {
+      "title": "Efficient Inference with SGLang: Text and Image Generation",
+      "description": "Learn how LLM inference works under the hood and implement caching optimizations, including KV cache and RadixAttention, to make text and image generation faster and cheaper.",
+      "level": "Intermediate",
+      "url": "https://www.deeplearning.ai/courses/efficient-inference-with-sglang-text-and-image-generation",
+      "slug": "efficient-inference-with-sglang-text-and-image-generation"
+    },
+    {
+      "title": "Agent Memory: Building Memory-Aware Agents",
+      "description": "Build a complete agent memory system that lets an LLM store, retrieve, and refine knowledge across sessions—turning a stateless agent into one that learns and improves over time.",
+      "level": "Intermediate",
+      "url": "https://www.deeplearning.ai/courses/agent-memory-building-memory-aware-agents",
+      "slug": "agent-memory-building-memory-aware-agents"
+    },
+    {
+      "title": "Build and Train",
+      "description": "an LLM with JAX Build and train a 20M-parameter LLM from scratch using JAX, the open-source library behind Google's Gemini, and learn the core techniques powering modern AI development.",
+      "level": "Intermediate",
+      "url": "https://www.deeplearning.ai/courses/build-and-train-an-llm-with-jax",
+      "slug": "build-and-train-an-llm-with-jax"
+    },
+    {
+      "title": "A2A: The Agent2Agent Protocol",
+      "description": "Connect agents across different frameworks and teams using A2A, the open protocol standardizing agent-to-agent communication.",
+      "level": "Intermediate",
+      "url": "https://www.deeplearning.ai/courses/a2a-the-agent2agent-protocol",
+      "slug": "a2a-the-agent2agent-protocol"
+    },
+    {
+      "title": "Agent Skills with Anthropic",
+      "description": "Equip agents with expert on-demand knowledge to enable reliable coding, research, and data analysis workflows",
+      "level": "Beginner",
+      "url": "https://www.deeplearning.ai/courses/agent-skills-with-anthropic",
+      "slug": "agent-skills-with-anthropic"
+    },
+    {
+      "title": "Document AI: From OCR to Agentic Doc Extraction",
+      "description": "Build agentic systems to parse documents and extract information grounded in visual components like charts, tables, and forms.",
+      "level": "Intermediate",
+      "url": "https://www.deeplearning.ai/courses/document-ai-from-ocr-to-agentic-doc-extraction",
+      "slug": "document-ai-from-ocr-to-agentic-doc-extraction"
+    },
+    {
+      "title": "Build with Andrew",
+      "description": "If you've never written code before, this course is for you. In less than 30 minutes, you'll learn to describe an idea in words and let AI transform it into an app for you.",
+      "level": "Beginner",
+      "url": "https://www.deeplearning.ai/courses/build-with-andrew",
+      "slug": "build-with-andrew"
+    },
+    {
+      "title": "Data Engineering",
+      "description": "Build your skills as a data engineer, drive organizational goals by ingesting, transforming, storing, and serving data to data stakeholders, and grow your career in a high-demand field.",
+      "level": "Intermediate",
+      "url": "https://www.deeplearning.ai/specializations/data-engineering",
+      "slug": "data-engineering"
+    },
+    {
+      "title": "Nvidia’s NeMo Agent",
+      "description": "Toolkit: Making Agents Reliable Turn proof-of-concept agent demos into production-ready systems using observability, evaluation, and deployment tools from Nvidia's NeMo Agent Toolkit.",
+      "level": "Intermediate",
+      "url": "https://www.deeplearning.ai/courses/nvidia-nat-making-agents-reliable",
+      "slug": "nvidia-nat-making-agents-reliable"
+    },
+    {
+      "title": "Multi-vector Image Retrieval",
+      "description": "Build advanced retrieval systems that represent images with multiple vectors, enabling fine-grained matching between text queries and visual content for accurate multi-modal search.",
+      "level": "Intermediate",
+      "url": "https://www.deeplearning.ai/courses/multi-vector-image-retrieval",
+      "slug": "multi-vector-image-retrieval"
+    },
+    {
+      "title": "Building Coding Agents with Tool Execution",
+      "description": "Build AI agents that write and execute code to accomplish tasks, running safely in sandboxed cloud environments that protect your systems from untrusted code.",
+      "level": "Intermediate",
+      "url": "https://www.deeplearning.ai/courses/building-coding-agents-with-tool-execution",
+      "slug": "building-coding-agents-with-tool-execution"
+    },
+    {
+      "title": "TensorFlow Developer Professional Certificate",
+      "description": "Equip yourself with the knowledge necessary to use the TensorFlow API along with best practices and hands-on experience in one of the most in-demand deep learning frameworks.",
+      "level": "Intermediate",
+      "url": "https://www.deeplearning.ai/specializations/tensorflow-developer-professional-certificate",
+      "slug": "tensorflow-developer-professional-certificate"
+    },
+    {
+      "title": "Semantic Caching for",
+      "description": "AI Agents Speed up and reduce the costs of your AI agents by implementing semantic caching that reuses responses based on meaning rather than exact text.",
+      "level": "Intermediate",
+      "url": "https://www.deeplearning.ai/courses/semantic-caching-for-ai-agents",
+      "slug": "semantic-caching-for-ai-agents"
+    },
+    {
+      "title": "Design, Develop, and",
+      "description": "Deploy Multi-Agent Systems with CrewAI Build practical multi-agent systems that collaborate, use tools and memory, and scale reliably to production",
+      "level": "Beginner",
+      "url": "https://www.deeplearning.ai/courses/design-develop-and-deploy-multi-agent-systems-with-crewai",
+      "slug": "design-develop-and-deploy-multi-agent-systems-with-crewai"
+    },
+    {
+      "title": "Generative AI for Software Development",
+      "description": "Learn practical prompt engineering and pair programming techniques with LLMs to write, test, and improve your code.",
+      "level": "Beginner",
+      "url": "https://www.deeplearning.ai/specializations/generative-ai-for-software-development",
+      "slug": "generative-ai-for-software-development"
+    },
+    {
+      "title": "Machine Learning in Production",
+      "description": "Design an ML production system: scoping, data, modeling, deployment. Prototype development, deployment & continuous improvement.",
+      "level": "Intermediate",
+      "url": "https://www.deeplearning.ai/courses/machine-learning-in-production",
+      "slug": "machine-learning-in-production"
+    },
+    {
+      "title": "Jupyter AI: AI Coding in Notebooks",
+      "description": "Learn to code with AI in Jupyter notebooks. Use Jupyter AI to generate code, get explanations, and analyze data.",
+      "level": "Beginner",
+      "url": "https://www.deeplearning.ai/courses/jupyter-ai-coding-in-notebooks",
+      "slug": "jupyter-ai-coding-in-notebooks"
+    },
+    {
+      "title": "Fine-tuning & RL for LLMs: Intro to Post-training",
+      "description": "Learn how to apply fine-tuning and reinforcement learning techniques to shape model behavior, improve reasoning, and make LLMs safer and more reliable.",
+      "level": "Intermediate",
+      "url": "https://www.deeplearning.ai/courses/fine-tuning-and-reinforcement-learning-for-llms-intro-to-post-training",
+      "slug": "fine-tuning-and-reinforcement-learning-for-llms-intro-to-post-training"
+    },
+    {
+      "title": "PyTorch for Deep Learning",
+      "description": "Learn the core principles of building, optimizing, and deploying deep learning models using PyTorch.",
+      "level": "Intermediate",
+      "url": "https://www.deeplearning.ai/specializations/pytorch-for-deep-learning-professional-certificate",
+      "slug": "pytorch-for-deep-learning-professional-certificate"
+    },
+    {
+      "title": "Generative AI with Large Language Models",
+      "description": "Understand the generative AI lifecycle. Describe transformer architecture powering LLMs. Apply training/tuning/inference methods. Hear from researchers on generative AI challenges/opportunities.",
+      "level": "Intermediate",
+      "url": "https://www.deeplearning.ai/courses/generative-ai-with-llms",
+      "slug": "generative-ai-with-llms"
+    },
+    {
+      "title": "Governing AI Agents",
+      "description": "Integrate data governance into your agent's workflow to ensure it handles data safely, securely, and accurately.",
+      "level": "Beginner",
+      "url": "https://www.deeplearning.ai/courses/governing-ai-agents",
+      "slug": "governing-ai-agents"
+    },
+    {
+      "title": "Retrieval Augmented Generation",
+      "description": "(RAG) Gain fundamental understanding and the practical knowledge to develop production-ready RAG applications, from architecture to deployment and evaluation.",
+      "level": "Intermediate",
+      "url": "https://www.deeplearning.ai/courses/retrieval-augmented-generation",
+      "slug": "retrieval-augmented-generation"
+    },
+    {
+      "title": "Agentic AI In",
+      "description": "this course taught by Andrew Ng, you'll build agentic AI systems that take action through iterative, multi-step workflows.",
+      "level": "Intermediate",
+      "url": "https://www.deeplearning.ai/courses/agentic-ai",
+      "slug": "agentic-ai"
+    },
+    {
+      "title": "Data Analytics",
+      "description": "Build a solid data analytics foundation using industry standard and AI tools to extract insights, make decisions, and solve real-world business problems.",
+      "level": "Beginner",
+      "url": "https://www.deeplearning.ai/specializations/data-analytics",
+      "slug": "data-analytics"
+    },
+    {
+      "title": "Mathematics for Machine Learning and Data Science",
+      "description": "Explore the fundamental mathematics toolkit of machine learning: calculus, linear algebra, statistics, and probability.",
+      "level": "Beginner",
+      "url": "https://www.deeplearning.ai/specializations/mathematics-for-machine-learning-and-data-science",
+      "slug": "mathematics-for-machine-learning-and-data-science"
+    },
+    {
+      "title": "Building Live Voice Agents with Google’s ADK",
+      "description": "Build real-time voice AI agents, from simple to multi-agent podcast systems, using Google’s Agent Development Kit.",
+      "level": "Intermediate",
+      "url": "https://www.deeplearning.ai/courses/building-live-voice-agents-with-googles-adk",
+      "slug": "building-live-voice-agents-with-googles-adk"
+    },
+    {
+      "title": "Building and Evaluating",
+      "description": "Data Agents Build, evaluate, and improve a multi-agent system that plans its steps, connects to data sources, and provides insights.",
+      "level": "Intermediate",
+      "url": "https://www.deeplearning.ai/courses/building-and-evaluating-data-agents",
+      "slug": "building-and-evaluating-data-agents"
+    },
+    {
+      "title": "Build AI Apps",
+      "description": "with MCP Server: Working with Box Files Build an LLM app that uses tools from the Box MCP server to discover Box files and extract text from them. Transform it into a multi-agent system that communicates using A2A.",
+      "level": "Intermediate",
+      "url": "https://www.deeplearning.ai/courses/build-ai-apps-with-mcp-server-working-with-box-files",
+      "slug": "build-ai-apps-with-mcp-server-working-with-box-files"
+    },
+    {
+      "title": "Knowledge Graphs for",
+      "description": "AI Agent API Discovery Construct a knowledge graph and use it to enable your AI agent to find and call the right APIs in the right order.",
+      "level": "Intermediate",
+      "url": "https://www.deeplearning.ai/courses/knowledge-graphs-for-ai-agent-api-discovery",
+      "slug": "knowledge-graphs-for-ai-agent-api-discovery"
+    },
+    {
+      "title": "Agentic Knowledge Graph Construction",
+      "description": "Build a multi-agent system that plans, designs, and constructs a knowledge graph.",
+      "level": "Intermediate",
+      "url": "https://www.deeplearning.ai/courses/agentic-knowledge-graph-construction",
+      "slug": "agentic-knowledge-graph-construction"
+    },
+    {
+      "title": "AI for Good",
+      "description": "Learn a framework for AI project development. Build models for air quality, wind energy, biodiversity & disaster management. Explore case studies on public health & climate change.",
+      "level": "Beginner",
+      "url": "https://www.deeplearning.ai/specializations/ai-for-good",
+      "slug": "ai-for-good"
+    },
+    {
+      "title": "Claude Code: A",
+      "description": "Highly Agentic Coding Assistant Explore, build, and refine codebases with Claude Code.",
+      "level": "Intermediate",
+      "url": "https://www.deeplearning.ai/courses/claude-code-a-highly-agentic-coding-assistant",
+      "slug": "claude-code-a-highly-agentic-coding-assistant"
+    },
+    {
+      "title": "Pydantic for LLM Workflows",
+      "description": "Build reliable LLM applications with structured outputs and validated data using Pydantic.",
+      "level": "Intermediate",
+      "url": "https://www.deeplearning.ai/courses/pydantic-for-llm-workflows",
+      "slug": "pydantic-for-llm-workflows"
+    },
+    {
+      "title": "Post-training of LLMs",
+      "description": "Adapt LLMs for specific tasks and behaviors using post-training techniques like SFT, DPO, and online RL.",
+      "level": "Intermediate",
+      "url": "https://www.deeplearning.ai/courses/post-training-of-llms",
+      "slug": "post-training-of-llms"
+    },
+    {
+      "title": "AI for Everyone",
+      "description": "Learn about AI technologies and how to use them. Examine AI's societal impact, and learn to navigate this technological shift.",
+      "level": "Beginner",
+      "url": "https://www.deeplearning.ai/courses/ai-for-everyone",
+      "slug": "ai-for-everyone"
+    },
+    {
+      "title": "Machine Learning Specialization",
+      "description": "Learn foundational AI concepts through an intuitive visual approach, then learn the code needed to implement the algorithms and math for ML.",
+      "level": "Beginner",
+      "url": "https://www.deeplearning.ai/specializations/machine-learning",
+      "slug": "machine-learning"
+    },
+    {
+      "title": "Deep Learning Specialization",
+      "description": "Build neural networks (CNNs, RNNs, LSTMs, Transformers) and apply them to speech recognition, NLP, and more using Python and TensorFlow.",
+      "level": "Intermediate",
+      "url": "https://www.deeplearning.ai/specializations/deep-learning",
+      "slug": "deep-learning"
+    },
+    {
+      "title": "Building with Llama 4",
+      "description": "Build multimodal and long-context GenAI applications using Llama 4 open models, API, and Llama tools.",
+      "level": "Beginner",
+      "url": "https://www.deeplearning.ai/courses/building-with-llama-4",
+      "slug": "building-with-llama-4"
+    },
+    {
+      "title": "Orchestrating Workflows for",
+      "description": "GenAI Applications Turn your GenAI prototype into an automated pipeline using Apache Airflow",
+      "level": "Intermediate",
+      "url": "https://www.deeplearning.ai/courses/orchestrating-workflows-for-genai-applications",
+      "slug": "orchestrating-workflows-for-genai-applications"
+    },
+    {
+      "title": "DSPy:",
+      "description": "Build and Optimize Agentic Apps Build, debug, and optimize AI agents using DSPy and MLflow.",
+      "level": "Intermediate",
+      "url": "https://www.deeplearning.ai/courses/dspy-build-optimize-agentic-apps",
+      "slug": "dspy-build-optimize-agentic-apps"
+    },
+    {
+      "title": "Reinforcement Fine-Tuning LLMs",
+      "description": "With GRPO Improve LLM reasoning with reinforcement fine-tuning and reward functions.",
+      "level": "Intermediate",
+      "url": "https://www.deeplearning.ai/courses/reinforcement-fine-tuning-llms-grpo",
+      "slug": "reinforcement-fine-tuning-llms-grpo"
+    },
+    {
+      "title": "MCP:",
+      "description": "Build Rich-Context AI Apps with Anthropic Build AI apps that access tools, data, and prompts using the Model Context Protocol.",
+      "level": "Intermediate",
+      "url": "https://www.deeplearning.ai/courses/mcp-build-rich-context-ai-apps-with-anthropic",
+      "slug": "mcp-build-rich-context-ai-apps-with-anthropic"
+    },
+    {
+      "title": "Building AI Voice Agents for Production",
+      "description": "Build responsive, scalable, and human-like AI voice applications.",
+      "level": "Intermediate",
+      "url": "https://www.deeplearning.ai/courses/building-ai-voice-agents-for-production",
+      "slug": "building-ai-voice-agents-for-production"
+    },
+    {
+      "title": "Building Code Agents with Hugging Face smolagents",
+      "description": "Build agents that write and execute code to perform complex tasks, using Hugging Face’s smolagents.",
+      "level": "Intermediate",
+      "url": "https://www.deeplearning.ai/courses/building-code-agents-with-hugging-face-smolagents",
+      "slug": "building-code-agents-with-hugging-face-smolagents"
+    },
+    {
+      "title": "Building AI Browser Agents",
+      "description": "Build agents that navigate and interact with websites, and learn how to make them more reliable.",
+      "level": "Intermediate",
+      "url": "https://www.deeplearning.ai/courses/building-ai-browser-agents",
+      "slug": "building-ai-browser-agents"
+    },
+    {
+      "title": "Getting Structured LLM Output",
+      "description": "Learn how to generate structured outputs to power production-ready LLM software applications.",
+      "level": "Intermediate",
+      "url": "https://www.deeplearning.ai/courses/getting-structured-llm-output",
+      "slug": "getting-structured-llm-output"
+    },
+    {
+      "title": "Generative AI for Everyoneㅤ",
+      "description": "Learn how to use generative AI's capabilities & limitations. Get an overview of real-world examples, and impact on business & society for effective strategies.",
+      "level": "Beginner",
+      "url": "https://www.deeplearning.ai/courses/generative-ai-for-everyone",
+      "slug": "generative-ai-for-everyone"
+    },
+    {
+      "title": "Vibe Coding 101",
+      "description": "with Replit Design, build, and deploy apps with an AI coding agent in an integrated web development environment.",
+      "level": "Beginner",
+      "url": "https://www.deeplearning.ai/courses/vibe-coding-101-with-replit",
+      "slug": "vibe-coding-101-with-replit"
+    },
+    {
+      "title": "Long-Term Agentic Memory With LangGraph",
+      "description": "Learn to build AI agents with long-term memory with LangGraph, using LangMem for memory management.",
+      "level": "Intermediate",
+      "url": "https://www.deeplearning.ai/courses/long-term-agentic-memory-with-langgraph",
+      "slug": "long-term-agentic-memory-with-langgraph"
+    },
+    {
+      "title": "Event-Driven Agentic Document Workflows",
+      "description": "Build an event-driven agentic workflow to process documents and fill forms using RAG and human-in-the-loop feedback.",
+      "level": "Beginner",
+      "url": "https://www.deeplearning.ai/courses/event-driven-agentic-document-workflows",
+      "slug": "event-driven-agentic-document-workflows"
+    },
+    {
+      "title": "Build Apps with",
+      "description": "Windsurf’s AI Coding Agents Learn to build, debug, and deploy applications with an Agentic AI-powered integrated development environment.",
+      "level": "Beginner",
+      "url": "https://www.deeplearning.ai/courses/build-apps-with-windsurfs-ai-coding-agents",
+      "slug": "build-apps-with-windsurfs-ai-coding-agents"
+    },
+    {
+      "title": "Evaluating AI Agents",
+      "description": "Learn how to systematically evaluate, improve, and iterate on AI agents using structured assessments.",
+      "level": "Beginner",
+      "url": "https://www.deeplearning.ai/courses/evaluating-ai-agents",
+      "slug": "evaluating-ai-agents"
+    },
+    {
+      "title": "Attention in Transformers: Concepts and Code in PyTorch",
+      "description": "Understand and implement the attention mechanism, a key element of transformer-based LLMs, using PyTorch.",
+      "level": "Beginner",
+      "url": "https://www.deeplearning.ai/courses/attention-in-transformers-concepts-and-code-in-pytorch",
+      "slug": "attention-in-transformers-concepts-and-code-in-pytorch"
+    },
+    {
+      "title": "How Transformer LLMs Work",
+      "description": "Understand the transformer architecture that powers LLMs to use them more effectively.",
+      "level": "Beginner",
+      "url": "https://www.deeplearning.ai/courses/how-transformer-llms-work",
+      "slug": "how-transformer-llms-work"
+    },
+    {
+      "title": "Building toward Computer Use with Anthropic",
+      "description": "Learn how an AI Assistant is built to use and accomplish tasks on computers.",
+      "level": "Beginner",
+      "url": "https://www.deeplearning.ai/courses/building-toward-computer-use-with-anthropic",
+      "slug": "building-toward-computer-use-with-anthropic"
+    },
+    {
+      "title": "Build Long-Context AI",
+      "description": "Apps with Jamba Build LLM apps that can process very long documents using the Jamba model",
+      "level": "Beginner",
+      "url": "https://www.deeplearning.ai/courses/build-long-context-ai-apps-with-jamba",
+      "slug": "build-long-context-ai-apps-with-jamba"
+    },
+    {
+      "title": "Reasoning with o1",
+      "description": "Learn how to use and prompt OpenAI's o1 model for complex reasoning tasks.",
+      "level": "Intermediate",
+      "url": "https://www.deeplearning.ai/courses/reasoning-with-o1",
+      "slug": "reasoning-with-o1"
+    },
+    {
+      "title": "Collaborative Writing and Coding with OpenAI Canvas",
+      "description": "Learn to use OpenAI Canvas to write, code, and create more effectively in collaboration with AI.",
+      "level": "Beginner",
+      "url": "https://www.deeplearning.ai/courses/collaborative-writing-and-coding-with-openai-canvas",
+      "slug": "collaborative-writing-and-coding-with-openai-canvas"
+    },
+    {
+      "title": "Building an AI-Powered Game",
+      "description": "Learn to build with LLMs by creating a fun interactive game from scratch.",
+      "level": "Beginner",
+      "url": "https://www.deeplearning.ai/courses/building-an-ai-powered-game",
+      "slug": "building-an-ai-powered-game"
+    },
+    {
+      "title": "Safe and reliable",
+      "description": "AI via guardrails Move your LLM-powered applications beyond proof-of-concept and into production with the added control of guardrails.",
+      "level": "Beginner",
+      "url": "https://www.deeplearning.ai/courses/safe-and-reliable-ai-via-guardrails",
+      "slug": "safe-and-reliable-ai-via-guardrails"
+    },
+    {
+      "title": "LLMs as Operating Systems: Agent Memory",
+      "description": "Build systems with MemGPT agents that can autonomously manage their memory.",
+      "level": "Intermediate",
+      "url": "https://www.deeplearning.ai/courses/llms-as-operating-systems-agent-memory",
+      "slug": "llms-as-operating-systems-agent-memory"
+    },
+    {
+      "title": "Practical Multi AI Agents and Advanced Use Cases with crewAI",
+      "description": "Build agents that collaborate to solve complex business tasks.",
+      "level": "Beginner",
+      "url": "https://www.deeplearning.ai/courses/practical-multi-ai-agents-and-advanced-use-cases-with-crewai",
+      "slug": "practical-multi-ai-agents-and-advanced-use-cases-with-crewai"
+    },
+    {
+      "title": "Introducing Multimodal Llama",
+      "description": "3.2 Try out the features of the new Llama 3.2 models to build AI applications with multimodality.",
+      "level": "Beginner",
+      "url": "https://www.deeplearning.ai/courses/introducing-multimodal-llama-3-2",
+      "slug": "introducing-multimodal-llama-3-2"
+    },
+    {
+      "title": "Retrieval Optimization: Tokenization to Vector Quantization",
+      "description": "Build faster and more relevant vector search for your LLM applications",
+      "level": "Beginner",
+      "url": "https://www.deeplearning.ai/courses/retrieval-optimization-from-tokenization-to-vector-quantization",
+      "slug": "retrieval-optimization-from-tokenization-to-vector-quantization"
+    },
+    {
+      "title": "Large Multimodal Model Prompting with Gemini",
+      "description": "Learn best practices for multimodal prompting using Google’s Gemini model.",
+      "level": "Beginner",
+      "url": "https://www.deeplearning.ai/courses/large-multimodal-model-prompting-with-gemini",
+      "slug": "large-multimodal-model-prompting-with-gemini"
+    },
+    {
+      "title": "Building AI Applications With Haystack",
+      "description": "Learn a flexible framework to build a variety of complex AI applications.",
+      "level": "Intermediate",
+      "url": "https://www.deeplearning.ai/courses/building-ai-applications-with-haystack",
+      "slug": "building-ai-applications-with-haystack"
+    },
+    {
+      "title": "Improving Accuracy of",
+      "description": "LLM Applications Systematically improve the accuracy of LLM applications with evaluation, prompting, and memory tuning.",
+      "level": "Intermediate",
+      "url": "https://www.deeplearning.ai/courses/improving-accuracy-of-llm-applications",
+      "slug": "improving-accuracy-of-llm-applications"
+    },
+    {
+      "title": "AI Python for Beginners",
+      "description": "Learn Python programming with AI assistance. Gain skills writing, testing, and debugging code efficiently, and create real-world AI applications.",
+      "level": "Beginner",
+      "url": "https://www.deeplearning.ai/courses/ai-python-for-beginners",
+      "slug": "ai-python-for-beginners"
+    },
+    {
+      "title": "Embedding Models: from Architecture to Implementation",
+      "description": "Learn how to build embedding models and how to create effective semantic retrieval systems.",
+      "level": "Beginner",
+      "url": "https://www.deeplearning.ai/courses/embedding-models-from-architecture-to-implementation",
+      "slug": "embedding-models-from-architecture-to-implementation"
+    },
+    {
+      "title": "Federated Fine-tuning of LLMs with Private Data",
+      "description": "Learn how to securely fine-tune large language models (LLMs) with private data using federated methods, enhancing data privacy, minimizing risks of data leakage, and optimizing efficiency through Parameter-Efficient Fine-Tuning (PEFT) and Differential Privacy.",
+      "level": "Beginner",
+      "url": "https://www.deeplearning.ai/courses/intro-to-federated-learning-c2",
+      "slug": "intro-to-federated-learning-c2"
+    },
+    {
+      "title": "Intro to Federated Learning",
+      "description": "Build and fine-tune LLMs across distributed data using a federated learning framework for better privacy.",
+      "level": "Beginner",
+      "url": "https://www.deeplearning.ai/courses/intro-to-federated-learning",
+      "slug": "intro-to-federated-learning"
+    },
+    {
+      "title": "Pretraining LLMs",
+      "description": "Learn the essential steps to pretrain a large language model from scratch.",
+      "level": "Intermediate",
+      "url": "https://www.deeplearning.ai/courses/pretraining-llms",
+      "slug": "pretraining-llms"
+    },
+    {
+      "title": "Prompt Compression and",
+      "description": "Query Optimization Optimize the efficiency, security, query processing speed, and cost of your RAG applications.",
+      "level": "Intermediate",
+      "url": "https://www.deeplearning.ai/courses/prompt-compression-and-query-optimization",
+      "slug": "prompt-compression-and-query-optimization"
+    },
+    {
+      "title": "Carbon Aware Computing",
+      "description": "for GenAI developers Train your machine learning models using cleaner energy sources.",
+      "level": "Beginner",
+      "url": "https://www.deeplearning.ai/courses/carbon-aware-computing-for-genai-developers",
+      "slug": "carbon-aware-computing-for-genai-developers"
+    },
+    {
+      "title": "Function-calling and data extraction with LLMs",
+      "description": "Learn to apply function-calling to expand LLM and agent application capabilities.",
+      "level": "Beginner",
+      "url": "https://www.deeplearning.ai/courses/function-calling-and-data-extraction-with-llms",
+      "slug": "function-calling-and-data-extraction-with-llms"
+    },
+    {
+      "title": "Building Your Own",
+      "description": "Database Agent Interact with tabular data and SQL databases using natural language, enabling more efficient and accessible data analysis.",
+      "level": "Beginner",
+      "url": "https://www.deeplearning.ai/courses/building-your-own-database-agent",
+      "slug": "building-your-own-database-agent"
+    },
+    {
+      "title": "AI Agents in LangGraph",
+      "description": "Build agentic AI workflows using LangChain's LangGraph and Tavily's agentic search.",
+      "level": "Intermediate",
+      "url": "https://www.deeplearning.ai/courses/ai-agents-in-langgraph",
+      "slug": "ai-agents-in-langgraph"
+    },
+    {
+      "title": "AI Agentic",
+      "description": "Design Patterns with AutoGen Use the AutoGen framework to build multi-agent systems with diverse roles and capabilities for implementing complex AI applications.",
+      "level": "Beginner",
+      "url": "https://www.deeplearning.ai/courses/ai-agentic-design-patterns-with-autogen",
+      "slug": "ai-agentic-design-patterns-with-autogen"
+    },
+    {
+      "title": "Introduction to on-device AI",
+      "description": "Deploy AI for edge devices and smartphones. Learn model conversion, quantization, and how to modify for deployment on diverse devices.",
+      "level": "Beginner",
+      "url": "https://www.deeplearning.ai/courses/introduction-to-on-device-ai",
+      "slug": "introduction-to-on-device-ai"
+    },
+    {
+      "title": "Multi AI Agent",
+      "description": "Systems with crewAI Automate business workflows with multi-AI agent systems. Exceed the performance of prompting a single LLM by designing and prompting a team of AI agents through natural language.",
+      "level": "Beginner",
+      "url": "https://www.deeplearning.ai/courses/multi-ai-agent-systems-with-crewai",
+      "slug": "multi-ai-agent-systems-with-crewai"
+    },
+    {
+      "title": "Building Agentic RAG with Llamaindex",
+      "description": "Build autonomous agents that intelligently navigate and analyze your data. Learn to develop agentic RAG systems using LlamaIndex, enabling powerful document Q&A and summarization. Gain valuable skills in guiding agent reasoning and debugging.",
+      "level": "Beginner",
+      "url": "https://www.deeplearning.ai/courses/building-agentic-rag-with-llamaindex",
+      "slug": "building-agentic-rag-with-llamaindex"
+    },
+    {
+      "title": "Quantization in Depth",
+      "description": "Customize model compression with advanced quantization techniques. Try out different variants of Linear Quantization, including symmetric vs. asymmetric mode, and different granularities.",
+      "level": "Intermediate",
+      "url": "https://www.deeplearning.ai/courses/quantization-in-depth",
+      "slug": "quantization-in-depth"
+    },
+    {
+      "title": "Prompt Engineering for Vision Models",
+      "description": "Learn prompt engineering for vision models using Stable Diffusion, and advanced techniques like object detection and in-painting.",
+      "level": "Beginner",
+      "url": "https://www.deeplearning.ai/courses/prompt-engineering-for-vision-models",
+      "slug": "prompt-engineering-for-vision-models"
+    },
+    {
+      "title": "Getting Started with Mistral",
+      "description": "Explore Mistral's open-source and commercial models, and leverage Mistral's JSON mode to generate structured LLM responses. Use Mistral's API to call user-defined functions for enhanced LLM capabilities.",
+      "level": "Beginner",
+      "url": "https://www.deeplearning.ai/courses/getting-started-with-mistral",
+      "slug": "getting-started-with-mistral"
+    },
+    {
+      "title": "Quantization Fundamentals with Hugging Face",
+      "description": "Learn how to quantize any open-source model. Learn to compress models with the Hugging Face Transformers library and the Quanto library.",
+      "level": "Beginner",
+      "url": "https://www.deeplearning.ai/courses/quantization-fundamentals",
+      "slug": "quantization-fundamentals"
+    },
+    {
+      "title": "Preprocessing Unstructured Data for LLM Applications Improve your RAG system to retrieve diverse data types.",
+      "description": "Learn to extract and normalize content from a wide variety of document types, such as PDFs, PowerPoints, and HTML files.",
+      "level": "Beginner",
+      "url": "https://www.deeplearning.ai/courses/preprocessing-unstructured-data-for-llm-applications",
+      "slug": "preprocessing-unstructured-data-for-llm-applications"
+    },
+    {
+      "title": "Red Teaming LLM Applications",
+      "description": "Learn how to make safer LLM apps through red teaming. Learn to identify and evaluate vulnerabilities in large language model (LLM) applications.",
+      "level": "Beginner",
+      "url": "https://www.deeplearning.ai/courses/red-teaming-llm-applications",
+      "slug": "red-teaming-llm-applications"
+    },
+    {
+      "title": "JavaScript RAG Web Apps with LlamaIndex",
+      "description": "Build a full-stack web application that uses RAG capabilities to chat with your data. Learn to build a RAG application in JavaScript, using an intelligent agent to answer queries.",
+      "level": "Beginner",
+      "url": "https://www.deeplearning.ai/courses/javascript-rag-web-apps-with-llamaindex",
+      "slug": "javascript-rag-web-apps-with-llamaindex"
+    },
+    {
+      "title": "Efficiently Serving LLMs",
+      "description": "Understand how LLMs predict the next token and how techniques like KV caching can speed up text generation. Write code to serve LLM applications efficiently to multiple users.",
+      "level": "Intermediate",
+      "url": "https://www.deeplearning.ai/courses/efficiently-serving-llms",
+      "slug": "efficiently-serving-llms"
+    },
+    {
+      "title": "Knowledge Graphs for RAG",
+      "description": "Learn how to build and use knowledge graph systems to improve your retrieval augmented generation applications. Use Neo4j's query language Cypher to manage and retrieve data.",
+      "level": "Intermediate",
+      "url": "https://www.deeplearning.ai/courses/knowledge-graphs-rag",
+      "slug": "knowledge-graphs-rag"
+    },
+    {
+      "title": "Open Source Models with Hugging Face",
+      "description": "Learn how to easily build AI applications using open-source models and Hugging Face tools. Find and filter open-source models on Hugging Face Hub.",
+      "level": "Beginner",
+      "url": "https://www.deeplearning.ai/courses/open-source-models-hugging-face",
+      "slug": "open-source-models-hugging-face"
+    },
+    {
+      "title": "Prompt Engineering with Llama 2&3",
+      "description": "Learn best practices for prompting and selecting among Meta Llama 2 & 3 models. Interact with Meta Llama 2 Chat, Code Llama, and Llama Guard models.",
+      "level": "Beginner",
+      "url": "https://www.deeplearning.ai/courses/prompt-engineering-with-llama-2",
+      "slug": "prompt-engineering-with-llama-2"
+    },
+    {
+      "title": "Building Applications with Vector Databases",
+      "description": "Learn to build six applications powered by vector databases, including semantic search, retrieval augmented generation (RAG), and anomaly detection.",
+      "level": "Beginner",
+      "url": "https://www.deeplearning.ai/courses/building-applications-vector-databases",
+      "slug": "building-applications-vector-databases"
+    },
+    {
+      "title": "Automated Testing for LLMOps",
+      "description": "Learn how to create an automated CI pipeline to evaluate your LLM applications on every change, for faster and safer development.",
+      "level": "Intermediate",
+      "url": "https://www.deeplearning.ai/courses/automated-testing-llmops",
+      "slug": "automated-testing-llmops"
+    },
+    {
+      "title": "LLMOps",
+      "description": "Learn LLMOps best practices as you design and automate steps to fine-tune and deploy an LLM for a specific task.",
+      "level": "Beginner",
+      "url": "https://www.deeplearning.ai/courses/llmops",
+      "slug": "llmops"
+    },
+    {
+      "title": "Advanced Retrieval for AI with Chroma",
+      "description": "Learn advanced retrieval techniques to improve the relevancy of retrieved results. Learn to recognize poor query results and use LLMs to improve queries.",
+      "level": "Intermediate",
+      "url": "https://www.deeplearning.ai/courses/advanced-retrieval-for-ai",
+      "slug": "advanced-retrieval-for-ai"
+    },
+    {
+      "title": "Reinforcement Learning From",
+      "description": "Human Feedback Get an introduction to tuning and evaluating LLMs using Reinforcement Learning from Human Feedback (RLHF) and fine-tune the Llama 2 model.",
+      "level": "Intermediate",
+      "url": "https://www.deeplearning.ai/courses/reinforcement-learning-from-human-feedback",
+      "slug": "reinforcement-learning-from-human-feedback"
+    },
+    {
+      "title": "Building and Evaluating Advanced RAG",
+      "description": "Learn advanced RAG retrieval methods like sentence-window and auto-merging that outperform baselines, and evaluate and iterate on your pipeline's performance.",
+      "level": "Beginner",
+      "url": "https://www.deeplearning.ai/courses/building-evaluating-advanced-rag",
+      "slug": "building-evaluating-advanced-rag"
+    },
+    {
+      "title": "Vector Databases: from Embeddings to Applications",
+      "description": "Design and execute real-world applications of vector databases. Build efficient, practical applications, including hybrid and multilingual searches.",
+      "level": "Intermediate",
+      "url": "https://www.deeplearning.ai/courses/vector-databases-embeddings-applications",
+      "slug": "vector-databases-embeddings-applications"
+    },
+    {
+      "title": "Functions, Tools and Agents with LangChain",
+      "description": "Learn about the latest advancements in LLM APIs and use LangChain Expression Language (LCEL) to compose and customize chains and agents.",
+      "level": "Intermediate",
+      "url": "https://www.deeplearning.ai/courses/functions-tools-agents-langchain",
+      "slug": "functions-tools-agents-langchain"
+    },
+    {
+      "title": "Pair Programming with a Large Language Model",
+      "description": "Learn how to prompt an LLM to help improve, debug, understand, and document your code. Use LLMs to simplify your code and enhance productivity.",
+      "level": "Beginner",
+      "url": "https://www.deeplearning.ai/courses/pair-programming-llm",
+      "slug": "pair-programming-llm"
+    },
+    {
+      "title": "Understanding and Applying Text Embeddings",
+      "description": "Learn how to accelerate the application development process with text embeddings for sentence and paragraph meaning.",
+      "level": "Beginner",
+      "url": "https://www.deeplearning.ai/courses/google-cloud-vertex-ai",
+      "slug": "google-cloud-vertex-ai"
+    },
+    {
+      "title": "How Business Thinkers Can Start Building AI Plugins With Semantic Kernel",
+      "description": "Learn Microsoft's open source orchestrator, Semantic Kernel and use LLM building blocks such as memory, connectors, chains and planners in your apps.",
+      "level": "Beginner",
+      "url": "https://www.deeplearning.ai/courses/microsoft-semantic-kernel",
+      "slug": "microsoft-semantic-kernel"
+    },
+    {
+      "title": "Finetuning Large Language",
+      "description": "Models Discover when to use finetuning vs prompting for LLMs. Select suitable open-source models, prepare data, and train & evaluate for your specific domain.",
+      "level": "Intermediate",
+      "url": "https://www.deeplearning.ai/courses/finetuning-large-language-models",
+      "slug": "finetuning-large-language-models"
+    },
+    {
+      "title": "Large Language Models with Semantic Search",
+      "description": "Learn to use LLMs to enhance search and summarize results, using Cohere Rerank and embeddings for dense retrieval.",
+      "level": "Beginner",
+      "url": "https://www.deeplearning.ai/courses/large-language-models-semantic-search",
+      "slug": "large-language-models-semantic-search"
+    },
+    {
+      "title": "Evaluating and Debugging Generative AI",
+      "description": "Learn MLOps tools for managing, versioning, debugging, and experimenting in your ML workflow.",
+      "level": "Intermediate",
+      "url": "https://www.deeplearning.ai/courses/evaluating-debugging-generative-ai",
+      "slug": "evaluating-debugging-generative-ai"
+    },
+    {
+      "title": "Building Generative AI Applications with Gradio",
+      "description": "Create and demo machine learning applications quickly. Share your app with teammates and beta testers on Hugging Face Spaces.",
+      "level": "Beginner",
+      "url": "https://www.deeplearning.ai/courses/huggingface-gradio",
+      "slug": "huggingface-gradio"
+    },
+    {
+      "title": "LangChain Chat with Your Data",
+      "description": "Create a chatbot with LangChain to interface with your private data and documents. Learn from LangChain creator, Harrison Chase.",
+      "level": "Beginner",
+      "url": "https://www.deeplearning.ai/courses/langchain-chat-with-your-data",
+      "slug": "langchain-chat-with-your-data"
+    },
+    {
+      "title": "Building Systems with the ChatGPT API",
+      "description": "Learn to break down complex tasks, automate workflows, chain LLM calls, and get better outputs from LLMs. Evaluate LLM inputs and outputs for safety and relevance.",
+      "level": "Beginner",
+      "url": "https://www.deeplearning.ai/courses/chatgpt-building-system",
+      "slug": "chatgpt-building-system"
+    },
+    {
+      "title": "How Diffusion Models Work",
+      "description": "Learn and build diffusion models from the ground up, understanding each step. Learn about diffusion models in use today and implement algorithms to speed up sampling.",
+      "level": "Intermediate",
+      "url": "https://www.deeplearning.ai/courses/diffusion-models",
+      "slug": "diffusion-models"
+    },
+    {
+      "title": "LangChain for LLM",
+      "description": "Application Development Use the powerful and extensible LangChain framework, using prompts, parsing, memory, chains, question answering, and agents.",
+      "level": "Beginner",
+      "url": "https://www.deeplearning.ai/courses/langchain",
+      "slug": "langchain"
+    },
+    {
+      "title": "ChatGPT Prompt Engineering for Developers",
+      "description": "Learn the fundamentals of prompt engineering for ChatGPT. Learn effective prompting, and how to use LLMs for summarizing, inferring, transforming, and expanding.",
+      "level": "Beginner",
+      "url": "https://www.deeplearning.ai/courses/chatgpt-prompt-eng",
+      "slug": "chatgpt-prompt-eng"
+    },
+    {
+      "title": "Fast Prototyping of",
+      "description": "GenAI Apps with Streamlit Prototype and deploy GenAI apps using an MVP workflow, prompt engineering, and RAG.",
+      "level": "Intermediate",
+      "url": "https://www.deeplearning.ai/courses/fast-prototyping-of-genai-apps-with-streamlit",
+      "slug": "fast-prototyping-of-genai-apps-with-streamlit"
+    },
+    {
+      "title": "Natural Language Processing Specialization",
+      "description": "Design NLP apps that perform question-answering, sentiment analysis, language translation, and summarization.",
+      "level": "Intermediate",
+      "url": "https://www.deeplearning.ai/specializations/natural-language-processing",
+      "slug": "natural-language-processing"
+    },
+    {
+      "title": "AI for Medicine",
+      "description": "Estimate treatment effects from randomized controlled trials data. Interpret diagnostic & prognostic models. Apply NLP to extract info from unstructured medical data.",
+      "level": "Intermediate",
+      "url": "https://www.deeplearning.ai/specializations/ai-for-medicine",
+      "slug": "ai-for-medicine"
+    }
+  ]
+}
