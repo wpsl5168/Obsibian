@@ -1,0 +1,622 @@
+[
+  {
+    "title": "A2A The Agent2Agent Protocol",
+    "slug": "a2a-the-agent2agent-protocol",
+    "type": "courses"
+  },
+  {
+    "title": "Advanced Retrieval For Ai",
+    "slug": "advanced-retrieval-for-ai",
+    "type": "courses"
+  },
+  {
+    "title": "Agent Memory Building Memory Aware Agents",
+    "slug": "agent-memory-building-memory-aware-agents",
+    "type": "courses"
+  },
+  {
+    "title": "Agent Skills With Anthropic",
+    "slug": "agent-skills-with-anthropic",
+    "type": "courses"
+  },
+  {
+    "title": "Agentic Ai",
+    "slug": "agentic-ai",
+    "type": "courses"
+  },
+  {
+    "title": "Agentic Knowledge Graph Construction",
+    "slug": "agentic-knowledge-graph-construction",
+    "type": "courses"
+  },
+  {
+    "title": "Ai Agentic Design Patterns With Autogen",
+    "slug": "ai-agentic-design-patterns-with-autogen",
+    "type": "courses"
+  },
+  {
+    "title": "Ai Agents For Image And Video Generation",
+    "slug": "ai-agents-for-image-and-video-generation",
+    "type": "courses"
+  },
+  {
+    "title": "Ai Agents In Langgraph",
+    "slug": "ai-agents-in-langgraph",
+    "type": "courses"
+  },
+  {
+    "title": "Ai For Everyone",
+    "slug": "ai-for-everyone",
+    "type": "courses"
+  },
+  {
+    "title": "Ai For Good",
+    "slug": "ai-for-good",
+    "type": "specializations"
+  },
+  {
+    "title": "Ai For Medicine",
+    "slug": "ai-for-medicine",
+    "type": "specializations"
+  },
+  {
+    "title": "Ai Prompting For Everyone",
+    "slug": "ai-prompting-for-everyone",
+    "type": "courses"
+  },
+  {
+    "title": "Ai Python For Beginners",
+    "slug": "ai-python-for-beginners",
+    "type": "courses"
+  },
+  {
+    "title": "Attention In Transformers Concepts And Code In Pytorch",
+    "slug": "attention-in-transformers-concepts-and-code-in-pytorch",
+    "type": "courses"
+  },
+  {
+    "title": "Automated Testing Llmops",
+    "slug": "automated-testing-llmops",
+    "type": "courses"
+  },
+  {
+    "title": "Build Ai Apps With Mcp Server Working With Box Files",
+    "slug": "build-ai-apps-with-mcp-server-working-with-box-files",
+    "type": "courses"
+  },
+  {
+    "title": "Build And Train An Llm With Jax",
+    "slug": "build-and-train-an-llm-with-jax",
+    "type": "courses"
+  },
+  {
+    "title": "Build Apps With Windsurfs Ai Coding Agents",
+    "slug": "build-apps-with-windsurfs-ai-coding-agents",
+    "type": "courses"
+  },
+  {
+    "title": "Build Interactive Agents With Generative Ui",
+    "slug": "build-interactive-agents-with-generative-ui",
+    "type": "courses"
+  },
+  {
+    "title": "Build Long Context Ai Apps With Jamba",
+    "slug": "build-long-context-ai-apps-with-jamba",
+    "type": "courses"
+  },
+  {
+    "title": "Build With Andrew",
+    "slug": "build-with-andrew",
+    "type": "courses"
+  },
+  {
+    "title": "Building Agentic Rag With Llamaindex",
+    "slug": "building-agentic-rag-with-llamaindex",
+    "type": "courses"
+  },
+  {
+    "title": "Building Ai Applications With Haystack",
+    "slug": "building-ai-applications-with-haystack",
+    "type": "courses"
+  },
+  {
+    "title": "Building Ai Browser Agents",
+    "slug": "building-ai-browser-agents",
+    "type": "courses"
+  },
+  {
+    "title": "Building Ai Voice Agents For Production",
+    "slug": "building-ai-voice-agents-for-production",
+    "type": "courses"
+  },
+  {
+    "title": "Building An Ai Powered Game",
+    "slug": "building-an-ai-powered-game",
+    "type": "courses"
+  },
+  {
+    "title": "Building And Evaluating Data Agents",
+    "slug": "building-and-evaluating-data-agents",
+    "type": "courses"
+  },
+  {
+    "title": "Building Applications Vector Databases",
+    "slug": "building-applications-vector-databases",
+    "type": "courses"
+  },
+  {
+    "title": "Building Code Agents With Hugging Face Smolagents",
+    "slug": "building-code-agents-with-hugging-face-smolagents",
+    "type": "courses"
+  },
+  {
+    "title": "Building Coding Agents With Tool Execution",
+    "slug": "building-coding-agents-with-tool-execution",
+    "type": "courses"
+  },
+  {
+    "title": "Building Evaluating Advanced Rag",
+    "slug": "building-evaluating-advanced-rag",
+    "type": "courses"
+  },
+  {
+    "title": "Building Live Voice Agents With Googles Adk",
+    "slug": "building-live-voice-agents-with-googles-adk",
+    "type": "courses"
+  },
+  {
+    "title": "Building Multimodal Data Pipelines",
+    "slug": "building-multimodal-data-pipelines",
+    "type": "courses"
+  },
+  {
+    "title": "Building Toward Computer Use With Anthropic",
+    "slug": "building-toward-computer-use-with-anthropic",
+    "type": "courses"
+  },
+  {
+    "title": "Building With Llama 4",
+    "slug": "building-with-llama-4",
+    "type": "courses"
+  },
+  {
+    "title": "Building Your Own Database Agent",
+    "slug": "building-your-own-database-agent",
+    "type": "courses"
+  },
+  {
+    "title": "Carbon Aware Computing For Genai Developers",
+    "slug": "carbon-aware-computing-for-genai-developers",
+    "type": "courses"
+  },
+  {
+    "title": "Chatgpt Building System",
+    "slug": "chatgpt-building-system",
+    "type": "courses"
+  },
+  {
+    "title": "Chatgpt Prompt Eng",
+    "slug": "chatgpt-prompt-eng",
+    "type": "courses"
+  },
+  {
+    "title": "Claude Code A Highly Agentic Coding Assistant",
+    "slug": "claude-code-a-highly-agentic-coding-assistant",
+    "type": "courses"
+  },
+  {
+    "title": "Collaborative Writing And Coding With Openai Canvas",
+    "slug": "collaborative-writing-and-coding-with-openai-canvas",
+    "type": "courses"
+  },
+  {
+    "title": "Data Analytics",
+    "slug": "data-analytics",
+    "type": "specializations"
+  },
+  {
+    "title": "Data Engineering",
+    "slug": "data-engineering",
+    "type": "specializations"
+  },
+  {
+    "title": "Deep Learning",
+    "slug": "deep-learning",
+    "type": "specializations"
+  },
+  {
+    "title": "Design Develop And Deploy Multi Agent Systems With Crewai",
+    "slug": "design-develop-and-deploy-multi-agent-systems-with-crewai",
+    "type": "courses"
+  },
+  {
+    "title": "Diffusion Models",
+    "slug": "diffusion-models",
+    "type": "courses"
+  },
+  {
+    "title": "Document Ai From Ocr To Agentic Doc Extraction",
+    "slug": "document-ai-from-ocr-to-agentic-doc-extraction",
+    "type": "courses"
+  },
+  {
+    "title": "Dspy Build Optimize Agentic Apps",
+    "slug": "dspy-build-optimize-agentic-apps",
+    "type": "courses"
+  },
+  {
+    "title": "Efficient Inference With Sglang Text And Image Generation",
+    "slug": "efficient-inference-with-sglang-text-and-image-generation",
+    "type": "courses"
+  },
+  {
+    "title": "Efficiently Serving Llms",
+    "slug": "efficiently-serving-llms",
+    "type": "courses"
+  },
+  {
+    "title": "Embedding Models From Architecture To Implementation",
+    "slug": "embedding-models-from-architecture-to-implementation",
+    "type": "courses"
+  },
+  {
+    "title": "Evaluating Ai Agents",
+    "slug": "evaluating-ai-agents",
+    "type": "courses"
+  },
+  {
+    "title": "Evaluating Debugging Generative Ai",
+    "slug": "evaluating-debugging-generative-ai",
+    "type": "courses"
+  },
+  {
+    "title": "Event Driven Agentic Document Workflows",
+    "slug": "event-driven-agentic-document-workflows",
+    "type": "courses"
+  },
+  {
+    "title": "Fast And Efficient Llm Inference With Vllm",
+    "slug": "fast-and-efficient-llm-inference-with-vllm",
+    "type": "courses"
+  },
+  {
+    "title": "Fast Prototyping Of Genai Apps With Streamlit",
+    "slug": "fast-prototyping-of-genai-apps-with-streamlit",
+    "type": "courses"
+  },
+  {
+    "title": "Fine Tuning And Reinforcement Learning For Llms Intro To Post Training",
+    "slug": "fine-tuning-and-reinforcement-learning-for-llms-intro-to-post-training",
+    "type": "courses"
+  },
+  {
+    "title": "Finetuning Large Language Models",
+    "slug": "finetuning-large-language-models",
+    "type": "courses"
+  },
+  {
+    "title": "Function Calling And Data Extraction With Llms",
+    "slug": "function-calling-and-data-extraction-with-llms",
+    "type": "courses"
+  },
+  {
+    "title": "Functions Tools Agents Langchain",
+    "slug": "functions-tools-agents-langchain",
+    "type": "courses"
+  },
+  {
+    "title": "Gemini Cli Code And Create With An Open Source Agent",
+    "slug": "gemini-cli-code-and-create-with-an-open-source-agent",
+    "type": "courses"
+  },
+  {
+    "title": "Generative Ai For Everyone",
+    "slug": "generative-ai-for-everyone",
+    "type": "courses"
+  },
+  {
+    "title": "Generative Ai For Software Development",
+    "slug": "generative-ai-for-software-development",
+    "type": "specializations"
+  },
+  {
+    "title": "Generative Ai With Llms",
+    "slug": "generative-ai-with-llms",
+    "type": "courses"
+  },
+  {
+    "title": "Getting Started With Mistral",
+    "slug": "getting-started-with-mistral",
+    "type": "courses"
+  },
+  {
+    "title": "Getting Structured Llm Output",
+    "slug": "getting-structured-llm-output",
+    "type": "courses"
+  },
+  {
+    "title": "Google Cloud Vertex Ai",
+    "slug": "google-cloud-vertex-ai",
+    "type": "courses"
+  },
+  {
+    "title": "Governing Ai Agents",
+    "slug": "governing-ai-agents",
+    "type": "courses"
+  },
+  {
+    "title": "How Transformer Llms Work",
+    "slug": "how-transformer-llms-work",
+    "type": "courses"
+  },
+  {
+    "title": "Huggingface Gradio",
+    "slug": "huggingface-gradio",
+    "type": "courses"
+  },
+  {
+    "title": "Improving Accuracy Of Llm Applications",
+    "slug": "improving-accuracy-of-llm-applications",
+    "type": "courses"
+  },
+  {
+    "title": "Intro To Federated Learning",
+    "slug": "intro-to-federated-learning",
+    "type": "courses"
+  },
+  {
+    "title": "Intro To Federated Learning C2",
+    "slug": "intro-to-federated-learning-c2",
+    "type": "courses"
+  },
+  {
+    "title": "Introducing Multimodal Llama 3 2",
+    "slug": "introducing-multimodal-llama-3-2",
+    "type": "courses"
+  },
+  {
+    "title": "Introduction To On Device Ai",
+    "slug": "introduction-to-on-device-ai",
+    "type": "courses"
+  },
+  {
+    "title": "Javascript Rag Web Apps With Llamaindex",
+    "slug": "javascript-rag-web-apps-with-llamaindex",
+    "type": "courses"
+  },
+  {
+    "title": "Jupyter Ai Coding In Notebooks",
+    "slug": "jupyter-ai-coding-in-notebooks",
+    "type": "courses"
+  },
+  {
+    "title": "Knowledge Graphs For Ai Agent Api Discovery",
+    "slug": "knowledge-graphs-for-ai-agent-api-discovery",
+    "type": "courses"
+  },
+  {
+    "title": "Knowledge Graphs Rag",
+    "slug": "knowledge-graphs-rag",
+    "type": "courses"
+  },
+  {
+    "title": "Langchain",
+    "slug": "langchain",
+    "type": "courses"
+  },
+  {
+    "title": "Langchain Chat With Your Data",
+    "slug": "langchain-chat-with-your-data",
+    "type": "courses"
+  },
+  {
+    "title": "Large Language Models Semantic Search",
+    "slug": "large-language-models-semantic-search",
+    "type": "courses"
+  },
+  {
+    "title": "Large Multimodal Model Prompting With Gemini",
+    "slug": "large-multimodal-model-prompting-with-gemini",
+    "type": "courses"
+  },
+  {
+    "title": "Llmops",
+    "slug": "llmops",
+    "type": "courses"
+  },
+  {
+    "title": "Llms As Operating Systems Agent Memory",
+    "slug": "llms-as-operating-systems-agent-memory",
+    "type": "courses"
+  },
+  {
+    "title": "Long Term Agentic Memory With Langgraph",
+    "slug": "long-term-agentic-memory-with-langgraph",
+    "type": "courses"
+  },
+  {
+    "title": "Machine Learning",
+    "slug": "machine-learning",
+    "type": "specializations"
+  },
+  {
+    "title": "Machine Learning In Production",
+    "slug": "machine-learning-in-production",
+    "type": "courses"
+  },
+  {
+    "title": "Mathematics For Machine Learning And Data Science",
+    "slug": "mathematics-for-machine-learning-and-data-science",
+    "type": "specializations"
+  },
+  {
+    "title": "Mcp Build Rich Context Ai Apps With Anthropic",
+    "slug": "mcp-build-rich-context-ai-apps-with-anthropic",
+    "type": "courses"
+  },
+  {
+    "title": "Microsoft Semantic Kernel",
+    "slug": "microsoft-semantic-kernel",
+    "type": "courses"
+  },
+  {
+    "title": "Multi Ai Agent Systems With Crewai",
+    "slug": "multi-ai-agent-systems-with-crewai",
+    "type": "courses"
+  },
+  {
+    "title": "Multi Vector Image Retrieval",
+    "slug": "multi-vector-image-retrieval",
+    "type": "courses"
+  },
+  {
+    "title": "Natural Language Processing",
+    "slug": "natural-language-processing",
+    "type": "specializations"
+  },
+  {
+    "title": "Nvidia Nat Making Agents Reliable",
+    "slug": "nvidia-nat-making-agents-reliable",
+    "type": "courses"
+  },
+  {
+    "title": "Open Source Models Hugging Face",
+    "slug": "open-source-models-hugging-face",
+    "type": "courses"
+  },
+  {
+    "title": "Orchestrating Workflows For Genai Applications",
+    "slug": "orchestrating-workflows-for-genai-applications",
+    "type": "courses"
+  },
+  {
+    "title": "Pair Programming Llm",
+    "slug": "pair-programming-llm",
+    "type": "courses"
+  },
+  {
+    "title": "Post Training Of Llms",
+    "slug": "post-training-of-llms",
+    "type": "courses"
+  },
+  {
+    "title": "Practical Multi Ai Agents And Advanced Use Cases With Crewai",
+    "slug": "practical-multi-ai-agents-and-advanced-use-cases-with-crewai",
+    "type": "courses"
+  },
+  {
+    "title": "Preprocessing Unstructured Data For Llm Applications",
+    "slug": "preprocessing-unstructured-data-for-llm-applications",
+    "type": "courses"
+  },
+  {
+    "title": "Pretraining Llms",
+    "slug": "pretraining-llms",
+    "type": "courses"
+  },
+  {
+    "title": "Prompt Compression And Query Optimization",
+    "slug": "prompt-compression-and-query-optimization",
+    "type": "courses"
+  },
+  {
+    "title": "Prompt Engineering For Vision Models",
+    "slug": "prompt-engineering-for-vision-models",
+    "type": "courses"
+  },
+  {
+    "title": "Prompt Engineering With Llama 2",
+    "slug": "prompt-engineering-with-llama-2",
+    "type": "courses"
+  },
+  {
+    "title": "Pydantic For Llm Workflows",
+    "slug": "pydantic-for-llm-workflows",
+    "type": "courses"
+  },
+  {
+    "title": "Pytorch For Deep Learning Professional Certificate",
+    "slug": "pytorch-for-deep-learning-professional-certificate",
+    "type": "specializations"
+  },
+  {
+    "title": "Quantization Fundamentals",
+    "slug": "quantization-fundamentals",
+    "type": "courses"
+  },
+  {
+    "title": "Quantization In Depth",
+    "slug": "quantization-in-depth",
+    "type": "courses"
+  },
+  {
+    "title": "Reasoning With O1",
+    "slug": "reasoning-with-o1",
+    "type": "courses"
+  },
+  {
+    "title": "Red Teaming Llm Applications",
+    "slug": "red-teaming-llm-applications",
+    "type": "courses"
+  },
+  {
+    "title": "Reinforcement Fine Tuning Llms Grpo",
+    "slug": "reinforcement-fine-tuning-llms-grpo",
+    "type": "courses"
+  },
+  {
+    "title": "Reinforcement Learning From Human Feedback",
+    "slug": "reinforcement-learning-from-human-feedback",
+    "type": "courses"
+  },
+  {
+    "title": "Retrieval Augmented Generation",
+    "slug": "retrieval-augmented-generation",
+    "type": "courses"
+  },
+  {
+    "title": "Retrieval Optimization From Tokenization To Vector Quantization",
+    "slug": "retrieval-optimization-from-tokenization-to-vector-quantization",
+    "type": "courses"
+  },
+  {
+    "title": "Safe And Reliable Ai Via Guardrails",
+    "slug": "safe-and-reliable-ai-via-guardrails",
+    "type": "courses"
+  },
+  {
+    "title": "Semantic Caching For Ai Agents",
+    "slug": "semantic-caching-for-ai-agents",
+    "type": "courses"
+  },
+  {
+    "title": "Spec Driven Development With Coding Agents",
+    "slug": "spec-driven-development-with-coding-agents",
+    "type": "courses"
+  },
+  {
+    "title": "Tensorflow Developer Professional Certificate",
+    "slug": "tensorflow-developer-professional-certificate",
+    "type": "specializations"
+  },
+  {
+    "title": "Transformers In Practice",
+    "slug": "transformers-in-practice",
+    "type": "courses"
+  },
+  {
+    "title": "Vector Databases Embeddings Applications",
+    "slug": "vector-databases-embeddings-applications",
+    "type": "courses"
+  },
+  {
+    "title": "Vibe Coding 101 With Replit",
+    "slug": "vibe-coding-101-with-replit",
+    "type": "courses"
+  },
+  {
+    "title": "Voice For Ai Agents And Applications",
+    "slug": "voice-for-ai-agents-and-applications",
+    "type": "courses"
+  }
+]

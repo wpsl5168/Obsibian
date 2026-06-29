@@ -1,0 +1,746 @@
+[
+  {
+    "title": "A2A The Agent2Agent Protocol",
+    "slug": "a2a-the-agent2agent-protocol",
+    "type": "courses",
+    "url": "https://www.deeplearning.ai/courses/a2a-the-agent2agent-protocol"
+  },
+  {
+    "title": "Advanced Retrieval For Ai",
+    "slug": "advanced-retrieval-for-ai",
+    "type": "courses",
+    "url": "https://www.deeplearning.ai/courses/advanced-retrieval-for-ai"
+  },
+  {
+    "title": "Agent Memory Building Memory Aware Agents",
+    "slug": "agent-memory-building-memory-aware-agents",
+    "type": "courses",
+    "url": "https://www.deeplearning.ai/courses/agent-memory-building-memory-aware-agents"
+  },
+  {
+    "title": "Agent Skills With Anthropic",
+    "slug": "agent-skills-with-anthropic",
+    "type": "courses",
+    "url": "https://www.deeplearning.ai/courses/agent-skills-with-anthropic"
+  },
+  {
+    "title": "Agentic Ai",
+    "slug": "agentic-ai",
+    "type": "courses",
+    "url": "https://www.deeplearning.ai/courses/agentic-ai"
+  },
+  {
+    "title": "Agentic Knowledge Graph Construction",
+    "slug": "agentic-knowledge-graph-construction",
+    "type": "courses",
+    "url": "https://www.deeplearning.ai/courses/agentic-knowledge-graph-construction"
+  },
+  {
+    "title": "Ai Agentic Design Patterns With Autogen",
+    "slug": "ai-agentic-design-patterns-with-autogen",
+    "type": "courses",
+    "url": "https://www.deeplearning.ai/courses/ai-agentic-design-patterns-with-autogen"
+  },
+  {
+    "title": "Ai Agents For Image And Video Generation",
+    "slug": "ai-agents-for-image-and-video-generation",
+    "type": "courses",
+    "url": "https://www.deeplearning.ai/courses/ai-agents-for-image-and-video-generation"
+  },
+  {
+    "title": "Ai Agents In Langgraph",
+    "slug": "ai-agents-in-langgraph",
+    "type": "courses",
+    "url": "https://www.deeplearning.ai/courses/ai-agents-in-langgraph"
+  },
+  {
+    "title": "Ai For Everyone",
+    "slug": "ai-for-everyone",
+    "type": "courses",
+    "url": "https://www.deeplearning.ai/courses/ai-for-everyone"
+  },
+  {
+    "title": "Ai For Good",
+    "slug": "ai-for-good",
+    "type": "specializations",
+    "url": "https://www.deeplearning.ai/specializations/ai-for-good"
+  },
+  {
+    "title": "Ai For Medicine",
+    "slug": "ai-for-medicine",
+    "type": "specializations",
+    "url": "https://www.deeplearning.ai/specializations/ai-for-medicine"
+  },
+  {
+    "title": "Ai Prompting For Everyone",
+    "slug": "ai-prompting-for-everyone",
+    "type": "courses",
+    "url": "https://www.deeplearning.ai/courses/ai-prompting-for-everyone"
+  },
+  {
+    "title": "Ai Python For Beginners",
+    "slug": "ai-python-for-beginners",
+    "type": "courses",
+    "url": "https://www.deeplearning.ai/courses/ai-python-for-beginners"
+  },
+  {
+    "title": "Attention In Transformers Concepts And Code In Pytorch",
+    "slug": "attention-in-transformers-concepts-and-code-in-pytorch",
+    "type": "courses",
+    "url": "https://www.deeplearning.ai/courses/attention-in-transformers-concepts-and-code-in-pytorch"
+  },
+  {
+    "title": "Automated Testing Llmops",
+    "slug": "automated-testing-llmops",
+    "type": "courses",
+    "url": "https://www.deeplearning.ai/courses/automated-testing-llmops"
+  },
+  {
+    "title": "Build Ai Apps With Mcp Server Working With Box Files",
+    "slug": "build-ai-apps-with-mcp-server-working-with-box-files",
+    "type": "courses",
+    "url": "https://www.deeplearning.ai/courses/build-ai-apps-with-mcp-server-working-with-box-files"
+  },
+  {
+    "title": "Build And Train An Llm With Jax",
+    "slug": "build-and-train-an-llm-with-jax",
+    "type": "courses",
+    "url": "https://www.deeplearning.ai/courses/build-and-train-an-llm-with-jax"
+  },
+  {
+    "title": "Build Apps With Windsurfs Ai Coding Agents",
+    "slug": "build-apps-with-windsurfs-ai-coding-agents",
+    "type": "courses",
+    "url": "https://www.deeplearning.ai/courses/build-apps-with-windsurfs-ai-coding-agents"
+  },
+  {
+    "title": "Build Interactive Agents With Generative Ui",
+    "slug": "build-interactive-agents-with-generative-ui",
+    "type": "courses",
+    "url": "https://www.deeplearning.ai/courses/build-interactive-agents-with-generative-ui"
+  },
+  {
+    "title": "Build Long Context Ai Apps With Jamba",
+    "slug": "build-long-context-ai-apps-with-jamba",
+    "type": "courses",
+    "url": "https://www.deeplearning.ai/courses/build-long-context-ai-apps-with-jamba"
+  },
+  {
+    "title": "Build With Andrew",
+    "slug": "build-with-andrew",
+    "type": "courses",
+    "url": "https://www.deeplearning.ai/courses/build-with-andrew"
+  },
+  {
+    "title": "Building Agentic Rag With Llamaindex",
+    "slug": "building-agentic-rag-with-llamaindex",
+    "type": "courses",
+    "url": "https://www.deeplearning.ai/courses/building-agentic-rag-with-llamaindex"
+  },
+  {
+    "title": "Building Ai Applications With Haystack",
+    "slug": "building-ai-applications-with-haystack",
+    "type": "courses",
+    "url": "https://www.deeplearning.ai/courses/building-ai-applications-with-haystack"
+  },
+  {
+    "title": "Building Ai Browser Agents",
+    "slug": "building-ai-browser-agents",
+    "type": "courses",
+    "url": "https://www.deeplearning.ai/courses/building-ai-browser-agents"
+  },
+  {
+    "title": "Building Ai Voice Agents For Production",
+    "slug": "building-ai-voice-agents-for-production",
+    "type": "courses",
+    "url": "https://www.deeplearning.ai/courses/building-ai-voice-agents-for-production"
+  },
+  {
+    "title": "Building An Ai Powered Game",
+    "slug": "building-an-ai-powered-game",
+    "type": "courses",
+    "url": "https://www.deeplearning.ai/courses/building-an-ai-powered-game"
+  },
+  {
+    "title": "Building And Evaluating Data Agents",
+    "slug": "building-and-evaluating-data-agents",
+    "type": "courses",
+    "url": "https://www.deeplearning.ai/courses/building-and-evaluating-data-agents"
+  },
+  {
+    "title": "Building Applications Vector Databases",
+    "slug": "building-applications-vector-databases",
+    "type": "courses",
+    "url": "https://www.deeplearning.ai/courses/building-applications-vector-databases"
+  },
+  {
+    "title": "Building Code Agents With Hugging Face Smolagents",
+    "slug": "building-code-agents-with-hugging-face-smolagents",
+    "type": "courses",
+    "url": "https://www.deeplearning.ai/courses/building-code-agents-with-hugging-face-smolagents"
+  },
+  {
+    "title": "Building Coding Agents With Tool Execution",
+    "slug": "building-coding-agents-with-tool-execution",
+    "type": "courses",
+    "url": "https://www.deeplearning.ai/courses/building-coding-agents-with-tool-execution"
+  },
+  {
+    "title": "Building Evaluating Advanced Rag",
+    "slug": "building-evaluating-advanced-rag",
+    "type": "courses",
+    "url": "https://www.deeplearning.ai/courses/building-evaluating-advanced-rag"
+  },
+  {
+    "title": "Building Live Voice Agents With Googles Adk",
+    "slug": "building-live-voice-agents-with-googles-adk",
+    "type": "courses",
+    "url": "https://www.deeplearning.ai/courses/building-live-voice-agents-with-googles-adk"
+  },
+  {
+    "title": "Building Multimodal Data Pipelines",
+    "slug": "building-multimodal-data-pipelines",
+    "type": "courses",
+    "url": "https://www.deeplearning.ai/courses/building-multimodal-data-pipelines"
+  },
+  {
+    "title": "Building Toward Computer Use With Anthropic",
+    "slug": "building-toward-computer-use-with-anthropic",
+    "type": "courses",
+    "url": "https://www.deeplearning.ai/courses/building-toward-computer-use-with-anthropic"
+  },
+  {
+    "title": "Building With Llama 4",
+    "slug": "building-with-llama-4",
+    "type": "courses",
+    "url": "https://www.deeplearning.ai/courses/building-with-llama-4"
+  },
+  {
+    "title": "Building Your Own Database Agent",
+    "slug": "building-your-own-database-agent",
+    "type": "courses",
+    "url": "https://www.deeplearning.ai/courses/building-your-own-database-agent"
+  },
+  {
+    "title": "Carbon Aware Computing For Genai Developers",
+    "slug": "carbon-aware-computing-for-genai-developers",
+    "type": "courses",
+    "url": "https://www.deeplearning.ai/courses/carbon-aware-computing-for-genai-developers"
+  },
+  {
+    "title": "Chatgpt Building System",
+    "slug": "chatgpt-building-system",
+    "type": "courses",
+    "url": "https://www.deeplearning.ai/courses/chatgpt-building-system"
+  },
+  {
+    "title": "Chatgpt Prompt Eng",
+    "slug": "chatgpt-prompt-eng",
+    "type": "courses",
+    "url": "https://www.deeplearning.ai/courses/chatgpt-prompt-eng"
+  },
+  {
+    "title": "Claude Code A Highly Agentic Coding Assistant",
+    "slug": "claude-code-a-highly-agentic-coding-assistant",
+    "type": "courses",
+    "url": "https://www.deeplearning.ai/courses/claude-code-a-highly-agentic-coding-assistant"
+  },
+  {
+    "title": "Collaborative Writing And Coding With Openai Canvas",
+    "slug": "collaborative-writing-and-coding-with-openai-canvas",
+    "type": "courses",
+    "url": "https://www.deeplearning.ai/courses/collaborative-writing-and-coding-with-openai-canvas"
+  },
+  {
+    "title": "Data Analytics",
+    "slug": "data-analytics",
+    "type": "specializations",
+    "url": "https://www.deeplearning.ai/specializations/data-analytics"
+  },
+  {
+    "title": "Data Engineering",
+    "slug": "data-engineering",
+    "type": "specializations",
+    "url": "https://www.deeplearning.ai/specializations/data-engineering"
+  },
+  {
+    "title": "Deep Learning",
+    "slug": "deep-learning",
+    "type": "specializations",
+    "url": "https://www.deeplearning.ai/specializations/deep-learning"
+  },
+  {
+    "title": "Design Develop And Deploy Multi Agent Systems With Crewai",
+    "slug": "design-develop-and-deploy-multi-agent-systems-with-crewai",
+    "type": "courses",
+    "url": "https://www.deeplearning.ai/courses/design-develop-and-deploy-multi-agent-systems-with-crewai"
+  },
+  {
+    "title": "Diffusion Models",
+    "slug": "diffusion-models",
+    "type": "courses",
+    "url": "https://www.deeplearning.ai/courses/diffusion-models"
+  },
+  {
+    "title": "Document Ai From Ocr To Agentic Doc Extraction",
+    "slug": "document-ai-from-ocr-to-agentic-doc-extraction",
+    "type": "courses",
+    "url": "https://www.deeplearning.ai/courses/document-ai-from-ocr-to-agentic-doc-extraction"
+  },
+  {
+    "title": "Dspy Build Optimize Agentic Apps",
+    "slug": "dspy-build-optimize-agentic-apps",
+    "type": "courses",
+    "url": "https://www.deeplearning.ai/courses/dspy-build-optimize-agentic-apps"
+  },
+  {
+    "title": "Efficient Inference With Sglang Text And Image Generation",
+    "slug": "efficient-inference-with-sglang-text-and-image-generation",
+    "type": "courses",
+    "url": "https://www.deeplearning.ai/courses/efficient-inference-with-sglang-text-and-image-generation"
+  },
+  {
+    "title": "Efficiently Serving Llms",
+    "slug": "efficiently-serving-llms",
+    "type": "courses",
+    "url": "https://www.deeplearning.ai/courses/efficiently-serving-llms"
+  },
+  {
+    "title": "Embedding Models From Architecture To Implementation",
+    "slug": "embedding-models-from-architecture-to-implementation",
+    "type": "courses",
+    "url": "https://www.deeplearning.ai/courses/embedding-models-from-architecture-to-implementation"
+  },
+  {
+    "title": "Evaluating Ai Agents",
+    "slug": "evaluating-ai-agents",
+    "type": "courses",
+    "url": "https://www.deeplearning.ai/courses/evaluating-ai-agents"
+  },
+  {
+    "title": "Evaluating Debugging Generative Ai",
+    "slug": "evaluating-debugging-generative-ai",
+    "type": "courses",
+    "url": "https://www.deeplearning.ai/courses/evaluating-debugging-generative-ai"
+  },
+  {
+    "title": "Event Driven Agentic Document Workflows",
+    "slug": "event-driven-agentic-document-workflows",
+    "type": "courses",
+    "url": "https://www.deeplearning.ai/courses/event-driven-agentic-document-workflows"
+  },
+  {
+    "title": "Fast And Efficient Llm Inference With Vllm",
+    "slug": "fast-and-efficient-llm-inference-with-vllm",
+    "type": "courses",
+    "url": "https://www.deeplearning.ai/courses/fast-and-efficient-llm-inference-with-vllm"
+  },
+  {
+    "title": "Fast Prototyping Of Genai Apps With Streamlit",
+    "slug": "fast-prototyping-of-genai-apps-with-streamlit",
+    "type": "courses",
+    "url": "https://www.deeplearning.ai/courses/fast-prototyping-of-genai-apps-with-streamlit"
+  },
+  {
+    "title": "Fine Tuning And Reinforcement Learning For Llms Intro To Post Training",
+    "slug": "fine-tuning-and-reinforcement-learning-for-llms-intro-to-post-training",
+    "type": "courses",
+    "url": "https://www.deeplearning.ai/courses/fine-tuning-and-reinforcement-learning-for-llms-intro-to-post-training"
+  },
+  {
+    "title": "Finetuning Large Language Models",
+    "slug": "finetuning-large-language-models",
+    "type": "courses",
+    "url": "https://www.deeplearning.ai/courses/finetuning-large-language-models"
+  },
+  {
+    "title": "Function Calling And Data Extraction With Llms",
+    "slug": "function-calling-and-data-extraction-with-llms",
+    "type": "courses",
+    "url": "https://www.deeplearning.ai/courses/function-calling-and-data-extraction-with-llms"
+  },
+  {
+    "title": "Functions Tools Agents Langchain",
+    "slug": "functions-tools-agents-langchain",
+    "type": "courses",
+    "url": "https://www.deeplearning.ai/courses/functions-tools-agents-langchain"
+  },
+  {
+    "title": "Gemini Cli Code And Create With An Open Source Agent",
+    "slug": "gemini-cli-code-and-create-with-an-open-source-agent",
+    "type": "courses",
+    "url": "https://www.deeplearning.ai/courses/gemini-cli-code-and-create-with-an-open-source-agent"
+  },
+  {
+    "title": "Generative Ai For Everyone",
+    "slug": "generative-ai-for-everyone",
+    "type": "courses",
+    "url": "https://www.deeplearning.ai/courses/generative-ai-for-everyone"
+  },
+  {
+    "title": "Generative Ai For Software Development",
+    "slug": "generative-ai-for-software-development",
+    "type": "specializations",
+    "url": "https://www.deeplearning.ai/specializations/generative-ai-for-software-development"
+  },
+  {
+    "title": "Generative Ai With Llms",
+    "slug": "generative-ai-with-llms",
+    "type": "courses",
+    "url": "https://www.deeplearning.ai/courses/generative-ai-with-llms"
+  },
+  {
+    "title": "Getting Started With Mistral",
+    "slug": "getting-started-with-mistral",
+    "type": "courses",
+    "url": "https://www.deeplearning.ai/courses/getting-started-with-mistral"
+  },
+  {
+    "title": "Getting Structured Llm Output",
+    "slug": "getting-structured-llm-output",
+    "type": "courses",
+    "url": "https://www.deeplearning.ai/courses/getting-structured-llm-output"
+  },
+  {
+    "title": "Google Cloud Vertex Ai",
+    "slug": "google-cloud-vertex-ai",
+    "type": "courses",
+    "url": "https://www.deeplearning.ai/courses/google-cloud-vertex-ai"
+  },
+  {
+    "title": "Governing Ai Agents",
+    "slug": "governing-ai-agents",
+    "type": "courses",
+    "url": "https://www.deeplearning.ai/courses/governing-ai-agents"
+  },
+  {
+    "title": "How Transformer Llms Work",
+    "slug": "how-transformer-llms-work",
+    "type": "courses",
+    "url": "https://www.deeplearning.ai/courses/how-transformer-llms-work"
+  },
+  {
+    "title": "Huggingface Gradio",
+    "slug": "huggingface-gradio",
+    "type": "courses",
+    "url": "https://www.deeplearning.ai/courses/huggingface-gradio"
+  },
+  {
+    "title": "Improving Accuracy Of Llm Applications",
+    "slug": "improving-accuracy-of-llm-applications",
+    "type": "courses",
+    "url": "https://www.deeplearning.ai/courses/improving-accuracy-of-llm-applications"
+  },
+  {
+    "title": "Intro To Federated Learning",
+    "slug": "intro-to-federated-learning",
+    "type": "courses",
+    "url": "https://www.deeplearning.ai/courses/intro-to-federated-learning"
+  },
+  {
+    "title": "Intro To Federated Learning C2",
+    "slug": "intro-to-federated-learning-c2",
+    "type": "courses",
+    "url": "https://www.deeplearning.ai/courses/intro-to-federated-learning-c2"
+  },
+  {
+    "title": "Introducing Multimodal Llama 3 2",
+    "slug": "introducing-multimodal-llama-3-2",
+    "type": "courses",
+    "url": "https://www.deeplearning.ai/courses/introducing-multimodal-llama-3-2"
+  },
+  {
+    "title": "Introduction To On Device Ai",
+    "slug": "introduction-to-on-device-ai",
+    "type": "courses",
+    "url": "https://www.deeplearning.ai/courses/introduction-to-on-device-ai"
+  },
+  {
+    "title": "Javascript Rag Web Apps With Llamaindex",
+    "slug": "javascript-rag-web-apps-with-llamaindex",
+    "type": "courses",
+    "url": "https://www.deeplearning.ai/courses/javascript-rag-web-apps-with-llamaindex"
+  },
+  {
+    "title": "Jupyter Ai Coding In Notebooks",
+    "slug": "jupyter-ai-coding-in-notebooks",
+    "type": "courses",
+    "url": "https://www.deeplearning.ai/courses/jupyter-ai-coding-in-notebooks"
+  },
+  {
+    "title": "Knowledge Graphs For Ai Agent Api Discovery",
+    "slug": "knowledge-graphs-for-ai-agent-api-discovery",
+    "type": "courses",
+    "url": "https://www.deeplearning.ai/courses/knowledge-graphs-for-ai-agent-api-discovery"
+  },
+  {
+    "title": "Knowledge Graphs Rag",
+    "slug": "knowledge-graphs-rag",
+    "type": "courses",
+    "url": "https://www.deeplearning.ai/courses/knowledge-graphs-rag"
+  },
+  {
+    "title": "Langchain",
+    "slug": "langchain",
+    "type": "courses",
+    "url": "https://www.deeplearning.ai/courses/langchain"
+  },
+  {
+    "title": "Langchain Chat With Your Data",
+    "slug": "langchain-chat-with-your-data",
+    "type": "courses",
+    "url": "https://www.deeplearning.ai/courses/langchain-chat-with-your-data"
+  },
+  {
+    "title": "Large Language Models Semantic Search",
+    "slug": "large-language-models-semantic-search",
+    "type": "courses",
+    "url": "https://www.deeplearning.ai/courses/large-language-models-semantic-search"
+  },
+  {
+    "title": "Large Multimodal Model Prompting With Gemini",
+    "slug": "large-multimodal-model-prompting-with-gemini",
+    "type": "courses",
+    "url": "https://www.deeplearning.ai/courses/large-multimodal-model-prompting-with-gemini"
+  },
+  {
+    "title": "Llmops",
+    "slug": "llmops",
+    "type": "courses",
+    "url": "https://www.deeplearning.ai/courses/llmops"
+  },
+  {
+    "title": "Llms As Operating Systems Agent Memory",
+    "slug": "llms-as-operating-systems-agent-memory",
+    "type": "courses",
+    "url": "https://www.deeplearning.ai/courses/llms-as-operating-systems-agent-memory"
+  },
+  {
+    "title": "Long Term Agentic Memory With Langgraph",
+    "slug": "long-term-agentic-memory-with-langgraph",
+    "type": "courses",
+    "url": "https://www.deeplearning.ai/courses/long-term-agentic-memory-with-langgraph"
+  },
+  {
+    "title": "Machine Learning",
+    "slug": "machine-learning",
+    "type": "specializations",
+    "url": "https://www.deeplearning.ai/specializations/machine-learning"
+  },
+  {
+    "title": "Machine Learning In Production",
+    "slug": "machine-learning-in-production",
+    "type": "courses",
+    "url": "https://www.deeplearning.ai/courses/machine-learning-in-production"
+  },
+  {
+    "title": "Mathematics For Machine Learning And Data Science",
+    "slug": "mathematics-for-machine-learning-and-data-science",
+    "type": "specializations",
+    "url": "https://www.deeplearning.ai/specializations/mathematics-for-machine-learning-and-data-science"
+  },
+  {
+    "title": "Mcp Build Rich Context Ai Apps With Anthropic",
+    "slug": "mcp-build-rich-context-ai-apps-with-anthropic",
+    "type": "courses",
+    "url": "https://www.deeplearning.ai/courses/mcp-build-rich-context-ai-apps-with-anthropic"
+  },
+  {
+    "title": "Microsoft Semantic Kernel",
+    "slug": "microsoft-semantic-kernel",
+    "type": "courses",
+    "url": "https://www.deeplearning.ai/courses/microsoft-semantic-kernel"
+  },
+  {
+    "title": "Multi Ai Agent Systems With Crewai",
+    "slug": "multi-ai-agent-systems-with-crewai",
+    "type": "courses",
+    "url": "https://www.deeplearning.ai/courses/multi-ai-agent-systems-with-crewai"
+  },
+  {
+    "title": "Multi Vector Image Retrieval",
+    "slug": "multi-vector-image-retrieval",
+    "type": "courses",
+    "url": "https://www.deeplearning.ai/courses/multi-vector-image-retrieval"
+  },
+  {
+    "title": "Natural Language Processing",
+    "slug": "natural-language-processing",
+    "type": "specializations",
+    "url": "https://www.deeplearning.ai/specializations/natural-language-processing"
+  },
+  {
+    "title": "Nvidia Nat Making Agents Reliable",
+    "slug": "nvidia-nat-making-agents-reliable",
+    "type": "courses",
+    "url": "https://www.deeplearning.ai/courses/nvidia-nat-making-agents-reliable"
+  },
+  {
+    "title": "Open Source Models Hugging Face",
+    "slug": "open-source-models-hugging-face",
+    "type": "courses",
+    "url": "https://www.deeplearning.ai/courses/open-source-models-hugging-face"
+  },
+  {
+    "title": "Orchestrating Workflows For Genai Applications",
+    "slug": "orchestrating-workflows-for-genai-applications",
+    "type": "courses",
+    "url": "https://www.deeplearning.ai/courses/orchestrating-workflows-for-genai-applications"
+  },
+  {
+    "title": "Pair Programming Llm",
+    "slug": "pair-programming-llm",
+    "type": "courses",
+    "url": "https://www.deeplearning.ai/courses/pair-programming-llm"
+  },
+  {
+    "title": "Post Training Of Llms",
+    "slug": "post-training-of-llms",
+    "type": "courses",
+    "url": "https://www.deeplearning.ai/courses/post-training-of-llms"
+  },
+  {
+    "title": "Practical Multi Ai Agents And Advanced Use Cases With Crewai",
+    "slug": "practical-multi-ai-agents-and-advanced-use-cases-with-crewai",
+    "type": "courses",
+    "url": "https://www.deeplearning.ai/courses/practical-multi-ai-agents-and-advanced-use-cases-with-crewai"
+  },
+  {
+    "title": "Preprocessing Unstructured Data For Llm Applications",
+    "slug": "preprocessing-unstructured-data-for-llm-applications",
+    "type": "courses",
+    "url": "https://www.deeplearning.ai/courses/preprocessing-unstructured-data-for-llm-applications"
+  },
+  {
+    "title": "Pretraining Llms",
+    "slug": "pretraining-llms",
+    "type": "courses",
+    "url": "https://www.deeplearning.ai/courses/pretraining-llms"
+  },
+  {
+    "title": "Prompt Compression And Query Optimization",
+    "slug": "prompt-compression-and-query-optimization",
+    "type": "courses",
+    "url": "https://www.deeplearning.ai/courses/prompt-compression-and-query-optimization"
+  },
+  {
+    "title": "Prompt Engineering For Vision Models",
+    "slug": "prompt-engineering-for-vision-models",
+    "type": "courses",
+    "url": "https://www.deeplearning.ai/courses/prompt-engineering-for-vision-models"
+  },
+  {
+    "title": "Prompt Engineering With Llama 2",
+    "slug": "prompt-engineering-with-llama-2",
+    "type": "courses",
+    "url": "https://www.deeplearning.ai/courses/prompt-engineering-with-llama-2"
+  },
+  {
+    "title": "Pydantic For Llm Workflows",
+    "slug": "pydantic-for-llm-workflows",
+    "type": "courses",
+    "url": "https://www.deeplearning.ai/courses/pydantic-for-llm-workflows"
+  },
+  {
+    "title": "Pytorch For Deep Learning Professional Certificate",
+    "slug": "pytorch-for-deep-learning-professional-certificate",
+    "type": "specializations",
+    "url": "https://www.deeplearning.ai/specializations/pytorch-for-deep-learning-professional-certificate"
+  },
+  {
+    "title": "Quantization Fundamentals",
+    "slug": "quantization-fundamentals",
+    "type": "courses",
+    "url": "https://www.deeplearning.ai/courses/quantization-fundamentals"
+  },
+  {
+    "title": "Quantization In Depth",
+    "slug": "quantization-in-depth",
+    "type": "courses",
+    "url": "https://www.deeplearning.ai/courses/quantization-in-depth"
+  },
+  {
+    "title": "Reasoning With O1",
+    "slug": "reasoning-with-o1",
+    "type": "courses",
+    "url": "https://www.deeplearning.ai/courses/reasoning-with-o1"
+  },
+  {
+    "title": "Red Teaming Llm Applications",
+    "slug": "red-teaming-llm-applications",
+    "type": "courses",
+    "url": "https://www.deeplearning.ai/courses/red-teaming-llm-applications"
+  },
+  {
+    "title": "Reinforcement Fine Tuning Llms Grpo",
+    "slug": "reinforcement-fine-tuning-llms-grpo",
+    "type": "courses",
+    "url": "https://www.deeplearning.ai/courses/reinforcement-fine-tuning-llms-grpo"
+  },
+  {
+    "title": "Reinforcement Learning From Human Feedback",
+    "slug": "reinforcement-learning-from-human-feedback",
+    "type": "courses",
+    "url": "https://www.deeplearning.ai/courses/reinforcement-learning-from-human-feedback"
+  },
+  {
+    "title": "Retrieval Augmented Generation",
+    "slug": "retrieval-augmented-generation",
+    "type": "courses",
+    "url": "https://www.deeplearning.ai/courses/retrieval-augmented-generation"
+  },
+  {
+    "title": "Retrieval Optimization From Tokenization To Vector Quantization",
+    "slug": "retrieval-optimization-from-tokenization-to-vector-quantization",
+    "type": "courses",
+    "url": "https://www.deeplearning.ai/courses/retrieval-optimization-from-tokenization-to-vector-quantization"
+  },
+  {
+    "title": "Safe And Reliable Ai Via Guardrails",
+    "slug": "safe-and-reliable-ai-via-guardrails",
+    "type": "courses",
+    "url": "https://www.deeplearning.ai/courses/safe-and-reliable-ai-via-guardrails"
+  },
+  {
+    "title": "Semantic Caching For Ai Agents",
+    "slug": "semantic-caching-for-ai-agents",
+    "type": "courses",
+    "url": "https://www.deeplearning.ai/courses/semantic-caching-for-ai-agents"
+  },
+  {
+    "title": "Spec Driven Development With Coding Agents",
+    "slug": "spec-driven-development-with-coding-agents",
+    "type": "courses",
+    "url": "https://www.deeplearning.ai/courses/spec-driven-development-with-coding-agents"
+  },
+  {
+    "title": "Tensorflow Developer Professional Certificate",
+    "slug": "tensorflow-developer-professional-certificate",
+    "type": "specializations",
+    "url": "https://www.deeplearning.ai/specializations/tensorflow-developer-professional-certificate"
+  },
+  {
+    "title": "Transformers In Practice",
+    "slug": "transformers-in-practice",
+    "type": "courses",
+    "url": "https://www.deeplearning.ai/courses/transformers-in-practice"
+  },
+  {
+    "title": "Vector Databases Embeddings Applications",
+    "slug": "vector-databases-embeddings-applications",
+    "type": "courses",
+    "url": "https://www.deeplearning.ai/courses/vector-databases-embeddings-applications"
+  },
+  {
+    "title": "Vibe Coding 101 With Replit",
+    "slug": "vibe-coding-101-with-replit",
+    "type": "courses",
+    "url": "https://www.deeplearning.ai/courses/vibe-coding-101-with-replit"
+  },
+  {
+    "title": "Voice For Ai Agents And Applications",
+    "slug": "voice-for-ai-agents-and-applications",
+    "type": "courses",
+    "url": "https://www.deeplearning.ai/courses/voice-for-ai-agents-and-applications"
+  }
+]
