@@ -71,6 +71,8 @@ sources: [可选，源材料路径或URL]
 - `#multimodal` — 多模态能力
 - `#evaluation` — 评测、Evals、可观测性
 - `#security` — 安全护栏、防注入
+- `#mcp` — Model Context Protocol、Server生态、上下文协议
+- `#sdk` — SDK开发、工具库封装
 
 ### 工程实践 (practice)
 - `#vibe-coding` — Claude Code、Codex等终端Agent实战
