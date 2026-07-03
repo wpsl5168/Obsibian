@@ -47,6 +47,52 @@
 
 **推荐路径**:#42/#21(PartsTray 真bug)+ #37/#28(pages a11y)= 4 条真价值,rebase main 后逐条合;#20/#29/#19 与已合内容重叠,建议 close;#5 单独评估。
 
+---
+
+## 二次收尾(2026-07-03 续,老王「持续推荐推进」授权)
+
+延续方案 A:PR 都 DIRTY(基于旧 main,行号已漂),不 rebase,改为**读意图→当前 main 等价 apply→守卫→close**。
+
+### 等价 apply(main 32d838b2)
+| 来源 PR | apply 内容 | 备注 |
+|---|---|---|
+| #42 | PartsTray `scrollbarWidth: 'auto'→'none'` | main 现状是 auto,真 bug,已修 |
+| #37 | model/[id]: 关闭钮 w-6→w-11、上下步 w-9→w-11(触控44px红线)、返回主页 min-h-11 | aria 部分 main 早已合,只补触控尺寸 |
+| #28 | index: AI工坊 button type/aria-label、搜索框 type=search、难度条内联三元→IIFE(等价健壮) | 搜索框 aria-label 早已合;KnowledgePreviewPanel a11y 早已在 main |
+| **bug类** | model/[id] 的 `border-3`→`border-2` 共 **6 处**(Tailwind 无此刻度,渲染失效) | #37 原 diff 只改 2 处,顺手修完整 bug 类 |
+
+### 已在 main、直接 close(无需 apply)
+- #21:PartsTray border-3→border-2 + 删冗余 font-bold — main 第56行早已是正确态
+
+### 守卫(合并前)
+- lint ✔ No ESLint warnings or errors
+- build ✓ Compiled successfully, exit 0, **无 WASM fallback**(native swc 生效)
+- 未碰 3D,纯 CSS/a11y,无需 Visual Check
+
+### 落地
+- commit `32d838b2`(3 files, +34/-14)→ push origin/main(远程 fetch 二次确认)
+
+### close 处置(7 条,带精确 comment)
+- 已 apply:#42 #37 #28
+- 已在 main:#21
+- 重叠/被覆盖:#20(触控被覆盖)、#29(utils 已进 main + pages 被覆盖 + 死代码)、#19(core 已进 main + sandbox 重叠 + 死代码 BrickScene)
+
+### 队列终态
+**19 → 1 OPEN**(今天累计 close 18 条)。**唯一剩 #5**。
+
+### #5 首页像素级复刻 — 留待老王拍板(不替合)
+- 作者 `app/copilot-swe-agent`(非 Dream B),2026-04-27 创建已 2+ 月
+- +674/-105,**整体重写 pages/index.js**(内联 9 个 SVG 图标组件 + 全新 header/hero/LegoBar 布局 + BrickPatternSvg 背景)
+- **触老王铁律**:「测试页先调满意→再迁移主页,禁未确认就改正式页」+「HermesPet 改码规矩同款」
+- 且与本次刚合的 index.js(button/search/难度条)**全面冲突**,UNKNOWN
+- **建议**:老王先本地起 dev 看 #5 视觉效果,满意再决定"整体替换 index.js"还是"提取局部元素";在此之前不合。要不要我起本地 dev 截图给你看?
+
+### 本次二段总结
+- 又清 7 条,队列 19→1,只剩需你亲自看效果的 #5
+- **关键方法**:DIRTY PR 不 rebase(会带回已合重复改动),改为 main 等价 apply;apply 前必逐处核 main 现状(发现 #21/aria/KnowledgePreviewPanel 多处早已合,避免重复劳动)
+- 顺手修完 border-3 bug 类(6处),符合「修整个 bug 类」原则
+
+
 ## 本地清理
 - 删整合分支 `dreamB/consolidated-20260702`(已并入 main)
 - 删 11 条已 close PR 对应本地分支
