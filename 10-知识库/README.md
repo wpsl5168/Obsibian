@@ -51,7 +51,7 @@ Obsidian: 点击任意文章的tag(如 #agent) → 显示所有相关页
 看目录树: AI模型与Agent/ 下1.x-6.x编号系列
 
 # 4. 检查某个链接指向哪里
-Obsidian: Ctrl+点击 [[链接]] → 跳转目标页
+Obsidian: Ctrl+点击链接 → 跳转目标页
 
 # 5. 看某个概念的引用关系
 Obsidian: 右侧面板 → Graph View → 显示链接网络
