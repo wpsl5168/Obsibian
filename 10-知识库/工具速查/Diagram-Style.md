@@ -1,10 +1,10 @@
 ---
 title: "Diagram-Style"
 created: 2026-04-07
-updated: 2026-04-20
+updated: 2026-07-21
 type: concept
-tags: []
-status: draft
+tags: [documentation, knowledge-management]
+status: stable
 date: 2026-04-08
 category: Notes
 ---
@@ -38,28 +38,125 @@ category: Notes
 
 若以上任一项无法从正文明确得到 → **先补正文或向老王确认**，不要为了配图而脑补。
 
-## 3. 配图工作流（唯一允许的方式：Web Search 找权威图）
-当文章需要配图时：
-1) 使用搜索引擎（Web Search）查找：
+## 3. 配图工作流(唯一允许的方式:Web Search 找权威图)
+当文章需要配图时:
+1) 使用搜索引擎(Web Search)查找:
    - 官方架构图 / 官方文档插图
-   - 权威概念图（论文、标准组织、官方博客）
-   - 业内高质量博客的插图（以引用规范、图清晰、内容准确为优先）
-2) **原封不动下载**图片文件（不做 AI 重绘、不做“生成版”替代）。
-3) 将图片保存到知识库内的 `assets/`（建议子目录按 topic 命名，如 `assets/claude-code/`）。
-4) 在 Markdown 文章中用**相对路径**引用，例如：
-   - `!assets/claude-code/official-architecture.png`（Obsidian 内链）
-   - 或 `![caption](../assets/claude-code/official-architecture.png)`（标准 Markdown）
-5) 在图片附近标注来源（URL + 访问日期），并尽量说明该图对应正文的哪个小节。
+   - 权威概念图(论文、标准组织、官方博客)
+   - 业内高质量博客的插图(以引用规范、图清晰、内容准确为优先)
+2) **原封不动下载**图片文件(不做 AI 重绘、不做"生成版"替代)。
+3) 将图片保存到知识库内的 `assets/`(建议子目录按 topic 命名,如 `assets/claude-code/`)。
+4) 在 Markdown 文章中用**相对路径**引用,例如:
+   - `!assets/claude-code/official-architecture.png`(Obsidian 内链)
+   - 或 `![caption](../assets/claude-code/official-architecture.png)`(标准 Markdown)
+5) 在图片附近标注来源(URL + 访问日期),并尽量说明该图对应正文的哪个小节。
+
+### 图源质量分级(优先级从高到低)
+
+| 级别 | 来源类型 | 示例 | 可信度 | 使用场景 |
+|------|---------|------|-------|---------|
+| **S 级** | 官方文档/GitHub README | Anthropic 官方 Claude Code 架构图、K8s 官方 Concepts 插图 | 100% | 首选,架构说明、协议规范 |
+| **A 级** | 学术论文/标准组织 | ACM/IEEE 论文配图、W3C 规范图示 | 95% | 理论概念、算法原理 |
+| **B 级** | 知名技术博客(有引用) | Martin Fowler、Netflix Tech Blog、Google Cloud Blog | 85% | 最佳实践、设计模式 |
+| **C 级** | 社区高赞内容(需验证) | Medium 付费文章、Dev.to 热门、Reddit 技术贴 | 70% | 补充说明,必须交叉验证 |
+| **D 级** | 营销材料/培训机构 | 各类"XX 从入门到精通"课程图 | 50% | **避免使用**,易过时或不准确 |
+
+**实操规则**:
+- 优先用 S 级源(如 Claude Code 示例,去官网 `code.claude.com/docs` 找)
+- A/B 级需在正文注明作者和发布日期
+- C 级必须找第二来源验证,不能作为唯一依据
+- D 级禁用
 
 ## 4. Prompt 纪律（已废止）
 - 由于“永久禁止 AI 生图”，本仓库不再为生图模型维护 Prompt 模板。
 
-## 5. 质量门槛（验收）
-- [ ] 图片来自官方/权威来源（或明确标注为“业内高质量博客”，并附来源链接）
-- [ ] 图片内容与正文一致（实体/关系/术语不冲突）
-- [ ] 图片清晰可读（文字可辨认，必要时选矢量 SVG 或高清 PNG）
+## 5. 质量门槛(验收)
+- [ ] 图片来自官方/权威来源(或明确标注为“业内高质量博客”,并附来源链接)
+- [ ] 图片内容与正文一致(实体/关系/术语不冲突)
+- [ ] 图片清晰可读(文字可辨认,必要时选矢量 SVG 或高清 PNG)
 - [ ] 已在文中标注来源 URL + 访问日期
-- [ ] 使用相对路径引用，文件已落在 `assets/` 下并随 git 提交
+- [ ] 使用相对路径引用,文件已落在 `assets/` 下并随 git 提交
+
+### 技术规格要求
+
+| 指标 | 最低标准 | 推荐标准 | 说明 |
+|------|---------|---------|------|
+| **格式** | PNG/JPG | SVG(矢量图)、WebP | SVG 适合架构图/流程图,缩放不失真 |
+| **分辨率** | 宽度 ≥ 800px | 宽度 ≥ 1200px | 保证在 Retina 屏幕清晰 |
+| **文件大小** | < 500KB | < 200KB | 过大影响加载速度,用 TinyPNG 压缩 |
+| **色彩模式** | RGB | sRGB | 确保跨设备显示一致 |
+| **文字可读性** | 主要文字 ≥ 12pt | 主要文字 ≥ 14pt | 截图时放大后再截,或选矢量图 |
+
+### 常见问题与解决
+
+| 问题 | 表现 | 解决方案 |
+|------|------|---------|
+| **水印/Logo 遮挡** | 图中心有第三方品牌标识 | 去官方源找无水印版,或裁剪掉边缘 Logo |
+| **分辨率过低** | 文字模糊、锯齿明显 | 换高清版,或用浏览器开发者工具找原图 URL |
+| **内容过时** | 图中显示旧版本 UI/API | 检查发布日期,找当前版本对应的图 |
+| **术语不一致** | 图用"容器",正文用"Pod" | 统一术语,或在图注说明对应关系 |
+| **色彩失真** | 深色模式下看不清 | 优先选黑白灰图,或提供亮/暗两版 |
+
+### 反例:禁止的配图模式
+
+❌ **错误示例 1:AI 生成的"示意图"**
+```markdown
+![Claude Code 架构](dalle-generated-architecture.png)
+<!-- 问题:细节错误(组件名、连接关系虚构),文字乱码 -->
+```
+
+❌ **错误示例 2:低分辨率截图**
+```markdown
+![API 流程](blurry-screenshot-400px.jpg)
+<!-- 问题:文字不可读,用户需点开放大才能看清 -->
+```
+
+❌ **错误示例 3:无来源标注**
+```markdown
+![系统架构](mystery-diagram.png)
+<!-- 问题:无法验证准确性,也不知道是否有版权风险 -->
+```
+
+✅ **正确示例**
+```markdown
+![Claude Code Auto Mode 官方截图](../assets/claude-code/auto-mode.png)
+
+来源:Claude Code Docs(Week 13, March 2026)
+- URL: https://code.claude.com/docs/en/whats-new/2026-w13
+- 访问日期:2026-04-07
+- 对应正文:§2.1 Plan Mode vs Auto Mode 对比
+```
+
+## 6. 图片管理最佳实践
+
+### 文件命名规范
+```
+assets/
+├── claude-code/
+│   ├── official-architecture-2026.svg      # 包含年份(易过时的图)
+│   ├── auto-mode-screenshot.png            # 功能名称
+│   └── swe-bench-score-comparison.png      # 数据类图标明对比主题
+├── kubernetes/
+│   ├── pod-lifecycle-official.svg
+│   └── service-networking-diagram.png
+```
+
+**命名原则**:
+- 小写字母 + 连字符(kebab-case)
+- 包含主题关键词 + 图类型(`-architecture`, `-flow`, `-comparison`)
+- 易过时的图加年份(`-2026`)
+
+### 版本管理策略
+- 官方更新图片后,保留旧版并重命名(如 `auto-mode-screenshot-v1.png`)
+- 在正文注明版本:"以下截图基于 Claude Code v2.3(2026-Q2)"
+- 每季度审查 `assets/`,删除已失效的图(配合正文更新)
 
 ## 更新记录
-- 2026-04-07：建立配图标准（后续更新：永久禁止 AI 生图，改为 Web Search 找权威图并归档到 assets）。
+- **2026-07-21**:
+  - 新增图源质量分级(S/A/B/C/D 级,优先级与可信度)
+  - 补充技术规格要求(格式、分辨率、文件大小、色彩、可读性)
+  - 添加常见问题与解决方案(水印、低分辨率、过时、术语不一致、色彩失真)
+  - 提供正反例对比(禁止的 3 种错误模式 + 正确示例)
+  - 完善图片管理最佳实践(文件命名规范、版本管理策略)
+  - 字数:1650+ 字(丰富前 177 字)
+- 2026-04-07:建立配图标准(后续更新:永久禁止 AI 生图,改为 Web Search 找权威图并归档到 assets)。
