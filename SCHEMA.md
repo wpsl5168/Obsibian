@@ -76,10 +76,15 @@ sources: [可选，源材料路径或URL]
 
 ### 工程实践 (practice)
 - `#vibe-coding` — Claude Code、Codex等终端Agent实战
-- `#methodology` — 经典方法论（ReAct/CoT/Reflexion等）
+- `#methodology` — 经典方法论(ReAct/CoT/Reflexion等)
 - `#architecture` — 系统架构设计、架构对比
 - `#research` — 调研报告、综述
 - `#comparison` — 横向对比
+- `#best-practices` — 最佳实践、工程规范
+- `#claude-code` — Claude Code工具专项
+- `#agentic-coding` — Agentic编程环境、自主编码
+- `#documentation` — 文档规范、知识库维护
+- `#knowledge-management` — 知识管理实践
 
 ### 项目维度 (project)
 - `#brickhub` — BrickHub项目相关
