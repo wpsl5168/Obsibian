@@ -1,7 +1,7 @@
 ---
 title: Wiki Schema
 created: 2026-04-21
-updated: 2026-04-21
+updated: 2026-08-12
 type: meta
 ---
 
@@ -85,6 +85,8 @@ sources: [可选，源材料路径或URL]
 - `#agentic-coding` — Agentic编程环境、自主编码
 - `#documentation` — 文档规范、知识库维护
 - `#knowledge-management` — 知识管理实践
+- `#context-engineering` — 上下文工程、窗口预算与信息编排
+- `#prompt-caching` — 提示词缓存、缓存命中与成本优化
 
 ### 项目维度 (project)
 - `#brickhub` — BrickHub项目相关
