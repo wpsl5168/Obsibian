@@ -52,13 +52,14 @@ def scan_vault():
     dead_links = []
     hollow_files = []
     
-    # 构建所有文件映射（用于检测死链）
-    all_files = {}
+    # 构建文件映射：同时支持 [[文件名]]、[[目录/文件]]、相对路径链接
+    all_files_by_stem = {}
+    all_paths_no_ext = set()
     for md in VAULT_ROOT.rglob("*.md"):
         if '.trash' in str(md) or '.obsidian' in str(md):
             continue
-        name = md.stem
-        all_files[name] = md
+        all_files_by_stem.setdefault(md.stem, []).append(md)
+        all_paths_no_ext.add(md.relative_to(VAULT_ROOT).with_suffix('').as_posix())
     
     # 扫描文件
     for md in VAULT_ROOT.rglob("*.md"):
@@ -80,9 +81,24 @@ def scan_vault():
         # 检查死链
         links = extract_links(content)
         for link in links:
-            # 处理别名 [[target|alias]]
-            target = link.split('|')[0].split('#')[0].strip()
-            if target and target not in all_files:
+            # 处理别名 [[target|alias]] 与锚点 [[target#section]]
+            target = link.split('|')[0].split('#')[0].strip().replace('\\', '/')
+            if not target:
+                continue
+
+            normalized = target[:-3] if target.endswith('.md') else target
+            exists = normalized in all_paths_no_ext
+
+            # Obsidian 的短链接按文件名解析
+            if not exists and '/' not in normalized:
+                exists = normalized in all_files_by_stem
+
+            # 支持相对当前文档目录的链接
+            if not exists:
+                relative_candidate = (md.parent / normalized).with_suffix('.md')
+                exists = relative_candidate.exists()
+
+            if not exists:
                 dead_links.append((str(rel_path), target))
         
         # 检查空洞内容（仅限知识库核心区域）
