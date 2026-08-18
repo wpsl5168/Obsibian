@@ -52,6 +52,6 @@ sources:
 
 ## 🔗 关联
 
-- [[../../30-知识库/AI模型与Agent/README|AI 模型与 Agent 知识库]]
-- [[../../30-知识库/经典方法论/README|经典方法论（ReAct/CoT 等）]]
+- [[10-知识库/AI模型与Agent/README|AI 模型与 Agent 知识库]]
+- [[10-知识库/经典方法论/10-经典方法论（ReAct_Reflexion_ToT_MetaGPT）|经典方法论（ReAct/CoT 等）]]
 - [[../AI-Agent个人盈利赛道扫描-2026Q2|AI Agent 个人盈利赛道（含金融场景）]]

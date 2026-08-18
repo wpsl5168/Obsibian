@@ -1,7 +1,7 @@
 ---
 title: Wiki Schema
 created: 2026-04-21
-updated: 2026-08-12
+updated: 2026-08-18
 type: meta
 ---
 
@@ -122,16 +122,16 @@ sources: [可选，源材料路径或URL]
 
 ## 6. 链接规范
 
-- 每个wiki页面**至少2个出站 `[[wikilinks]]`**（孤儿页是债务）
+- 每个 wiki 页面**至少 2 个真实出站 WikiLink**（孤儿页是债务；示例文本不要伪装成链接）
 - 项目专页（`20-项目/<X>/`）必须有1个README作为枢纽，链向该项目所有子页
-- 跨目录链接用相对路径：`[[../../10-知识库/AI模型与Agent/4.3-记忆机制设计]]`
+- 跨目录链接优先使用 vault-relative 路径，例如 `10-知识库/AI模型与Agent/04-智能体架构与工作流设计/4.3-记忆机制设计`
 
 ---
 
 ## 7. 矛盾处理
 
 - 新源与已有内容冲突时：**不要静默覆盖**
-- 在页面顶部添加 `> ⚠️ Note: 本页与 [[other-page]] 在 X 点存在分歧（YYYY-MM-DD）`
+- 在页面顶部添加 `> ⚠️ Note: 本页与「另一页面」在 X 点存在分歧（YYYY-MM-DD）`，落稿时再替换为真实 WikiLink
 - frontmatter加 `contradictions: [page-name]`
 - 在下次lint报告中由人工裁决
 

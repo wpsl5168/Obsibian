@@ -40,5 +40,5 @@ engine = MemoryEngine(db_path="~/.hippocampus/memory.db")
 ## 相关链接
 
 - 上级索引：[[../项目需求文档(PRD)]]
-- 项目主页：[[../README]]
+- 项目主页：[[../项目需求文档(PRD)]]
 - 知识库索引：[[../../../index]]

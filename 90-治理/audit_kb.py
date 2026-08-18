@@ -93,9 +93,15 @@ def scan_vault():
             if not exists and '/' not in normalized:
                 exists = normalized in all_files_by_stem
 
-            # 支持相对当前文档目录的链接
+            # 支持相对当前文档目录的链接。不能直接对无扩展名目标
+            # 调用 with_suffix('.md')：如 `4.1-标题` 会被 Path 误判为
+            # 带 `.1-标题` 后缀并截断，制造假死链。
             if not exists:
-                relative_candidate = (md.parent / normalized).with_suffix('.md')
+                target_path = md.parent / normalized
+                relative_candidate = (
+                    target_path if target_path.suffix == '.md'
+                    else Path(f"{target_path}.md")
+                )
                 exists = relative_candidate.exists()
 
             if not exists:

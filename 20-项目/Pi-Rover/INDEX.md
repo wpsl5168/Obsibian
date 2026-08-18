@@ -42,5 +42,5 @@ status: stable
 
 ## 相关项目
 
-- [[../海马体/INDEX|OpenHippo海马体]] — 未来可作为Pi-Rover长期记忆后端
+- [[20-项目/海马体/项目需求文档(PRD)|OpenHippo海马体]] — 未来可作为Pi-Rover长期记忆后端
 - [[4.5-BrickHub_Architecture_Vision|BrickHub]] — 另一核心项目

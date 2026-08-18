@@ -58,7 +58,7 @@ status: stable
 
 ## 关联阅读
 
-- [[../../00-个人/简历/README]] — 老王 PFE 背景与 FDE 的能力交集
+- 个人简历（当前 vault 未收录） — 老王 PFE 背景与 FDE 的能力交集
 - [[../../10-知识库/AI模型与Agent/04-智能体架构与工作流设计/4.1-AI_Agent核心心智模型|AI Agent]] — Hermes Agent 作为个人 Ontology 等价物的潜力
 - 外部:Barry (ex-Palantir) *Understanding Forward Deployed Engineering* — barry.ooo/posts/fde-culture
 - 外部:Diogo Silva Santos *A Comprehensive Analysis of Palantir's FDE Model* (Medium, Apr 2026)

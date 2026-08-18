@@ -54,4 +54,4 @@ sources:
 
 - Khanmigo MVP决策（待补充到00-收件箱）
 - [[05-个人/家庭与孩子教育|家庭与孩子教育]]（待补 Khan Kids 试水方案）
-- [[../../20-项目/hermespet/README]]（HermesPet 可借鉴 Khanmigo 角色化交互）
+- [[20-项目/Pets/README]]（HermesPet 可借鉴 Khanmigo 角色化交互）
