@@ -1,3 +1,12 @@
+---
+title: 业界优秀文章分析 Skill 与 Workflow 调研
+created: 2026-08-20
+updated: 2026-08-21
+type: research
+tags: [research, workflow, evaluation]
+status: stable
+---
+
 # 业界优秀文章分析 Skill 与 Workflow 调研
 
 ## 结论
