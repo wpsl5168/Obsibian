@@ -327,3 +327,11 @@ type: meta
 **信源**: bearblog 反爬，走 jina reader 取全文（含 Karpathy 用 Codex 5.5 生成的 summary+transcript）
 
 **待决策**: 可验证 RL 环境 wedge 是否做"验证器可行性 spike"（企业IT迁移校验为优先候选）
+
+---
+
+## [2026-08-25] weekly-maintenance | MCP 2026-07-28 与 Coding Agent CI/CD 生产化刷新
+
+- `3.2-Model_Context_Protocol规范解析.md`：升级到 MCP 2026-07-28；补充无状态请求、Streamable HTTP、MRTR、订阅、OAuth resource binding、step-up scope、token passthrough 与 SSRF 防护；删除无法稳定复核的生态硬数字。
+- `6.3.1-SWE-Agent生产化与CICD.md`：按生成/验证/发布分权重写；补充无特权 PR CI、`pull_request_target` 风险、OIDC 部署、patch 策略门禁、企业评测指标与审计清单；删除未验证榜单和固定模型推荐。
+- 修复 `50-日报与动态/AI日报/2026-04-09` 至 `2026-04-13` 的 10 处过时 WikiLink，指向现有 Claude Code 与 MCP 页面。
