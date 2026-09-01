@@ -1,8 +1,10 @@
 ---
 title: Slock.ai（现 Raft）Agent 协作平台详解
-date: 2026-09-01
-tags: [AI-Agent, Multi-Agent, Raft, Slock, Agent动力学, 协作平台]
-status: complete
+created: 2026-09-01
+updated: 2026-09-01
+type: research
+tags: [agent, architecture, research, workflow]
+status: stable
 ---
 
 # Slock.ai（现 Raft）Agent 协作平台详解
