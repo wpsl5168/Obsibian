@@ -1,7 +1,7 @@
 ---
 title: 知识库操作日志
 created: 2026-04-21
-updated: 2026-04-22
+updated: 2026-09-01
 type: meta
 ---
 
@@ -335,3 +335,12 @@ type: meta
 - `3.2-Model_Context_Protocol规范解析.md`：升级到 MCP 2026-07-28；补充无状态请求、Streamable HTTP、MRTR、订阅、OAuth resource binding、step-up scope、token passthrough 与 SSRF 防护；删除无法稳定复核的生态硬数字。
 - `6.3.1-SWE-Agent生产化与CICD.md`：按生成/验证/发布分权重写；补充无特权 PR CI、`pull_request_target` 风险、OIDC 部署、patch 策略门禁、企业评测指标与审计清单；删除未验证榜单和固定模型推荐。
 - 修复 `50-日报与动态/AI日报/2026-04-09` 至 `2026-04-13` 的 10 处过时 WikiLink，指向现有 Claude Code 与 MCP 页面。
+
+---
+
+## [2026-09-01] weekly-maintenance | LangGraph/MCP 时效刷新与审计器纠偏
+
+- `4.2.1-LangGraph深度实操.md`：纠正 HITL 为 `interrupt()` + `Command(resume=...)`；补重放幂等纪律与 subgraph `None/True/False` 持久化模型。
+- `3.2.3-MCP协议架构与传输层.md`：对齐 MCP `2026-07-28`，补 per-request metadata、双时代版本回退、Streamable HTTP 网关/幂等/安全基线。
+- `90-治理/audit_kb.py`：忽略 fenced/inline code 和 append-only 历史映射，分列全库与 Schema 治理区结果。
+- 复验：全库 686 篇；治理区 281 篇 Frontmatter 缺口 0；死链 0；真实骨架 0。README 无新增、重命名、归档页面，本周无需更新索引。

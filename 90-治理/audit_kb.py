@@ -13,8 +13,10 @@ def has_frontmatter(content: str) -> bool:
     return content.strip().startswith('---') and '\n---' in content[3:]
 
 def extract_links(content: str) -> List[str]:
-    """提取所有wiki链接"""
-    return re.findall(r'\[\[([^\]]+)\]\]', content)
+    """提取正文 WikiLink，忽略 fenced code 与 inline code 中的示例。"""
+    without_fences = re.sub(r'```.*?```', '', content, flags=re.DOTALL)
+    without_code = re.sub(r'`[^`\n]*`', '', without_fences)
+    return re.findall(r'\[\[([^\]]+)\]\]', without_code)
 
 def is_hollow(filepath: Path, content: str) -> Tuple[bool, str]:
     """判断文件是否空洞，返回(是否空洞, 原因)"""
@@ -49,7 +51,9 @@ def scan_vault():
     print("=" * 80)
     
     missing_fm = []
+    missing_fm_governed = []
     dead_links = []
+    dead_links_governed = []
     hollow_files = []
     
     # 构建文件映射：同时支持 [[文件名]]、[[目录/文件]]、相对路径链接
@@ -67,6 +71,9 @@ def scan_vault():
             continue
         
         rel_path = md.relative_to(VAULT_ROOT)
+        governed = rel_path.parts and rel_path.parts[0] in {
+            '10-知识库', '20-项目', '40-调研报告'
+        }
         
         try:
             content = md.read_text(encoding='utf-8')
@@ -77,9 +84,13 @@ def scan_vault():
         # 检查frontmatter
         if not has_frontmatter(content):
             missing_fm.append(str(rel_path))
+            if governed:
+                missing_fm_governed.append(str(rel_path))
         
         # 检查死链
-        links = extract_links(content)
+        # 根目录 log.md 是 append-only 治理历史，其中保留旧链接映射示例，
+        # 不是可点击知识正文，不能据此制造死链告警。
+        links = [] if rel_path.as_posix() == 'log.md' else extract_links(content)
         for link in links:
             # 处理别名 [[target|alias]] 与锚点 [[target#section]]
             target = link.split('|')[0].split('#')[0].strip().replace('\\', '/')
@@ -106,6 +117,8 @@ def scan_vault():
 
             if not exists:
                 dead_links.append((str(rel_path), target))
+                if governed:
+                    dead_links_governed.append((str(rel_path), target))
         
         # 检查空洞内容（仅限知识库核心区域）
         if '10-知识库' in str(rel_path) and not any(x in str(rel_path) for x in ['archive', 'Topics-archive', 'README']):
@@ -120,12 +133,14 @@ def scan_vault():
         print(f"   - {f}")
     if len(missing_fm) > 20:
         print(f"   ... 还有 {len(missing_fm)-20} 个")
+    print(f"   其中 Schema 治理区: {len(missing_fm_governed)} 个")
     
     print(f"\n🔗 死链: {len(dead_links)} 处")
     for src, target in dead_links[:15]:
         print(f"   - {src} → [[{target}]]")
     if len(dead_links) > 15:
         print(f"   ... 还有 {len(dead_links)-15} 处")
+    print(f"   其中 Schema 治理区: {len(dead_links_governed)} 处")
     
     print(f"\n📄 空洞/骨架文件: {len(hollow_files)} 个")
     for f, reason in hollow_files[:20]:
@@ -139,7 +154,9 @@ def scan_vault():
     # 返回详细数据供后续使用
     return {
         'missing_fm': missing_fm,
+        'missing_fm_governed': missing_fm_governed,
         'dead_links': dead_links,
+        'dead_links_governed': dead_links_governed,
         'hollow_files': hollow_files
     }
 
