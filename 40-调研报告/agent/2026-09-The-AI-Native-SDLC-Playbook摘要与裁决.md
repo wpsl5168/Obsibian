@@ -1,3 +1,12 @@
+---
+title: The AI-Native SDLC Playbook：摘要与裁决
+created: 2026-09-05
+updated: 2026-09-05
+type: research
+tags: [agent, methodology, research, workflow]
+status: stable
+---
+
 # The AI-Native SDLC Playbook：摘要与裁决
 
 > [打开交互式流程页](./AI-Native-SDLC交互流程.html)  
