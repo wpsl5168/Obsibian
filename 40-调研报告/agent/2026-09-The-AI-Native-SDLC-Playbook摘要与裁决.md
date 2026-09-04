@@ -1,5 +1,8 @@
 # The AI-Native SDLC Playbook：摘要与裁决
 
+> [打开交互式流程页](./AI-Native-SDLC交互流程.html)  
+> HTML 为单文件，可离线打开；Markdown 正文用于 Obsidian 检索与双链。
+
 ## 一句话裁决
 
 这不是一篇“怎样让 AI 多写代码”的教程，而是一套 **artifact-driven control plane**：把需求、设计、实施、验证、审批、生产反馈都变成 Agent 可读、Git 可审计、规则可强制的连续闭环。方向对，机制也够具体；但它仍是 Anthropic 的厂商 playbook，不是已被数据证明有效的通用方法论。[1]
