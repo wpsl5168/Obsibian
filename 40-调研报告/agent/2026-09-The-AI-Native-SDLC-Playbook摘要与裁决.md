@@ -31,6 +31,8 @@
 
 原文提供了可执行模板、依赖关系、治理责任和 leading/lagging indicators，因此比概念文章具体；但没有客户基线、样本、对照组或上线后的 defect/cycle-time 数据。故“可以这样实施”有较强支持，“这样实施一定更快且同样安全”仍未被证明。[1]
 
+外部证据本身也是 mixed：DORA 2024 观察到 AI adoption 与文档质量、代码质量和 review speed 改善相关，但同时与 delivery throughput、stability 下降相关，说明局部提速不会自动转化为端到端收益。[5] METR 的 early-2025 RCT 曾测得资深开源开发者慢 19%，但 METR 已明确标注该结果过时；其 2026 更新认为现在更可能提速，却因参与者和任务选择偏差，无法可靠估算幅度。[6] 所以文章前提在 2026 年是合理假设，不是普遍事实。
+
 ## 最强反方
 
 - **Plan/Design 压得过薄。** 多方 stakeholder 冲突、领域模型、NFR、requirement→test traceability，不能都缩成一次对话和两份 prose Markdown；小 feature 可用，复杂系统不足。[2]
@@ -58,7 +60,9 @@
 
 ## Sources
 
-[1] https://claude.com/blog/the-ai-native-sdlc-playbook
-[2] https://martinelli.ch/code-is-no-longer-the-bottleneck-requirements-are
-[3] https://waydev.co/anthropics-ai-native-sdlc-playbook-has-a-missing-layer-measurement
-[4] https://www.port.io/blog/anthropic-ai-native-sdlc-playbook
+[1] https://claude.com/blog/the-ai-native-sdlc-playbook — The AI-Native SDLC playbook
+[2] https://martinelli.ch/code-is-no-longer-the-bottleneck-requirements-are — Code Is No Longer the Bottleneck. Requirements Are.
+[3] https://waydev.co/anthropics-ai-native-sdlc-playbook-has-a-missing-layer-measurement — Anthropic's AI-Native SDLC playbook has a missing layer: measurement
+[4] https://www.port.io/blog/anthropic-ai-native-sdlc-playbook — Implementing the Anthropic AI-Native SDLC Playbook
+[5] https://cloud.google.com/blog/products/devops-sre/announcing-the-2024-dora-report — Highlights from the 10th DORA report
+[6] https://metr.org/blog/2026-02-24-uplift-update — We are Changing our Developer Productivity Experiment Design
