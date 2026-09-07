@@ -352,3 +352,10 @@ type: meta
 - 新增 `1.1.1-Attention-Is-All-You-Need深度解读.md`：基于 arXiv v7 原文、独立 Evidence Auditor 与 Red Team，拆解 QKV、自注意力并行优势、GPT decoder-only 继承关系、二次复杂度和解释性边界。
 - 引用链通过 strict evidence gate；分析门禁 92/100，3 个承重 claim，原文摘要占比 10.17%。
 - 同步更新 AI模型与Agent README 与全库 index。
+
+## [2026-09-07] audit | 全机体检与目录治理
+
+- 新增 [[90-治理/2026-09-07-全机体检与整理]]：服务器资源正常；主站HTTP500、海马体异地备份停滞、cron错误和旧域名待处理。
+- 已做在线本地热备及副本完整性验证；workspace新增README/PROJECTS台账，现有生产路径和未提交代码保留。
+- 修5个skill YAML描述，正文不变；修订运维安全流程，未删除业务文件、改DNS或重跑cron。
+- 完整本地证据归档：`~/work/system-audit/2026-09-07/`。
