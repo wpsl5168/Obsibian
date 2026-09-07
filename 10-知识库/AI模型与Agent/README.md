@@ -20,6 +20,7 @@ date: 2026-04-08
 | 编号 | 标题 | 关键词 |
 |---|---|---|
 | 1.1 | [[1.1-大模型演进与主流架构体系]] | Transformer, GPT, Claude, Gemini |
+| 1.1.1 | [[1.1.1-Attention-Is-All-You-Need深度解读]] | Self-Attention, QKV, 并行训练, 架构边界 |
 | 1.2 | [[1.2-上下文窗口与Token机制]] | Context Window, Tokenizer, 长上下文 |
 | 1.3 | [[1.3-多模态能力原理与应用]] | Vision, Audio, 多模态融合 |
 | 1.4 | [[1.4-Embeddings与向量表示]] | 向量检索, 语义搜索, RAG基础 |

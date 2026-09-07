@@ -24,9 +24,10 @@ status: stable
 
 - [[05-个人/家庭与孩子教育.md|家庭与孩子教育]] — 1. 下载Khan Kids App（iOS/Android）
 
-## 🤖 知识库 · AI模型与Agent  *(32)*
+## 🤖 知识库 · AI模型与Agent  *(33)*
 
 - [[10-知识库/AI模型与Agent/01-基础架构与模型底座/1.1-大模型演进与主流架构体系.md|大模型演进与主流架构体系]] — 大语言模型（Large Language Model, LLM）本质上是一个超大规模的概率函数——给定一串 Token 序列，输出下一个 Token 的概率分布。如果用 .NET 类比：`Func<T 🟡
+- [[10-知识库/AI模型与Agent/01-基础架构与模型底座/1.1.1-Attention-Is-All-You-Need深度解读.md|Attention Is All You Need 深度解读]] — Transformer 的核心突破、GPT 继承关系、效率边界与常见误读。 🟢
 - [[10-知识库/AI模型与Agent/01-基础架构与模型底座/1.2-上下文窗口与Token机制.md|上下文窗口与 Token 机制]] — Token 不等于字符，也不等于单词。它是模型 Tokenizer 切分后的最小语义单元。 🟡
 - [[10-知识库/AI模型与Agent/01-基础架构与模型底座/1.3-多模态能力原理与应用.md|多模态能力原理与应用]] — 多模态（Multimodal）指模型能处理和生成多种数据模态——文本、图像、音频、视频。 🟡
 - [[10-知识库/AI模型与Agent/01-基础架构与模型底座/1.4-Embeddings与向量表示.md|Embeddings 与向量表示]] — Embedding（嵌入/向量表示）本质上就是把人类语言"翻译"成计算机能做数学运算的高维浮点数组。如果你熟悉 SQL Server，可以这样理解：一张表的每一行是一个文本，Embedding 就是给 🔴

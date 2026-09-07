@@ -1,7 +1,7 @@
 ---
 title: 知识库操作日志
 created: 2026-04-21
-updated: 2026-09-01
+updated: 2026-09-07
 type: meta
 ---
 
@@ -344,3 +344,11 @@ type: meta
 - `3.2.3-MCP协议架构与传输层.md`：对齐 MCP `2026-07-28`，补 per-request metadata、双时代版本回退、Streamable HTTP 网关/幂等/安全基线。
 - `90-治理/audit_kb.py`：忽略 fenced/inline code 和 append-only 历史映射，分列全库与 Schema 治理区结果。
 - 复验：全库 686 篇；治理区 281 篇 Frontmatter 缺口 0；死链 0；真实骨架 0。README 无新增、重命名、归档页面，本周无需更新索引。
+
+---
+
+## [2026-09-07] ingest | Attention Is All You Need 深度解读
+
+- 新增 `1.1.1-Attention-Is-All-You-Need深度解读.md`：基于 arXiv v7 原文、独立 Evidence Auditor 与 Red Team，拆解 QKV、自注意力并行优势、GPT decoder-only 继承关系、二次复杂度和解释性边界。
+- 引用链通过 strict evidence gate；分析门禁 92/100，3 个承重 claim，原文摘要占比 10.17%。
+- 同步更新 AI模型与Agent README 与全库 index。
