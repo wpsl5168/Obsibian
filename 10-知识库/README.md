@@ -1,7 +1,7 @@
 ---
 title: 10-知识库
 created: 2025-01-01
-updated: 2026-07-14
+updated: 2026-09-08
 type: meta
 tags: [methodology, meta]
 status: stable
@@ -93,7 +93,7 @@ Obsidian: 右侧面板 → Graph View → 显示链接网络
 | `#vibe-coding` | Claude Code、Codex实战 | AI辅助编程 |
 | `#methodology` | ReAct/CoT/Reflexion等经典算法 | 深入理解原理 |
 
-完整Tag体系见 [[SCHEMA#4. Tag Taxonomy]]。
+完整Tag体系见 [[SCHEMA#4. Tag Taxonomy（强约束，新tag必须先在此注册）|Tag Taxonomy]]。
 
 ### 技巧2: 利用链接网络发现关联
 
@@ -132,7 +132,7 @@ AI模型与Agent/README → 按1.1→6.3顺序读 → 遇到不懂的概念跳�
 1. **新页前先查重**: 打开 `Ctrl+P` 输入文件名关键词,看是否已有类似页面
 2. **必须遵守Schema**: 
    - Frontmatter必须包含: `title`, `created`, `updated`, `type`, `tags`, `status`
-   - Tag必须来自 [[SCHEMA#4. Tag Taxonomy]],禁止野生tag
+   - Tag必须来自 [[SCHEMA#4. Tag Taxonomy（强约束，新tag必须先在此注册）|Tag Taxonomy]],禁止野生tag
    - 修改任何页面必须bump `updated`日期
 3. **更新索引**: 如果新增了重要页面,在对应目录的README中加入索引条目
 
@@ -199,6 +199,8 @@ Ctrl+Shift+F → "MCP" → 找到:
 ```
 
 ## 更新日志
+
+**2026-09-08**：修复两处 Tag Taxonomy 标题锚点，保持其他内容不变。
 
 **2026-07-14**: 深度丰富README内容
 - 新增"快速开始"章节(新手入口+三种场景导航)

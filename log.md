@@ -366,3 +366,11 @@ type: meta
 - 更新 [[10-知识库/AI模型与Agent/03-工具调用与上下文协议/3.2.1-MCP-Server生态系统]] 与 [[10-知识库/AI模型与Agent/03-工具调用与上下文协议/3.2.2-MCP-SDK开发实战]]：官方来源核验归档/包名/SDK v2，移除无来源统计与危险或不可运行示例，补选型、权限和两个业务场景。
 - 实测 Python/TS SDK 的 19 项检查通过；文内代码与实测文件一致，小测试另行运行通过；未连接外部业务系统。Phase 2 复检 CRITICAL/WARN 为 0。
 - 审计快照、原文件备份与测试证据：`~/.hermes/workspaces/kb-weekly-2026-09-08/`。原有未提交内容保留，Git 仅选择本轮文档和本条追加日志。
+
+## [2026-09-08] update | 每周知识库维护：索引与锚点修复
+
+- [[10-知识库/AI模型与Agent/README]] 补齐 11 个现存章节入口，覆盖 33 篇文章；明确旧目录名映射，没有新建骨架。
+- [[10-知识库/README]] 修复两处 Tag Taxonomy 标题锚点；[[40-调研报告/Palantir-FDE/07-移植到个人咨询]] 修复一处缺点号的章节锚点，保留 intentional stub。
+- 复验治理页 576 处非代码 WikiLink，按同目录/vault 路径、stem、alias、heading 解析后无未解析候选；未声称全库外链可用。核心 linter 仍为 CRITICAL/WARN=0，INFO=301。
+- 独立按 SCHEMA 解析 YAML 发现核心 linter 漏检：59 页空/非列表 tags、1 页缺 status、5 次未注册 tag 使用（合计 65 条、62 个去重文件）。未批量改元数据或 taxonomy；这些是残留治理债务，不以脚本零 WARN 当健康证明。
+- Phase 2 已推送并核 SHA：`c3e65173f26284b541f585757fceeccdb68d3b66`。本阶段仅提交上述索引/锚点文件和本条日志；审计基线不变。
