@@ -1,15 +1,47 @@
 ---
-title: 10-知识库
-created: 2025-01-01
-updated: 2026-09-08
+title: "10-知识库"
+created: 2026-09-09
+updated: 2026-09-09
 type: meta
-tags: [methodology, meta]
+tags: [meta]
 status: stable
 ---
 
+
 # 10-知识库
 
-长期保留的**结构化知识**。所有内容受 [[SCHEMA]] 约束。
+> 2026-09-09 目录重组。文件位置与阅读顺序已整理；文中旧日期、建议和项目状态不因此变成最新事实。
+
+[[index|知识库首页]] · [[README|上级入口]]
+
+## 分区
+
+- [[10-知识库/AI模型与Agent/README|AI模型与Agent]] — 35份现有正文/记录
+
+- [[10-知识库/企业IT与云服务/README|企业IT与云服务]] — 1份现有正文/记录
+
+- [[10-知识库/学习与信息源/README|学习与信息源]] — 1份现有正文/记录
+
+- [[10-知识库/工具速查/README|工具速查]] — 5份现有正文/记录
+
+- [[10-知识库/工程模式/README|工程模式]] — 9份现有正文/记录
+
+- [[10-知识库/数据工程/README|数据工程]] — 3份现有正文/记录
+
+- [[10-知识库/认知与方法/README|认知与方法]] — 1份现有正文/记录
+
+- [[10-知识库/语言学习/README|语言学习]] — 1份现有正文/记录
+
+- [[10-知识库/课程与学习/README|课程与学习]] — 3份现有正文/记录
+
+
+<details>
+<summary>原有说明与历史导航（完整保留；目录以本页上方为准）</summary>
+
+
+# 10-知识库
+
+长期保留的**结构化知识**。所有内容受 [[SCHEMA.md]] 约束。
 
 ## 🚀 快速开始
 
@@ -93,7 +125,7 @@ Obsidian: 右侧面板 → Graph View → 显示链接网络
 | `#vibe-coding` | Claude Code、Codex实战 | AI辅助编程 |
 | `#methodology` | ReAct/CoT/Reflexion等经典算法 | 深入理解原理 |
 
-完整Tag体系见 [[SCHEMA#4. Tag Taxonomy（强约束，新tag必须先在此注册）|Tag Taxonomy]]。
+完整Tag体系见 [[SCHEMA.md#4. Tag Taxonomy（强约束，新tag必须先在此注册）|Tag Taxonomy]]。
 
 ### 技巧2: 利用链接网络发现关联
 
@@ -132,13 +164,13 @@ AI模型与Agent/README → 按1.1→6.3顺序读 → 遇到不懂的概念跳�
 1. **新页前先查重**: 打开 `Ctrl+P` 输入文件名关键词,看是否已有类似页面
 2. **必须遵守Schema**: 
    - Frontmatter必须包含: `title`, `created`, `updated`, `type`, `tags`, `status`
-   - Tag必须来自 [[SCHEMA#4. Tag Taxonomy（强约束，新tag必须先在此注册）|Tag Taxonomy]],禁止野生tag
+   - Tag必须来自 [[SCHEMA.md#4. Tag Taxonomy（强约束，新tag必须先在此注册）|Tag Taxonomy]],禁止野生tag
    - 修改任何页面必须bump `updated`日期
 3. **更新索引**: 如果新增了重要页面,在对应目录的README中加入索引条目
 
 ### 质量标准
 
-参考 [[SCHEMA]] 的核心要求:
+参考 [[SCHEMA.md]] 的核心要求:
 
 | 维度 | 要求 | 反例 |
 |-----|------|-----|
@@ -214,3 +246,6 @@ Ctrl+Shift+F → "MCP" → 找到:
 - 总字数: 107字 → 1456字(含表格/代码)
 
 **2026-04-21**: 初始版本,建立基础导航结构
+
+
+</details>

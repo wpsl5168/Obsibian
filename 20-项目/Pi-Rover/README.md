@@ -1,11 +1,40 @@
 ---
-title: README
-created: 2026-04-23
-updated: 2026-04-23
+title: "Pi-Rover"
+created: 2026-09-09
+updated: 2026-09-09
 type: meta
-tags: [pi-rover]
+tags: [meta]
 status: stable
 ---
+
+
+# Pi-Rover
+
+> 2026-09-09 目录重组。文件位置与阅读顺序已整理；文中旧日期、建议和项目状态不因此变成最新事实。
+
+[[index|知识库首页]] · [[20-项目/README|上级入口]]
+
+## 项目阅读顺序
+
+需求与范围 → 设计/选型 → 实施与测试 → 决策与历史。当前实施状态以最近核验记录及仓库为准。
+
+## 分区
+
+- [[20-项目/Pi-Rover/调研/README|调研]] — 10份现有正文/记录
+
+## 文档
+
+- [[20-项目/Pi-Rover/INDEX|INDEX]]
+
+- [[20-项目/Pi-Rover/决策/99-decision-matrix|99-decision-matrix]]
+
+- [[20-项目/Pi-Rover/实施与运维/01-pi-deployment-forms|Pi 5 本地部署形式详解]]
+
+
+<details>
+<summary>原有说明与历史导航（完整保留；目录以本页上方为准）</summary>
+
+
 # Pi-Rover 知识库
 
 > 项目：树莓派Agent级智能小车
@@ -54,3 +83,6 @@ docs/kb/
 > **混合脑 + 分层反射** 的复合架构最适合本项目。
 > 即 03 + 04 的融合：L0安全反射 + L1路由器 + L2本地脑 + L3云端脑 + L4执行层。
 > 详见 `99-decision-matrix.md`。
+
+
+</details>

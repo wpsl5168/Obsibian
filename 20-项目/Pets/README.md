@@ -1,12 +1,35 @@
 ---
-title: Pets README
-created: 2026-05-08
-updated: 2026-05-08
+title: "Pets"
+created: 2026-09-09
+updated: 2026-09-09
 type: meta
-tags:
-status: draft
-  - 项目/pets
+tags: [meta]
+status: stable
 ---
+
+
+# Pets
+
+> 2026-09-09 目录重组。文件位置与阅读顺序已整理；文中旧日期、建议和项目状态不因此变成最新事实。
+
+[[index|知识库首页]] · [[20-项目/README|上级入口]]
+
+## 项目阅读顺序
+
+需求与范围 → 设计/选型 → 实施与测试 → 决策与历史。当前实施状态以最近核验记录及仓库为准。
+
+## 文档
+
+- [[20-项目/Pets/PRD|Pets PRD]]
+
+- [[20-项目/Pets/架构|Pets 架构]]
+
+- [[20-项目/Pets/进度|Pets 进度]]
+
+
+<details>
+<summary>原有说明与历史导航（完整保留；目录以本页上方为准）</summary>
+
 
      1|# HermesPet · 我的 AI 分身
      2|
@@ -48,3 +71,5 @@ status: draft
     38|## 看板
     39|`hermes kanban ls --tenant pets`
     40|
+
+</details>

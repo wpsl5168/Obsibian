@@ -1,7 +1,7 @@
 ---
 title: INDEX
 created: 2026-04-23
-updated: 2026-04-23
+updated: 2026-09-09
 type: meta
 tags: [pi-rover]
 status: stable
@@ -15,11 +15,11 @@ status: stable
 
 ## 快速导航
 
-- [[README]] — 知识库总入口
-- [[架构模式/00-overview|架构总览]] — 8种架构对比
-- [[架构模式/03-hybrid-brain|★ 混合脑(主选)]]
-- [[架构模式/04-hierarchical|★ 分层反射(主选)]]
-- [[架构模式/99-decision-matrix|🎯 决策矩阵+5阶段路线]]
+- [[20-项目/Pi-Rover/README.md]] — 知识库总入口
+- [[20-项目/Pi-Rover/调研/设计模式/00-overview.md|架构总览]] — 8种架构对比
+- [[20-项目/Pi-Rover/调研/设计模式/03-hybrid-brain.md|★ 混合脑(主选)]]
+- [[20-项目/Pi-Rover/调研/设计模式/04-hierarchical.md|★ 分层反射(主选)]]
+- [[20-项目/Pi-Rover/决策/99-decision-matrix.md|🎯 决策矩阵+5阶段路线]]
 
 ## 核心方案 (待老王拍板)
 
@@ -42,5 +42,5 @@ status: stable
 
 ## 相关项目
 
-- [[20-项目/海马体/项目需求文档(PRD)|OpenHippo海马体]] — 未来可作为Pi-Rover长期记忆后端
-- [[4.5-BrickHub_Architecture_Vision|BrickHub]] — 另一核心项目
+- [[20-项目/海马体/需求/项目需求文档(PRD).md|OpenHippo海马体]] — 未来可作为Pi-Rover长期记忆后端
+- [[20-项目/BrickHub/设计/4.5-BrickHub_Architecture_Vision.md|BrickHub]] — 另一核心项目

@@ -1,11 +1,31 @@
 ---
-title: README
-created: 2026-05-27
-updated: 2026-05-27
-type: index
-tags: []
+title: "50-日报与动态"
+created: 2026-09-09
+updated: 2026-09-09
+type: meta
+tags: [meta]
 status: stable
 ---
+
+
+# 50-日报与动态
+
+> 2026-09-09 目录重组。文件位置与阅读顺序已整理；文中旧日期、建议和项目状态不因此变成最新事实。
+
+[[index|知识库首页]] · [[README|上级入口]]
+
+## 分区
+
+- [[50-日报与动态/AI日报/README|AI日报]] — 135份现有正文/记录
+
+- [[50-日报与动态/DeepLearning.AI/README|DeepLearning.AI]] — 96份现有正文/记录
+
+- [[50-日报与动态/项目巡检/README|项目巡检]] — 137份现有正文/记录
+
+
+<details>
+<summary>原有说明与历史导航（完整保留；目录以本页上方为准）</summary>
+
 
 # 50-日报与动态
 
@@ -19,3 +39,6 @@ status: stable
 | `DeepLearning.AI/digests/` | 课程目录每日摘要 | 每天 |
 | `DeepLearning.AI/updates/` | 新课程/变更增量 | 有变化时 |
 | `DeepLearning.AI/snapshots/` | 课程目录原始快照 (JSON) | 每天 |
+
+
+</details>

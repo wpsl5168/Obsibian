@@ -1,12 +1,37 @@
 ---
-title: "02-AI知识星球 索引"
-created: 2026-04-08
-updated: 2026-09-08
-type: concept
-tags: [meta, agent, memory]
-status: draft
-date: 2026-04-08
+title: "AI模型与Agent"
+created: 2026-09-09
+updated: 2026-09-09
+type: meta
+tags: [meta]
+status: stable
 ---
+
+
+# AI模型与Agent
+
+> 2026-09-09 目录重组。文件位置与阅读顺序已整理；文中旧日期、建议和项目状态不因此变成最新事实。
+
+[[index|知识库首页]] · [[10-知识库/README|上级入口]]
+
+## 分区
+
+- [[10-知识库/AI模型与Agent/01-基础架构与模型底座/README|01-基础架构与模型底座]] — 5份现有正文/记录
+
+- [[10-知识库/AI模型与Agent/02-提示词工程与输出规范/README|02-提示词工程与输出规范]] — 6份现有正文/记录
+
+- [[10-知识库/AI模型与Agent/03-工具调用与上下文协议/README|03-工具调用与上下文协议]] — 6份现有正文/记录
+
+- [[10-知识库/AI模型与Agent/04-智能体架构与工作流设计/README|04-智能体架构与工作流设计]] — 11份现有正文/记录
+
+- [[10-知识库/AI模型与Agent/05-评测监控与安全防护/README|05-评测监控与安全防护]] — 3份现有正文/记录
+
+- [[10-知识库/AI模型与Agent/06-工程落地与Vibe_Coding实战/README|06-工程落地与Vibe_Coding实战]] — 4份现有正文/记录
+
+
+<details>
+<summary>原有说明与历史导航（完整保留；目录以本页上方为准）</summary>
+
 
 # 02-AI知识星球
 
@@ -21,67 +46,67 @@ date: 2026-04-08
 ### 01-基础架构与模型底座
 | 编号 | 标题 | 关键词 |
 |---|---|---|
-| 1.1 | [[1.1-大模型演进与主流架构体系]] | Transformer, GPT, Claude, Gemini |
-| 1.1.1 | [[1.1.1-Attention-Is-All-You-Need深度解读]] | Self-Attention, QKV, 并行训练, 架构边界 |
-| 1.2 | [[1.2-上下文窗口与Token机制]] | Context Window, Tokenizer, 长上下文 |
-| 1.3 | [[1.3-多模态能力原理与应用]] | Vision, Audio, 多模态融合 |
-| 1.4 | [[1.4-Embeddings与向量表示]] | 向量检索, 语义搜索, RAG基础 |
+| 1.1 | [[10-知识库/AI模型与Agent/01-基础架构与模型底座/1.1-大模型演进与主流架构体系.md]] | Transformer, GPT, Claude, Gemini |
+| 1.1.1 | [[10-知识库/AI模型与Agent/01-基础架构与模型底座/1.1.1-Attention-Is-All-You-Need深度解读.md]] | Self-Attention, QKV, 并行训练, 架构边界 |
+| 1.2 | [[10-知识库/AI模型与Agent/01-基础架构与模型底座/1.2-上下文窗口与Token机制.md]] | Context Window, Tokenizer, 长上下文 |
+| 1.3 | [[10-知识库/AI模型与Agent/01-基础架构与模型底座/1.3-多模态能力原理与应用.md]] | Vision, Audio, 多模态融合 |
+| 1.4 | [[10-知识库/AI模型与Agent/01-基础架构与模型底座/1.4-Embeddings与向量表示.md]] | 向量检索, 语义搜索, RAG基础 |
 
 ### 02-提示词工程与输出规范
 | 编号 | 标题 | 关键词 |
 |---|---|---|
-| 2.1 | [[2.1-系统提示词与角色设定]] | System Prompt, 角色设计 |
-| 2.2 | [[2.2-高阶推理策略]] | CoT, Few-shot, Self-consistency |
-| 2.3 | [[2.3-结构化数据输出]] | JSON Mode, Function Calling |
+| 2.1 | [[10-知识库/AI模型与Agent/02-提示词工程与输出规范/2.1-系统提示词与角色设定.md]] | System Prompt, 角色设计 |
+| 2.2 | [[10-知识库/AI模型与Agent/02-提示词工程与输出规范/2.2-高阶推理策略.md]] | CoT, Few-shot, Self-consistency |
+| 2.3 | [[10-知识库/AI模型与Agent/02-提示词工程与输出规范/2.3-结构化数据输出.md]] | JSON Mode, Function Calling |
 
 延伸阅读：
-- [[2.2.1-推理模型工程化进阶]]
-- [[2.3.1-结构化输出-厂商能力对比]]
-- [[2.3.2-结构化输出-工程实战]]
+- [[10-知识库/AI模型与Agent/02-提示词工程与输出规范/2.2.1-推理模型工程化进阶.md]]
+- [[10-知识库/AI模型与Agent/02-提示词工程与输出规范/2.3.1-结构化输出-厂商能力对比.md]]
+- [[10-知识库/AI模型与Agent/02-提示词工程与输出规范/2.3.2-结构化输出-工程实战.md]]
 
 ### 03-工具调用与上下文协议
 | 编号 | 标题 | 关键词 |
 |---|---|---|
-| 3.1 | [[3.1-函数调用底层机制]] | Tool Use, JSON Schema |
-| 3.2 | [[3.2-Model_Context_Protocol规范解析]] | MCP, ADO.NET类比, 标准化协议 |
-| 3.3 | [[3.3-RAG系统架构与演进]] | 检索增强, 向量数据库, Hybrid Search |
+| 3.1 | [[10-知识库/AI模型与Agent/03-工具调用与上下文协议/3.1-函数调用底层机制.md]] | Tool Use, JSON Schema |
+| 3.2 | [[10-知识库/AI模型与Agent/03-工具调用与上下文协议/3.2-Model_Context_Protocol规范解析.md]] | MCP, ADO.NET类比, 标准化协议 |
+| 3.3 | [[10-知识库/AI模型与Agent/03-工具调用与上下文协议/3.3-RAG系统架构与演进.md]] | 检索增强, 向量数据库, Hybrid Search |
 
 延伸阅读：
-- [[3.2.1-MCP-Server生态系统]] — 归档迁移、Registry 信任边界与权限隔离。
-- [[3.2.2-MCP-SDK开发实战]] — SDK v2 选型、可运行示例与测试边界。
-- [[3.2.3-MCP协议架构与传输层]]
+- [[10-知识库/AI模型与Agent/03-工具调用与上下文协议/3.2.1-MCP-Server生态系统.md]] — 归档迁移、Registry 信任边界与权限隔离。
+- [[10-知识库/AI模型与Agent/03-工具调用与上下文协议/3.2.2-MCP-SDK开发实战.md]] — SDK v2 选型、可运行示例与测试边界。
+- [[10-知识库/AI模型与Agent/03-工具调用与上下文协议/3.2.3-MCP协议架构与传输层.md]]
 
 ### 04-智能体架构与工作流设计
 | 编号 | 标题 | 关键词 |
 |---|---|---|
-| 4.1 | [[4.1-AI_Agent核心心智模型]] | ReAct, ToT, Reflexion, LATS, 框架对比 |
-| 4.2 | [[4.2-工作流编排模式]] | Chain, Router, Parallel, LangGraph深度实操 |
-| 4.3 | [[4.3-记忆机制设计]] | 短期/长期记忆, 向量存储 |
-| 4.4 | [[4.4-Human-in-the-loop交接机制]] | 人机协作, 审批流程 |
-| 4.5 | [[4.5-AI-Agent架构开源学习指南]] | 开源项目, 学习路径 |
+| 4.1 | [[10-知识库/AI模型与Agent/04-智能体架构与工作流设计/4.1-AI_Agent核心心智模型.md]] | ReAct, ToT, Reflexion, LATS, 框架对比 |
+| 4.2 | [[10-知识库/AI模型与Agent/04-智能体架构与工作流设计/4.2-工作流编排模式.md]] | Chain, Router, Parallel, LangGraph深度实操 |
+| 4.3 | [[10-知识库/AI模型与Agent/04-智能体架构与工作流设计/4.3-记忆机制设计.md]] | 短期/长期记忆, 向量存储 |
+| 4.4 | [[10-知识库/AI模型与Agent/04-智能体架构与工作流设计/4.4-Human-in-the-loop交接机制.md]] | 人机协作, 审批流程 |
+| 4.5 | [[10-知识库/AI模型与Agent/04-智能体架构与工作流设计/4.5-AI-Agent架构开源学习指南.md]] | 开源项目, 学习路径 |
 
 延伸阅读：
-- [[4.1.1-Agent认知架构与主流框架2026]]
-- [[4.2-Agent-Loop概念与coding-agent创始人观点]]
-- [[4.2.1-LangGraph深度实操]]
-- [[4.2.2-工作流工程最佳实践]]
+- [[10-知识库/AI模型与Agent/04-智能体架构与工作流设计/4.1.1-Agent认知架构与主流框架2026.md]]
+- [[10-知识库/AI模型与Agent/04-智能体架构与工作流设计/4.2-Agent-Loop概念与coding-agent创始人观点.md]]
+- [[10-知识库/AI模型与Agent/04-智能体架构与工作流设计/4.2.1-LangGraph深度实操.md]]
+- [[10-知识库/AI模型与Agent/04-智能体架构与工作流设计/4.2.2-工作流工程最佳实践.md]]
 
 ### 05-评测监控与安全防护
 | 编号 | 标题 | 关键词 |
 |---|---|---|
-| 5.1 | [[5.1-模型评测基准与Evals驱动开发]] | Benchmark, MMLU, HumanEval |
-| 5.2 | [[5.2-可观测性与链路追踪]] | LangSmith, Tracing, 监控 |
-| 5.3 | [[5.3-AI安全护栏与防御机制]] | Guardrails, 越狱防护, 内容安全 |
+| 5.1 | [[10-知识库/AI模型与Agent/05-评测监控与安全防护/5.1-模型评测基准与Evals驱动开发.md]] | Benchmark, MMLU, HumanEval |
+| 5.2 | [[10-知识库/AI模型与Agent/05-评测监控与安全防护/5.2-可观测性与链路追踪.md]] | LangSmith, Tracing, 监控 |
+| 5.3 | [[10-知识库/AI模型与Agent/05-评测监控与安全防护/5.3-AI安全护栏与防御机制.md]] | Guardrails, 越狱防护, 内容安全 |
 
 ### 06-工程落地与Vibe Coding实战
 | 编号 | 标题 | 关键词 |
 |---|---|---|
-| 6.1 | [[6.1-终端IDE形态深度对比]] | Cursor, Windsurf, 终端 vs IDE |
-| 6.2 | [[6.2-CLI原生Agent实战]] | Aider, Claude Code(Tengu架构), Codex CLI |
-| 6.3 | [[6.3-SWE-Agent端到端闭环开发]] | SWE-bench, Devin, OpenHands, CI/CD闭环 |
+| 6.1 | [[10-知识库/AI模型与Agent/06-工程落地与Vibe_Coding实战/6.1-终端IDE形态深度对比.md]] | Cursor, Windsurf, 终端 vs IDE |
+| 6.2 | [[10-知识库/AI模型与Agent/06-工程落地与Vibe_Coding实战/6.2-CLI原生Agent实战.md]] | Aider, Claude Code(Tengu架构), Codex CLI |
+| 6.3 | [[10-知识库/AI模型与Agent/06-工程落地与Vibe_Coding实战/6.3-SWE-Agent端到端闭环开发.md]] | SWE-bench, Devin, OpenHands, CI/CD闭环 |
 
 延伸阅读：
-- [[6.3.1-SWE-Agent生产化与CICD]]
+- [[10-知识库/AI模型与Agent/06-工程落地与Vibe_Coding实战/6.3.1-SWE-Agent生产化与CICD.md]]
 
 ---
 
@@ -94,3 +119,6 @@ date: 2026-04-08
 | 2026-04-08 | 初始化知识体系，创建6章22篇骨架 |
 | 2026-04-14 | 全量内容填充，.NET类比入门系列完成 |
 | 2026-04-15 | 章节整理：5篇散落文章合并入对应章节，消除重复，更新索引 |
+
+
+</details>

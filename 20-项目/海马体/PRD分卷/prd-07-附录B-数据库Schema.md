@@ -1,7 +1,7 @@
 ---
 title: PRD 附录 B：数据库 Schema
 created: 2026-04-21
-updated: 2026-04-21
+updated: 2026-09-09
 type: entity
 tags: [openhippo]
 status: draft
@@ -9,7 +9,7 @@ status: draft
 
 # PRD 附录 B：数据库 Schema
 
-> 📚 上级页面：[[prd-07-附录]]
+> 📚 上级页面：[[20-项目/海马体/需求/PRD/prd-07-附录.md]]
 
 ## 附录B: 数据库Schema
 
