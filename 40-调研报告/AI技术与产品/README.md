@@ -22,6 +22,8 @@ status: stable
 
 ## 文档
 
+- [[40-调研报告/AI技术与产品/2026-09-09-SGLang项目分析|SGLang：推理架构、竞争边界与落地价值]]
+
 - [[40-调研报告/AI技术与产品/Agent综述/2026-04-12-AI-Agent-研究报告|AI Agent 研究报告（10大主题）副本]]
 
 - [[40-调研报告/AI技术与产品/模型对比/Claude-Opus-4.7-vs-4.6|Claude Opus 4.7 vs 4.6 对比]]
